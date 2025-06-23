@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naufal Nabila - Flutter Developer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(13, 13, 13, 0.95);
+        backdrop-filter: blur(20px);
+        z-index: 1000;
+        padding: 1rem 0;
+        transition: all 0.3s ease;
+      }
+
+      nav.scrolled {
+        background: rgba(13, 13, 13, 0.98);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #00d4ff;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .nav-links a:hover {
+        color: #00d4ff;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(45deg, #00d4ff, #ff0080);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      /* Hero Section */
+      .hero {
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
+        animation: float 20s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(2deg);
+        }
+      }
+
+      .hero-content {
+        z-index: 2;
+        max-width: 800px;
+        padding: 0 2rem;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        opacity: 0;
+        animation: slideInUp 1s ease 0.5s forwards;
+      }
+
+      .hero .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0;
+        animation: slideInUp 1s ease 0.7s forwards;
+      }
+
+      .hero .description {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0;
+        animation: slideInUp 1s ease 0.9s forwards;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(45deg, #00d4ff, #ff0080);
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        opacity: 0;
+        animation: slideInUp 1s ease 1.1s forwards;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .cta-button:hover::before {
+        left: 100%;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+      }
+
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Section Styles */
+      section {
+        padding: 5rem 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(45deg, #00d4ff, #ff0080);
+        border-radius: 2px;
+      }
+
+      /* About Section */
+      .about {
+        background: #f8f9fa;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .profile-img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #00d4ff;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .profile-img:hover {
+        transform: scale(1.05);
+      }
+
+      .about-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      /* Skills Section */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .skill-category {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .skill-category:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .skill-category h3 {
+        color: #333;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .skill-tag {
+        background: linear-gradient(45deg, #00d4ff, #ff0080);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      /* Experience Section */
+      .experience {
+        background: #f8f9fa;
+      }
+
+      .timeline {
+        position: relative;
+        padding-left: 2rem;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #00d4ff, #ff0080);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 3rem;
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .timeline-item:hover {
+        transform: translateX(10px);
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -32px;
+        top: 2rem;
+        width: 16px;
+        height: 16px;
+        background: #00d4ff;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 0 0 4px #00d4ff;
+      }
+
+      .timeline-date {
+        color: #666;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      .timeline-title {
+        font-size: 1.3rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      .timeline-desc {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .timeline-desc ul {
+        margin-left: 1rem;
+      }
+
+      .timeline-desc li {
+        margin-bottom: 0.5rem;
+      }
+
+      /* Certifications Section */
+      .certifications-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .cert-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cert-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(45deg, #00d4ff, #ff0080);
+      }
+
+      .cert-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .cert-title {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .cert-org {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+
+      .cert-date {
+        color: #00d4ff;
+        font-weight: bold;
+      }
+
+      /* Contact Section */
+      .contact {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+
+      .contact-content {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .contact-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease;
+      }
+
+      .contact-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+      }
+
+      /* Footer */
+      footer {
+        background: #0d0d0d;
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero .subtitle {
+          font-size: 1.2rem;
+        }
+
+        .about-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 2rem;
+        }
+
+        .timeline {
+          padding-left: 1rem;
+        }
+
+        .timeline::before {
+          left: 10px;
+        }
+
+        .timeline-item::before {
+          left: -22px;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+
+      /* Scroll animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Particle background for hero */
+      .particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .particle {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        animation: particleFloat 15s infinite linear;
+      }
+
+      @keyframes particleFloat {
+        0% {
+          transform: translateY(100vh) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo">Naufal Nabila</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="particles" id="particles"></div>
+      <div class="hero-content">
+        <h1>Naufal Nabila</h1>
+        <p class="subtitle">Flutter Developer & Blockchain Enthusiast</p>
+        <p class="description">
+          Experienced Flutter Developer and Odoo Developer with a proven track
+          record of developing high-quality cross-browser mobile applications.
+        </p>
+        <a href="#about" class="cta-button">Discover My Work</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title fade-in">About Me</h2>
+        <div class="about-content fade-in">
+          <div>
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 250 250'%3E%3Ccircle cx='125' cy='125' r='125' fill='%2300d4ff'/%3E%3Ctext x='125' y='140' text-anchor='middle' fill='white' font-size='80' font-family='Arial'%3EN%3C/text%3E%3C/svg%3E"
+              alt="Naufal Nabila"
+              class="profile-img"
+            />
+          </div>
+          <div class="about-text">
+            <p>
+              I'm a passionate Flutter developer with a strong foundation in
+              mobile application development and blockchain technology. With
+              experience at companies like PT. Arkana Solusi Digital,
+              QurbanPlus, and various educational institutions, I specialize in
+              creating intuitive, high-performance mobile applications.
+            </p>
+
+            <p>
+              My expertise spans across Flutter, Dart, Python, and various
+              modern development frameworks. I'm proficient in clean
+              architecture patterns, state management techniques, and have a
+              strong commitment to delivering solutions that meet business
+              objectives through effective communication and teamwork.
+            </p>
+
+            <p>
+              Currently pursuing blockchain development to stay at the forefront
+              of emerging technologies, I bring both technical excellence and
+              innovative thinking to every project I work on.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="section-title fade-in">Skills & Technologies</h2>
+        <div class="skills-grid fade-in">
+          <div class="skill-category">
+            <h3>Mobile Development</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Flutter</span>
+              <span class="skill-tag">Dart</span>
+              <span class="skill-tag">Android</span>
+              <span class="skill-tag">iOS</span>
+              <span class="skill-tag">Cross-platform</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend & Database</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Odoo</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">XML</span>
+              <span class="skill-tag">API Integration</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Emerging Technologies</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Blockchain</span>
+              <span class="skill-tag">Solidity</span>
+              <span class="skill-tag">Web3</span>
+              <span class="skill-tag">Smart Contracts</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Development Tools</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">CI/CD</span>
+              <span class="skill-tag">Testing</span>
+              <span class="skill-tag">QA</span>
+              <span class="skill-tag">Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+      <div class="container">
+        <h2 class="section-title fade-in">Professional Experience</h2>
+        <div class="timeline fade-in">
+          <div class="timeline-item">
+            <div class="timeline-date">November 2024 - Present</div>
+            <div class="timeline-title">Flutter Developer - QurbanPlus</div>
+            <div class="timeline-desc">
+              <ul>
+                <li>
+                  Maintained Flutter application for qurban process management
+                </li>
+                <li>
+                  Implemented animal booking and customer data management
+                  features
+                </li>
+                <li>
+                  Enhanced operational efficiency and transparency throughout
+                  the qurban journey
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">January 2023 - Present</div>
+            <div class="timeline-title">
+              Flutter Developer - PT. Arkana Solusi Digital
+            </div>
+            <div class="timeline-desc">
+              <ul>
+                <li>
+                  Developed Agriculture and HR applications using Flutter and
+                  Dart
+                </li>
+                <li>
+                  Integrated Odoo ERP system with Python, XML, and PostgreSQL
+                </li>
+                <li>
+                  Collaborated with cross-functional teams to deliver business
+                  solutions
+                </li>
+                <li>
+                  Worked with major clients including PT Triputra Electric,
+                  Margaria Group, KSO, and others
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">July 2024 - December 2024</div>
+            <div class="timeline-title">
+              Flutter Developer - CV Codespace Indonesia
+            </div>
+            <div class="timeline-desc">
+              <ul>
+                <li>
+                  Developed and maintained FnB applications using Flutter and
+                  Dart
+                </li>
+                <li>
+                  Implemented CI/CD practices and quality assurance processes
+                </li>
+                <li>Collaborated with backend developers and UI designers</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">May 2022 - December 2022</div>
+            <div class="timeline-title">
+              Flutter Developer - Universitas Terbuka
+            </div>
+            <div class="timeline-desc">
+              <ul>
+                <li>
+                  Developed student and radio applications for mobile platforms
+                </li>
+                <li>Conducted testing, quality assurance, and bug fixes</li>
+                <li>Published applications to App Store and Play Store</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">October 2020 - May 2022</div>
+            <div class="timeline-title">
+              Mobile Developer - PT. Bintang Pelajar
+            </div>
+            <div class="timeline-desc">
+              <ul>
+                <li>
+                  Developed HR application and student application using Flutter
+                </li>
+                <li>Collaborated with backend developers and UI designers</li>
+                <li>
+                  Communicated with stakeholders to align development with
+                  business goals
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+      <div class="container">
+        <h2 class="section-title fade-in">Certifications</h2>
+        <div class="certifications-grid fade-in">
+          <div class="cert-card">
+            <div class="cert-title">Certificate of Excellence: Solidity</div>
+            <div class="cert-org">Programming Hub</div>
+            <div class="cert-date">February 14, 2025</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-title">Certificate of Excellence: Blockchain</div>
+            <div class="cert-org">Programming Hub</div>
+            <div class="cert-date">February 7, 2025</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-title">Certificate of Excellence: Python 3</div>
+            <div class="cert-org">Programming Hub</div>
+            <div class="cert-date">February 25, 2025</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-title">Dart, Flutter, Solid Principle</div>
+            <div class="cert-org">Dicoding Indonesia</div>
+            <div class="cert-date">September 7, 2023</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-title">Junior Web Programmer</div>
+            <div class="cert-org">BNSP</div>
+            <div class="cert-date">August 14, 2017</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-title">Junior Office Operator</div>
+            <div class="cert-org">BNSP</div>
+            <div class="cert-date">May 29, 2019</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title fade-in">Get In Touch</h2>
+        <div class="contact-content fade-in">
+          <p>
+            I'm always open to discussing new opportunities and interesting
+            projects. Let's connect and create something amazing together!
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <div>Email</div>
+                <div>naufal.nabila.2008@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div>
+                <div>Phone</div>
+                <div>+62-823-2859-1004</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 Naufal Nabila. All rights reserved. Built with passion and
+          code.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", () => {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Fade in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Create floating particles
+      function createParticles() {
+        const particlesContainer = document.getElementById("particles");
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement("div");
+          particle.classList.add("particle");
+
+          // Random size and position
+          const size = Math.random() * 4 + 2;
+          particle.style.width = size + "px";
+          particle.style.height = size + "px";
+          particle.style.left = Math.random() * 100 + "%";
+          particle.style.animationDelay = Math.random() * 15 + "s";
+          particle.style.animationDuration = Math.random() * 10 + 10 + "s";
+
+          particlesContainer.appendChild(particle);
+        }
+      }
+
+      // Initialize particles
+      createParticles();
+
+      // Add typing effect to hero title
+      function typeWriter(element, text, speed = 100) {
+        let i = 0;
+        element.innerHTML = "";
+
+        function type() {
+          if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          }
+        }
+        type();
+      }
+
+      // Initialize typing effect after page loads
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const heroTitle = document.querySelector(".hero h1");
+          typeWriter(heroTitle, "Naufal Nabila", 150);
+        }, 1000);
+      });
+
+      // Add hover effects to timeline items
+      document.querySelectorAll(".timeline-item").forEach((item) => {
+        item.addEventListener("mouseenter", function () {
+          this.style.transform = "translateX(15px) scale(1.02)";
+        });
+
+        item.addEventListener("mouseleave", function () {
+          this.style.transform = "translateX(10px) scale(1)";
+        });
+      });
+
+      // Add click effects to skill tags
+      document.querySelectorAll(".skill-tag").forEach((tag) => {
+        tag.addEventListener("click", function () {
+          this.style.transform = "scale(0.95)";
+          setTimeout(() => {
+            this.style.transform = "scale(1)";
+          }, 150);
+        });
+      });
+
+      // Add floating animation to certification cards
+      document.querySelectorAll(".cert-card").forEach((card, index) => {
+        card.style.animationDelay = index * 0.2 + "s";
+        card.style.animation = "float 6s ease-in-out infinite";
+      });
+
+      // Progressive loading effect for sections
+      const sections = document.querySelectorAll("section");
+      let currentSection = 0;
+
+      function loadNextSection() {
+        if (currentSection < sections.length) {
+          sections[currentSection].style.opacity = "1";
+          sections[currentSection].style.transform = "translateY(0)";
+          currentSection++;
+          setTimeout(loadNextSection, 200);
+        }
+      }
+
+      // Initialize section loading
+      sections.forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(30px)";
+        section.style.transition = "all 0.6s ease";
+      });
+
+      // Start loading sections after hero animation
+      setTimeout(loadNextSection, 2000);
+    </script>
+  </body>
+</html>
