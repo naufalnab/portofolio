@@ -361,6 +361,134 @@
             font-weight: 500;
         }
 
+        /* Client Projects Section */
+        .clients {
+            background: #0a0a0a;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .clients {
+            background: #ffffff;
+        }
+
+        .clients::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="rgba(0,212,255,0.05)"/><stop offset="100%" stop-color="rgba(255,0,128,0.05)"/></linearGradient></defs><rect width="1000" height="400" fill="url(%23grad)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .clients-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .clients-intro p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .clients-intro p {
+            color: #666;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .client-card {
+            background: rgba(26, 26, 26, 0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #333;
+            backdrop-filter: blur(10px);
+        }
+
+        .light-mode .client-card {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        .client-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #00d4ff, #ff0080);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .client-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .client-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+        }
+
+        .light-mode .client-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .client-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #e0e0e0;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .client-name {
+            color: #333;
+        }
+
+        .client-industry {
+            color: #00d4ff;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .client-description {
+            color: #b0b0b0;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .client-description {
+            color: #666;
+        }
+
+
+
         /* Experience Section */
         .experience {
             background: #111111;
@@ -464,7 +592,125 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Certifications Section */
+        /* Awards Section */
+        .awards {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .awards::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"><path d="M0,400 Q250,300 500,400 T1000,400 L1000,0 L0,0 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .awards-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .award-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 3rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+        }
+
+        .award-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 212, 255, 0.4);
+        }
+
+        .award-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .award-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .award-organization {
+            font-size: 1.2rem;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .award-date {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .award-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #00d4ff, #ff0080);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .award-link:hover::before {
+            left: 100%;
+        }
+
+        .award-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+        }
         .certifications-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -532,6 +778,41 @@
         .cert-date {
             color: #00d4ff;
             font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .cert-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #00d4ff, #ff0080);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cert-link:hover::before {
+            left: 100%;
+        }
+
+        .cert-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
         }
 
         /* Contact Section */
@@ -640,6 +921,10 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            .clients-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Scroll animations */
@@ -687,6 +972,50 @@
                 opacity: 0;
             }
         }
+
+        /* Stagger animation for client cards */
+        .client-card {
+            animation: slideInUp 0.6s ease forwards;
+            animation-delay: calc(var(--delay) * 0.1s);
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Pulse animation for featured clients */
+        .client-card {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+            }
+        }
+
+        .light-mode .client-card {
+            animation: pulseLightMode 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseLightMode {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            }
+            50% {
+                box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+            }
+        }
     </style>
 </head>
 <body>
@@ -699,7 +1028,9 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#clients">Clients</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#awards">Awards</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -716,8 +1047,8 @@
         <div class="particles" id="particles"></div>
         <div class="hero-content">
             <h1>Naufal Nabila</h1>
-            <p class="subtitle">Flutter Developer & Blockchain Enthusiast</p>
-            <p class="description">Experienced Flutter Developer and Odoo Developer with a proven track record of developing high-quality cross-browser mobile applications.</p>
+            <p class="subtitle">Odoo Developer, Flutter Developer & Blockchain Enthusiast</p>
+            <p class="description">Experienced Flutter Developer and Odoo Developer with a proven track record of developing high-quality cross-browser mobile applications and ERP solutions for leading Indonesian companies.</p>
             <a href="#about" class="cta-button">Discover My Work</a>
         </div>
     </section>
@@ -728,14 +1059,14 @@
             <h2 class="section-title fade-in">About Me</h2>
             <div class="about-content fade-in">
                 <div>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 250 250'%3E%3Ccircle cx='125' cy='125' r='125' fill='%2300d4ff'/%3E%3Ctext x='125' y='140' text-anchor='middle' fill='white' font-size='80' font-family='Arial'%3EN%3C/text%3E%3C/svg%3E" alt="Naufal Nabila" class="profile-img">
+                    <img src="profile.jpeg" alt="Naufal Nabila" class="profile-img">
                 </div>
                 <div class="about-text">
-                    <p>I'm a passionate Flutter developer with a strong foundation in mobile application development and blockchain technology. With experience at companies like PT. Arkana Solusi Digital, QurbanPlus, and various educational institutions, I specialize in creating intuitive, high-performance mobile applications.</p>
+                    <p>I'm a passionate Flutter and Odoo developer with extensive experience in mobile application development, ERP solutions, and blockchain technology. Having worked with major Indonesian companies including Yamaha Motor Parts Manufacturing, Telkom Sigma, PT Triputra Electric, and many others, I specialize in creating scalable, efficient solutions that drive business growth.</p>
                     
-                    <p>My expertise spans across Flutter, Dart, Python, and various modern development frameworks. I'm proficient in clean architecture patterns, state management techniques, and have a strong commitment to delivering solutions that meet business objectives through effective communication and teamwork.</p>
+                    <p>My expertise spans across Flutter, Dart, Python, Odoo ERP, and various modern development frameworks. I'm proficient in clean architecture patterns, state management techniques, and have successfully delivered projects for manufacturing, telecommunications, automotive, and textile industries.</p>
                     
-                    <p>Currently pursuing blockchain development to stay at the forefront of emerging technologies, I bring both technical excellence and innovative thinking to every project I work on.</p>
+                    <p>Currently expanding my skills in blockchain development, I bring both technical excellence and innovative thinking to every project, ensuring solutions that not only meet current business needs but are also future-ready.</p>
                 </div>
             </div>
         </div>
@@ -757,10 +1088,10 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Backend & Database</h3>
+                    <h3>ERP & Backend</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
                         <span class="skill-tag">Odoo</span>
+                        <span class="skill-tag">Python</span>
                         <span class="skill-tag">PostgreSQL</span>
                         <span class="skill-tag">XML</span>
                         <span class="skill-tag">API Integration</span>
@@ -789,11 +1120,126 @@
         </div>
     </section>
 
+    <!-- Client Projects Section -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <h2 class="section-title fade-in">Client Projects</h2>
+            <div class="clients-intro fade-in">
+                <p>I've had the privilege of working with leading Indonesian companies, delivering robust Odoo ERP solutions and Flutter applications across various industries including manufacturing, automotive, telecommunications, and textiles.</p>
+            </div>
+            <div class="clients-grid fade-in">
+                <div class="client-card" style="--delay: 1;">
+                    <div class="client-name">PT Yamaha Motor Parts Manufacturing Indonesia</div>
+                    <div class="client-industry">Automotive Manufacturing</div>
+                    <div class="client-description">Delivered comprehensive Odoo ERP solutions for manufacturing operations, inventory management, and quality control processes for one of Indonesia's leading automotive parts manufacturers.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 2;">
+                    <div class="client-name">Telkom Sigma</div>
+                    <div class="client-industry">Telecommunications</div>
+                    <div class="client-description">Implemented advanced Odoo systems for telecommunications infrastructure management, customer relationship management, and business process optimization.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 3;">
+                    <div class="client-name">PT Triputra Electric Abadi</div>
+                    <div class="client-industry">Electrical Manufacturing</div>
+                    <div class="client-description">Developed custom Odoo modules for electrical component manufacturing, supply chain management, and financial integration systems.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 4;">
+                    <div class="client-name">PT SUCOFINDO</div>
+                    <div class="client-industry">Inspection & Certification</div>
+                    <div class="client-description">Created specialized Odoo applications for inspection processes, certification management, and compliance tracking for Indonesia's leading inspection company.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 5;">
+                    <div class="client-name">PT Kawat Enamel Indonesia</div>
+                    <div class="client-industry">Wire Manufacturing</div>
+                    <div class="client-description">Implemented Odoo ERP for wire manufacturing processes, quality control, and production planning optimization.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 6;">
+                    <div class="client-name">Pennyu Group</div>
+                    <div class="client-industry">Conglomerate</div>
+                    <div class="client-description">Developed multi-company Odoo solutions with integrated financial reporting and business intelligence dashboards.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 7;">
+                    <div class="client-name">PT Kartika Bina Medikatama</div>
+                    <div class="client-industry">Healthcare</div>
+                    <div class="client-description">Created healthcare management systems using Odoo for patient records, medical inventory, and appointment scheduling.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 8;">
+                    <div class="client-name">Margaria Group</div>
+                    <div class="client-industry">Trading & Distribution</div>
+                    <div class="client-description">Built comprehensive trading and distribution management systems with advanced inventory tracking and sales analytics.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 9;">
+                    <div class="client-name">PT Asia Bandar Alam</div>
+                    <div class="client-industry">Logistics</div>
+                    <div class="client-description">Developed logistics and warehousing solutions with real-time tracking and automated reporting capabilities.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 10;">
+                    <div class="client-name">PT NOK Indonesia</div>
+                    <div class="client-industry">Automotive Parts</div>
+                    <div class="client-description">Implemented manufacturing execution systems and quality management processes for automotive component production.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 11;">
+                    <div class="client-name">PT Surveyor Indonesia</div>
+                    <div class="client-industry">Inspection Services</div>
+                    <div class="client-description">Created inspection management systems with mobile integration and comprehensive reporting features.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 12;">
+                    <div class="client-name">PT Sun Star Prima Motor</div>
+                    <div class="client-industry">Automotive</div>
+                    <div class="client-description">Developed dealership management systems with inventory control, sales tracking, and customer relationship management.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 13;">
+                    <div class="client-name">PT Autocomp System Indonesia</div>
+                    <div class="client-industry">Automotive Components</div>
+                    <div class="client-description">Built production planning and quality assurance systems for automotive component manufacturing processes.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 14;">
+                    <div class="client-name">PT Citra Busana Indonesia</div>
+                    <div class="client-industry">Textile & Garment</div>
+                    <div class="client-description">Implemented textile manufacturing management systems with production scheduling and order tracking capabilities.</div>
+                </div>
+                
+                <div class="client-card" style="--delay: 15;">
+                    <div class="client-name">Duniatex Group</div>
+                    <div class="client-industry">Textile Manufacturing</div>
+                    <div class="client-description">Created comprehensive textile production management systems with supply chain integration and quality control modules.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Experience Section -->
     <section class="experience" id="experience">
         <div class="container">
             <h2 class="section-title fade-in">Professional Experience</h2>
             <div class="timeline fade-in">
+                <div class="timeline-item">
+                    <div class="timeline-date">January 2023 - Present</div>
+                    <div class="timeline-title">Flutter & Odoo Developer - PT. Arkana Solusi Digital</div>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Developed Agriculture and HR applications using Flutter and Dart</li>
+                            <li>Integrated Odoo ERP system with Python, XML, and PostgreSQL</li>
+                            <li>Collaborated with cross-functional teams to deliver business solutions</li>
+                            <li>Worked with 15+ major clients including PT Yamaha Motor Parts Manufacturing, Telkom Sigma, PT Triputra Electric, and others</li>
+                            <li>Delivered custom ERP modules for manufacturing, automotive, telecommunications, and textile industries</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="timeline-item">
                     <div class="timeline-date">November 2024 - Present</div>
                     <div class="timeline-title">Flutter Developer - QurbanPlus</div>
@@ -802,19 +1248,6 @@
                             <li>Maintained Flutter application for qurban process management</li>
                             <li>Implemented animal booking and customer data management features</li>
                             <li>Enhanced operational efficiency and transparency throughout the qurban journey</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">January 2023 - Present</div>
-                    <div class="timeline-title">Flutter Developer - PT. Arkana Solusi Digital</div>
-                    <div class="timeline-desc">
-                        <ul>
-                            <li>Developed Agriculture and HR applications using Flutter and Dart</li>
-                            <li>Integrated Odoo ERP system with Python, XML, and PostgreSQL</li>
-                            <li>Collaborated with cross-functional teams to deliver business solutions</li>
-                            <li>Worked with major clients including PT Triputra Electric, Margaria Group, KSO, and others</li>
                         </ul>
                     </div>
                 </div>
@@ -858,6 +1291,23 @@
         </div>
     </section>
 
+    <!-- Awards & Recognition Section -->
+    <section class="awards" id="awards">
+        <div class="container">
+            <h2 class="section-title fade-in">Awards & Recognition</h2>
+            <div class="awards-content fade-in">
+                <div class="award-card">
+                    <span class="award-icon">🏆</span>
+                    <div class="award-title">Best Developer of The Year</div>
+                    <div class="award-title">Best Performance 2024</div>
+                    <div class="award-organization">PT. Arkana Solusi Digital</div>
+                    <div class="award-date">2024</div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7288436057010843649/" target="_blank" class="award-link">View Achievement</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Certifications Section -->
     <section class="certifications" id="certifications">
         <div class="container">
@@ -867,31 +1317,85 @@
                     <div class="cert-title">Certificate of Excellence: Solidity</div>
                     <div class="cert-org">Programming Hub</div>
                     <div class="cert-date">February 14, 2025</div>
+                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1739543460286/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
                 </div>
                 <div class="cert-card">
                     <div class="cert-title">Certificate of Excellence: Blockchain</div>
                     <div class="cert-org">Programming Hub</div>
                     <div class="cert-date">February 7, 2025</div>
+                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1738895772737/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-title">Make Your Own Cryptocurrency</div>
+                    <div class="cert-org">Programming Hub</div>
+                    <div class="cert-date">January 2025</div>
+                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1746685435014/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
                 </div>
                 <div class="cert-card">
                     <div class="cert-title">Certificate of Excellence: Python 3</div>
                     <div class="cert-org">Programming Hub</div>
                     <div class="cert-date">February 25, 2025</div>
+                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/overlay/1740495319541/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
                 </div>
                 <div class="cert-card">
-                    <div class="cert-title">Dart, Flutter, Solid Principle</div>
+                    <div class="cert-title">React UI Development</div>
+                    <div class="cert-org">Professional Training</div>
+                    <div class="cert-date">November 2024</div>
+                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1732072734653/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-title">Odoo Functional Training</div>
+                    <div class="cert-org">Odoo Official Training</div>
+                    <div class="cert-date">May 2024</div>
+                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1716352092670/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-title">Odoo Development Training</div>
+                    <div class="cert-org">Odoo Official Training</div>
+                    <div class="cert-date">October 2021</div>
+                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1635515318416/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-title">SOLID Principle in Flutter</div>
                     <div class="cert-org">Dicoding Indonesia</div>
                     <div class="cert-date">September 7, 2023</div>
+                    <a href="https://www.dicoding.com/certificates/L4PQ8MVQ2ZO1" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-title">Dart Programming Language</div>
+                    <div class="cert-org">Dicoding Indonesia</div>
+                    <div class="cert-date">2023</div>
+                    <a href="https://www.dicoding.com/certificates/QLZ9Q6KD7Z5D" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-title">Flutter Development</div>
+                    <div class="cert-org">Dicoding Indonesia</div>
+                    <div class="cert-date">2023</div>
+                    <a href="https://www.dicoding.com/certificates/98XWV3O2JPM3" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-title">Flutter & Dart Development</div>
+                    <div class="cert-org">Udemy</div>
+                    <div class="cert-date">2023</div>
+                    <a href="https://www.udemy.com/certificate/UC-c036a891-a2a5-47a8-acfd-9a0fe894f040/" target="_blank" class="cert-link">View Certificate</a>
                 </div>
                 <div class="cert-card">
                     <div class="cert-title">Junior Web Programmer</div>
                     <div class="cert-org">BNSP</div>
                     <div class="cert-date">August 14, 2017</div>
+                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1518017705241/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-title">TOEFL English Proficiency</div>
+                    <div class="cert-org">Language Testing Institute</div>
+                    <div class="cert-date">2021</div>
+                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1635550996159/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
                 </div>
                 <div class="cert-card">
                     <div class="cert-title">Junior Office Operator</div>
                     <div class="cert-org">BNSP</div>
                     <div class="cert-date">May 29, 2019</div>
+                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1635550995242/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
                 </div>
             </div>
         </div>
@@ -942,35 +1446,11 @@
             if (body.classList.contains('light-mode')) {
                 themeIcon.textContent = '🌙';
                 themeText.textContent = 'Dark';
-                localStorage.setItem('theme', 'light');
             } else {
-                themeIcon.textContent = '☀️';
-                themeText.textContent = 'Light';
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-
-        // Load saved theme on page load
-        function loadTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const body = document.body;
-            const themeIcon = document.getElementById('theme-icon');
-            const themeText = document.getElementById('theme-text');
-            
-            // Default is dark mode, so only apply light mode if saved
-            if (savedTheme === 'light') {
-                body.classList.add('light-mode');
-                themeIcon.textContent = '🌙';
-                themeText.textContent = 'Dark';
-            } else {
-                // Default dark mode
                 themeIcon.textContent = '☀️';
                 themeText.textContent = 'Light';
             }
         }
-
-        // Load theme when page loads
-        window.addEventListener('load', loadTheme);
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1110,6 +1590,36 @@
 
         // Start loading sections after hero animation
         setTimeout(loadNextSection, 2000);
+
+        // Staggered animation for client cards
+        const clientCards = document.querySelectorAll('.client-card');
+        const clientObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        clientCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            clientObserver.observe(card);
+        });
+
+        // Add interactive hover effects to client cards
+        clientCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02) rotateY(5deg)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1) rotateY(0deg)';
+            });
+        });
     </script>
 </body>
 </html>
