@@ -304,295 +304,7 @@
             color: #666;
         }
 
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-            border: 1px solid #333;
-        }
-
-        .light-mode .skill-category {
-            background: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e0e0e0;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
-        }
-
-        .light-mode .skill-category:hover {
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .skill-category h3 {
-            color: #e0e0e0;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .skill-category h3 {
-            color: #333;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background: linear-gradient(45deg, #00d4ff, #ff0080);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Client Projects Section */
-        .clients {
-            background: #0a0a0a;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .clients {
-            background: #ffffff;
-        }
-
-        .clients::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="rgba(0,212,255,0.05)"/><stop offset="100%" stop-color="rgba(255,0,128,0.05)"/></linearGradient></defs><rect width="1000" height="400" fill="url(%23grad)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .clients-intro {
-            text-align: center;
-            margin-bottom: 4rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .clients-intro p {
-            font-size: 1.2rem;
-            color: #b0b0b0;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.8;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .clients-intro p {
-            color: #666;
-        }
-
-        .clients-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .client-card {
-            background: rgba(26, 26, 26, 0.9);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid #333;
-            backdrop-filter: blur(10px);
-        }
-
-        .light-mode .client-card {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e0e0e0;
-        }
-
-        .client-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(45deg, #00d4ff, #ff0080);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .client-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .client-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
-        }
-
-        .light-mode .client-card:hover {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .client-name {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #e0e0e0;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .client-name {
-            color: #333;
-        }
-
-        .client-industry {
-            color: #00d4ff;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .client-description {
-            color: #b0b0b0;
-            line-height: 1.6;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .client-description {
-            color: #666;
-        }
-
-
-
-        /* Experience Section */
-        .experience {
-            background: #111111;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .experience {
-            background: #f8f9fa;
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #00d4ff, #ff0080);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, background 0.3s ease;
-            border: 1px solid #333;
-        }
-
-        .light-mode .timeline-item {
-            background: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e0e0e0;
-        }
-
-        .timeline-item:hover {
-            transform: translateX(10px);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -32px;
-            top: 2rem;
-            width: 16px;
-            height: 16px;
-            background: #00d4ff;
-            border-radius: 50%;
-            border: 4px solid #1a1a1a;
-            box-shadow: 0 0 0 4px #00d4ff;
-        }
-
-        .light-mode .timeline-item::before {
-            border: 4px solid white;
-        }
-
-        .timeline-date {
-            color: #888;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .timeline-date {
-            color: #666;
-        }
-
-        .timeline-title {
-            font-size: 1.3rem;
-            color: #e0e0e0;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .timeline-title {
-            color: #333;
-        }
-
-        .timeline-desc {
-            color: #b0b0b0;
-            line-height: 1.6;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .timeline-desc {
-            color: #666;
-        }
-
-        .timeline-desc ul {
-            margin-left: 1rem;
-        }
-
-        .timeline-desc li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Awards Section */
+        /* Awards & Recognition Section */
         .awards {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -711,6 +423,312 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
         }
+
+        /* Skills Section */
+        .skills {
+            background: #0a0a0a;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .skills {
+            background: #ffffff;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .light-mode .skill-category {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .light-mode .skill-category:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-category h3 {
+            color: #e0e0e0;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .skill-category h3 {
+            color: #333;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, #00d4ff, #ff0080);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Client Projects Section */
+        .clients {
+            background: #111111;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .clients {
+            background: #f8f9fa;
+        }
+
+        .clients::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="rgba(0,212,255,0.05)"/><stop offset="100%" stop-color="rgba(255,0,128,0.05)"/></linearGradient></defs><rect width="1000" height="400" fill="url(%23grad)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .clients-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .clients-intro p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .clients-intro p {
+            color: #666;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .client-card {
+            background: rgba(26, 26, 26, 0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #333;
+            backdrop-filter: blur(10px);
+        }
+
+        .light-mode .client-card {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        .client-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #00d4ff, #ff0080);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .client-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .client-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+        }
+
+        .light-mode .client-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .client-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #e0e0e0;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .client-name {
+            color: #333;
+        }
+
+        .client-industry {
+            color: #00d4ff;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .client-description {
+            color: #b0b0b0;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .client-description {
+            color: #666;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: #0a0a0a;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .experience {
+            background: #ffffff;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #00d4ff, #ff0080);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .light-mode .timeline-item {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 2rem;
+            width: 16px;
+            height: 16px;
+            background: #00d4ff;
+            border-radius: 50%;
+            border: 4px solid #1a1a1a;
+            box-shadow: 0 0 0 4px #00d4ff;
+        }
+
+        .light-mode .timeline-item::before {
+            border: 4px solid white;
+        }
+
+        .timeline-date {
+            color: #888;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .timeline-date {
+            color: #666;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            color: #e0e0e0;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .timeline-title {
+            color: #333;
+        }
+
+        .timeline-desc {
+            color: #b0b0b0;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .timeline-desc {
+            color: #666;
+        }
+
+        .timeline-desc ul {
+            margin-left: 1rem;
+        }
+
+        .timeline-desc li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Certifications Section */
+        .certifications {
+            background: #111111;
+            transition: all 0.3s ease;
+        }
+
+        .light-mode .certifications {
+            background: #f8f9fa;
+        }
+
         .certifications-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1027,10 +1045,10 @@
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#awards">Awards</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#clients">Clients</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#awards">Awards</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -1067,6 +1085,23 @@
                     <p>My expertise spans across Flutter, Dart, Python, Odoo ERP, and various modern development frameworks. I'm proficient in clean architecture patterns, state management techniques, and have successfully delivered projects for manufacturing, telecommunications, automotive, and textile industries.</p>
                     
                     <p>Currently expanding my skills in blockchain development, I bring both technical excellence and innovative thinking to every project, ensuring solutions that not only meet current business needs but are also future-ready.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition Section -->
+    <section class="awards" id="awards">
+        <div class="container">
+            <h2 class="section-title fade-in">Awards & Recognition</h2>
+            <div class="awards-content fade-in">
+                <div class="award-card">
+                    <span class="award-icon">🏆</span>
+                    <div class="award-title">Best Developer of The Year</div>
+                    <div class="award-title">Best Performance 2024</div>
+                    <div class="award-organization">PT. Arkana Solusi Digital</div>
+                    <div class="award-date">2024</div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7288436057010843649/" target="_blank" class="award-link">View Achievement</a>
                 </div>
             </div>
         </div>
@@ -1188,12 +1223,6 @@
                     <div class="client-description">Implemented manufacturing execution systems and quality management processes for automotive component production.</div>
                 </div>
                 
-                <div class="client-card" style="--delay: 11;">
-                    <div class="client-name">PT Surveyor Indonesia</div>
-                    <div class="client-industry">Inspection Services</div>
-                    <div class="client-description">Created inspection management systems with mobile integration and comprehensive reporting features.</div>
-                </div>
-                
                 <div class="client-card" style="--delay: 12;">
                     <div class="client-name">PT Sun Star Prima Motor</div>
                     <div class="client-industry">Automotive</div>
@@ -1286,23 +1315,6 @@
                             <li>Communicated with stakeholders to align development with business goals</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards & Recognition Section -->
-    <section class="awards" id="awards">
-        <div class="container">
-            <h2 class="section-title fade-in">Awards & Recognition</h2>
-            <div class="awards-content fade-in">
-                <div class="award-card">
-                    <span class="award-icon">🏆</span>
-                    <div class="award-title">Best Developer of The Year</div>
-                    <div class="award-title">Best Performance 2024</div>
-                    <div class="award-organization">PT. Arkana Solusi Digital</div>
-                    <div class="award-date">2024</div>
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7288436057010843649/" target="_blank" class="award-link">View Achievement</a>
                 </div>
             </div>
         </div>
