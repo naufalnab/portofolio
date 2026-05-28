@@ -1,11 +1,12 @@
 /* ==========================================================================
-   Main entry — Naufal Nabila Portfolio
-   Modular CSS organized by concern.
+   Aggregate entry (legacy / fallback).
+   The primary index.html now links each module separately for reliability.
+   If you reference style.css directly, these imports still work.
    ========================================================================== */
 
-@import url('base.css');
-@import url('layout.css');
-@import url('hero.css');
-@import url('sections.css');
-@import url('components.css');
-@import url('responsive.css');
+@import url('./base.css');
+@import url('./layout.css');
+@import url('./hero.css');
+@import url('./sections.css');
+@import url('./components.css');
+@import url('./responsive.css');
