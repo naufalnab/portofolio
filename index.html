@@ -1,28 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naufal Nabila - Flutter, Odoo & AI Automation</title>
+    <title>Naufal Nabila — AI Automation, ERP & Digital Product Builder</title>
+    <meta name="description"
+        content="Naufal Nabila — AI Automation Engineer, Odoo & Flutter Developer. I build AI-powered workflows, ERP systems, and digital learning platforms for enterprise clients across Indonesia.">
     <style>
+        :root {
+            --bg: #0b0b0f;
+            --bg-alt: #11121a;
+            --surface: #161824;
+            --surface-2: #1c1f2e;
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #ececf1;
+            --text-muted: #a0a3b8;
+            --text-soft: #777a8d;
+            --accent: #00d4ff;
+            --accent-2: #ff4d8d;
+            --accent-soft: rgba(0, 212, 255, 0.12);
+            --gradient: linear-gradient(135deg, #00d4ff 0%, #ff4d8d 100%);
+            --gradient-soft: linear-gradient(135deg, rgba(0, 212, 255, 0.18) 0%, rgba(255, 77, 141, 0.18) 100%);
+            --radius: 18px;
+            --radius-lg: 24px;
+            --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+            --max-w: 1180px;
+        }
+
+        body.light-mode {
+            --bg: #ffffff;
+            --bg-alt: #f6f7fb;
+            --surface: #ffffff;
+            --surface-2: #f1f3f9;
+            --border: rgba(0, 0, 0, 0.08);
+            --text: #15172a;
+            --text-muted: #4b5063;
+            --text-soft: #7a7f95;
+            --accent: #008fb3;
+            --accent-2: #d63672;
+            --accent-soft: rgba(0, 143, 179, 0.1);
+            --gradient: linear-gradient(135deg, #008fb3 0%, #d63672 100%);
+            --gradient-soft: linear-gradient(135deg, rgba(0, 143, 179, 0.12) 0%, rgba(214, 54, 114, 0.12) 100%);
+            --shadow: 0 16px 40px rgba(20, 25, 60, 0.08);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #e0e0e0;
-            background-color: #0a0a0a;
-            overflow-x: hidden;
-            transition: all 0.3s ease;
+        html {
+            scroll-behavior: smooth;
         }
 
-        body.light-mode {
-            color: #333;
-            background-color: #ffffff;
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            overflow-x: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: #0b0b0f;
         }
 
         /* Navigation */
@@ -30,115 +76,133 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(13, 13, 13, 0.95);
+            background: color-mix(in srgb, var(--bg) 85%, transparent);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             z-index: 1000;
             padding: 1rem 0;
+            border-bottom: 1px solid transparent;
             transition: all 0.3s ease;
         }
 
         nav.scrolled {
-            background: rgba(13, 13, 13, 0.98);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            border-bottom-color: var(--border);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: var(--max-w);
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 2rem;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        .logo span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 2rem;
-        }
-
-        .theme-toggle {
-            background: rgba(0, 212, 255, 0.1);
-            border: 2px solid #00d4ff;
-            color: #00d4ff;
-            padding: 10px 16px;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            backdrop-filter: blur(10px);
-            white-space: nowrap;
-        }
-
-        .theme-toggle:hover {
-            background: #00d4ff;
-            color: #0a0a0a;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
-        }
-
-        .light-mode .theme-toggle {
-            background: rgba(0, 212, 255, 0.1);
-            color: #00d4ff;
-        }
-
-        .light-mode .theme-toggle:hover {
-            background: #00d4ff;
-            color: white;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #00d4ff;
-            text-decoration: none;
+            gap: 1.75rem;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.75rem;
         }
 
         .nav-links a {
-            color: white;
+            color: var(--text-muted);
             text-decoration: none;
-            transition: color 0.3s ease;
-            position: relative;
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: #00d4ff;
+            color: var(--text);
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(45deg, #00d4ff, #ff0080);
-            transition: width 0.3s ease;
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.5rem 0.9rem;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s ease;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
+        .theme-toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
         }
 
-        /* Hero Section */
+        /* Layout */
+        section {
+            padding: 7rem 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.25rem;
+            color: var(--text);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 640px;
+            line-height: 1.7;
+            margin-bottom: 3.5rem;
+        }
+
+        /* Hero */
         .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
+            padding: 7rem 0 5rem;
             position: relative;
             overflow: hidden;
         }
@@ -146,200 +210,642 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
-            animation: float 20s ease-in-out infinite;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 20% 30%, rgba(0, 212, 255, 0.18) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 40% at 80% 70%, rgba(255, 77, 141, 0.15) 0%, transparent 60%);
+            pointer-events: none;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(2deg); }
+        .light-mode .hero::before {
+            background:
+                radial-gradient(ellipse 60% 50% at 20% 30%, rgba(0, 143, 179, 0.1) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 40% at 80% 70%, rgba(214, 54, 114, 0.08) 0%, transparent 60%);
         }
 
         .hero-content {
+            max-width: 860px;
+            position: relative;
             z-index: 2;
-            max-width: 800px;
-            padding: 0 2rem;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent-soft);
+            border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+            color: var(--accent);
+            padding: 0.45rem 1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.75rem;
+        }
+
+        .hero-tag .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #2ecc71;
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
         }
 
         .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: slideInUp 1s ease 0.5s forwards;
+            font-size: clamp(2.5rem, 6vw, 4.25rem);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            color: var(--text);
         }
 
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0;
-            animation: slideInUp 1s ease 0.7s forwards;
+        .hero h1 .accent {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
-        .hero .description {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0;
-            animation: slideInUp 1s ease 0.9s forwards;
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            max-width: 720px;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #00d4ff, #ff0080);
-            color: white;
-            padding: 15px 30px;
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin-bottom: 4rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.95rem 1.6rem;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            opacity: 0;
-            animation: slideInUp 1s ease 1.1s forwards;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.25s ease;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--text);
+            border-color: var(--border);
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 720px;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .stat-num {
+            font-size: clamp(1.6rem, 3vw, 2.25rem);
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.02em;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* About */
+        .about {
+            background: var(--bg-alt);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-image-wrap {
+            position: sticky;
+            top: 6rem;
+        }
+
+        .profile-img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+        }
+
+        .about-pillars {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pillar {
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .pillar:first-child {
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .pillar h4 {
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .pillar p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .about-lead {
+            font-size: 1.25rem;
+            line-height: 1.65;
+            color: var(--text);
+            margin-bottom: 1rem;
+            letter-spacing: -0.005em;
+        }
+
+        /* Featured Projects */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .featured-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 2.5rem;
+            transition: all 0.35s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .cta-button::before {
+        .featured-card::before {
             content: '';
             position: absolute;
             top: 0;
-            left: -100%;
-            width: 100%;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--card-accent, var(--gradient));
+            transition: height 0.4s ease;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-4px);
+            border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
+            box-shadow: var(--shadow);
+        }
+
+        .featured-card:hover::before {
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
         }
 
-        .cta-button:hover::before {
-            left: 100%;
+        .featured-side {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
-        .cta-button:hover {
+        .featured-icon {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        .featured-org {
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+        }
+
+        .featured-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.25;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+
+        .featured-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.5rem;
+        }
+
+        .tech-badge {
+            background: transparent;
+            color: var(--text-muted);
+            padding: 0.3rem 0.7rem;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        .featured-link {
+            margin-top: auto;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding-top: 1rem;
+        }
+
+        .featured-link::after {
+            content: '→';
+            transition: transform 0.25s ease;
+        }
+
+        .featured-link:hover::after {
+            transform: translateX(4px);
+        }
+
+        .featured-body {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .featured-block h5 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-soft);
+            margin-bottom: 0.4rem;
+        }
+
+        .featured-block p {
+            color: var(--text);
+            line-height: 1.65;
+            font-size: 1rem;
+        }
+
+        .featured-block.impact p {
+            color: var(--text-muted);
+        }
+
+        .featured-block.impact strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* Other Projects (compact list) */
+        .other-projects {
+            margin-top: 4rem;
+        }
+
+        .other-projects h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .other-projects h3::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .other-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .other-card {
+            padding: 1.4rem 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: all 0.25s ease;
+        }
+
+        .other-card:hover {
+            border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
+            transform: translateY(-2px);
+        }
+
+        .other-card-name {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .other-card-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Clients */
+        .clients {
+            background: var(--bg-alt);
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .client-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .client-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+            border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
         }
 
-        @keyframes slideInUp {
+        .light-mode .client-card:hover {
+            box-shadow: 0 12px 30px rgba(20, 25, 60, 0.08);
+        }
+
+        .client-industry {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.6rem;
+        }
+
+        .client-name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.6rem;
+            line-height: 1.35;
+        }
+
+        .client-desc {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .clients-more {
+            margin-top: 2.5rem;
+            padding: 1.75rem;
+            text-align: center;
+            border: 1px dashed var(--border);
+            border-radius: var(--radius);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .clients-more p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.65;
+            max-width: 720px;
+            margin: 0;
+        }
+
+        .clients-more strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .clients-extra {
+            margin-top: 1.5rem;
+            animation: revealClients 0.4s ease;
+        }
+
+        .clients-extra[hidden] {
+            display: none;
+        }
+
+        @keyframes revealClients {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(8px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        /* Section Styles */
-        section {
-            padding: 5rem 0;
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, #00d4ff, #ff0080);
-            border-radius: 2px;
-        }
-
-        /* About Section */
-        .about {
-            background: #111111;
+        .skill-group {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
             transition: all 0.3s ease;
         }
 
-        .light-mode .about {
-            background: #f8f9fa;
+        .skill-group:hover {
+            transform: translateY(-3px);
+            border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
         }
 
-        .about-content {
+        .skill-group-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.85rem;
+            display: block;
+        }
+
+        .skill-group h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+        }
+
+        .skill-group-sub {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .skill-pill {
+            background: var(--accent-soft);
+            color: var(--accent);
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+
+        /* Experience */
+        .experience {
+            background: var(--bg-alt);
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 8px;
+            bottom: 8px;
+            width: 1px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-alt);
+            border: 2px solid var(--accent);
+            z-index: 1;
+        }
+
+        .timeline-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.5rem 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-date {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .timeline-role {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+
+        .timeline-company {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-impact {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        .timeline-impact strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* Awards & Certifications */
+        .credentials-grid {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .profile-img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #00d4ff;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #b0b0b0;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .about-text {
-            color: #666;
-        }
-
-        /* Awards & Recognition Section */
-        .awards {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .awards::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"><path d="M0,400 Q250,300 500,400 T1000,400 L1000,0 L0,0 Z" fill="rgba(255,255,255,0.1)"/></svg>');
-            animation: float 15s ease-in-out infinite;
-        }
-
-        .awards-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+            gap: 2rem;
+            align-items: start;
         }
 
         .award-card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            border-radius: 25px;
-            padding: 3rem;
-            margin: 2rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            transition: all 0.4s ease;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
             position: relative;
             overflow: hidden;
         }
@@ -347,609 +853,276 @@
         .award-card::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: shimmer 3s ease-in-out infinite;
+            inset: 0;
+            background: var(--gradient-soft);
+            opacity: 0.5;
+            pointer-events: none;
         }
 
-        @keyframes shimmer {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(180deg); }
-        }
-
-        .award-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 212, 255, 0.4);
+        .award-card>* {
+            position: relative;
+            z-index: 1;
         }
 
         .award-icon {
-            font-size: 4rem;
+            font-size: 1.75rem;
             margin-bottom: 1rem;
             display: block;
         }
 
+        .award-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
         .award-title {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: #ffffff;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
         }
 
-        .award-organization {
-            font-size: 1.2rem;
-            color: #00d4ff;
-            margin-bottom: 1rem;
-            font-weight: 500;
+        .award-org {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
         }
 
-        .award-date {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 1.5rem;
+        .award-context {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-top: 0.75rem;
+            margin-bottom: 1.25rem;
         }
 
         .award-link {
-            display: inline-block;
-            background: linear-gradient(45deg, #00d4ff, #ff0080);
-            color: white;
-            padding: 12px 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--accent);
             text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            font-size: 0.9rem;
+            font-weight: 600;
         }
 
-        .award-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
+        .award-link::after {
+            content: '→';
+            transition: transform 0.25s ease;
         }
 
-        .award-link:hover::before {
-            left: 100%;
+        .award-link:hover::after {
+            transform: translateX(4px);
         }
 
-        .award-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
-        }
-
-        /* Skills Section */
-        .skills {
-            background: #0a0a0a;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .skills {
-            background: #ffffff;
-        }
-
-        .skills-grid {
+        .cert-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
         }
 
-        .skill-category {
-            background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-            border: 1px solid #333;
-        }
-
-        .light-mode .skill-category {
-            background: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e0e0e0;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
-        }
-
-        .light-mode .skill-category:hover {
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .skill-category h3 {
-            color: #e0e0e0;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .skill-category h3 {
-            color: #333;
-        }
-
-        .skill-tags {
+        .cert-item {
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: all 0.25s ease;
         }
 
-        .skill-tag {
-            background: linear-gradient(45deg, #00d4ff, #ff0080);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
+        .cert-item:hover {
+            border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
+            transform: translateX(4px);
         }
 
-        /* Client Projects Section */
-        .clients {
-            background: #111111;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
+        .cert-info {
+            min-width: 0;
         }
 
-        .light-mode .clients {
-            background: #f8f9fa;
+        .cert-name {
+            font-size: 0.98rem;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.4;
+            margin-bottom: 0.2rem;
         }
 
-        .clients::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="rgba(0,212,255,0.05)"/><stop offset="100%" stop-color="rgba(255,0,128,0.05)"/></linearGradient></defs><rect width="1000" height="400" fill="url(%23grad)"/></svg>');
-            opacity: 0.3;
+        .cert-meta {
+            font-size: 0.84rem;
+            color: var(--text-muted);
         }
 
-        .clients-intro {
-            text-align: center;
-            margin-bottom: 4rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .clients-intro p {
-            font-size: 1.2rem;
-            color: #b0b0b0;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.8;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .clients-intro p {
-            color: #666;
-        }
-
-        .clients-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .client-card {
-            background: rgba(26, 26, 26, 0.9);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid #333;
-            backdrop-filter: blur(10px);
-        }
-
-        .light-mode .client-card {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e0e0e0;
-        }
-
-        .client-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(45deg, #00d4ff, #ff0080);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .client-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .client-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
-        }
-
-        .light-mode .client-card:hover {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .client-name {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #e0e0e0;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .client-name {
-            color: #333;
-        }
-
-        .client-industry {
-            color: #00d4ff;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .client-description {
-            color: #b0b0b0;
-            line-height: 1.6;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .client-description {
-            color: #666;
-        }
-
-        /* Experience Section */
-        .experience {
-            background: #0a0a0a;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .experience {
-            background: #ffffff;
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #00d4ff, #ff0080);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, background 0.3s ease;
-            border: 1px solid #333;
-        }
-
-        .light-mode .timeline-item {
-            background: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e0e0e0;
-        }
-
-        .timeline-item:hover {
-            transform: translateX(10px);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -32px;
-            top: 2rem;
-            width: 16px;
-            height: 16px;
-            background: #00d4ff;
-            border-radius: 50%;
-            border: 4px solid #1a1a1a;
-            box-shadow: 0 0 0 4px #00d4ff;
-        }
-
-        .light-mode .timeline-item::before {
-            border: 4px solid white;
-        }
-
-        .timeline-date {
-            color: #888;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .timeline-date {
-            color: #666;
-        }
-
-        .timeline-title {
-            font-size: 1.3rem;
-            color: #e0e0e0;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .timeline-title {
-            color: #333;
-        }
-
-        .timeline-desc {
-            color: #b0b0b0;
-            line-height: 1.6;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .timeline-desc {
-            color: #666;
-        }
-
-        .timeline-desc ul {
-            margin-left: 1rem;
-        }
-
-        .timeline-desc li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Certifications Section */
-        .certifications {
-            background: #111111;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .certifications {
-            background: #f8f9fa;
-        }
-
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .cert-card {
-            background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid #333;
-        }
-
-        .light-mode .cert-card {
-            background: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e0e0e0;
-        }
-
-        .cert-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(45deg, #00d4ff, #ff0080);
-        }
-
-        .cert-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
-        }
-
-        .light-mode .cert-card:hover {
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .cert-title {
-            font-size: 1.2rem;
-            color: #e0e0e0;
-            margin-bottom: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .cert-title {
-            color: #333;
-        }
-
-        .cert-org {
-            color: #888;
-            margin-bottom: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .light-mode .cert-org {
-            color: #666;
-        }
-
-        .cert-date {
-            color: #00d4ff;
-            font-weight: bold;
-            margin-bottom: 1rem;
+        .cert-meta .dot {
+            margin: 0 0.5rem;
+            opacity: 0.5;
         }
 
         .cert-link {
-            display: inline-block;
-            background: linear-gradient(45deg, #00d4ff, #ff0080);
-            color: white;
-            padding: 8px 16px;
+            color: var(--text-muted);
             text-decoration: none;
-            border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cert-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .cert-link:hover::before {
-            left: 100%;
+            white-space: nowrap;
+            transition: color 0.2s ease;
         }
 
         .cert-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+            color: var(--accent);
         }
 
-        /* Contact Section */
+        .cert-toggle {
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.7rem 1.25rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .cert-toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .cert-extra {
+            display: none;
+        }
+
+        .cert-extra.open {
+            display: contents;
+        }
+
+        /* Contact */
         .contact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: var(--bg-alt);
         }
 
-        .contact-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-info {
+        .contact-wrap {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
 
-        .contact-item {
+        .contact-wrap h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-wrap p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .contact-action {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 1rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease;
+            padding: 1.1rem 1.4rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.25s ease;
         }
 
-        .contact-item:hover {
-            transform: translateY(-5px);
+        .contact-action:hover {
+            border-color: var(--accent);
+            transform: translateX(4px);
         }
 
-        .contact-icon {
+        .contact-action.primary {
+            background: var(--gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        .contact-action.primary:hover {
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        .contact-action-icon {
             width: 40px;
             height: 40px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: var(--accent-soft);
+            border-radius: 10px;
             font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-action.primary .contact-action-icon {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-action-text {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .contact-action-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 0.1rem;
+        }
+
+        .contact-action.primary .contact-action-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-action-value {
+            font-weight: 600;
+            font-size: 0.98rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         /* Footer */
         footer {
-            background: #0a0a0a;
-            color: #888;
+            background: var(--bg);
+            color: var(--text-muted);
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
             text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid #333;
-            transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
 
-        .light-mode footer {
-            background: #f8f9fa;
-            color: #666;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .nav-right {
-                justify-content: flex-end;
-            }
-
-            .theme-toggle {
-                font-size: 0.8rem;
-                padding: 8px 12px;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
-            }
-
-            .timeline {
-                padding-left: 1rem;
-            }
-
-            .timeline::before {
-                left: 10px;
-            }
-
-            .timeline-item::before {
-                left: -22px;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .clients-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Scroll animations */
+        /* Fade in */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
         }
 
         .fade-in.visible {
@@ -957,101 +1130,83 @@
             transform: translateY(0);
         }
 
-        /* Particle background for hero */
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
+        /* Responsive */
+        @media (max-width: 900px) {
+            section {
+                padding: 5rem 0;
+            }
 
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            animation: particleFloat 15s infinite linear;
-        }
+            .nav-links {
+                display: none;
+            }
 
-        @keyframes particleFloat {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
             }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
 
-        /* Stagger animation for client cards */
-        .client-card {
-            animation: slideInUp 0.6s ease forwards;
-            animation-delay: calc(var(--delay) * 0.1s);
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .about-image-wrap {
+                position: static;
+                max-width: 220px;
+            }
+
+            .featured-card {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 2rem;
+            }
+
+            .credentials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-wrap {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
             }
         }
 
-        /* Pulse animation for featured clients */
-        .client-card {
-            animation: pulse 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        @media (max-width: 540px) {
+            section {
+                padding: 4rem 0;
             }
-            50% {
-                box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
-            }
-        }
 
-        .light-mode .client-card {
-            animation: pulseLightMode 3s ease-in-out infinite;
-        }
-
-        @keyframes pulseLightMode {
-            0%, 100% {
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            .container {
+                padding: 0 1.25rem;
             }
-            50% {
-                box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cert-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
             }
         }
     </style>
 </head>
+
 <body>
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">Naufal Nabila</a>
+            <a href="#home" class="logo">Naufal<span>.</span></a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#awards">Awards</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#clients">Clients</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <button class="theme-toggle" onclick="toggleTheme()">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
                     <span id="theme-icon">☀️</span>
                     <span id="theme-text">Light</span>
                 </button>
@@ -1059,391 +1214,744 @@
         </div>
     </nav>
 
+    <!-- HERO -->
     <section class="hero" id="home">
-        <div class="particles" id="particles"></div>
-        <div class="hero-content">
-            <h1>Naufal Nabila</h1>
-            <p class="subtitle">Odoo Developer, Flutter Developer & AI Automation Specialist</p>
-            <p class="description">Experienced Flutter Developer, Odoo Developer, and AI Automation Specialist with a proven track record of developing high-quality mobile apps, custom ERP solutions, and intelligent workflow automations for leading Indonesian companies.</p>
-            <a href="#about" class="cta-button">Discover My Work</a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="dot"></span>
+                    Available for new projects
+                </div>
+                <h1>Building <span class="accent">AI-powered workflows</span>, ERP systems, and digital learning
+                    platforms.</h1>
+                <p class="hero-subtitle">I'm Naufal — an AI Automation Engineer, Odoo &amp; Flutter Developer
+                    helping enterprises and educational platforms ship intelligent, scalable products that deliver
+                    real impact.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-ghost">Discuss a Project</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="stat-num">5+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">20+</div>
+                        <div class="stat-label">Projects Shipped</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">15+</div>
+                        <div class="stat-label">Enterprise Clients</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">4</div>
+                        <div class="stat-label">AI · ERP · Mobile · Web</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+
+    <!-- ABOUT -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title fade-in">About Me</h2>
-            <div class="about-content fade-in">
-                <div>
+            <div class="about-grid fade-in">
+                <div class="about-image-wrap">
                     <img src="profile.jpeg" alt="Naufal Nabila" class="profile-img">
                 </div>
-                <div class="about-text">
-                    <p>I'm a passionate Flutter Developer, Odoo Developer, and AI Automation Specialist. My extensive experience covers mobile application development, ERP solutions, and designing intelligent workflow automations. Having worked with major Indonesian companies including Yamaha Motor Parts Manufacturing, Telkom Sigma, PT Triputra Electric, and many others, I specialize in creating scalable, efficient solutions that drive business growth.</p>
-                    
-                    <p>My expertise spans across Flutter, Dart, Python, Odoo ERP, AI automation platforms like n8n, and various modern development frameworks. I'm proficient in clean architecture patterns, state management techniques, and have successfully delivered projects for manufacturing, telecommunications, automotive, and textile industries.</p>
-                    
-                    <p>I am constantly advancing my skills in AI and process automation, bringing both technical excellence and innovative thinking to every project, ensuring solutions that not only meet current business needs but are also future-ready.</p>
+                <div>
+                    <span class="section-eyebrow">About</span>
+                    <h2 class="section-title">Specialized in turning complex business problems into clean,
+                        intelligent systems.</h2>
+                    <p class="about-lead">I build AI-assisted workflows, ERP solutions, and learning platforms
+                        for education, business, and content systems — with a strong focus on automation,
+                        integration, and measurable outcomes.</p>
+
+                    <div class="about-pillars">
+                        <div class="pillar">
+                            <h4>Who I Am</h4>
+                            <p>An engineer with 5+ years across mobile (Flutter), ERP (Odoo), and AI workflow
+                                automation (n8n + Vertex AI). I bridge product thinking with deep technical
+                                execution.</p>
+                        </div>
+                        <div class="pillar">
+                            <h4>What I Do</h4>
+                            <p>End-to-end AI automation, custom Odoo modules, microservice web platforms with
+                                SvelteKit, and AI-powered learning products with multi-language video pipelines.
+                            </p>
+                        </div>
+                        <div class="pillar">
+                            <h4>Proof of Work</h4>
+                            <p>Trusted by Yamaha Motor Parts, Telkom Sigma, SUCOFINDO, Duniatex Group,
+                                Nusativ, Naska Jala Dewa, and Kripto Syariah Indonesia — across manufacturing,
+                                fintech, telecom, and EdTech.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="awards" id="awards">
+    <!-- FEATURED PROJECTS -->
+    <section class="projects" id="projects">
         <div class="container">
-            <h2 class="section-title fade-in">Awards & Recognition</h2>
-            <div class="awards-content fade-in">
-                <div class="award-card">
-                    <span class="award-icon">🏆</span>
-                    <div class="award-title">Best Developer of The Year</div>
-                    <div class="award-title">Best Performance 2024</div>
-                    <div class="award-organization">PT. Arkana Solusi Digital</div>
-                    <div class="award-date">2024</div>
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7288436057010843649/" target="_blank" class="award-link">View Achievement</a>
+            <span class="section-eyebrow fade-in">Featured Work</span>
+            <h2 class="section-title fade-in">Selected projects with real impact.</h2>
+            <p class="section-subtitle fade-in">A curated look at the systems I've architected and shipped — from
+                enterprise risk platforms to AI-powered CRM transformations.</p>
+
+            <div class="featured-grid fade-in">
+
+                <!-- Project 1: Naska Jala Dewa CRM -->
+                <article class="featured-card" style="--card-accent: linear-gradient(180deg, #E23B26, #F5A623);">
+                    <div class="featured-side">
+                        <span class="featured-icon">⚡</span>
+                        <div>
+                            <div class="featured-org">PT Naska Jala Dewa</div>
+                            <div class="featured-name">Salesforce-grade CRM Transformation</div>
+                        </div>
+                        <div class="featured-tech">
+                            <span class="tech-badge">n8n</span>
+                            <span class="tech-badge">Vertex AI</span>
+                            <span class="tech-badge">WhatsApp API</span>
+                            <span class="tech-badge">Odoo</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">Docker</span>
+                        </div>
+                    </div>
+                    <div class="featured-body">
+                        <div class="featured-block">
+                            <h5>Problem</h5>
+                            <p>Standard Odoo CRM lacked AI-driven lead intelligence, real-time SLA enforcement,
+                                and executive visibility — leading to missed tickets and slow deal cycles.</p>
+                        </div>
+                        <div class="featured-block">
+                            <h5>Solution</h5>
+                            <p>Built 18+ n8n workflows around Odoo: AI Lead Scoring engine, 3-tier SLA
+                                escalation, WhatsApp Executive Dashboard, CSAT survey automation, and a custom
+                                AP Portal for invoice ingestion.</p>
+                        </div>
+                        <div class="featured-block impact">
+                            <h5>Impact</h5>
+                            <p><strong>Zero missed tickets</strong> via tiered escalation, <strong>real-time
+                                    deal visibility</strong> on WhatsApp, and dual-mode AI agent "Aina"
+                                handling helpdesk autonomously.</p>
+                        </div>
+                        <a href="#contact" class="featured-link">Discuss a similar build</a>
+                    </div>
+                </article>
+
+                <!-- Project 2: CryptoSharia -->
+                <article class="featured-card" style="--card-accent: linear-gradient(180deg, #f7d046, #00d4ff);">
+                    <div class="featured-side">
+                        <span class="featured-icon">🕌</span>
+                        <div>
+                            <div class="featured-org">PT Kripto Syariah Indonesia</div>
+                            <div class="featured-name">CryptoSharia — Microservice Ecosystem</div>
+                        </div>
+                        <div class="featured-tech">
+                            <span class="tech-badge">SvelteKit</span>
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Tailwind 4</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">Drizzle ORM</span>
+                            <span class="tech-badge">OpenAPI 3.1</span>
+                        </div>
+                    </div>
+                    <div class="featured-body">
+                        <div class="featured-block">
+                            <h5>Problem</h5>
+                            <p>Indonesia lacked a credible Sharia-compliant crypto education platform with both
+                                e-learning depth and a verifiable token screening system.</p>
+                        </div>
+                        <div class="featured-block">
+                            <h5>Solution</h5>
+                            <p>Architected 6 interconnected SvelteKit services — public site, e-learning
+                                academy, admin CMS with RBAC, REST API with Scalar docs, community portal, and
+                                media viewer. Shared AI foundation rules across repos for consistency.</p>
+                        </div>
+                        <div class="featured-block impact">
+                            <h5>Impact</h5>
+                            <p><strong>Live at cryptosharia.id</strong> with full e-learning, token screening,
+                                certificates, and JWT + Argon2id-secured auth across the entire microservice
+                                stack.</p>
+                        </div>
+                        <a href="https://cryptosharia.id" target="_blank" rel="noopener" class="featured-link">Visit
+                            cryptosharia.id</a>
+                    </div>
+                </article>
+
+                <!-- Project 3: E-Risk Nusativ -->
+                <article class="featured-card" style="--card-accent: linear-gradient(180deg, #00d4ff, #667eea);">
+                    <div class="featured-side">
+                        <span class="featured-icon">🛡️</span>
+                        <div>
+                            <div class="featured-org">PT Nusa Teknologi Inovasi (Nusativ)</div>
+                            <div class="featured-name">E-Risk — Enterprise Risk Management</div>
+                        </div>
+                        <div class="featured-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Odoo 16</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">REST API</span>
+                            <span class="tech-badge">SSO</span>
+                        </div>
+                    </div>
+                    <div class="featured-body">
+                        <div class="featured-block">
+                            <h5>Problem</h5>
+                            <p>Enterprise risk processes were fragmented across spreadsheets and disconnected
+                                tools, with no real-time visibility into KPIs, treatments, or impact
+                                assessments.</p>
+                        </div>
+                        <div class="featured-block">
+                            <h5>Solution</h5>
+                            <p>Designed 30+ custom Odoo 16 modules — risk registers, interactive dashboards,
+                                KPI tracking, impact assessments, treatment realization, tier validation, SSO,
+                                and a public REST API.</p>
+                        </div>
+                        <div class="featured-block impact">
+                            <h5>Impact</h5>
+                            <p><strong>Single source of truth</strong> for enterprise risk, with approval
+                                workflows, dark mode theming, and seamless integration into the Nusativ
+                                platform.</p>
+                        </div>
+                        <a href="https://nusativ.id" target="_blank" rel="noopener" class="featured-link">Visit
+                            nusativ.id</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Other notable products -->
+            <div class="other-projects fade-in">
+                <h3>Other notable products</h3>
+                <div class="other-grid">
+                    <div class="other-card">
+                        <div class="other-card-name">Kelas AI — Pembelajar Belajar</div>
+                        <div class="other-card-desc">AI-powered e-learning with multi-language video generation
+                            (ID/EN/AR/MS) and dynamic domain branding.</div>
+                    </div>
+                    <div class="other-card">
+                        <div class="other-card-name">QurbanPlus</div>
+                        <div class="other-card-desc">Flutter app for end-to-end qurban journey: animal booking,
+                            customer data, transparency tracking.</div>
+                    </div>
+                    <div class="other-card">
+                        <div class="other-card-name">Ramadhan Series Platform</div>
+                        <div class="other-card-desc">Dedicated video distribution platform built on top of the
+                            Pembelajar Belajar AI pipeline.</div>
+                    </div>
+                    <div class="other-card">
+                        <div class="other-card-name">Akademik SMA FG Putri FDS</div>
+                        <div class="other-card-desc">Academic information system for student data, scheduling,
+                            and reporting with n8n workflow automation.</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title fade-in">Skills & Technologies</h2>
-            <div class="skills-grid fade-in">
-                <div class="skill-category">
-                    <h3>Mobile Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Flutter</span>
-                        <span class="skill-tag">Dart</span>
-                        <span class="skill-tag">Android</span>
-                        <span class="skill-tag">iOS</span>
-                        <span class="skill-tag">Cross-platform</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>ERP & Backend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Odoo</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">XML</span>
-                        <span class="skill-tag">API Integration</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>AI & Automation</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AI Integration</span>
-                        <span class="skill-tag">Workflow Automation</span>
-                        <span class="skill-tag">n8n</span>
-                        <span class="skill-tag">Process Optimization</span>
-                        <span class="skill-tag">API Integration</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Development Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">CI/CD</span>
-                        <span class="skill-tag">Testing</span>
-                        <span class="skill-tag">QA</span>
-                        <span class="skill-tag">Figma</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- CLIENTS -->
     <section class="clients" id="clients">
         <div class="container">
-            <h2 class="section-title fade-in">Client Projects</h2>
-            <div class="clients-intro fade-in">
-                <p>I've had the privilege of working with leading Indonesian companies, delivering robust Odoo ERP solutions, Flutter applications, and AI-driven automation across various industries including manufacturing, automotive, telecommunications, and textiles.</p>
-            </div>
-            <div class="clients-grid fade-in">
-                <div class="client-card" style="--delay: 1;">
-                    <div class="client-name">PT Yamaha Motor Parts Manufacturing Indonesia</div>
-                    <div class="client-industry">Automotive Manufacturing</div>
-                    <div class="client-description">Delivered comprehensive Odoo ERP solutions for manufacturing operations, inventory management, and quality control processes for one of Indonesia's leading automotive parts manufacturers.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 2;">
-                    <div class="client-name">Telkom Sigma</div>
-                    <div class="client-industry">Telecommunications</div>
-                    <div class="client-description">Implemented advanced Odoo systems for telecommunications infrastructure management, customer relationship management, and business process optimization.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 3;">
-                    <div class="client-name">PT Triputra Electric Abadi</div>
-                    <div class="client-industry">Electrical Manufacturing</div>
-                    <div class="client-description">Developed custom Odoo modules for electrical component manufacturing, supply chain management, and financial integration systems.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 4;">
-                    <div class="client-name">PT SUCOFINDO</div>
-                    <div class="client-industry">Inspection & Certification</div>
-                    <div class="client-description">Created specialized Odoo applications for inspection processes, certification management, and compliance tracking for Indonesia's leading inspection company.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 5;">
-                    <div class="client-name">PT Kawat Enamel Indonesia</div>
-                    <div class="client-industry">Wire Manufacturing</div>
-                    <div class="client-description">Implemented Odoo ERP for wire manufacturing processes, quality control, and production planning optimization.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 6;">
-                    <div class="client-name">Pennyu Group</div>
-                    <div class="client-industry">Conglomerate</div>
-                    <div class="client-description">Developed multi-company Odoo solutions with integrated financial reporting and business intelligence dashboards.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 7;">
-                    <div class="client-name">PT Kartika Bina Medikatama</div>
-                    <div class="client-industry">Healthcare</div>
-                    <div class="client-description">Created healthcare management systems using Odoo for patient records, medical inventory, and appointment scheduling.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 8;">
-                    <div class="client-name">Margaria Group</div>
-                    <div class="client-industry">Trading & Distribution</div>
-                    <div class="client-description">Built comprehensive trading and distribution management systems with advanced inventory tracking and sales analytics.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 9;">
-                    <div class="client-name">PT Asia Bandar Alam</div>
-                    <div class="client-industry">Logistics</div>
-                    <div class="client-description">Developed logistics and warehousing solutions with real-time tracking and automated reporting capabilities.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 10;">
-                    <div class="client-name">PT NOK Indonesia</div>
-                    <div class="client-industry">Automotive Parts</div>
-                    <div class="client-description">Implemented manufacturing execution systems and quality management processes for automotive component production.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 12;">
-                    <div class="client-name">PT Sun Star Prima Motor</div>
-                    <div class="client-industry">Automotive</div>
-                    <div class="client-description">Developed dealership management systems with inventory control, sales tracking, and customer relationship management.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 13;">
-                    <div class="client-name">PT Autocomp System Indonesia</div>
-                    <div class="client-industry">Automotive Components</div>
-                    <div class="client-description">Built production planning and quality assurance systems for automotive component manufacturing processes.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 14;">
-                    <div class="client-name">PT Citra Busana Indonesia</div>
-                    <div class="client-industry">Textile & Garment</div>
-                    <div class="client-description">Implemented textile manufacturing management systems with production scheduling and order tracking capabilities.</div>
-                </div>
-                
-                <div class="client-card" style="--delay: 15;">
-                    <div class="client-name">Duniatex Group</div>
-                    <div class="client-industry">Textile Manufacturing</div>
-                    <div class="client-description">Created comprehensive textile production management systems with supply chain integration and quality control modules.</div>
-                </div>
+            <span class="section-eyebrow fade-in">Selected Clients</span>
+            <h2 class="section-title fade-in">Trusted by enterprises across Indonesia.</h2>
+            <p class="section-subtitle fade-in">A focused selection of organizations I've delivered ERP, mobile,
+                and AI automation solutions for — across manufacturing, fintech, telecom, and EdTech.</p>
 
-                <div class="client-card" style="--delay: 16;">
-                    <div class="client-name">CryptoSharia.id</div>
-                    <div class="client-industry">Fintech / Automation</div>
-                    <div class="client-description">Implemented complex automated workflows using n8n to integrate Whatsapp, database and Discord.</div>
+            <div class="clients-grid fade-in">
+                <div class="client-card">
+                    <div class="client-industry">Automotive Manufacturing</div>
+                    <div class="client-name">Yamaha Motor Parts Manufacturing Indonesia</div>
+                    <div class="client-desc">Comprehensive Odoo ERP for manufacturing operations, inventory
+                        management, and quality control.</div>
                 </div>
-                
-                <div class="client-card" style="--delay: 17;">
+                <div class="client-card">
+                    <div class="client-industry">Telecommunications</div>
+                    <div class="client-name">Telkom Sigma</div>
+                    <div class="client-desc">Advanced Odoo systems for infrastructure management, CRM, and
+                        business process optimization.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Inspection &amp; Certification</div>
+                    <div class="client-name">PT SUCOFINDO</div>
+                    <div class="client-desc">Specialized Odoo applications for inspection processes,
+                        certification management, and compliance tracking.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Fintech / EdTech</div>
+                    <div class="client-name">PT Kripto Syariah Indonesia</div>
+                    <div class="client-desc">6-app SvelteKit microservice ecosystem with academy, admin CMS, REST
+                        API, portal, and media viewer.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Enterprise Risk Management</div>
+                    <div class="client-name">PT Nusa Teknologi Inovasi</div>
+                    <div class="client-desc">E-Risk system on Odoo 16 with 30+ modules for risk registers, KPI,
+                        SSO, and tier validation workflows.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">CRM &amp; AI Automation</div>
+                    <div class="client-name">PT Naska Jala Dewa</div>
+                    <div class="client-desc">Salesforce-level Odoo CRM transformation with 18+ n8n automations,
+                        AI lead scoring, and WhatsApp dashboards.</div>
+                </div>
+            </div>
+
+            <div class="clients-more fade-in">
+                <p>
+                    <strong>+ 14 additional client engagements</strong> across Duniatex Group, Margaria Group,
+                    Pennyu Group, Triputra Electric, NOK Indonesia, Sun Star Prima Motor, Kawat Enamel, Citra
+                    Busana, and others — spanning automotive, textile, healthcare, logistics, and EdTech.
+                </p>
+                <button class="cert-toggle" onclick="toggleClients()" id="clients-toggle-btn" aria-expanded="false"
+                    aria-controls="clients-extra">
+                    <span id="clients-toggle-text">View all 14 clients</span>
+                    <span id="clients-toggle-arrow">↓</span>
+                </button>
+            </div>
+
+            <div class="clients-grid clients-extra" id="clients-extra" hidden>
+                <div class="client-card">
+                    <div class="client-industry">Electrical Manufacturing</div>
+                    <div class="client-name">PT Triputra Electric Abadi</div>
+                    <div class="client-desc">Custom Odoo modules for electrical component manufacturing,
+                        supply chain, and financial integration.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Wire Manufacturing</div>
+                    <div class="client-name">PT Kawat Enamel Indonesia</div>
+                    <div class="client-desc">Odoo ERP for wire manufacturing processes, quality control, and
+                        production planning optimization.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Conglomerate</div>
+                    <div class="client-name">Pennyu Group</div>
+                    <div class="client-desc">Multi-company Odoo solutions with integrated financial reporting
+                        and business intelligence dashboards.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Healthcare</div>
+                    <div class="client-name">PT Kartika Bina Medikatama</div>
+                    <div class="client-desc">Healthcare management on Odoo for patient records, medical
+                        inventory, and appointment scheduling.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Trading &amp; Distribution</div>
+                    <div class="client-name">Margaria Group</div>
+                    <div class="client-desc">Trading and distribution management with advanced inventory
+                        tracking and sales analytics.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Logistics</div>
+                    <div class="client-name">PT Asia Bandar Alam</div>
+                    <div class="client-desc">Logistics and warehousing solutions with real-time tracking and
+                        automated reporting capabilities.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Automotive Parts</div>
+                    <div class="client-name">PT NOK Indonesia</div>
+                    <div class="client-desc">Manufacturing execution and quality management systems for
+                        automotive component production.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Automotive</div>
+                    <div class="client-name">PT Sun Star Prima Motor</div>
+                    <div class="client-desc">Dealership management with inventory control, sales tracking, and
+                        CRM workflows.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Automotive Components</div>
+                    <div class="client-name">PT Autocomp System Indonesia</div>
+                    <div class="client-desc">Production planning and quality assurance systems for automotive
+                        component manufacturing.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Textile &amp; Garment</div>
+                    <div class="client-name">PT Citra Busana Indonesia</div>
+                    <div class="client-desc">Textile manufacturing management with production scheduling and
+                        order tracking capabilities.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">Textile Manufacturing</div>
+                    <div class="client-name">Duniatex Group</div>
+                    <div class="client-desc">Textile production management with supply chain integration and
+                        quality control modules.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">EdTech / AI Content</div>
+                    <div class="client-name">Pembelajar Belajar</div>
+                    <div class="client-desc">AI-powered e-learning platform with multi-language video
+                        generation (ID/EN/AR/MS) and dynamic domain branding.</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-industry">SaaS</div>
                     <div class="client-name">Abatapps.online</div>
-                    <div class="client-industry">Software as a Service (SaaS)</div>
-                    <div class="client-description">Developed and deployed scalable online applications, focusing on robust backend automation (including n8n) and seamless user experience.</div>
+                    <div class="client-desc">Scalable online applications with robust backend automation
+                        (n8n) and seamless user experience.</div>
                 </div>
-                
-                <div class="client-card" style="--delay: 18;">
-                    <div class="client-name">Akademik SMA FG Putri FDS</div>
+                <div class="client-card">
                     <div class="client-industry">Education (EdTech)</div>
-                    <div class="client-description">Built a comprehensive academic information system to manage student data, scheduling, and reporting, featuring n8n workflow automation.</div>
+                    <div class="client-name">Akademik SMA FG Putri FDS</div>
+                    <div class="client-desc">Academic information system for student data, scheduling, and
+                        reporting with n8n workflow automation.</div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SKILLS -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <span class="section-eyebrow fade-in">Capabilities</span>
+            <h2 class="section-title fade-in">Skills grouped by what I actually deliver.</h2>
+            <p class="section-subtitle fade-in">Not a tools dump — these are the four areas where I ship
+                production work for clients today.</p>
+
+            <div class="skills-grid fade-in">
+                <div class="skill-group">
+                    <span class="skill-group-icon">🤖</span>
+                    <h3>AI &amp; Automation</h3>
+                    <p class="skill-group-sub">Workflow automation, AI agents, and intelligent integrations.</p>
+                    <div class="skill-list">
+                        <span class="skill-pill">n8n</span>
+                        <span class="skill-pill">Google Vertex AI</span>
+                        <span class="skill-pill">AI Agents</span>
+                        <span class="skill-pill">WhatsApp API (WAHA)</span>
+                        <span class="skill-pill">Workflow Automation</span>
+                        <span class="skill-pill">Process Optimization</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <span class="skill-group-icon">🏢</span>
+                    <h3>ERP &amp; Backend</h3>
+                    <p class="skill-group-sub">Custom modules, integrations, and enterprise data systems.</p>
+                    <div class="skill-list">
+                        <span class="skill-pill">Odoo 16</span>
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">PostgreSQL</span>
+                        <span class="skill-pill">REST API</span>
+                        <span class="skill-pill">OpenAPI 3.1</span>
+                        <span class="skill-pill">Risk Management</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <span class="skill-group-icon">🌐</span>
+                    <h3>Web &amp; Product</h3>
+                    <p class="skill-group-sub">Modern microservice apps, dashboards, and learning platforms.</p>
+                    <div class="skill-list">
+                        <span class="skill-pill">SvelteKit</span>
+                        <span class="skill-pill">Svelte 5</span>
+                        <span class="skill-pill">TypeScript</span>
+                        <span class="skill-pill">Tailwind CSS</span>
+                        <span class="skill-pill">Drizzle ORM</span>
+                        <span class="skill-pill">PHP</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <span class="skill-group-icon">📱</span>
+                    <h3>Mobile Development</h3>
+                    <p class="skill-group-sub">Cross-platform apps for production at scale.</p>
+                    <div class="skill-list">
+                        <span class="skill-pill">Flutter</span>
+                        <span class="skill-pill">Dart</span>
+                        <span class="skill-pill">SOLID Architecture</span>
+                        <span class="skill-pill">CI/CD</span>
+                        <span class="skill-pill">App Store / Play Store</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
     <section class="experience" id="experience">
         <div class="container">
-            <h2 class="section-title fade-in">Professional Experience</h2>
+            <span class="section-eyebrow fade-in">Career</span>
+            <h2 class="section-title fade-in">Professional experience.</h2>
+            <p class="section-subtitle fade-in">Where I've worked, what I built, and the impact delivered.</p>
+
             <div class="timeline fade-in">
                 <div class="timeline-item">
-                    <div class="timeline-date">January 2023 - Present</div>
-                    <div class="timeline-title">Flutter & Odoo Developer - PT. Arkana Solusi Digital</div>
-                    <div class="timeline-desc">
-                        <ul>
-                            <li>Developed Agriculture and HR applications using Flutter and Dart</li>
-                            <li>Integrated Odoo ERP system with Python, XML, and PostgreSQL</li>
-                            <li>Collaborated with cross-functional teams to deliver business solutions</li>
-                            <li>Worked with 15+ major clients including PT Yamaha Motor Parts Manufacturing, Telkom Sigma, PT Triputra Electric, and others</li>
-                            <li>Delivered custom ERP modules for manufacturing, automotive, telecommunications, and textile industries</li>
-                        </ul>
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Nov 2025 — Present</span>
+                        <span class="timeline-role">AI Automation Expert</span>
                     </div>
+                    <div class="timeline-company">PT Naska Jala Dewa</div>
+                    <p class="timeline-impact">Transformed standard Odoo CRM into a Salesforce-grade
+                        enterprise system with 18+ n8n workflows. Engineered an AI Lead Scoring engine on
+                        Vertex AI, a 3-tier SLA escalation system, real-time WhatsApp Executive Dashboard,
+                        CSAT automation, and a custom PHP/Docker AP Portal. <strong>Result: zero missed
+                            tickets and end-to-end deal visibility.</strong></p>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-date">November 2024 - Present</div>
-                    <div class="timeline-title">Flutter Developer - QurbanPlus</div>
-                    <div class="timeline-desc">
-                        <ul>
-                            <li>Maintained Flutter application for qurban process management</li>
-                            <li>Implemented animal booking and customer data management features</li>
-                            <li>Enhanced operational efficiency and transparency throughout the qurban journey</li>
-                        </ul>
+                    <div class="timeline-meta">
+                        <span class="timeline-date">2025 — Present</span>
+                        <span class="timeline-role">Freelance AI &amp; Web Architect</span>
                     </div>
+                    <div class="timeline-company">Independent</div>
+                    <p class="timeline-impact">Architected the CryptoSharia microservice ecosystem (6
+                        SvelteKit apps) for PT Kripto Syariah Indonesia, built E-Risk on Odoo 16 with 30+
+                        custom modules for Nusativ, and developed Kelas AI — an AI-powered e-learning
+                        platform with multi-language video generation. <strong>Result: three production
+                            platforms now serving live users.</strong></p>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-date">July 2024 - December 2024</div>
-                    <div class="timeline-title">Flutter Developer - CV Codespace Indonesia</div>
-                    <div class="timeline-desc">
-                        <ul>
-                            <li>Developed and maintained FnB applications using Flutter and Dart</li>
-                            <li>Implemented CI/CD practices and quality assurance processes</li>
-                            <li>Collaborated with backend developers and UI designers</li>
-                        </ul>
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Jan 2023 — Oct 2025</span>
+                        <span class="timeline-role">Flutter &amp; Odoo Developer</span>
                     </div>
+                    <div class="timeline-company">PT Arkana Solusi Digital</div>
+                    <p class="timeline-impact">Delivered Agriculture and HR Flutter apps and integrated Odoo
+                        ERP solutions across 15+ enterprise clients including Yamaha Motor Parts, Telkom
+                        Sigma, SUCOFINDO, Duniatex, and Triputra Electric. <strong>Result: custom ERP
+                            modules powering manufacturing, automotive, telecom, and textile
+                            operations.</strong></p>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-date">May 2022 - December 2022</div>
-                    <div class="timeline-title">Flutter Developer - Universitas Terbuka</div>
-                    <div class="timeline-desc">
-                        <ul>
-                            <li>Developed student and radio applications for mobile platforms</li>
-                            <li>Conducted testing, quality assurance, and bug fixes</li>
-                            <li>Published applications to App Store and Play Store</li>
-                        </ul>
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Nov 2024 — Present</span>
+                        <span class="timeline-role">Flutter Developer</span>
                     </div>
+                    <div class="timeline-company">QurbanPlus</div>
+                    <p class="timeline-impact">Maintained the Flutter app for end-to-end qurban management
+                        — animal booking, customer data, and transparent journey tracking. <strong>Result:
+                            improved operational efficiency and trust during the qurban season.</strong>
+                    </p>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-date">October 2020 - May 2022</div>
-                    <div class="timeline-title">Mobile Developer - PT. Bintang Pelajar</div>
-                    <div class="timeline-desc">
-                        <ul>
-                            <li>Developed HR application and student application using Flutter</li>
-                            <li>Collaborated with backend developers and UI designers</li>
-                            <li>Communicated with stakeholders to align development with business goals</li>
-                        </ul>
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Jul 2024 — Dec 2024</span>
+                        <span class="timeline-role">Flutter Developer</span>
                     </div>
+                    <div class="timeline-company">CV Codespace Indonesia</div>
+                    <p class="timeline-impact">Built and maintained F&amp;B Flutter applications with
+                        established CI/CD and QA practices. Worked alongside backend engineers and UI
+                        designers to ship reliable releases.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">May 2022 — Dec 2022</span>
+                        <span class="timeline-role">Flutter Developer</span>
+                    </div>
+                    <div class="timeline-company">Universitas Terbuka</div>
+                    <p class="timeline-impact">Shipped student and radio mobile apps to App Store and Play
+                        Store with full QA and bug-fix cycles.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Oct 2020 — May 2022</span>
+                        <span class="timeline-role">Mobile Developer</span>
+                    </div>
+                    <div class="timeline-company">PT Bintang Pelajar</div>
+                    <p class="timeline-impact">Developed HR and student Flutter applications, working
+                        directly with stakeholders to align development with business goals.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="certifications" id="certifications">
+    <!-- AWARDS & CERTIFICATIONS -->
+    <section id="credentials">
         <div class="container">
-            <h2 class="section-title fade-in">Certifications</h2>
-            <div class="certifications-grid fade-in">
-                <div class="cert-card">
-                    <div class="cert-title">Certificate of Excellence: Solidity</div>
-                    <div class="cert-org">Programming Hub</div>
-                    <div class="cert-date">February 14, 2025</div>
-                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1739543460286/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
+            <span class="section-eyebrow fade-in">Recognition &amp; Credentials</span>
+            <h2 class="section-title fade-in">Awards and certifications.</h2>
+            <p class="section-subtitle fade-in">Selected recognition and the credentials most relevant to my
+                current work in AI, ERP, and modern web development.</p>
+
+            <div class="credentials-grid fade-in">
+                <div class="award-card">
+                    <span class="award-icon">🏆</span>
+                    <div class="award-label">Award · 2024</div>
+                    <div class="award-title">Best Developer of The Year &amp; Best Performance 2024</div>
+                    <div class="award-org">PT Arkana Solusi Digital</div>
+                    <p class="award-context">Recognized for outstanding delivery across 15+ enterprise ERP and
+                        Flutter projects, including custom Odoo modules for manufacturing, automotive, and
+                        telecom clients.</p>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7288436057010843649/" target="_blank"
+                        rel="noopener" class="award-link">View achievement</a>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-title">Certificate of Excellence: Blockchain</div>
-                    <div class="cert-org">Programming Hub</div>
-                    <div class="cert-date">February 7, 2025</div>
-                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1738895772737/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">Make Your Own Cryptocurrency</div>
-                    <div class="cert-org">Programming Hub</div>
-                    <div class="cert-date">January 2025</div>
-                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1746685435014/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">Certificate of Excellence: Python 3</div>
-                    <div class="cert-org">Programming Hub</div>
-                    <div class="cert-date">February 25, 2025</div>
-                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/overlay/1740495319541/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">React UI Development</div>
-                    <div class="cert-org">Professional Training</div>
-                    <div class="cert-date">November 2024</div>
-                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1732072734653/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">Odoo Functional Training</div>
-                    <div class="cert-org">Odoo Official Training</div>
-                    <div class="cert-date">May 2024</div>
-                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1716352092670/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">Odoo Development Training</div>
-                    <div class="cert-org">Odoo Official Training</div>
-                    <div class="cert-date">October 2021</div>
-                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1635515318416/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">SOLID Principle in Flutter</div>
-                    <div class="cert-org">Dicoding Indonesia</div>
-                    <div class="cert-date">September 7, 2023</div>
-                    <a href="https://www.dicoding.com/certificates/L4PQ8MVQ2ZO1" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">Dart Programming Language</div>
-                    <div class="cert-org">Dicoding Indonesia</div>
-                    <div class="cert-date">2023</div>
-                    <a href="https://www.dicoding.com/certificates/QLZ9Q6KD7Z5D" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">Flutter Development</div>
-                    <div class="cert-org">Dicoding Indonesia</div>
-                    <div class="cert-date">2023</div>
-                    <a href="https://www.dicoding.com/certificates/98XWV3O2JPM3" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">Flutter & Dart Development</div>
-                    <div class="cert-org">Udemy</div>
-                    <div class="cert-date">2023</div>
-                    <a href="https://www.udemy.com/certificate/UC-c036a891-a2a5-47a8-acfd-9a0fe894f040/" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">Junior Web Programmer</div>
-                    <div class="cert-org">BNSP</div>
-                    <div class="cert-date">August 14, 2017</div>
-                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1518017705241/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">TOEFL English Proficiency</div>
-                    <div class="cert-org">Language Testing Institute</div>
-                    <div class="cert-date">2021</div>
-                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1635550996159/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">Junior Office Operator</div>
-                    <div class="cert-org">BNSP</div>
-                    <div class="cert-date">May 29, 2019</div>
-                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1635550995242/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g" target="_blank" class="cert-link">View Certificate</a>
+
+                <div>
+                    <div class="cert-list" id="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-info">
+                                <div class="cert-name">Odoo Functional Training</div>
+                                <div class="cert-meta">Odoo Official<span class="dot">·</span>May 2024</div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1716352092670/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
+                                target="_blank" rel="noopener" class="cert-link">View →</a>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-info">
+                                <div class="cert-name">Odoo Development Training</div>
+                                <div class="cert-meta">Odoo Official<span class="dot">·</span>Oct 2021</div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1635515318416/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
+                                target="_blank" rel="noopener" class="cert-link">View →</a>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-info">
+                                <div class="cert-name">Certificate of Excellence: Python 3</div>
+                                <div class="cert-meta">Programming Hub<span class="dot">·</span>Feb 2025</div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/overlay/1740495319541/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
+                                target="_blank" rel="noopener" class="cert-link">View →</a>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-info">
+                                <div class="cert-name">SOLID Principle in Flutter</div>
+                                <div class="cert-meta">Dicoding Indonesia<span class="dot">·</span>Sep 2023
+                                </div>
+                            </div>
+                            <a href="https://www.dicoding.com/certificates/L4PQ8MVQ2ZO1" target="_blank" rel="noopener"
+                                class="cert-link">View →</a>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-info">
+                                <div class="cert-name">Flutter Development</div>
+                                <div class="cert-meta">Dicoding Indonesia<span class="dot">·</span>2023</div>
+                            </div>
+                            <a href="https://www.dicoding.com/certificates/98XWV3O2JPM3" target="_blank" rel="noopener"
+                                class="cert-link">View →</a>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-info">
+                                <div class="cert-name">React UI Development</div>
+                                <div class="cert-meta">Professional Training<span class="dot">·</span>Nov 2024
+                                </div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1732072734653/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
+                                target="_blank" rel="noopener" class="cert-link">View →</a>
+                        </div>
+
+                        <div class="cert-extra" id="cert-extra">
+                            <div class="cert-item">
+                                <div class="cert-info">
+                                    <div class="cert-name">Certificate of Excellence: Solidity</div>
+                                    <div class="cert-meta">Programming Hub<span class="dot">·</span>Feb 2025
+                                    </div>
+                                </div>
+                                <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1739543460286/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
+                                    target="_blank" rel="noopener" class="cert-link">View →</a>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-info">
+                                    <div class="cert-name">Certificate of Excellence: Blockchain</div>
+                                    <div class="cert-meta">Programming Hub<span class="dot">·</span>Feb 2025
+                                    </div>
+                                </div>
+                                <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1738895772737/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
+                                    target="_blank" rel="noopener" class="cert-link">View →</a>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-info">
+                                    <div class="cert-name">Make Your Own Cryptocurrency</div>
+                                    <div class="cert-meta">Programming Hub<span class="dot">·</span>Jan 2025
+                                    </div>
+                                </div>
+                                <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1746685435014/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
+                                    target="_blank" rel="noopener" class="cert-link">View →</a>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-info">
+                                    <div class="cert-name">Dart Programming Language</div>
+                                    <div class="cert-meta">Dicoding Indonesia<span class="dot">·</span>2023
+                                    </div>
+                                </div>
+                                <a href="https://www.dicoding.com/certificates/QLZ9Q6KD7Z5D" target="_blank"
+                                    rel="noopener" class="cert-link">View →</a>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-info">
+                                    <div class="cert-name">Flutter &amp; Dart Development</div>
+                                    <div class="cert-meta">Udemy<span class="dot">·</span>2023</div>
+                                </div>
+                                <a href="https://www.udemy.com/certificate/UC-c036a891-a2a5-47a8-acfd-9a0fe894f040/"
+                                    target="_blank" rel="noopener" class="cert-link">View →</a>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-info">
+                                    <div class="cert-name">Junior Web Programmer</div>
+                                    <div class="cert-meta">BNSP<span class="dot">·</span>Aug 2017</div>
+                                </div>
+                                <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1518017705241/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
+                                    target="_blank" rel="noopener" class="cert-link">View →</a>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-info">
+                                    <div class="cert-name">TOEFL English Proficiency</div>
+                                    <div class="cert-meta">Language Testing Institute<span class="dot">·</span>2021
+                                    </div>
+                                </div>
+                                <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1635550996159/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
+                                    target="_blank" rel="noopener" class="cert-link">View →</a>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-info">
+                                    <div class="cert-name">Junior Office Operator</div>
+                                    <div class="cert-meta">BNSP<span class="dot">·</span>May 2019</div>
+                                </div>
+                                <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1635550995242/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
+                                    target="_blank" rel="noopener" class="cert-link">View →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cert-toggle" onclick="toggleCerts()" id="cert-toggle-btn">
+                        <span id="cert-toggle-text">View all certifications</span>
+                        <span id="cert-toggle-arrow">↓</span>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title fade-in">Get In Touch</h2>
-            <div class="contact-content fade-in">
-                <p>I'm always open to discussing new opportunities and interesting projects. Let's connect and create something amazing together!</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <div>Email</div>
-                            <div>naufal.nabila.2008@gmail.com</div>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <div>Phone</div>
-                            <div>+62-823-2859-1004</div>
-                        </div>
-                    </div>
+            <div class="contact-wrap fade-in">
+                <div>
+                    <span class="section-eyebrow">Let's talk</span>
+                    <h2>Interested in building an AI-powered learning platform, ERP system, or automation
+                        workflow?</h2>
+                    <p>Tell me about your project and the problem you're trying to solve. I respond fastest
+                        on WhatsApp — usually within a few hours during business days.</p>
+                </div>
+                <div class="contact-actions">
+                    <a href="https://wa.me/6282328591004" target="_blank" rel="noopener" class="contact-action primary">
+                        <span class="contact-action-icon">💬</span>
+                        <span class="contact-action-text">
+                            <span class="contact-action-label">WhatsApp · fastest reply</span>
+                            <span class="contact-action-value">+62 823-2859-1004</span>
+                        </span>
+                    </a>
+                    <a href="mailto:naufal.nabila.2008@gmail.com" class="contact-action">
+                        <span class="contact-action-icon">📧</span>
+                        <span class="contact-action-text">
+                            <span class="contact-action-label">Email</span>
+                            <span class="contact-action-value">naufal.nabila.2008@gmail.com</span>
+                        </span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/" target="_blank" rel="noopener"
+                        class="contact-action">
+                        <span class="contact-action-icon">in</span>
+                        <span class="contact-action-text">
+                            <span class="contact-action-label">LinkedIn</span>
+                            <span class="contact-action-value">@naufal-nabila</span>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1451,196 +1959,86 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Naufal Nabila. All rights reserved. Built with passion and code.</p>
+            <p>© 2025 Naufal Nabila · Built with care, code, and a lot of automation.</p>
         </div>
     </footer>
 
     <script>
-        // Theme toggle functionality
+        // Theme toggle
         function toggleTheme() {
             const body = document.body;
             const themeIcon = document.getElementById('theme-icon');
             const themeText = document.getElementById('theme-text');
-            
             body.classList.toggle('light-mode');
-            
-            if (body.classList.contains('light-mode')) {
-                themeIcon.textContent = '🌙';
-                themeText.textContent = 'Dark';
-            } else {
-                themeIcon.textContent = '☀️';
-                themeText.textContent = 'Light';
-            }
+            const isLight = body.classList.contains('light-mode');
+            themeIcon.textContent = isLight ? '🌙' : '☀️';
+            themeText.textContent = isLight ? 'Dark' : 'Light';
+            try {
+                localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            } catch (e) { }
         }
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        // Restore theme
+        try {
+            if (localStorage.getItem('theme') === 'light') {
+                document.body.classList.add('light-mode');
+                document.getElementById('theme-icon').textContent = '🌙';
+                document.getElementById('theme-text').textContent = 'Dark';
+            }
+        } catch (e) { }
 
         // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            if (window.scrollY > 20) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
         });
 
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        // Fade in on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Create floating particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 50;
+        // Make hero visible immediately
+        document.querySelectorAll('.hero .fade-in, .hero-content').forEach(el => el.classList.add('visible'));
 
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Random size and position
-                const size = Math.random() * 4 + 2;
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                
-                particlesContainer.appendChild(particle);
-            }
+        // Certifications toggle
+        function toggleCerts() {
+            const extra = document.getElementById('cert-extra');
+            const text = document.getElementById('cert-toggle-text');
+            const arrow = document.getElementById('cert-toggle-arrow');
+            const isOpen = extra.classList.toggle('open');
+            text.textContent = isOpen ? 'Show less' : 'View all certifications';
+            arrow.textContent = isOpen ? '↑' : '↓';
         }
 
-        // Initialize particles
-        createParticles();
-
-        // Add typing effect to hero title
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Initialize typing effect after page loads
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const heroTitle = document.querySelector('.hero h1');
-                typeWriter(heroTitle, 'Naufal Nabila', 150);
-            }, 1000);
-        });
-
-        // Add hover effects to timeline items
-        document.querySelectorAll('.timeline-item').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(15px) scale(1.02)';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateX(10px) scale(1)';
-            });
-        });
-
-        // Add click effects to skill tags
-        document.querySelectorAll('.skill-tag').forEach(tag => {
-            tag.addEventListener('click', function() {
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 150);
-            });
-        });
-
-        // Add floating animation to certification cards
-        document.querySelectorAll('.cert-card').forEach((card, index) => {
-            card.style.animationDelay = index * 0.2 + 's';
-            card.style.animation = 'float 6s ease-in-out infinite';
-        });
-
-        // Progressive loading effect for sections
-        const sections = document.querySelectorAll('section');
-        let currentSection = 0;
-
-        function loadNextSection() {
-            if (currentSection < sections.length) {
-                sections[currentSection].style.opacity = '1';
-                sections[currentSection].style.transform = 'translateY(0)';
-                currentSection++;
-                setTimeout(loadNextSection, 200);
+        // Clients toggle
+        function toggleClients() {
+            const extra = document.getElementById('clients-extra');
+            const btn = document.getElementById('clients-toggle-btn');
+            const text = document.getElementById('clients-toggle-text');
+            const arrow = document.getElementById('clients-toggle-arrow');
+            const isHidden = extra.hasAttribute('hidden');
+            if (isHidden) {
+                extra.removeAttribute('hidden');
+                btn.setAttribute('aria-expanded', 'true');
+                text.textContent = 'Show less';
+                arrow.textContent = '↑';
+            } else {
+                extra.setAttribute('hidden', '');
+                btn.setAttribute('aria-expanded', 'false');
+                text.textContent = 'View all 14 clients';
+                arrow.textContent = '↓';
             }
         }
-
-        // Initialize section loading
-        sections.forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'all 0.6s ease';
-        });
-
-        // Start loading sections after hero animation
-        setTimeout(loadNextSection, 2000);
-
-        // Staggered animation for client cards
-        const clientCards = document.querySelectorAll('.client-card');
-        const clientObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 100);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        clientCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            clientObserver.observe(card);
-        });
-
-        // Add interactive hover effects to client cards
-        clientCards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-15px) scale(1.02) rotateY(5deg)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1) rotateY(0deg)';
-            });
-        });
     </script>
 </body>
+
 </html>
