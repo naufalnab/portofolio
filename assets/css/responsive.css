@@ -31,8 +31,7 @@
     }
 
     .nav-cta {
-        padding: 0.6rem 1.1rem;
-        font-size: 0.95rem;
+        display: none;
     }
 
     .hero-stats {
