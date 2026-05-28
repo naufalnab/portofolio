@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Hero section
+   ========================================================================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 7rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 50% at 20% 30%, rgba(0, 212, 255, 0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 70%, rgba(255, 77, 141, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.light-mode .hero::before {
+    background:
+        radial-gradient(ellipse 60% 50% at 20% 30%, rgba(0, 143, 179, 0.1) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 70%, rgba(214, 54, 114, 0.08) 0%, transparent 60%);
+}
+
+.hero-content {
+    max-width: 920px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    color: var(--accent);
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 1.75rem;
+}
+
+.hero-tag .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #2ecc71;
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+}
+
+.hero h1 {
+    font-size: clamp(2.75rem, 6.5vw, 4.75rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+.hero h1 .accent {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 760px;
+}
+
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-bottom: 4rem;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 760px;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.stat-num {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}

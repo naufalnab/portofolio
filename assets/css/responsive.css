@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Responsive — tablet & mobile breakpoints
+   ========================================================================== */
+
+@media (max-width: 1000px) {
+    .nav-links {
+        gap: 1.25rem;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 900px) {
+    section {
+        padding: 5rem 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-cta {
+        padding: 0.55rem 1rem;
+        font-size: 0.88rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .about-image-wrap {
+        position: static;
+        max-width: 280px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-card {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .credentials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-wrap {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+    body {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cert-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .featured-name {
+        font-size: 1.35rem;
+    }
+
+    .timeline-role {
+        font-size: 1.15rem;
+    }
+}

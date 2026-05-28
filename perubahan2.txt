@@ -1,0 +1,272 @@
+1. Masalah terbesar: website terlalu kecil dan “mengecilkan value kamu”
+
+Secara keseluruhan, konten terlihat seperti dibuat untuk layar designer/developer yang sabar membaca detail kecil. Banyak teks penting terlalu kecil, terlalu tipis, dan terlalu rapat. Ini membuat website terasa elegan, tapi juga membuat value kamu tidak langsung “nendang”.
+
+Untuk personal portfolio kelas B2B, kamu harus terlihat seperti orang yang bisa menangani proyek puluhan hingga ratusan juta. Saat ini visualnya sudah menuju ke sana, tapi ukuran typography dan spacing masih membuatnya terasa seperti portfolio indie developer, bukan trusted system builder untuk bisnis serius.
+
+Saran tajam:
+Naikkan ukuran body text minimal 1–2 level. Jangan takut website jadi lebih besar. B2B client tidak akan marah karena teks mudah dibaca. Mereka justru akan lebih percaya.
+
+2. Hero section kuat, tapi belum cukup “jualan”
+
+Headline:
+
+Building AI-powered workflows, ERP systems, and digital learning platforms.
+
+Ini sudah bagus dan jelas. Tapi problemnya: headline ini masih menjelaskan apa yang kamu buat, belum cukup menjelaskan hasil bisnis yang kamu berikan.
+
+Frasa “AI-powered workflows” keren, tapi calon klien akan bertanya: “Terus buat bisnis saya apa?” “Menghemat waktu?” “Mengurangi admin manual?” “Membuat sistem operasional lebih rapi?” “Mengotomatisasi tim?”
+
+Versi yang lebih tajam:
+
+I build AI-powered business systems that reduce manual work, organize operations, and turn scattered workflows into scalable platforms.
+
+Atau lebih pendek:
+
+I build AI-powered systems that turn messy business operations into scalable workflows.
+
+Subheadline di bawahnya juga terlalu kecil dan kurang menggigit. Harus lebih menekan pain point:
+
+For businesses, schools, and teams that are tired of spreadsheets, scattered tools, and manual processes.
+
+CTA kamu juga masih kurang tegas. “View Work” dan “Contact Me” oke, tapi terlalu standar. Untuk B2B, lebih kuat kalau CTA-nya berbasis hasil:
+
+Primary CTA: “Discuss a System Project”
+Secondary CTA: “View Case Studies”
+
+3. Badge kecil di atas hero bagus, tapi kurang terbaca
+
+Badge kecil seperti “Available for new projects” bagus sebagai trust/status signal. Tapi ukurannya terlalu kecil dan posisinya agak tenggelam. Padahal ini bisa menjadi sinyal penting bahwa kamu aktif menerima project.
+
+Saran: buat badge lebih terlihat sedikit, jangan terlalu mungil. Misalnya:
+
+Available for AI, ERP & Learning Platform Projects
+
+Ini lebih spesifik daripada sekadar available.
+
+4. Navigasi terlalu kecil dan kurang punya hierarki
+
+Navbar terlihat bersih, tapi sangat kecil. Untuk website personal premium, ini boleh. Tapi untuk website yang ingin menghasilkan leads, navigasi harus cepat dipahami.
+
+Masalahnya:
+
+Link terlalu kecil.
+Contrast kurang kuat.
+“Login” di kanan atas membingungkan untuk portfolio pribadi. Login ke apa? Client portal? Dashboard? Kalau belum penting, lebih baik jangan tampilkan di navbar utama.
+Tidak ada CTA kuat di navbar.
+
+Saran:
+Ganti struktur navbar menjadi:
+
+Work | Services | Experience | Testimonials | Contact
+
+Lalu kanan atas tombol:
+
+Start a Project
+
+Kalau tetap mau ada Login, taruh kecil di footer atau secondary menu. Di navbar utama, “Login” bisa mengganggu karena calon klien belum tahu konteksnya.
+
+5. Section “Specialized in turning complex business problems…” bagus, tapi foto kamu terlalu kecil dan kurang powerful
+
+Foto personal adalah elemen trust besar. Tapi di sini fotonya kecil, gelap, dan tidak terasa sebagai “founder/consultant profile”. Ia lebih terasa seperti dokumentasi casual.
+
+Kalau ingin serius, foto harus:
+
+lebih besar,
+lebih terang,
+lebih profesional,
+atau diganti dengan visual work/system mockup.
+
+Saat ini foto membantu menunjukkan manusia di balik website, tapi belum cukup menaikkan kredibilitas. Kalau kamu target enterprise, foto harus lebih “consultant yang bisa dipercaya”, bukan “orang sedang berdiri di lorong”.
+
+Saran layout:
+Kiri: statement personal kuat.
+Kanan: foto besar atau visual sistem/project dashboard.
+Tambahkan 1 kalimat positioning:
+
+I don’t just write code. I map business processes, design the workflow, and build systems that teams can actually use.
+
+Ini jauh lebih kuat daripada deskripsi teknis biasa.
+
+6. Project cards sudah bagus, tapi kurang “case study”
+
+Section “Selected projects with real impact” adalah salah satu bagian terbaik secara struktur. Namun problemnya: cards masih terasa seperti daftar project, belum seperti bukti bisnis.
+
+Untuk B2B, project card harus menjawab:
+
+Masalah awalnya apa?
+Solusinya apa?
+Dampaknya apa?
+Teknologi hanya pendukung, bukan inti cerita.
+
+Saat ini kamu sudah punya penjelasan, tapi dampaknya belum cukup terlihat besar. Misalnya project CRM automation harus menonjolkan hasil seperti:
+
+Reduced manual lead tracking and centralized customer follow-up workflow.
+
+Kalau ada angka, lebih kuat:
+
+Cut manual admin steps by 60%
+Replaced 5 scattered spreadsheets
+Enabled real-time student progress monitoring
+Automated certificate generation and reporting
+
+Walaupun angka estimasi internal, lebih baik gunakan wording hati-hati:
+
+Designed to reduce manual reporting time
+Built to centralize operational data
+Helped teams move from spreadsheet-based tracking to structured workflows
+
+Jangan terlalu banyak menampilkan teknologi di depan. Klien non-teknis tidak peduli stack dulu. Mereka peduli hasil.
+
+7. “Trusted by enterprises across Indonesia” berani, tapi hati-hati: klaimnya harus sangat solid
+
+Judul ini kuat, tapi juga berisiko. “Enterprises” terdengar besar. Kalau logo/klien yang ditampilkan memang perusahaan/instansi serius, bagus. Tapi kalau sebagian masih proyek kecil/menengah, kata “enterprises” bisa terasa overclaim.
+
+Alternatif lebih aman dan tetap kuat:
+
+Trusted by teams and organizations across Indonesia.
+
+Atau:
+
+Systems built for businesses, schools, and organizations across Indonesia.
+
+Ini lebih natural dan tidak terlalu bombastis.
+
+Logo cards terlihat bagus, tapi terlalu kecil. Nama klien dan deskripsinya sulit dibaca. Padahal ini bagian trust. Jangan jadikan trust section sebagai dekorasi. Buat dia lebih terbaca.
+
+Saran:
+
+Perbesar card.
+Kurangi jumlah dalam satu baris kalau perlu.
+Tambahkan kategori: Education, Business, Government/Organization, Internal Tools.
+Jika boleh tampilkan logo asli, gunakan logo. Kalau tidak, gunakan nama teks yang lebih besar.
+8. Section services cukup jelas, tapi masih terlalu “kategori teknis”
+
+“AI Automation”, “ERP Systems”, “Web Products”, “Mobile Development” sudah oke. Tapi masih terasa seperti jasa developer umum.
+
+Supaya lebih tajam, ubah dari “apa yang kamu bisa buat” menjadi “masalah apa yang kamu selesaikan”.
+
+Misalnya:
+
+AI Workflow Automation
+For teams that repeat the same admin tasks every day.
+
+ERP & Internal Systems
+For businesses that outgrow spreadsheets and WhatsApp-based operations.
+
+Learning Platforms
+For schools, courses, and communities that need structured digital learning.
+
+Web & Mobile Products
+For founders who need functional products, not just landing pages.
+
+Ini akan jauh lebih menjual.
+
+9. Experience section bagus, tapi terlalu panjang dan kurang bisa di-scan
+
+Timeline experience terlihat rapi, tapi teksnya terlalu kecil dan terlalu banyak. Untuk recruiter mungkin oke. Untuk calon klien, terlalu detail.
+
+Yang perlu ditonjolkan bukan riwayat kerja panjang, tapi bukti kemampuan:
+
+Pernah membangun sistem apa?
+Untuk siapa?
+Scope-nya apa?
+Dampaknya apa?
+Role kamu apa?
+
+Saran:
+Buat tiap experience menjadi format:
+
+Role — Company/Client
+Year • Scope
+1–2 bullet paling penting saja.
+
+Jangan semua pengalaman diberi bobot sama. Pengalaman yang paling relevan dengan AI workflow, ERP, dan learning platform harus paling dominan. Yang kurang relevan bisa diringkas.
+
+10. Awards & Certifications bagus, tapi posisinya terlalu bawah dan kurang emosional
+
+Sertifikasi dan penghargaan menambah trust, tapi tampilannya masih “sekadar daftar”. Kalau ada yang prestisius, naikkan nilainya secara visual.
+
+Misalnya:
+
+Highlight satu sertifikasi utama.
+Sertakan “Why it matters” kecil.
+Jangan semua item accordion tertutup; calon klien mungkin tidak akan klik.
+
+Bagian kiri card “Web Developer of the Year...” bagus, tapi kalau itu sangat penting, buat lebih besar dan lebih percaya diri.
+
+11. CTA akhir bagus, tapi copy-nya masih kurang spesifik
+
+Bagian akhir:
+
+Interested in building an AI-powered learning platform, ERP system, or automation workflow?
+
+Ini sudah bagus. Tapi CTA kanan terlalu generic. Harus lebih tajam.
+
+Saran copy:
+
+Tell me what process feels messy, repetitive, or hard to scale. I’ll help you turn it into a structured system.
+
+Tombol:
+
+Book a Project Discussion
+Send Project Brief
+Email Me Directly
+
+Kalau kamu belum punya booking system, jangan pakai “Book”. Gunakan “Start a Project”.
+
+12. Masalah visual: dark mode terlalu dominan, gradient bagus tapi kurang diarahkan
+
+Dark mode kamu enak, tapi banyak section terasa mirip. Ada banyak background gelap yang menyebabkan tiap section kurang punya identitas visual. Hero punya gradient bagus, tapi setelah itu beberapa section terasa seperti “card di atas gelap” terus-menerus.
+
+Akibatnya website terasa panjang dan sedikit monoton.
+
+Saran:
+
+Buat tiap 2 section ada variasi background subtle.
+Tambahkan lebih banyak visual sistem: screenshot dashboard, flow diagram, mini mockup.
+Jangan semua card hanya teks. Untuk jasa sistem, visual alur kerja sangat penting.
+
+Contoh section yang bisa ditambahkan:
+
+From messy operations to structured systems
+
+Dengan 3 kolom:
+
+Current mess: Spreadsheet, WhatsApp, manual reports
+System design: Workflow, roles, database, automation
+Final product: Dashboard, alerts, reports, AI assistant
+
+Ini akan sangat kuat untuk calon klien.
+
+13. Masalah terbesar kedua: kurang visual bukti produk
+
+Untuk orang yang menjual ERP, workflow, learning platform, dan AI system, website kamu harus menunjukkan lebih banyak interface, flow, dashboard, architecture, before-after.
+
+Saat ini terlalu banyak teks dan card. Padahal yang kamu jual adalah sistem. Calon klien ingin melihat “oh, dia bisa bikin dashboard seperti ini”, “oh, dia paham proses bisnis”, “oh, dia bisa rapikan workflow”.
+
+Tambahkan:
+
+screenshot project,
+diagram automation,
+mockup dashboard,
+before/after workflow,
+mini architecture map,
+sample admin panel,
+learning platform preview.
+
+Tanpa itu, website terasa seperti klaim. Dengan itu, website terasa seperti bukti.
+
+14. Tone bahasa Inggris cukup bagus, tapi masih agak generik
+
+Beberapa copy terdengar profesional, tapi belum punya karakter yang sangat khas. Kamu punya positioning kuat: AI, ERP, workflow, education platform. Tapi copy-nya masih terasa seperti banyak portfolio developer modern.
+
+Kamu perlu punya angle lebih tajam:
+
+I build practical AI systems for real businesses — not demos, not hype, but tools your team can actually use.
+
+Atau:
+
+I help Indonesian businesses move from scattered manual work to clean, automated, scalable systems.
+
+Ini lebih manusiawi, lebih tajam, dan lebih relevan.

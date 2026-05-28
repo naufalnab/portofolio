@@ -6,1191 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naufal Nabila — AI Automation, ERP & Digital Product Builder</title>
     <meta name="description"
-        content="Naufal Nabila — AI Automation Engineer, Odoo & Flutter Developer. I build AI-powered workflows, ERP systems, and digital learning platforms for enterprise clients across Indonesia.">
-    <style>
-        :root {
-            --bg: #0b0b0f;
-            --bg-alt: #11121a;
-            --surface: #161824;
-            --surface-2: #1c1f2e;
-            --border: rgba(255, 255, 255, 0.08);
-            --text: #ececf1;
-            --text-muted: #a0a3b8;
-            --text-soft: #777a8d;
-            --accent: #00d4ff;
-            --accent-2: #ff4d8d;
-            --accent-soft: rgba(0, 212, 255, 0.12);
-            --gradient: linear-gradient(135deg, #00d4ff 0%, #ff4d8d 100%);
-            --gradient-soft: linear-gradient(135deg, rgba(0, 212, 255, 0.18) 0%, rgba(255, 77, 141, 0.18) 100%);
-            --radius: 18px;
-            --radius-lg: 24px;
-            --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-            --max-w: 1180px;
-        }
-
-        body.light-mode {
-            --bg: #ffffff;
-            --bg-alt: #f6f7fb;
-            --surface: #ffffff;
-            --surface-2: #f1f3f9;
-            --border: rgba(0, 0, 0, 0.08);
-            --text: #15172a;
-            --text-muted: #4b5063;
-            --text-soft: #7a7f95;
-            --accent: #008fb3;
-            --accent-2: #d63672;
-            --accent-soft: rgba(0, 143, 179, 0.1);
-            --gradient: linear-gradient(135deg, #008fb3 0%, #d63672 100%);
-            --gradient-soft: linear-gradient(135deg, rgba(0, 143, 179, 0.12) 0%, rgba(214, 54, 114, 0.12) 100%);
-            --shadow: 0 16px 40px rgba(20, 25, 60, 0.08);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-            font-size: 17px;
-            line-height: 1.7;
-            color: var(--text);
-            background: var(--bg);
-            overflow-x: hidden;
-            transition: background 0.3s ease, color 0.3s ease;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        ::selection {
-            background: var(--accent);
-            color: #0b0b0f;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: color-mix(in srgb, var(--bg) 85%, transparent);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            z-index: 1000;
-            padding: 1rem 0;
-            border-bottom: 1px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            border-bottom-color: var(--border);
-        }
-
-        .nav-container {
-            max-width: var(--max-w);
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            gap: 1rem;
-        }
-
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text);
-            text-decoration: none;
-            letter-spacing: -0.01em;
-        }
-
-        .logo span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1.75rem;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.75rem;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.92rem;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--text);
-        }
-
-        .theme-toggle {
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text);
-            padding: 0.5rem 0.9rem;
-            border-radius: 999px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            transition: all 0.2s ease;
-        }
-
-        .theme-toggle:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        /* Layout */
-        section {
-            padding: 7rem 0;
-            position: relative;
-        }
-
-        .container {
-            max-width: var(--max-w);
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-eyebrow {
-            display: inline-block;
-            font-size: 0.82rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 4vw, 2.75rem);
-            font-weight: 700;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            margin-bottom: 1.25rem;
-            color: var(--text);
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            max-width: 640px;
-            line-height: 1.7;
-            margin-bottom: 3.5rem;
-        }
-
-        /* Hero */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 7rem 0 5rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse 60% 50% at 20% 30%, rgba(0, 212, 255, 0.18) 0%, transparent 60%),
-                radial-gradient(ellipse 50% 40% at 80% 70%, rgba(255, 77, 141, 0.15) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .light-mode .hero::before {
-            background:
-                radial-gradient(ellipse 60% 50% at 20% 30%, rgba(0, 143, 179, 0.1) 0%, transparent 60%),
-                radial-gradient(ellipse 50% 40% at 80% 70%, rgba(214, 54, 114, 0.08) 0%, transparent 60%);
-        }
-
-        .hero-content {
-            max-width: 860px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--accent-soft);
-            border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
-            color: var(--accent);
-            padding: 0.45rem 1rem;
-            border-radius: 999px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 1.75rem;
-        }
-
-        .hero-tag .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #2ecc71;
-            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.25rem);
-            font-weight: 800;
-            line-height: 1.05;
-            letter-spacing: -0.03em;
-            margin-bottom: 1.5rem;
-            color: var(--text);
-        }
-
-        .hero h1 .accent {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1.1rem, 1.6vw, 1.3rem);
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 2.5rem;
-            max-width: 720px;
-        }
-
-        .hero-cta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.85rem;
-            margin-bottom: 4rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.95rem 1.6rem;
-            border-radius: 999px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            border: 1px solid transparent;
-            transition: all 0.25s ease;
-        }
-
-        .btn-primary {
-            background: var(--gradient);
-            color: white;
-            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.25);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
-        }
-
-        .btn-ghost {
-            background: transparent;
-            color: var(--text);
-            border-color: var(--border);
-        }
-
-        .btn-ghost:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            max-width: 720px;
-            padding-top: 2.5rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .stat-num {
-            font-size: clamp(1.6rem, 3vw, 2.25rem);
-            font-weight: 700;
-            color: var(--text);
-            letter-spacing: -0.02em;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 0.25rem;
-        }
-
-        /* About */
-        .about {
-            background: var(--bg-alt);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .about-image-wrap {
-            position: sticky;
-            top: 6rem;
-        }
-
-        .profile-img {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-        }
-
-        .about-pillars {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .pillar {
-            padding: 1.5rem 0;
-            border-top: 1px solid var(--border);
-        }
-
-        .pillar:first-child {
-            padding-top: 0;
-            border-top: none;
-        }
-
-        .pillar h4 {
-            font-size: 0.78rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--accent);
-            margin-bottom: 0.75rem;
-        }
-
-        .pillar p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .about-lead {
-            font-size: 1.25rem;
-            line-height: 1.65;
-            color: var(--text);
-            margin-bottom: 1rem;
-            letter-spacing: -0.005em;
-        }
-
-        /* Featured Projects */
-        .featured-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .featured-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 2.5rem;
-            display: grid;
-            grid-template-columns: 1fr 1.4fr;
-            gap: 2.5rem;
-            transition: all 0.35s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .featured-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 0;
-            background: var(--card-accent, var(--gradient));
-            transition: height 0.4s ease;
-        }
-
-        .featured-card:hover {
-            transform: translateY(-4px);
-            border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
-            box-shadow: var(--shadow);
-        }
-
-        .featured-card:hover::before {
-            height: 100%;
-        }
-
-        .featured-side {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .featured-icon {
-            font-size: 2.5rem;
-            line-height: 1;
-        }
-
-        .featured-org {
-            font-size: 0.78rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--accent);
-        }
-
-        .featured-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 1.25;
-            color: var(--text);
-            letter-spacing: -0.01em;
-        }
-
-        .featured-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.5rem;
-        }
-
-        .tech-badge {
-            background: transparent;
-            color: var(--text-muted);
-            padding: 0.3rem 0.7rem;
-            border-radius: 6px;
-            font-size: 0.78rem;
-            font-weight: 500;
-            border: 1px solid var(--border);
-        }
-
-        .featured-link {
-            margin-top: auto;
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 0.92rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding-top: 1rem;
-        }
-
-        .featured-link::after {
-            content: '→';
-            transition: transform 0.25s ease;
-        }
-
-        .featured-link:hover::after {
-            transform: translateX(4px);
-        }
-
-        .featured-body {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
-        .featured-block h5 {
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--text-soft);
-            margin-bottom: 0.4rem;
-        }
-
-        .featured-block p {
-            color: var(--text);
-            line-height: 1.65;
-            font-size: 1rem;
-        }
-
-        .featured-block.impact p {
-            color: var(--text-muted);
-        }
-
-        .featured-block.impact strong {
-            color: var(--text);
-            font-weight: 600;
-        }
-
-        /* Other Projects (compact list) */
-        .other-projects {
-            margin-top: 4rem;
-        }
-
-        .other-projects h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .other-projects h3::before {
-            content: '';
-            width: 24px;
-            height: 1px;
-            background: var(--accent);
-        }
-
-        .other-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-        }
-
-        .other-card {
-            padding: 1.4rem 1.5rem;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            transition: all 0.25s ease;
-        }
-
-        .other-card:hover {
-            border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
-            transform: translateY(-2px);
-        }
-
-        .other-card-name {
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 0.25rem;
-            font-size: 1rem;
-        }
-
-        .other-card-desc {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
-
-        /* Clients */
-        .clients {
-            background: var(--bg-alt);
-        }
-
-        .clients-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.25rem;
-        }
-
-        .client-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.75rem;
-            transition: all 0.3s ease;
-        }
-
-        .client-card:hover {
-            transform: translateY(-3px);
-            border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .light-mode .client-card:hover {
-            box-shadow: 0 12px 30px rgba(20, 25, 60, 0.08);
-        }
-
-        .client-industry {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            margin-bottom: 0.6rem;
-        }
-
-        .client-name {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 0.6rem;
-            line-height: 1.35;
-        }
-
-        .client-desc {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .clients-more {
-            margin-top: 2.5rem;
-            padding: 1.75rem;
-            text-align: center;
-            border: 1px dashed var(--border);
-            border-radius: var(--radius);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .clients-more p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.65;
-            max-width: 720px;
-            margin: 0;
-        }
-
-        .clients-more strong {
-            color: var(--text);
-            font-weight: 600;
-        }
-
-        .clients-extra {
-            margin-top: 1.5rem;
-            animation: revealClients 0.4s ease;
-        }
-
-        .clients-extra[hidden] {
-            display: none;
-        }
-
-        @keyframes revealClients {
-            from {
-                opacity: 0;
-                transform: translateY(8px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill-group {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .skill-group:hover {
-            transform: translateY(-3px);
-            border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
-        }
-
-        .skill-group-icon {
-            font-size: 1.5rem;
-            margin-bottom: 0.85rem;
-            display: block;
-        }
-
-        .skill-group h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 0.4rem;
-        }
-
-        .skill-group-sub {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin-bottom: 1.25rem;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-        }
-
-        .skill-pill {
-            background: var(--accent-soft);
-            color: var(--accent);
-            padding: 0.4rem 0.8rem;
-            border-radius: 8px;
-            font-size: 0.82rem;
-            font-weight: 500;
-        }
-
-        /* Experience */
-        .experience {
-            background: var(--bg-alt);
-        }
-
-        .timeline {
-            position: relative;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 11px;
-            top: 8px;
-            bottom: 8px;
-            width: 1px;
-            background: var(--border);
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 3rem;
-            padding-bottom: 2.5rem;
-        }
-
-        .timeline-item:last-child {
-            padding-bottom: 0;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 8px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--bg-alt);
-            border: 2px solid var(--accent);
-            z-index: 1;
-        }
-
-        .timeline-meta {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: baseline;
-            gap: 0.5rem 1rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .timeline-date {
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .timeline-role {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text);
-            letter-spacing: -0.01em;
-        }
-
-        .timeline-company {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-        }
-
-        .timeline-impact {
-            color: var(--text-muted);
-            font-size: 0.98rem;
-            line-height: 1.7;
-        }
-
-        .timeline-impact strong {
-            color: var(--text);
-            font-weight: 600;
-        }
-
-        /* Awards & Certifications */
-        .credentials-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .award-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .award-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--gradient-soft);
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        .award-card>* {
-            position: relative;
-            z-index: 1;
-        }
-
-        .award-icon {
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .award-label {
-            font-size: 0.78rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-
-        .award-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text);
-            line-height: 1.3;
-            margin-bottom: 0.5rem;
-        }
-
-        .award-org {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 0.4rem;
-        }
-
-        .award-context {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin-top: 0.75rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .award-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .award-link::after {
-            content: '→';
-            transition: transform 0.25s ease;
-        }
-
-        .award-link:hover::after {
-            transform: translateX(4px);
-        }
-
-        .cert-list {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0.75rem;
-        }
-
-        .cert-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            padding: 1rem 1.25rem;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            transition: all 0.25s ease;
-        }
-
-        .cert-item:hover {
-            border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
-            transform: translateX(4px);
-        }
-
-        .cert-info {
-            min-width: 0;
-        }
-
-        .cert-name {
-            font-size: 0.98rem;
-            font-weight: 600;
-            color: var(--text);
-            line-height: 1.4;
-            margin-bottom: 0.2rem;
-        }
-
-        .cert-meta {
-            font-size: 0.84rem;
-            color: var(--text-muted);
-        }
-
-        .cert-meta .dot {
-            margin: 0 0.5rem;
-            opacity: 0.5;
-        }
-
-        .cert-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            white-space: nowrap;
-            transition: color 0.2s ease;
-        }
-
-        .cert-link:hover {
-            color: var(--accent);
-        }
-
-        .cert-toggle {
-            margin-top: 1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.7rem 1.25rem;
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text);
-            border-radius: 999px;
-            font-size: 0.88rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.25s ease;
-        }
-
-        .cert-toggle:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .cert-extra {
-            display: none;
-        }
-
-        .cert-extra.open {
-            display: contents;
-        }
-
-        /* Contact */
-        .contact {
-            background: var(--bg-alt);
-        }
-
-        .contact-wrap {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .contact-wrap h2 {
-            font-size: clamp(2rem, 4vw, 2.75rem);
-            font-weight: 700;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            margin-bottom: 1.25rem;
-        }
-
-        .contact-wrap p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .contact-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .contact-action {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.1rem 1.4rem;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            text-decoration: none;
-            color: var(--text);
-            transition: all 0.25s ease;
-        }
-
-        .contact-action:hover {
-            border-color: var(--accent);
-            transform: translateX(4px);
-        }
-
-        .contact-action.primary {
-            background: var(--gradient);
-            color: white;
-            border-color: transparent;
-        }
-
-        .contact-action.primary:hover {
-            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
-        }
-
-        .contact-action-icon {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--accent-soft);
-            border-radius: 10px;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .contact-action.primary .contact-action-icon {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .contact-action-text {
-            display: flex;
-            flex-direction: column;
-            min-width: 0;
-        }
-
-        .contact-action-label {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            margin-bottom: 0.1rem;
-        }
-
-        .contact-action.primary .contact-action-label {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .contact-action-value {
-            font-weight: 600;
-            font-size: 0.98rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--bg);
-            color: var(--text-muted);
-            padding: 2.5rem 0;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        /* Fade in */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            section {
-                padding: 5rem 0;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.25rem;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
-            .about-image-wrap {
-                position: static;
-                max-width: 220px;
-            }
-
-            .featured-card {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 2rem;
-            }
-
-            .credentials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-wrap {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-        }
-
-        @media (max-width: 540px) {
-            section {
-                padding: 4rem 0;
-            }
-
-            .container {
-                padding: 0 1.25rem;
-            }
-
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .cert-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-        }
-    </style>
+        content="Naufal Nabila — I build AI-powered business systems that reduce manual work, organize operations, and turn scattered workflows into scalable platforms. Trusted by businesses, schools, and organizations across Indonesia.">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -1199,13 +16,13 @@
             <a href="#home" class="logo">Naufal<span>.</span></a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#clients">Clients</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#clients">Clients</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <a href="#contact" class="nav-cta">Start a Project</a>
                 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
                     <span id="theme-icon">☀️</span>
                     <span id="theme-text">Light</span>
@@ -1220,16 +37,16 @@
             <div class="hero-content">
                 <div class="hero-tag">
                     <span class="dot"></span>
-                    Available for new projects
+                    Available for AI, ERP &amp; Learning Platform projects
                 </div>
-                <h1>Building <span class="accent">AI-powered workflows</span>, ERP systems, and digital learning
-                    platforms.</h1>
-                <p class="hero-subtitle">I'm Naufal — an AI Automation Engineer, Odoo &amp; Flutter Developer
-                    helping enterprises and educational platforms ship intelligent, scalable products that deliver
-                    real impact.</p>
+                <h1>I build <span class="accent">AI-powered systems</span> that turn messy business operations
+                    into scalable workflows.</h1>
+                <p class="hero-subtitle">For businesses, schools, and teams that are tired of spreadsheets,
+                    scattered tools, and manual processes — I design and ship intelligent platforms your team
+                    can actually use.</p>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-ghost">Discuss a Project</a>
+                    <a href="#contact" class="btn btn-primary">Discuss a System Project</a>
+                    <a href="#projects" class="btn btn-ghost">View Case Studies</a>
                 </div>
                 <div class="hero-stats">
                     <div>
@@ -1242,7 +59,7 @@
                     </div>
                     <div>
                         <div class="stat-num">15+</div>
-                        <div class="stat-label">Enterprise Clients</div>
+                        <div class="stat-label">Organizations Served</div>
                     </div>
                     <div>
                         <div class="stat-num">4</div>
@@ -1253,21 +70,24 @@
         </div>
     </section>
 
-
     <!-- ABOUT -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-grid fade-in">
                 <div class="about-image-wrap">
-                    <img src="profile.jpeg" alt="Naufal Nabila" class="profile-img">
+                    <img src="assets/images/profile.jpeg" alt="Naufal Nabila" class="profile-img">
+                    <div class="about-positioning">
+                        I don't just write code. I map business processes, design the workflow, and build
+                        systems that teams can actually use.
+                    </div>
                 </div>
                 <div>
                     <span class="section-eyebrow">About</span>
                     <h2 class="section-title">Specialized in turning complex business problems into clean,
                         intelligent systems.</h2>
-                    <p class="about-lead">I build AI-assisted workflows, ERP solutions, and learning platforms
-                        for education, business, and content systems — with a strong focus on automation,
-                        integration, and measurable outcomes.</p>
+                    <p class="about-lead">I help Indonesian businesses move from scattered manual work to
+                        clean, automated, scalable systems — with a strong focus on real business outcomes,
+                        not just demos.</p>
 
                     <div class="about-pillars">
                         <div class="pillar">
@@ -1279,8 +99,8 @@
                         <div class="pillar">
                             <h4>What I Do</h4>
                             <p>End-to-end AI automation, custom Odoo modules, microservice web platforms with
-                                SvelteKit, and AI-powered learning products with multi-language video pipelines.
-                            </p>
+                                SvelteKit, and AI-powered learning products with multi-language video
+                                pipelines.</p>
                         </div>
                         <div class="pillar">
                             <h4>Proof of Work</h4>
@@ -1294,13 +114,106 @@
         </div>
     </section>
 
+    <!-- SERVICES (problem-led framing) -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <span class="section-eyebrow fade-in">Services</span>
+            <h2 class="section-title fade-in">Problems I solve, not just stacks I use.</h2>
+            <p class="section-subtitle fade-in">Most clients don't care about the tools. They care whether
+                their operations get faster, cleaner, and easier to scale. Here's where I usually help.</p>
+
+            <div class="services-grid fade-in">
+                <div class="service-card">
+                    <span class="service-icon">🤖</span>
+                    <h3>AI Workflow Automation</h3>
+                    <p class="service-target">For teams that <strong>repeat the same admin tasks every
+                            day</strong> — lead handling, ticketing, follow-ups, reporting. I design AI
+                        agents and workflows that take that work off their plate.</p>
+                    <div class="service-stack">n8n · Vertex AI · WhatsApp API</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🏢</span>
+                    <h3>ERP &amp; Internal Systems</h3>
+                    <p class="service-target">For businesses that have <strong>outgrown spreadsheets and
+                            WhatsApp-based operations</strong> and need a single source of truth for risk,
+                        sales, HR, or inventory.</p>
+                    <div class="service-stack">Odoo 16 · Python · PostgreSQL</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🎓</span>
+                    <h3>Learning Platforms</h3>
+                    <p class="service-target">For schools, courses, and communities that need
+                        <strong>structured digital learning</strong> with certificates, tracking, and
+                        AI-assisted content — not another generic LMS.</p>
+                    <div class="service-stack">SvelteKit · AI Pipelines · Drizzle</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">📱</span>
+                    <h3>Web &amp; Mobile Products</h3>
+                    <p class="service-target">For founders who need <strong>functional products, not just
+                            landing pages</strong> — Flutter apps, dashboards, admin panels, and microservice
+                        web ecosystems shipped to production.</p>
+                    <div class="service-stack">Flutter · SvelteKit · TypeScript</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS — From messy operations to structured systems -->
+    <section class="process" id="process">
+        <div class="container">
+            <span class="section-eyebrow fade-in">How I Work</span>
+            <h2 class="section-title fade-in">From messy operations to structured systems.</h2>
+            <p class="section-subtitle fade-in">Most of my projects follow the same arc — take what feels
+                chaotic and rebuild it as something a team can actually rely on.</p>
+
+            <div class="process-grid fade-in">
+                <div class="process-step problem">
+                    <div class="process-step-num">1</div>
+                    <h3>The Current Mess</h3>
+                    <ul>
+                        <li>Spreadsheets scattered across Drive</li>
+                        <li>Approvals lost in WhatsApp groups</li>
+                        <li>Manual reports rebuilt every month</li>
+                        <li>Status tracked by people, not systems</li>
+                    </ul>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-num">2</div>
+                    <h3>System Design</h3>
+                    <ul>
+                        <li>Map the actual workflow and roles</li>
+                        <li>Design data model and integrations</li>
+                        <li>Identify automation opportunities</li>
+                        <li>Plan for scale and edge cases</li>
+                    </ul>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-num">3</div>
+                    <h3>The Final Product</h3>
+                    <ul>
+                        <li>Centralized dashboard with real-time data</li>
+                        <li>Automated alerts and reporting</li>
+                        <li>AI assistant for repetitive tasks</li>
+                        <li>A system the team actually uses</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FEATURED PROJECTS -->
     <section class="projects" id="projects">
         <div class="container">
             <span class="section-eyebrow fade-in">Featured Work</span>
             <h2 class="section-title fade-in">Selected projects with real impact.</h2>
-            <p class="section-subtitle fade-in">A curated look at the systems I've architected and shipped — from
-                enterprise risk platforms to AI-powered CRM transformations.</p>
+            <p class="section-subtitle fade-in">A curated look at the systems I've architected and shipped —
+                from enterprise risk platforms to AI-powered CRM transformations.</p>
 
             <div class="featured-grid fade-in">
 
@@ -1335,9 +248,9 @@
                         </div>
                         <div class="featured-block impact">
                             <h5>Impact</h5>
-                            <p><strong>Zero missed tickets</strong> via tiered escalation, <strong>real-time
-                                    deal visibility</strong> on WhatsApp, and dual-mode AI agent "Aina"
-                                handling helpdesk autonomously.</p>
+                            <p>Designed to <strong>eliminate missed tickets</strong> through tiered escalation,
+                                give executives <strong>real-time deal visibility on WhatsApp</strong>, and
+                                replace manual helpdesk work with a dual-mode AI agent named "Aina".</p>
                         </div>
                         <a href="#contact" class="featured-link">Discuss a similar build</a>
                     </div>
@@ -1363,8 +276,8 @@
                     <div class="featured-body">
                         <div class="featured-block">
                             <h5>Problem</h5>
-                            <p>Indonesia lacked a credible Sharia-compliant crypto education platform with both
-                                e-learning depth and a verifiable token screening system.</p>
+                            <p>Indonesia lacked a credible Sharia-compliant crypto education platform with
+                                both e-learning depth and a verifiable token screening system.</p>
                         </div>
                         <div class="featured-block">
                             <h5>Solution</h5>
@@ -1414,9 +327,9 @@
                         </div>
                         <div class="featured-block impact">
                             <h5>Impact</h5>
-                            <p><strong>Single source of truth</strong> for enterprise risk, with approval
-                                workflows, dark mode theming, and seamless integration into the Nusativ
-                                platform.</p>
+                            <p>Built to be a <strong>single source of truth</strong> for enterprise risk — with
+                                approval workflows, dark mode theming, and seamless integration into the
+                                Nusativ platform.</p>
                         </div>
                         <a href="https://nusativ.id" target="_blank" rel="noopener" class="featured-link">Visit
                             nusativ.id</a>
@@ -1431,13 +344,13 @@
                 <div class="other-grid">
                     <div class="other-card">
                         <div class="other-card-name">Kelas AI — Pembelajar Belajar</div>
-                        <div class="other-card-desc">AI-powered e-learning with multi-language video generation
-                            (ID/EN/AR/MS) and dynamic domain branding.</div>
+                        <div class="other-card-desc">AI-powered e-learning with multi-language video
+                            generation (ID/EN/AR/MS) and dynamic domain branding.</div>
                     </div>
                     <div class="other-card">
                         <div class="other-card-name">QurbanPlus</div>
-                        <div class="other-card-desc">Flutter app for end-to-end qurban journey: animal booking,
-                            customer data, transparency tracking.</div>
+                        <div class="other-card-desc">Flutter app for end-to-end qurban journey: animal
+                            booking, customer data, transparency tracking.</div>
                     </div>
                     <div class="other-card">
                         <div class="other-card-name">Ramadhan Series Platform</div>
@@ -1446,8 +359,8 @@
                     </div>
                     <div class="other-card">
                         <div class="other-card-name">Akademik SMA FG Putri FDS</div>
-                        <div class="other-card-desc">Academic information system for student data, scheduling,
-                            and reporting with n8n workflow automation.</div>
+                        <div class="other-card-desc">Academic information system for student data,
+                            scheduling, and reporting with n8n workflow automation.</div>
                     </div>
                 </div>
             </div>
@@ -1458,46 +371,65 @@
     <section class="clients" id="clients">
         <div class="container">
             <span class="section-eyebrow fade-in">Selected Clients</span>
-            <h2 class="section-title fade-in">Trusted by enterprises across Indonesia.</h2>
-            <p class="section-subtitle fade-in">A focused selection of organizations I've delivered ERP, mobile,
-                and AI automation solutions for — across manufacturing, fintech, telecom, and EdTech.</p>
+            <h2 class="section-title fade-in">Systems built for businesses, schools, and organizations across
+                Indonesia.</h2>
+            <p class="section-subtitle fade-in">A focused selection of organizations I've delivered ERP,
+                mobile, and AI automation solutions for — across business, education, and internal tooling.
+            </p>
 
-            <div class="clients-grid fade-in">
-                <div class="client-card">
-                    <div class="client-industry">Automotive Manufacturing</div>
-                    <div class="client-name">Yamaha Motor Parts Manufacturing Indonesia</div>
-                    <div class="client-desc">Comprehensive Odoo ERP for manufacturing operations, inventory
-                        management, and quality control.</div>
+            <div class="fade-in">
+                <div class="client-category">
+                    <div class="client-category-title">
+                        <span>Business &amp; Manufacturing</span>
+                        <span class="client-category-count">3</span>
+                    </div>
+                    <div class="clients-grid">
+                        <div class="client-card">
+                            <div class="client-industry">Automotive Manufacturing</div>
+                            <div class="client-name">Yamaha Motor Parts Manufacturing Indonesia</div>
+                            <div class="client-desc">Comprehensive Odoo ERP for manufacturing operations,
+                                inventory management, and quality control.</div>
+                        </div>
+                        <div class="client-card">
+                            <div class="client-industry">Telecommunications</div>
+                            <div class="client-name">Telkom Sigma</div>
+                            <div class="client-desc">Advanced Odoo systems for infrastructure management,
+                                CRM, and business process optimization.</div>
+                        </div>
+                        <div class="client-card">
+                            <div class="client-industry">Inspection &amp; Certification</div>
+                            <div class="client-name">PT SUCOFINDO</div>
+                            <div class="client-desc">Specialized Odoo applications for inspection processes,
+                                certification management, and compliance tracking.</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="client-card">
-                    <div class="client-industry">Telecommunications</div>
-                    <div class="client-name">Telkom Sigma</div>
-                    <div class="client-desc">Advanced Odoo systems for infrastructure management, CRM, and
-                        business process optimization.</div>
-                </div>
-                <div class="client-card">
-                    <div class="client-industry">Inspection &amp; Certification</div>
-                    <div class="client-name">PT SUCOFINDO</div>
-                    <div class="client-desc">Specialized Odoo applications for inspection processes,
-                        certification management, and compliance tracking.</div>
-                </div>
-                <div class="client-card">
-                    <div class="client-industry">Fintech / EdTech</div>
-                    <div class="client-name">PT Kripto Syariah Indonesia</div>
-                    <div class="client-desc">6-app SvelteKit microservice ecosystem with academy, admin CMS, REST
-                        API, portal, and media viewer.</div>
-                </div>
-                <div class="client-card">
-                    <div class="client-industry">Enterprise Risk Management</div>
-                    <div class="client-name">PT Nusa Teknologi Inovasi</div>
-                    <div class="client-desc">E-Risk system on Odoo 16 with 30+ modules for risk registers, KPI,
-                        SSO, and tier validation workflows.</div>
-                </div>
-                <div class="client-card">
-                    <div class="client-industry">CRM &amp; AI Automation</div>
-                    <div class="client-name">PT Naska Jala Dewa</div>
-                    <div class="client-desc">Salesforce-level Odoo CRM transformation with 18+ n8n automations,
-                        AI lead scoring, and WhatsApp dashboards.</div>
+
+                <div class="client-category">
+                    <div class="client-category-title">
+                        <span>Fintech, EdTech &amp; Internal Tools</span>
+                        <span class="client-category-count">3</span>
+                    </div>
+                    <div class="clients-grid">
+                        <div class="client-card">
+                            <div class="client-industry">Fintech / EdTech</div>
+                            <div class="client-name">PT Kripto Syariah Indonesia</div>
+                            <div class="client-desc">6-app SvelteKit microservice ecosystem with academy,
+                                admin CMS, REST API, portal, and media viewer.</div>
+                        </div>
+                        <div class="client-card">
+                            <div class="client-industry">Enterprise Risk Management</div>
+                            <div class="client-name">PT Nusa Teknologi Inovasi</div>
+                            <div class="client-desc">E-Risk system on Odoo 16 with 30+ modules for risk
+                                registers, KPI, SSO, and tier validation workflows.</div>
+                        </div>
+                        <div class="client-card">
+                            <div class="client-industry">CRM &amp; AI Automation</div>
+                            <div class="client-name">PT Naska Jala Dewa</div>
+                            <div class="client-desc">Salesforce-level Odoo CRM transformation with 18+ n8n
+                                automations, AI lead scoring, and WhatsApp dashboards.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1507,8 +439,8 @@
                     Pennyu Group, Triputra Electric, NOK Indonesia, Sun Star Prima Motor, Kawat Enamel, Citra
                     Busana, and others — spanning automotive, textile, healthcare, logistics, and EdTech.
                 </p>
-                <button class="cert-toggle" onclick="toggleClients()" id="clients-toggle-btn" aria-expanded="false"
-                    aria-controls="clients-extra">
+                <button class="cert-toggle" onclick="toggleClients()" id="clients-toggle-btn"
+                    aria-expanded="false" aria-controls="clients-extra">
                     <span id="clients-toggle-text">View all 14 clients</span>
                     <span id="clients-toggle-arrow">↓</span>
                 </button>
@@ -1560,8 +492,8 @@
                 <div class="client-card">
                     <div class="client-industry">Automotive</div>
                     <div class="client-name">PT Sun Star Prima Motor</div>
-                    <div class="client-desc">Dealership management with inventory control, sales tracking, and
-                        CRM workflows.</div>
+                    <div class="client-desc">Dealership management with inventory control, sales tracking,
+                        and CRM workflows.</div>
                 </div>
                 <div class="client-card">
                     <div class="client-industry">Automotive Components</div>
@@ -1615,7 +547,8 @@
                 <div class="skill-group">
                     <span class="skill-group-icon">🤖</span>
                     <h3>AI &amp; Automation</h3>
-                    <p class="skill-group-sub">Workflow automation, AI agents, and intelligent integrations.</p>
+                    <p class="skill-group-sub">Workflow automation, AI agents, and intelligent integrations.
+                    </p>
                     <div class="skill-list">
                         <span class="skill-pill">n8n</span>
                         <span class="skill-pill">Google Vertex AI</span>
@@ -1643,7 +576,8 @@
                 <div class="skill-group">
                     <span class="skill-group-icon">🌐</span>
                     <h3>Web &amp; Product</h3>
-                    <p class="skill-group-sub">Modern microservice apps, dashboards, and learning platforms.</p>
+                    <p class="skill-group-sub">Modern microservice apps, dashboards, and learning platforms.
+                    </p>
                     <div class="skill-list">
                         <span class="skill-pill">SvelteKit</span>
                         <span class="skill-pill">Svelte 5</span>
@@ -1675,7 +609,8 @@
         <div class="container">
             <span class="section-eyebrow fade-in">Career</span>
             <h2 class="section-title fade-in">Professional experience.</h2>
-            <p class="section-subtitle fade-in">Where I've worked, what I built, and the impact delivered.</p>
+            <p class="section-subtitle fade-in">Where I've worked, what I built, and the impact delivered —
+                most recent and most relevant first.</p>
 
             <div class="timeline fade-in">
                 <div class="timeline-item">
@@ -1687,8 +622,9 @@
                     <p class="timeline-impact">Transformed standard Odoo CRM into a Salesforce-grade
                         enterprise system with 18+ n8n workflows. Engineered an AI Lead Scoring engine on
                         Vertex AI, a 3-tier SLA escalation system, real-time WhatsApp Executive Dashboard,
-                        CSAT automation, and a custom PHP/Docker AP Portal. <strong>Result: zero missed
-                            tickets and end-to-end deal visibility.</strong></p>
+                        CSAT automation, and a custom PHP/Docker AP Portal. <strong>Result: tickets no longer
+                            slip through the cracks and executives have end-to-end deal visibility.</strong>
+                    </p>
                 </div>
 
                 <div class="timeline-item">
@@ -1712,9 +648,8 @@
                     <div class="timeline-company">PT Arkana Solusi Digital</div>
                     <p class="timeline-impact">Delivered Agriculture and HR Flutter apps and integrated Odoo
                         ERP solutions across 15+ enterprise clients including Yamaha Motor Parts, Telkom
-                        Sigma, SUCOFINDO, Duniatex, and Triputra Electric. <strong>Result: custom ERP
-                            modules powering manufacturing, automotive, telecom, and textile
-                            operations.</strong></p>
+                        Sigma, SUCOFINDO, Duniatex, and Triputra Electric. <strong>Result: custom ERP modules
+                            powering manufacturing, automotive, telecom, and textile operations.</strong></p>
                 </div>
 
                 <div class="timeline-item">
@@ -1723,41 +658,20 @@
                         <span class="timeline-role">Flutter Developer</span>
                     </div>
                     <div class="timeline-company">QurbanPlus</div>
-                    <p class="timeline-impact">Maintained the Flutter app for end-to-end qurban management
-                        — animal booking, customer data, and transparent journey tracking. <strong>Result:
-                            improved operational efficiency and trust during the qurban season.</strong>
-                    </p>
+                    <p class="timeline-impact">Maintained the Flutter app for end-to-end qurban management —
+                        animal booking, customer data, and transparent journey tracking. <strong>Result:
+                            improved operational efficiency and trust during the qurban season.</strong></p>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-meta">
-                        <span class="timeline-date">Jul 2024 — Dec 2024</span>
-                        <span class="timeline-role">Flutter Developer</span>
+                        <span class="timeline-date">2020 — 2024</span>
+                        <span class="timeline-role">Earlier Mobile Engineering Roles</span>
                     </div>
-                    <div class="timeline-company">CV Codespace Indonesia</div>
-                    <p class="timeline-impact">Built and maintained F&amp;B Flutter applications with
-                        established CI/CD and QA practices. Worked alongside backend engineers and UI
-                        designers to ship reliable releases.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-meta">
-                        <span class="timeline-date">May 2022 — Dec 2022</span>
-                        <span class="timeline-role">Flutter Developer</span>
-                    </div>
-                    <div class="timeline-company">Universitas Terbuka</div>
-                    <p class="timeline-impact">Shipped student and radio mobile apps to App Store and Play
-                        Store with full QA and bug-fix cycles.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-meta">
-                        <span class="timeline-date">Oct 2020 — May 2022</span>
-                        <span class="timeline-role">Mobile Developer</span>
-                    </div>
-                    <div class="timeline-company">PT Bintang Pelajar</div>
-                    <p class="timeline-impact">Developed HR and student Flutter applications, working
-                        directly with stakeholders to align development with business goals.</p>
+                    <div class="timeline-company">CV Codespace · Universitas Terbuka · PT Bintang Pelajar</div>
+                    <p class="timeline-impact">Shipped F&amp;B, student, HR, and radio Flutter applications to
+                        App Store and Play Store with full QA, CI/CD, and stakeholder alignment cycles —
+                        building the foundation for the production-grade work that followed.</p>
                 </div>
             </div>
         </div>
@@ -1780,8 +694,8 @@
                     <p class="award-context">Recognized for outstanding delivery across 15+ enterprise ERP and
                         Flutter projects, including custom Odoo modules for manufacturing, automotive, and
                         telecom clients.</p>
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7288436057010843649/" target="_blank"
-                        rel="noopener" class="award-link">View achievement</a>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7288436057010843649/"
+                        target="_blank" rel="noopener" class="award-link">View achievement</a>
                 </div>
 
                 <div>
@@ -1816,16 +730,16 @@
                                 <div class="cert-meta">Dicoding Indonesia<span class="dot">·</span>Sep 2023
                                 </div>
                             </div>
-                            <a href="https://www.dicoding.com/certificates/L4PQ8MVQ2ZO1" target="_blank" rel="noopener"
-                                class="cert-link">View →</a>
+                            <a href="https://www.dicoding.com/certificates/L4PQ8MVQ2ZO1" target="_blank"
+                                rel="noopener" class="cert-link">View →</a>
                         </div>
                         <div class="cert-item">
                             <div class="cert-info">
                                 <div class="cert-name">Flutter Development</div>
                                 <div class="cert-meta">Dicoding Indonesia<span class="dot">·</span>2023</div>
                             </div>
-                            <a href="https://www.dicoding.com/certificates/98XWV3O2JPM3" target="_blank" rel="noopener"
-                                class="cert-link">View →</a>
+                            <a href="https://www.dicoding.com/certificates/98XWV3O2JPM3" target="_blank"
+                                rel="noopener" class="cert-link">View →</a>
                         </div>
                         <div class="cert-item">
                             <div class="cert-info">
@@ -1924,23 +838,24 @@
             <div class="contact-wrap fade-in">
                 <div>
                     <span class="section-eyebrow">Let's talk</span>
-                    <h2>Interested in building an AI-powered learning platform, ERP system, or automation
-                        workflow?</h2>
-                    <p>Tell me about your project and the problem you're trying to solve. I respond fastest
-                        on WhatsApp — usually within a few hours during business days.</p>
+                    <h2>Tell me what process feels messy, repetitive, or hard to scale.</h2>
+                    <p>I'll help you turn it into a structured system — whether that's an AI-powered learning
+                        platform, an ERP, or an automation workflow. I respond fastest on WhatsApp, usually
+                        within a few hours during business days.</p>
                 </div>
                 <div class="contact-actions">
-                    <a href="https://wa.me/6282328591004" target="_blank" rel="noopener" class="contact-action primary">
+                    <a href="https://wa.me/6282328591004" target="_blank" rel="noopener"
+                        class="contact-action primary">
                         <span class="contact-action-icon">💬</span>
                         <span class="contact-action-text">
-                            <span class="contact-action-label">WhatsApp · fastest reply</span>
+                            <span class="contact-action-label">Start a Project · fastest reply</span>
                             <span class="contact-action-value">+62 823-2859-1004</span>
                         </span>
                     </a>
                     <a href="mailto:naufal.nabila.2008@gmail.com" class="contact-action">
                         <span class="contact-action-icon">📧</span>
                         <span class="contact-action-text">
-                            <span class="contact-action-label">Email</span>
+                            <span class="contact-action-label">Send a Project Brief</span>
                             <span class="contact-action-value">naufal.nabila.2008@gmail.com</span>
                         </span>
                     </a>
@@ -1955,82 +870,11 @@
         </div>
     </footer>
 
-    <script>
-        // Theme toggle
-        function toggleTheme() {
-            const body = document.body;
-            const themeIcon = document.getElementById('theme-icon');
-            const themeText = document.getElementById('theme-text');
-            body.classList.toggle('light-mode');
-            const isLight = body.classList.contains('light-mode');
-            themeIcon.textContent = isLight ? '🌙' : '☀️';
-            themeText.textContent = isLight ? 'Dark' : 'Light';
-            try {
-                localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            } catch (e) { }
-        }
-
-        // Restore theme
-        try {
-            if (localStorage.getItem('theme') === 'light') {
-                document.body.classList.add('light-mode');
-                document.getElementById('theme-icon').textContent = '🌙';
-                document.getElementById('theme-text').textContent = 'Dark';
-            }
-        } catch (e) { }
-
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
-        });
-
-        // Fade in on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-        // Make hero visible immediately
-        document.querySelectorAll('.hero .fade-in, .hero-content').forEach(el => el.classList.add('visible'));
-
-        // Certifications toggle
-        function toggleCerts() {
-            const extra = document.getElementById('cert-extra');
-            const text = document.getElementById('cert-toggle-text');
-            const arrow = document.getElementById('cert-toggle-arrow');
-            const isOpen = extra.classList.toggle('open');
-            text.textContent = isOpen ? 'Show less' : 'View all certifications';
-            arrow.textContent = isOpen ? '↑' : '↓';
-        }
-
-        // Clients toggle
-        function toggleClients() {
-            const extra = document.getElementById('clients-extra');
-            const btn = document.getElementById('clients-toggle-btn');
-            const text = document.getElementById('clients-toggle-text');
-            const arrow = document.getElementById('clients-toggle-arrow');
-            const isHidden = extra.hasAttribute('hidden');
-            if (isHidden) {
-                extra.removeAttribute('hidden');
-                btn.setAttribute('aria-expanded', 'true');
-                text.textContent = 'Show less';
-                arrow.textContent = '↑';
-            } else {
-                extra.setAttribute('hidden', '');
-                btn.setAttribute('aria-expanded', 'false');
-                text.textContent = 'View all 14 clients';
-                arrow.textContent = '↓';
-            }
-        }
-    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/nav.js" defer></script>
+    <script src="assets/js/reveal.js" defer></script>
+    <script src="assets/js/toggles.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
