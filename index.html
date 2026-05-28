@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naufal Nabila — AI Automation, ERP & Digital Product Builder</title>
     <meta name="description"
-        content="Naufal Nabila — I build AI-powered business systems that reduce manual work, organize operations, and turn scattered workflows into scalable platforms. Trusted by businesses, schools, and organizations across Indonesia.">
+        content="Naufal Nabila — I turn messy business operations into AI-powered scalable systems. ERP, AI workflow automation, and learning platforms for businesses, schools, and organizations across Indonesia.">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -16,11 +16,11 @@
             <a href="#home" class="logo">Naufal<span>.</span></a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#projects">Work</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#projects">Case Studies</a></li>
                     <li><a href="#clients">Clients</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#experience">Experience</a></li>
                 </ul>
                 <a href="#contact" class="nav-cta">Start a Project</a>
                 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -39,14 +39,14 @@
                     <span class="dot"></span>
                     Available for AI, ERP &amp; Learning Platform projects
                 </div>
-                <h1>I build <span class="accent">AI-powered systems</span> that turn messy business operations
-                    into scalable workflows.</h1>
+                <h1>I turn messy business operations into <span class="accent">AI-powered scalable
+                        systems</span>.</h1>
                 <p class="hero-subtitle">For businesses, schools, and teams that are tired of spreadsheets,
                     scattered tools, and manual processes — I design and ship intelligent platforms your team
                     can actually use.</p>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Discuss a System Project</a>
-                    <a href="#projects" class="btn btn-ghost">View Case Studies</a>
+                    <a href="#contact" class="btn btn-primary">Start a Project</a>
+                    <a href="#projects" class="btn btn-ghost">See Case Studies</a>
                 </div>
                 <div class="hero-stats">
                     <div>
@@ -76,6 +76,10 @@
             <div class="about-grid fade-in">
                 <div class="about-image-wrap">
                     <img src="assets/images/profile.jpeg" alt="Naufal Nabila" class="profile-img">
+                    <div class="profile-badges">
+                        <span class="profile-badge"><span class="icon">📍</span>Based in Indonesia</span>
+                        <span class="profile-badge"><span class="icon">⚙️</span>AI · ERP · LMS Systems</span>
+                    </div>
                     <div class="about-positioning">
                         I don't just write code. I map business processes, design the workflow, and build
                         systems that teams can actually use.
@@ -114,93 +118,100 @@
         </div>
     </section>
 
-    <!-- SERVICES (problem-led framing) -->
+    <!-- SERVICES — pain-point led -->
     <section class="services-section" id="services">
         <div class="container">
-            <span class="section-eyebrow fade-in">Services</span>
-            <h2 class="section-title fade-in">Problems I solve, not just stacks I use.</h2>
-            <p class="section-subtitle fade-in">Most clients don't care about the tools. They care whether
-                their operations get faster, cleaner, and easier to scale. Here's where I usually help.</p>
+            <span class="section-eyebrow fade-in">Problems I Solve</span>
+            <h2 class="section-title fade-in">If any of this feels familiar, we should talk.</h2>
+            <p class="section-subtitle fade-in">Most clients don't come to me asking for "an Odoo module" or
+                "an n8n workflow". They come because something in their operations is broken. Here's what
+                that usually looks like.</p>
 
             <div class="services-grid fade-in">
                 <div class="service-card">
                     <span class="service-icon">🤖</span>
-                    <h3>AI Workflow Automation</h3>
-                    <p class="service-target">For teams that <strong>repeat the same admin tasks every
-                            day</strong> — lead handling, ticketing, follow-ups, reporting. I design AI
-                        agents and workflows that take that work off their plate.</p>
+                    <h3>Manual Workflows</h3>
+                    <p class="service-pain">Your team <strong>repeats the same admin tasks every day</strong>
+                        across spreadsheets, WhatsApp groups, and disconnected tools.</p>
+                    <p class="service-target">I design AI agents and n8n workflows that take that work off
+                        their plate — lead handling, ticketing, follow-ups, reporting.</p>
                     <div class="service-stack">n8n · Vertex AI · WhatsApp API</div>
                 </div>
 
                 <div class="service-card">
                     <span class="service-icon">🏢</span>
-                    <h3>ERP &amp; Internal Systems</h3>
-                    <p class="service-target">For businesses that have <strong>outgrown spreadsheets and
-                            WhatsApp-based operations</strong> and need a single source of truth for risk,
-                        sales, HR, or inventory.</p>
+                    <h3>ERP Chaos</h3>
+                    <p class="service-pain">Your business data <strong>lives in too many places</strong>,
+                        making reports slow and decisions unclear.</p>
+                    <p class="service-target">I build a single source of truth — custom Odoo modules and
+                        dashboards for risk, sales, HR, inventory, and finance.</p>
                     <div class="service-stack">Odoo 16 · Python · PostgreSQL</div>
                 </div>
 
                 <div class="service-card">
                     <span class="service-icon">🎓</span>
-                    <h3>Learning Platforms</h3>
-                    <p class="service-target">For schools, courses, and communities that need
-                        <strong>structured digital learning</strong> with certificates, tracking, and
+                    <h3>Scattered Learning</h3>
+                    <p class="service-pain">Your education content, student progress, and assessments are
+                        <strong>scattered without a structured system</strong>.</p>
+                    <p class="service-target">I build learning platforms with certificates, tracking, and
                         AI-assisted content — not another generic LMS.</p>
                     <div class="service-stack">SvelteKit · AI Pipelines · Drizzle</div>
                 </div>
 
                 <div class="service-card">
-                    <span class="service-icon">📱</span>
-                    <h3>Web &amp; Mobile Products</h3>
-                    <p class="service-target">For founders who need <strong>functional products, not just
-                            landing pages</strong> — Flutter apps, dashboards, admin panels, and microservice
-                        web ecosystems shipped to production.</p>
-                    <div class="service-stack">Flutter · SvelteKit · TypeScript</div>
+                    <span class="service-icon">⚡</span>
+                    <h3>Half-Automated Processes</h3>
+                    <p class="service-pain">You know the process <strong>can be automated</strong>, but your
+                        current tools still depend on manual follow-up.</p>
+                    <p class="service-target">I bridge the gaps with AI workflows, dashboards, admin panels,
+                        and Flutter apps shipped to production.</p>
+                    <div class="service-stack">Flutter · SvelteKit · Automation</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROCESS — From messy operations to structured systems -->
+    <!-- PROCESS — From messy operations to structured systems (visual flow) -->
     <section class="process" id="process">
         <div class="container">
             <span class="section-eyebrow fade-in">How I Work</span>
             <h2 class="section-title fade-in">From messy operations to structured systems.</h2>
-            <p class="section-subtitle fade-in">Most of my projects follow the same arc — take what feels
-                chaotic and rebuild it as something a team can actually rely on.</p>
+            <p class="process-intro fade-in">I don't start with code. I start by mapping the mess.</p>
 
             <div class="process-grid fade-in">
                 <div class="process-step problem">
-                    <div class="process-step-num">1</div>
-                    <h3>The Current Mess</h3>
+                    <span class="process-step-num">01</span>
+                    <span class="process-step-icon">🗺️</span>
+                    <h3>Map the Mess</h3>
                     <ul>
-                        <li>Spreadsheets scattered across Drive</li>
-                        <li>Approvals lost in WhatsApp groups</li>
-                        <li>Manual reports rebuilt every month</li>
-                        <li>Status tracked by people, not systems</li>
+                        <li>Find repetitive tasks and manual bottlenecks</li>
+                        <li>Spot scattered data and duplicated effort</li>
+                        <li>Listen to the team that lives the workflow</li>
+                        <li>Identify what's actually slowing growth</li>
                     </ul>
                 </div>
 
                 <div class="process-step">
-                    <div class="process-step-num">2</div>
-                    <h3>System Design</h3>
+                    <span class="process-step-num">02</span>
+                    <span class="process-step-icon">📐</span>
+                    <h3>Design the System</h3>
                     <ul>
-                        <li>Map the actual workflow and roles</li>
-                        <li>Design data model and integrations</li>
-                        <li>Identify automation opportunities</li>
-                        <li>Plan for scale and edge cases</li>
+                        <li>Turn the process into roles and workflows</li>
+                        <li>Design the data model and integrations</li>
+                        <li>Decide what to automate and what stays human</li>
+                        <li>Plan for scale, edge cases, and handover</li>
                     </ul>
                 </div>
 
                 <div class="process-step">
-                    <div class="process-step-num">3</div>
-                    <h3>The Final Product</h3>
+                    <span class="process-step-num">03</span>
+                    <span class="process-step-icon">🚀</span>
+                    <h3>Build the Product</h3>
                     <ul>
-                        <li>Centralized dashboard with real-time data</li>
-                        <li>Automated alerts and reporting</li>
-                        <li>AI assistant for repetitive tasks</li>
-                        <li>A system the team actually uses</li>
+                        <li>Ship dashboards, portals, and admin panels</li>
+                        <li>Wire up AI assistants and automated reports</li>
+                        <li>Train the team and document the system</li>
+                        <li>Deliver something they actually use</li>
                     </ul>
                 </div>
             </div>
@@ -210,10 +221,11 @@
     <!-- FEATURED PROJECTS -->
     <section class="projects" id="projects">
         <div class="container">
-            <span class="section-eyebrow fade-in">Featured Work</span>
+            <span class="section-eyebrow fade-in">Case Studies</span>
             <h2 class="section-title fade-in">Selected projects with real impact.</h2>
             <p class="section-subtitle fade-in">A curated look at the systems I've architected and shipped —
-                from enterprise risk platforms to AI-powered CRM transformations.</p>
+                from enterprise risk platforms to AI-powered CRM transformations. Each one followed the same
+                arc: messy reality → designed system → working product.</p>
 
             <div class="featured-grid fade-in">
 
@@ -237,8 +249,9 @@
                     <div class="featured-body">
                         <div class="featured-block">
                             <h5>Problem</h5>
-                            <p>Standard Odoo CRM lacked AI-driven lead intelligence, real-time SLA enforcement,
-                                and executive visibility — leading to missed tickets and slow deal cycles.</p>
+                            <p>Standard Odoo CRM lacked AI-driven lead intelligence, real-time SLA
+                                enforcement, and executive visibility — leading to missed tickets and slow
+                                deal cycles.</p>
                         </div>
                         <div class="featured-block">
                             <h5>Solution</h5>
@@ -248,55 +261,22 @@
                         </div>
                         <div class="featured-block impact">
                             <h5>Impact</h5>
-                            <p>Designed to <strong>eliminate missed tickets</strong> through tiered escalation,
-                                give executives <strong>real-time deal visibility on WhatsApp</strong>, and
-                                replace manual helpdesk work with a dual-mode AI agent named "Aina".</p>
+                            <p>Designed to <strong>eliminate missed tickets</strong> through tiered
+                                escalation, give executives <strong>real-time deal visibility</strong> on
+                                WhatsApp, and replace manual helpdesk work with a dual-mode AI agent named
+                                "Aina".</p>
+                            <div class="impact-badges">
+                                <span class="impact-badge">AI lead scoring</span>
+                                <span class="impact-badge">SLA escalation</span>
+                                <span class="impact-badge">Executive dashboard</span>
+                                <span class="impact-badge">Helpdesk automation</span>
+                            </div>
                         </div>
                         <a href="#contact" class="featured-link">Discuss a similar build</a>
                     </div>
                 </article>
 
-                <!-- Project 2: CryptoSharia -->
-                <article class="featured-card" style="--card-accent: linear-gradient(180deg, #f7d046, #00d4ff);">
-                    <div class="featured-side">
-                        <span class="featured-icon">🕌</span>
-                        <div>
-                            <div class="featured-org">PT Kripto Syariah Indonesia</div>
-                            <div class="featured-name">CryptoSharia — Microservice Ecosystem</div>
-                        </div>
-                        <div class="featured-tech">
-                            <span class="tech-badge">SvelteKit</span>
-                            <span class="tech-badge">TypeScript</span>
-                            <span class="tech-badge">Tailwind 4</span>
-                            <span class="tech-badge">PostgreSQL</span>
-                            <span class="tech-badge">Drizzle ORM</span>
-                            <span class="tech-badge">OpenAPI 3.1</span>
-                        </div>
-                    </div>
-                    <div class="featured-body">
-                        <div class="featured-block">
-                            <h5>Problem</h5>
-                            <p>Indonesia lacked a credible Sharia-compliant crypto education platform with
-                                both e-learning depth and a verifiable token screening system.</p>
-                        </div>
-                        <div class="featured-block">
-                            <h5>Solution</h5>
-                            <p>Architected 6 interconnected SvelteKit services — public site, e-learning
-                                academy, admin CMS with RBAC, REST API with Scalar docs, community portal, and
-                                media viewer. Shared AI foundation rules across repos for consistency.</p>
-                        </div>
-                        <div class="featured-block impact">
-                            <h5>Impact</h5>
-                            <p><strong>Live at cryptosharia.id</strong> with full e-learning, token screening,
-                                certificates, and JWT + Argon2id-secured auth across the entire microservice
-                                stack.</p>
-                        </div>
-                        <a href="https://cryptosharia.id" target="_blank" rel="noopener" class="featured-link">Visit
-                            cryptosharia.id</a>
-                    </div>
-                </article>
-
-                <!-- Project 3: E-Risk Nusativ -->
+                <!-- Project 2: E-Risk Nusativ (Premium enterprise treatment) -->
                 <article class="featured-card" style="--card-accent: linear-gradient(180deg, #00d4ff, #667eea);">
                     <div class="featured-side">
                         <span class="featured-icon">🛡️</span>
@@ -322,25 +302,78 @@
                         <div class="featured-block">
                             <h5>Solution</h5>
                             <p>Designed 30+ custom Odoo 16 modules — risk registers, interactive dashboards,
-                                KPI tracking, impact assessments, treatment realization, tier validation, SSO,
-                                and a public REST API.</p>
+                                KPI tracking, impact assessments, treatment realization, tier validation,
+                                SSO, and a public REST API.</p>
                         </div>
                         <div class="featured-block impact">
                             <h5>Impact</h5>
-                            <p>Built to be a <strong>single source of truth</strong> for enterprise risk — with
-                                approval workflows, dark mode theming, and seamless integration into the
+                            <p>Built to be a <strong>single source of truth</strong> for enterprise risk —
+                                with approval workflows, dark mode theming, and seamless integration into the
                                 Nusativ platform.</p>
+                            <div class="impact-badges">
+                                <span class="impact-badge">30+ modules</span>
+                                <span class="impact-badge">Risk registers</span>
+                                <span class="impact-badge">KPI dashboards</span>
+                                <span class="impact-badge">SSO &amp; REST API</span>
+                            </div>
                         </div>
                         <a href="https://nusativ.id" target="_blank" rel="noopener" class="featured-link">Visit
                             nusativ.id</a>
                     </div>
                 </article>
 
+                <!-- Project 3: CryptoSharia -->
+                <article class="featured-card" style="--card-accent: linear-gradient(180deg, #f7d046, #00d4ff);">
+                    <div class="featured-side">
+                        <span class="featured-icon">🕌</span>
+                        <div>
+                            <div class="featured-org">PT Kripto Syariah Indonesia</div>
+                            <div class="featured-name">CryptoSharia — Learning &amp; Membership Ecosystem</div>
+                        </div>
+                        <div class="featured-tech">
+                            <span class="tech-badge">SvelteKit</span>
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Tailwind 4</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">Drizzle ORM</span>
+                            <span class="tech-badge">OpenAPI 3.1</span>
+                        </div>
+                    </div>
+                    <div class="featured-body">
+                        <div class="featured-block">
+                            <h5>Problem</h5>
+                            <p>Indonesia lacked a credible Sharia-compliant crypto education platform with
+                                both e-learning depth and a verifiable token screening system.</p>
+                        </div>
+                        <div class="featured-block">
+                            <h5>Solution</h5>
+                            <p>Built a structured learning and membership platform for a crypto education
+                                ecosystem — 6 interconnected SvelteKit services (public site, academy, admin
+                                CMS with RBAC, REST API with Scalar docs, community portal, media viewer)
+                                with shared AI foundation rules across repos.</p>
+                        </div>
+                        <div class="featured-block impact">
+                            <h5>Impact</h5>
+                            <p><strong>Live at cryptosharia.id</strong> with full e-learning, token screening,
+                                certificates, and JWT + Argon2id-secured auth across the entire microservice
+                                stack.</p>
+                            <div class="impact-badges">
+                                <span class="impact-badge">6 microservices</span>
+                                <span class="impact-badge">E-learning + certs</span>
+                                <span class="impact-badge">Token screening</span>
+                                <span class="impact-badge">Hardened auth</span>
+                            </div>
+                        </div>
+                        <a href="https://cryptosharia.id" target="_blank" rel="noopener" class="featured-link">Visit
+                            cryptosharia.id</a>
+                    </div>
+                </article>
+
             </div>
 
-            <!-- Other notable products -->
+            <!-- Additional systems and internal tools (renamed from mini projects) -->
             <div class="other-projects fade-in">
-                <h3>Other notable products</h3>
+                <h3>Additional systems and internal tools</h3>
                 <div class="other-grid">
                     <div class="other-card">
                         <div class="other-card-name">Kelas AI — Pembelajar Belajar</div>
@@ -354,8 +387,8 @@
                     </div>
                     <div class="other-card">
                         <div class="other-card-name">Ramadhan Series Platform</div>
-                        <div class="other-card-desc">Dedicated video distribution platform built on top of the
-                            Pembelajar Belajar AI pipeline.</div>
+                        <div class="other-card-desc">Dedicated video distribution platform built on top of
+                            the Pembelajar Belajar AI pipeline.</div>
                     </div>
                     <div class="other-card">
                         <div class="other-card-name">Akademik SMA FG Putri FDS</div>
@@ -371,8 +404,7 @@
     <section class="clients" id="clients">
         <div class="container">
             <span class="section-eyebrow fade-in">Selected Clients</span>
-            <h2 class="section-title fade-in">Systems built for businesses, schools, and organizations across
-                Indonesia.</h2>
+            <h2 class="section-title fade-in">Real systems built for real organizations.</h2>
             <p class="section-subtitle fade-in">A focused selection of organizations I've delivered ERP,
                 mobile, and AI automation solutions for — across business, education, and internal tooling.
             </p>
@@ -385,22 +417,31 @@
                     </div>
                     <div class="clients-grid">
                         <div class="client-card">
-                            <div class="client-industry">Automotive Manufacturing</div>
-                            <div class="client-name">Yamaha Motor Parts Manufacturing Indonesia</div>
-                            <div class="client-desc">Comprehensive Odoo ERP for manufacturing operations,
-                                inventory management, and quality control.</div>
+                            <div class="client-monogram">YM</div>
+                            <div class="client-info">
+                                <div class="client-industry">Automotive Manufacturing</div>
+                                <div class="client-name">Yamaha Motor Parts Manufacturing Indonesia</div>
+                                <div class="client-desc">Comprehensive Odoo ERP for manufacturing operations,
+                                    inventory management, and quality control.</div>
+                            </div>
                         </div>
                         <div class="client-card">
-                            <div class="client-industry">Telecommunications</div>
-                            <div class="client-name">Telkom Sigma</div>
-                            <div class="client-desc">Advanced Odoo systems for infrastructure management,
-                                CRM, and business process optimization.</div>
+                            <div class="client-monogram">TS</div>
+                            <div class="client-info">
+                                <div class="client-industry">Telecommunications</div>
+                                <div class="client-name">Telkom Sigma</div>
+                                <div class="client-desc">Advanced Odoo systems for infrastructure management,
+                                    CRM, and business process optimization.</div>
+                            </div>
                         </div>
                         <div class="client-card">
-                            <div class="client-industry">Inspection &amp; Certification</div>
-                            <div class="client-name">PT SUCOFINDO</div>
-                            <div class="client-desc">Specialized Odoo applications for inspection processes,
-                                certification management, and compliance tracking.</div>
+                            <div class="client-monogram">SC</div>
+                            <div class="client-info">
+                                <div class="client-industry">Inspection &amp; Certification</div>
+                                <div class="client-name">PT SUCOFINDO</div>
+                                <div class="client-desc">Specialized Odoo applications for inspection
+                                    processes, certification management, and compliance tracking.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -412,22 +453,31 @@
                     </div>
                     <div class="clients-grid">
                         <div class="client-card">
-                            <div class="client-industry">Fintech / EdTech</div>
-                            <div class="client-name">PT Kripto Syariah Indonesia</div>
-                            <div class="client-desc">6-app SvelteKit microservice ecosystem with academy,
-                                admin CMS, REST API, portal, and media viewer.</div>
+                            <div class="client-monogram">KS</div>
+                            <div class="client-info">
+                                <div class="client-industry">Fintech / EdTech</div>
+                                <div class="client-name">PT Kripto Syariah Indonesia</div>
+                                <div class="client-desc">6-app SvelteKit microservice ecosystem with academy,
+                                    admin CMS, REST API, portal, and media viewer.</div>
+                            </div>
                         </div>
                         <div class="client-card">
-                            <div class="client-industry">Enterprise Risk Management</div>
-                            <div class="client-name">PT Nusa Teknologi Inovasi</div>
-                            <div class="client-desc">E-Risk system on Odoo 16 with 30+ modules for risk
-                                registers, KPI, SSO, and tier validation workflows.</div>
+                            <div class="client-monogram">NU</div>
+                            <div class="client-info">
+                                <div class="client-industry">Enterprise Risk Management</div>
+                                <div class="client-name">PT Nusa Teknologi Inovasi</div>
+                                <div class="client-desc">E-Risk system on Odoo 16 with 30+ modules for risk
+                                    registers, KPI, SSO, and tier validation workflows.</div>
+                            </div>
                         </div>
                         <div class="client-card">
-                            <div class="client-industry">CRM &amp; AI Automation</div>
-                            <div class="client-name">PT Naska Jala Dewa</div>
-                            <div class="client-desc">Salesforce-level Odoo CRM transformation with 18+ n8n
-                                automations, AI lead scoring, and WhatsApp dashboards.</div>
+                            <div class="client-monogram">NJ</div>
+                            <div class="client-info">
+                                <div class="client-industry">CRM &amp; AI Automation</div>
+                                <div class="client-name">PT Naska Jala Dewa</div>
+                                <div class="client-desc">Salesforce-level Odoo CRM transformation with 18+ n8n
+                                    automations, AI lead scoring, and WhatsApp dashboards.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -448,169 +498,208 @@
 
             <div class="clients-grid clients-extra" id="clients-extra" hidden>
                 <div class="client-card">
-                    <div class="client-industry">Electrical Manufacturing</div>
-                    <div class="client-name">PT Triputra Electric Abadi</div>
-                    <div class="client-desc">Custom Odoo modules for electrical component manufacturing,
-                        supply chain, and financial integration.</div>
+                    <div class="client-monogram">TE</div>
+                    <div class="client-info">
+                        <div class="client-industry">Electrical Manufacturing</div>
+                        <div class="client-name">PT Triputra Electric Abadi</div>
+                        <div class="client-desc">Custom Odoo modules for electrical component manufacturing,
+                            supply chain, and financial integration.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">Wire Manufacturing</div>
-                    <div class="client-name">PT Kawat Enamel Indonesia</div>
-                    <div class="client-desc">Odoo ERP for wire manufacturing processes, quality control, and
-                        production planning optimization.</div>
+                    <div class="client-monogram">KE</div>
+                    <div class="client-info">
+                        <div class="client-industry">Wire Manufacturing</div>
+                        <div class="client-name">PT Kawat Enamel Indonesia</div>
+                        <div class="client-desc">Odoo ERP for wire manufacturing processes, quality control,
+                            and production planning optimization.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">Conglomerate</div>
-                    <div class="client-name">Pennyu Group</div>
-                    <div class="client-desc">Multi-company Odoo solutions with integrated financial reporting
-                        and business intelligence dashboards.</div>
+                    <div class="client-monogram">PG</div>
+                    <div class="client-info">
+                        <div class="client-industry">Conglomerate</div>
+                        <div class="client-name">Pennyu Group</div>
+                        <div class="client-desc">Multi-company Odoo solutions with integrated financial
+                            reporting and business intelligence dashboards.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">Healthcare</div>
-                    <div class="client-name">PT Kartika Bina Medikatama</div>
-                    <div class="client-desc">Healthcare management on Odoo for patient records, medical
-                        inventory, and appointment scheduling.</div>
+                    <div class="client-monogram">KB</div>
+                    <div class="client-info">
+                        <div class="client-industry">Healthcare</div>
+                        <div class="client-name">PT Kartika Bina Medikatama</div>
+                        <div class="client-desc">Healthcare management on Odoo for patient records, medical
+                            inventory, and appointment scheduling.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">Trading &amp; Distribution</div>
-                    <div class="client-name">Margaria Group</div>
-                    <div class="client-desc">Trading and distribution management with advanced inventory
-                        tracking and sales analytics.</div>
+                    <div class="client-monogram">MG</div>
+                    <div class="client-info">
+                        <div class="client-industry">Trading &amp; Distribution</div>
+                        <div class="client-name">Margaria Group</div>
+                        <div class="client-desc">Trading and distribution management with advanced inventory
+                            tracking and sales analytics.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">Logistics</div>
-                    <div class="client-name">PT Asia Bandar Alam</div>
-                    <div class="client-desc">Logistics and warehousing solutions with real-time tracking and
-                        automated reporting capabilities.</div>
+                    <div class="client-monogram">AB</div>
+                    <div class="client-info">
+                        <div class="client-industry">Logistics</div>
+                        <div class="client-name">PT Asia Bandar Alam</div>
+                        <div class="client-desc">Logistics and warehousing solutions with real-time tracking
+                            and automated reporting capabilities.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">Automotive Parts</div>
-                    <div class="client-name">PT NOK Indonesia</div>
-                    <div class="client-desc">Manufacturing execution and quality management systems for
-                        automotive component production.</div>
+                    <div class="client-monogram">NI</div>
+                    <div class="client-info">
+                        <div class="client-industry">Automotive Parts</div>
+                        <div class="client-name">PT NOK Indonesia</div>
+                        <div class="client-desc">Manufacturing execution and quality management systems for
+                            automotive component production.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">Automotive</div>
-                    <div class="client-name">PT Sun Star Prima Motor</div>
-                    <div class="client-desc">Dealership management with inventory control, sales tracking,
-                        and CRM workflows.</div>
+                    <div class="client-monogram">SS</div>
+                    <div class="client-info">
+                        <div class="client-industry">Automotive</div>
+                        <div class="client-name">PT Sun Star Prima Motor</div>
+                        <div class="client-desc">Dealership management with inventory control, sales tracking,
+                            and CRM workflows.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">Automotive Components</div>
-                    <div class="client-name">PT Autocomp System Indonesia</div>
-                    <div class="client-desc">Production planning and quality assurance systems for automotive
-                        component manufacturing.</div>
+                    <div class="client-monogram">AS</div>
+                    <div class="client-info">
+                        <div class="client-industry">Automotive Components</div>
+                        <div class="client-name">PT Autocomp System Indonesia</div>
+                        <div class="client-desc">Production planning and quality assurance systems for
+                            automotive component manufacturing.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">Textile &amp; Garment</div>
-                    <div class="client-name">PT Citra Busana Indonesia</div>
-                    <div class="client-desc">Textile manufacturing management with production scheduling and
-                        order tracking capabilities.</div>
+                    <div class="client-monogram">CB</div>
+                    <div class="client-info">
+                        <div class="client-industry">Textile &amp; Garment</div>
+                        <div class="client-name">PT Citra Busana Indonesia</div>
+                        <div class="client-desc">Textile manufacturing management with production scheduling
+                            and order tracking capabilities.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">Textile Manufacturing</div>
-                    <div class="client-name">Duniatex Group</div>
-                    <div class="client-desc">Textile production management with supply chain integration and
-                        quality control modules.</div>
+                    <div class="client-monogram">DT</div>
+                    <div class="client-info">
+                        <div class="client-industry">Textile Manufacturing</div>
+                        <div class="client-name">Duniatex Group</div>
+                        <div class="client-desc">Textile production management with supply chain integration
+                            and quality control modules.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">EdTech / AI Content</div>
-                    <div class="client-name">Pembelajar Belajar</div>
-                    <div class="client-desc">AI-powered e-learning platform with multi-language video
-                        generation (ID/EN/AR/MS) and dynamic domain branding.</div>
+                    <div class="client-monogram">PB</div>
+                    <div class="client-info">
+                        <div class="client-industry">EdTech / AI Content</div>
+                        <div class="client-name">Pembelajar Belajar</div>
+                        <div class="client-desc">AI-powered e-learning platform with multi-language video
+                            generation (ID/EN/AR/MS) and dynamic domain branding.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">SaaS</div>
-                    <div class="client-name">Abatapps.online</div>
-                    <div class="client-desc">Scalable online applications with robust backend automation
-                        (n8n) and seamless user experience.</div>
+                    <div class="client-monogram">AB</div>
+                    <div class="client-info">
+                        <div class="client-industry">SaaS</div>
+                        <div class="client-name">Abatapps.online</div>
+                        <div class="client-desc">Scalable online applications with robust backend automation
+                            (n8n) and seamless user experience.</div>
+                    </div>
                 </div>
                 <div class="client-card">
-                    <div class="client-industry">Education (EdTech)</div>
-                    <div class="client-name">Akademik SMA FG Putri FDS</div>
-                    <div class="client-desc">Academic information system for student data, scheduling, and
-                        reporting with n8n workflow automation.</div>
+                    <div class="client-monogram">SF</div>
+                    <div class="client-info">
+                        <div class="client-industry">Education (EdTech)</div>
+                        <div class="client-name">Akademik SMA FG Putri FDS</div>
+                        <div class="client-desc">Academic information system for student data, scheduling,
+                            and reporting with n8n workflow automation.</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- SKILLS — output-focused -->
     <section class="skills-section" id="skills">
         <div class="container">
             <span class="section-eyebrow fade-in">Capabilities</span>
             <h2 class="section-title fade-in">Skills grouped by what I actually deliver.</h2>
-            <p class="section-subtitle fade-in">Not a tools dump — these are the four areas where I ship
-                production work for clients today.</p>
+            <p class="section-subtitle fade-in">Not a tools dump. These are the four areas where I ship
+                production work for clients today, framed by the deliverables — not the stack.</p>
 
             <div class="skills-grid fade-in">
                 <div class="skill-group">
                     <span class="skill-group-icon">🤖</span>
-                    <h3>AI &amp; Automation</h3>
-                    <p class="skill-group-sub">Workflow automation, AI agents, and intelligent integrations.
-                    </p>
+                    <h3>AI Automation</h3>
+                    <p class="skill-group-sub">Workflow automation, AI assistants, and intelligent
+                        integrations.</p>
                     <div class="skill-list">
-                        <span class="skill-pill">n8n</span>
-                        <span class="skill-pill">Google Vertex AI</span>
-                        <span class="skill-pill">AI Agents</span>
-                        <span class="skill-pill">WhatsApp API (WAHA)</span>
-                        <span class="skill-pill">Workflow Automation</span>
-                        <span class="skill-pill">Process Optimization</span>
+                        <span class="skill-pill">Workflow automation</span>
+                        <span class="skill-pill">AI assistants</span>
+                        <span class="skill-pill">Data extraction</span>
+                        <span class="skill-pill">n8n · Vertex AI</span>
+                        <span class="skill-pill">WhatsApp API</span>
                     </div>
                 </div>
 
                 <div class="skill-group">
                     <span class="skill-group-icon">🏢</span>
-                    <h3>ERP &amp; Backend</h3>
-                    <p class="skill-group-sub">Custom modules, integrations, and enterprise data systems.</p>
+                    <h3>ERP &amp; Internal Systems</h3>
+                    <p class="skill-group-sub">Dashboards, reporting, role management, and approval flows.
+                    </p>
                     <div class="skill-list">
-                        <span class="skill-pill">Odoo 16</span>
-                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">Custom Odoo modules</span>
+                        <span class="skill-pill">Role-based access</span>
+                        <span class="skill-pill">Reporting &amp; KPI</span>
+                        <span class="skill-pill">Odoo 16 · Python</span>
                         <span class="skill-pill">PostgreSQL</span>
-                        <span class="skill-pill">REST API</span>
-                        <span class="skill-pill">OpenAPI 3.1</span>
-                        <span class="skill-pill">Risk Management</span>
                     </div>
                 </div>
 
                 <div class="skill-group">
-                    <span class="skill-group-icon">🌐</span>
-                    <h3>Web &amp; Product</h3>
-                    <p class="skill-group-sub">Modern microservice apps, dashboards, and learning platforms.
-                    </p>
+                    <span class="skill-group-icon">🎓</span>
+                    <h3>Learning Platforms</h3>
+                    <p class="skill-group-sub">Course systems, progress tracking, and assessment.</p>
                     <div class="skill-list">
-                        <span class="skill-pill">SvelteKit</span>
-                        <span class="skill-pill">Svelte 5</span>
-                        <span class="skill-pill">TypeScript</span>
-                        <span class="skill-pill">Tailwind CSS</span>
-                        <span class="skill-pill">Drizzle ORM</span>
-                        <span class="skill-pill">PHP</span>
+                        <span class="skill-pill">Course system</span>
+                        <span class="skill-pill">Progress tracking</span>
+                        <span class="skill-pill">Certificates</span>
+                        <span class="skill-pill">SvelteKit · Drizzle</span>
+                        <span class="skill-pill">AI video pipeline</span>
                     </div>
                 </div>
 
                 <div class="skill-group">
                     <span class="skill-group-icon">📱</span>
-                    <h3>Mobile Development</h3>
-                    <p class="skill-group-sub">Cross-platform apps for production at scale.</p>
+                    <h3>Web &amp; Mobile Products</h3>
+                    <p class="skill-group-sub">Admin panels, SaaS dashboards, and Flutter apps.</p>
                     <div class="skill-list">
-                        <span class="skill-pill">Flutter</span>
-                        <span class="skill-pill">Dart</span>
-                        <span class="skill-pill">SOLID Architecture</span>
+                        <span class="skill-pill">Admin panels</span>
+                        <span class="skill-pill">SaaS dashboards</span>
+                        <span class="skill-pill">Flutter apps</span>
+                        <span class="skill-pill">SvelteKit · TypeScript</span>
                         <span class="skill-pill">CI/CD</span>
-                        <span class="skill-pill">App Store / Play Store</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- EXPERIENCE — scan-friendly -->
     <section class="experience" id="experience">
         <div class="container">
             <span class="section-eyebrow fade-in">Career</span>
             <h2 class="section-title fade-in">Professional experience.</h2>
-            <p class="section-subtitle fade-in">Where I've worked, what I built, and the impact delivered —
-                most recent and most relevant first.</p>
+            <p class="section-subtitle fade-in">Most recent and most relevant first. The roles where I built
+                AI, ERP, and platform work get the spotlight.</p>
 
             <div class="timeline fade-in">
                 <div class="timeline-item">
@@ -618,13 +707,11 @@
                         <span class="timeline-date">Nov 2025 — Present</span>
                         <span class="timeline-role">AI Automation Expert</span>
                     </div>
-                    <div class="timeline-company">PT Naska Jala Dewa</div>
-                    <p class="timeline-impact">Transformed standard Odoo CRM into a Salesforce-grade
-                        enterprise system with 18+ n8n workflows. Engineered an AI Lead Scoring engine on
-                        Vertex AI, a 3-tier SLA escalation system, real-time WhatsApp Executive Dashboard,
-                        CSAT automation, and a custom PHP/Docker AP Portal. <strong>Result: tickets no longer
-                            slip through the cracks and executives have end-to-end deal visibility.</strong>
-                    </p>
+                    <div class="timeline-company">PT Naska Jala Dewa · AI · Workflow Automation · CRM</div>
+                    <p class="timeline-impact">Transformed a standard Odoo CRM into a Salesforce-grade system
+                        with 18+ n8n workflows, an AI Lead Scoring engine on Vertex AI, and a real-time
+                        WhatsApp Executive Dashboard. <strong>Tickets stop slipping through the cracks and
+                            executives get end-to-end deal visibility.</strong></p>
                 </div>
 
                 <div class="timeline-item">
@@ -632,12 +719,11 @@
                         <span class="timeline-date">2025 — Present</span>
                         <span class="timeline-role">Freelance AI &amp; Web Architect</span>
                     </div>
-                    <div class="timeline-company">Independent</div>
-                    <p class="timeline-impact">Architected the CryptoSharia microservice ecosystem (6
-                        SvelteKit apps) for PT Kripto Syariah Indonesia, built E-Risk on Odoo 16 with 30+
-                        custom modules for Nusativ, and developed Kelas AI — an AI-powered e-learning
-                        platform with multi-language video generation. <strong>Result: three production
-                            platforms now serving live users.</strong></p>
+                    <div class="timeline-company">Independent · ERP · LMS · Microservices</div>
+                    <p class="timeline-impact">Architected the CryptoSharia microservice ecosystem (6 SvelteKit
+                        apps), built E-Risk on Odoo 16 with 30+ modules for Nusativ, and developed Kelas AI —
+                        an AI-powered e-learning platform with multi-language video generation.
+                        <strong>Three production platforms now serving live users.</strong></p>
                 </div>
 
                 <div class="timeline-item">
@@ -645,11 +731,10 @@
                         <span class="timeline-date">Jan 2023 — Oct 2025</span>
                         <span class="timeline-role">Flutter &amp; Odoo Developer</span>
                     </div>
-                    <div class="timeline-company">PT Arkana Solusi Digital</div>
+                    <div class="timeline-company">PT Arkana Solusi Digital · ERP · Mobile · Client projects</div>
                     <p class="timeline-impact">Delivered Agriculture and HR Flutter apps and integrated Odoo
                         ERP solutions across 15+ enterprise clients including Yamaha Motor Parts, Telkom
-                        Sigma, SUCOFINDO, Duniatex, and Triputra Electric. <strong>Result: custom ERP modules
-                            powering manufacturing, automotive, telecom, and textile operations.</strong></p>
+                        Sigma, SUCOFINDO, Duniatex, and Triputra Electric.</p>
                 </div>
 
                 <div class="timeline-item">
@@ -657,10 +742,9 @@
                         <span class="timeline-date">Nov 2024 — Present</span>
                         <span class="timeline-role">Flutter Developer</span>
                     </div>
-                    <div class="timeline-company">QurbanPlus</div>
+                    <div class="timeline-company">QurbanPlus · Mobile</div>
                     <p class="timeline-impact">Maintained the Flutter app for end-to-end qurban management —
-                        animal booking, customer data, and transparent journey tracking. <strong>Result:
-                            improved operational efficiency and trust during the qurban season.</strong></p>
+                        animal booking, customer data, and transparent journey tracking.</p>
                 </div>
 
                 <div class="timeline-item">
@@ -670,14 +754,13 @@
                     </div>
                     <div class="timeline-company">CV Codespace · Universitas Terbuka · PT Bintang Pelajar</div>
                     <p class="timeline-impact">Shipped F&amp;B, student, HR, and radio Flutter applications to
-                        App Store and Play Store with full QA, CI/CD, and stakeholder alignment cycles —
-                        building the foundation for the production-grade work that followed.</p>
+                        App Store and Play Store with full QA, CI/CD, and stakeholder alignment cycles.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AWARDS & CERTIFICATIONS -->
+    <!-- AWARDS & CERTIFICATIONS — top 3 visible, rest in accordion -->
     <section id="credentials">
         <div class="container">
             <span class="section-eyebrow fade-in">Recognition &amp; Credentials</span>
@@ -700,6 +783,7 @@
 
                 <div>
                     <div class="cert-list" id="cert-list">
+                        <!-- Top 3 most relevant — always visible -->
                         <div class="cert-item">
                             <div class="cert-info">
                                 <div class="cert-name">Odoo Functional Training</div>
@@ -724,34 +808,36 @@
                             <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/overlay/1740495319541/single-media-viewer/?type=IMAGE&profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
                                 target="_blank" rel="noopener" class="cert-link">View →</a>
                         </div>
-                        <div class="cert-item">
-                            <div class="cert-info">
-                                <div class="cert-name">SOLID Principle in Flutter</div>
-                                <div class="cert-meta">Dicoding Indonesia<span class="dot">·</span>Sep 2023
-                                </div>
-                            </div>
-                            <a href="https://www.dicoding.com/certificates/L4PQ8MVQ2ZO1" target="_blank"
-                                rel="noopener" class="cert-link">View →</a>
-                        </div>
-                        <div class="cert-item">
-                            <div class="cert-info">
-                                <div class="cert-name">Flutter Development</div>
-                                <div class="cert-meta">Dicoding Indonesia<span class="dot">·</span>2023</div>
-                            </div>
-                            <a href="https://www.dicoding.com/certificates/98XWV3O2JPM3" target="_blank"
-                                rel="noopener" class="cert-link">View →</a>
-                        </div>
-                        <div class="cert-item">
-                            <div class="cert-info">
-                                <div class="cert-name">React UI Development</div>
-                                <div class="cert-meta">Professional Training<span class="dot">·</span>Nov 2024
-                                </div>
-                            </div>
-                            <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1732072734653/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
-                                target="_blank" rel="noopener" class="cert-link">View →</a>
-                        </div>
 
+                        <!-- Rest hidden behind toggle -->
                         <div class="cert-extra" id="cert-extra">
+                            <div class="cert-item">
+                                <div class="cert-info">
+                                    <div class="cert-name">SOLID Principle in Flutter</div>
+                                    <div class="cert-meta">Dicoding Indonesia<span class="dot">·</span>Sep 2023
+                                    </div>
+                                </div>
+                                <a href="https://www.dicoding.com/certificates/L4PQ8MVQ2ZO1" target="_blank"
+                                    rel="noopener" class="cert-link">View →</a>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-info">
+                                    <div class="cert-name">Flutter Development</div>
+                                    <div class="cert-meta">Dicoding Indonesia<span class="dot">·</span>2023
+                                    </div>
+                                </div>
+                                <a href="https://www.dicoding.com/certificates/98XWV3O2JPM3" target="_blank"
+                                    rel="noopener" class="cert-link">View →</a>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-info">
+                                    <div class="cert-name">React UI Development</div>
+                                    <div class="cert-meta">Professional Training<span class="dot">·</span>Nov
+                                        2024</div>
+                                </div>
+                                <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/details/featured/1732072734653/single-media-viewer/?profileId=ACoAACLX2sYBaayoKXpcBXkeLOe55XyyyRPrJ2g"
+                                    target="_blank" rel="noopener" class="cert-link">View →</a>
+                            </div>
                             <div class="cert-item">
                                 <div class="cert-info">
                                     <div class="cert-name">Certificate of Excellence: Solidity</div>
@@ -832,33 +918,35 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT — large gradient panel -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="contact-wrap fade-in">
-                <div>
-                    <span class="section-eyebrow">Let's talk</span>
-                    <h2>Tell me what process feels messy, repetitive, or hard to scale.</h2>
-                    <p>I'll help you turn it into a structured system — whether that's an AI-powered learning
-                        platform, an ERP, or an automation workflow. I respond fastest on WhatsApp, usually
-                        within a few hours during business days.</p>
-                </div>
-                <div class="contact-actions">
-                    <a href="https://wa.me/6282328591004" target="_blank" rel="noopener"
-                        class="contact-action primary">
-                        <span class="contact-action-icon">💬</span>
-                        <span class="contact-action-text">
-                            <span class="contact-action-label">Start a Project · fastest reply</span>
-                            <span class="contact-action-value">+62 823-2859-1004</span>
-                        </span>
-                    </a>
-                    <a href="mailto:naufal.nabila.2008@gmail.com" class="contact-action">
-                        <span class="contact-action-icon">📧</span>
-                        <span class="contact-action-text">
-                            <span class="contact-action-label">Send a Project Brief</span>
-                            <span class="contact-action-value">naufal.nabila.2008@gmail.com</span>
-                        </span>
-                    </a>
+            <div class="contact-panel fade-in">
+                <div class="contact-wrap">
+                    <div>
+                        <span class="section-eyebrow">Let's talk</span>
+                        <h2>Tell me what process feels messy, repetitive, or hard to scale.</h2>
+                        <p class="contact-reassure">You don't need to know the exact system yet. Tell me what
+                            feels messy. I'll help map the workflow and turn it into a working product.</p>
+                        <p>I respond fastest on WhatsApp — usually within a few hours during business days.</p>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="https://wa.me/6282328591004" target="_blank" rel="noopener"
+                            class="contact-action primary">
+                            <span class="contact-action-icon">💬</span>
+                            <span class="contact-action-text">
+                                <span class="contact-action-label">Start a Project · fastest reply</span>
+                                <span class="contact-action-value">+62 823-2859-1004</span>
+                            </span>
+                        </a>
+                        <a href="mailto:naufal.nabila.2008@gmail.com" class="contact-action">
+                            <span class="contact-action-icon">📧</span>
+                            <span class="contact-action-text">
+                                <span class="contact-action-label">Send a Project Brief</span>
+                                <span class="contact-action-value">naufal.nabila.2008@gmail.com</span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -866,7 +954,53 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 Naufal Nabila · Built with care, code, and a lot of automation.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">Naufal<span>.</span></a>
+                    <p>I build AI-powered systems for businesses, schools, and organizations that have
+                        outgrown spreadsheets and manual workflows.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#projects">Case Studies</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><a href="https://wa.me/6282328591004" target="_blank" rel="noopener">WhatsApp</a>
+                        </li>
+                        <li><a href="mailto:naufal.nabila.2008@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Live Work</h5>
+                    <ul>
+                        <li><a href="https://cryptosharia.id" target="_blank" rel="noopener">cryptosharia.id</a>
+                        </li>
+                        <li><a href="https://nusativ.id" target="_blank" rel="noopener">nusativ.id</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Naufal Nabila. Built with care, code, and a lot of automation.</span>
+                <span class="footer-meta">
+                    <span>📍 Indonesia</span>
+                    <span class="dot-sep">·</span>
+                    <span>Available for new projects</span>
+                </span>
+            </div>
         </div>
     </footer>
 
