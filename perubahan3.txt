@@ -1,0 +1,359 @@
+1. Hero section: jauh lebih kuat, tapi masih bisa lebih “menusuk”
+
+Headline sekarang:
+
+I build AI-powered systems that turn messy business operations into scalable workflows.
+
+Ini jauh lebih bagus dari sebelumnya. Lebih jelas, lebih business-oriented, dan pain point-nya langsung kena. Kata “messy business operations” sangat bagus karena calon klien bisa merasa: “Wah iya, bisnis saya memang berantakan di spreadsheet/WA/manual report.”
+
+Tapi masalahnya: headline ini masih agak panjang secara visual dan line break-nya belum sepenuhnya maksimal. Bagian “scalable workflows” sudah kuat, tapi bisa dibuat lebih punchy.
+
+Alternatif yang menurutku lebih tajam:
+
+I turn messy business operations into AI-powered scalable systems.
+
+Atau:
+
+I build AI-powered systems for messy operations, manual workflows, and growing teams.
+
+Versi sekarang tetap bagus. Tapi kalau targetmu adalah calon klien non-teknis, kata “systems” lebih mudah daripada “workflows”. Jangan terlalu banyak kata yang terasa startup-ish.
+
+CTA juga sudah membaik. Namun tombol “Contact Me” masih terasa standar. Lebih kuat kalau:
+
+Start a Project
+atau
+Discuss Your System
+
+Karena “Contact Me” pasif. “Start a Project” lebih terasa niat.
+
+2. Navbar: sudah lebih bagus, tapi masih terlalu mungil
+
+Navbar kamu terlihat clean, tapi masih kecil sekali. Di screenshot panjang ini, navbar hampir terasa seperti dekorasi. Padahal navbar harus membantu orang cepat memahami struktur website.
+
+Yang bagus:
+
+Ada CTA gradient di kanan.
+Navigasi tidak berantakan.
+Branding simple.
+
+Yang kurang:
+
+Link terlalu kecil.
+Contrast teks navigasi kurang kuat.
+CTA kanan bagus, tapi ukurannya masih terlalu kecil untuk dijadikan tombol utama.
+
+Saran:
+Perbesar navbar sekitar 10–15%. Jangan banyak. Cukup agar terasa lebih confidence.
+
+Kalau tombol kanan sekarang “Start a Project”, itu sudah benar. Pastikan dia lebih menonjol dari link biasa.
+
+3. Bagian profile: lebih baik, tapi foto masih belum cukup menjual
+
+Section:
+
+Specialized in turning complex business problems into clean, intelligent systems.
+
+Ini bagus. Copy-nya lebih matang. Tapi foto kamu masih jadi titik lemah visual.
+
+Masalahnya bukan fotonya jelek, tapi:
+
+terlalu kecil,
+terlalu casual,
+terlalu “tempelan”,
+belum terasa sebagai bukti profesional kelas B2B.
+
+Kalau kamu mau personal brand yang kuat, foto ini harus lebih deliberate. Pilih salah satu arah:
+
+Arah 1 — Professional consultant:
+Foto portrait lebih terang, rapi, background bersih.
+
+Arah 2 — Builder/operator:
+Foto kamu sedang bekerja dengan laptop, whiteboard, dashboard, atau meeting.
+
+Arah 3 — Minimal personal:
+Foto tetap kecil, tapi tambahkan card yang lebih kuat: “Based in Indonesia · Building AI/ERP/LMS systems for real operations.”
+
+Sekarang card kecil di bawah foto sudah bagus, tapi masih terlalu kecil untuk dibaca.
+
+4. “Problems I solve” adalah improvement terbaik
+
+Ini section baru yang sangat tepat. Website kamu langsung lebih business-oriented.
+
+Cards seperti:
+
+Manual workflows
+ERP chaos
+Learning Platform
+Business Process Automation
+
+Ini bagus karena sekarang kamu bicara dari sudut masalah, bukan stack.
+
+Tapi kritik tajamnya: judul section bagus, isi card masih kurang sakit. Pain point-nya harus lebih eksplisit.
+
+Contoh revisi yang lebih tajam:
+
+Manual Workflows
+Current version mungkin masih terlalu halus. Buat lebih nyeri:
+
+Your team repeats the same admin tasks every day, across spreadsheets, WhatsApp, and disconnected tools.
+
+ERP Chaos
+
+Your business data lives in too many places, making reports slow and decisions unclear.
+
+Learning Platforms
+
+Your education content, student progress, and assessments are scattered without a structured system.
+
+Business Process Automation
+
+You know the process can be automated, but your current tools still depend on manual follow-up.
+
+Ini akan lebih “kena” ke calon klien.
+
+5. Section “From messy operations to structured systems” sangat bagus, tapi perlu visual flow yang lebih kuat
+
+Ini ide section yang tepat. Bahkan menurutku ini harus jadi salah satu section utama yang paling kuat.
+
+Namun saat ini tampilannya masih berupa tiga card biasa. Padahal konsepnya adalah transformasi. Secara visual harus terasa seperti alur:
+
+Messy Operations → System Design → Scalable Platform
+
+Sekarang sudah ada 3 card, tapi belum terasa sebagai flow. Tambahkan:
+
+panah horizontal di desktop,
+numbering besar 01, 02, 03,
+visual kecil seperti spreadsheet icon → workflow diagram → dashboard icon,
+atau garis penghubung antar-card.
+
+Ini akan membuat calon klien langsung memahami cara kerja kamu.
+
+Saran copy section:
+
+I don’t start with code. I start by mapping the mess.
+
+Lalu flow:
+
+Map the mess
+Find repetitive tasks, scattered data, and manual bottlenecks.
+Design the system
+Turn the process into roles, workflows, database logic, and automation rules.
+Build the product
+Deliver dashboards, portals, reports, and AI-powered tools your team can use.
+
+Ini akan menaikkan trust karena kamu terlihat bukan sekadar coder, tapi system thinker.
+
+6. Project section: bagus, tapi belum cukup “case study”
+
+Ini masih salah satu area yang perlu ditingkatkan.
+
+Secara visual card project kamu rapi. Tapi sebagai bukti bisnis, masih agak kurang menggigit. Card project harus terasa seperti:
+
+Problem → Solution → Result
+
+Bukan hanya deskripsi project.
+
+Yang sekarang sudah lebih baik, tapi masih terlalu banyak teks kecil. Calon klien kemungkinan hanya scan. Maka buat bagian impact lebih menonjol.
+
+Contoh struktur tiap project:
+
+Telegram-based CRM Automation
+Problem: Leads and follow-ups were scattered across manual chat workflows.
+Solution: Built an automation system to centralize lead handling and follow-up logic.
+Impact: Reduced repetitive admin work and made customer tracking more structured.
+
+Lalu tampilkan 2–3 metric style badge:
+
+Centralized lead tracking
+Automated follow-up flow
+Reduced manual admin steps
+
+Untuk project CryptoSharia, jangan cuma tampilkan sebagai “membership system”. Tonjolkan bisnisnya:
+
+Built a structured learning and membership platform for a crypto education ecosystem.
+
+Untuk e-Zam / Enterprise Risk Management, itu terdengar paling enterprise. Beri dia treatment lebih premium. Mungkin jadikan featured case study paling besar.
+
+7. “Other mini projects” bagus, tapi terlalu kecil dan rawan dianggap filler
+
+Bagian mini projects oke untuk menunjukkan breadth. Tapi hati-hati: kalau terlalu kecil dan banyak, kesannya seperti “koleksi project kecil-kecilan”. Untuk website B2B premium, kualitas lebih penting daripada jumlah.
+
+Saran:
+Buat mini projects sebagai:
+
+Additional systems and internal tools
+
+Bukan “Other mini projects”.
+
+Kenapa? “Mini projects” terdengar kecil. “Additional systems and internal tools” terdengar lebih profesional.
+
+8. Trust section lebih aman sekarang, tapi masih kurang kuat secara visual
+
+Perubahan dari “Trusted by enterprises” ke:
+
+Systems built for businesses, schools, and organizations across Indonesia.
+
+Ini lebih aman dan lebih jujur. Bagus. Tidak terasa overclaim.
+
+Tapi section ini masih terlalu kecil. Padahal ini bagian trust. Jangan biarkan trust section tenggelam.
+
+Masalah:
+
+Card terlalu kecil.
+Nama organisasi sulit dibaca.
+Deskripsi kecil.
+Tidak ada logo visual yang memorable.
+Bagian bawah seperti quote/testimonial kurang menonjol.
+
+Kalau belum bisa pakai logo asli, minimal buat initial mark yang lebih besar. Misalnya card dengan huruf/inisial organisasi. Tapi kalau bisa pakai logo, pakai logo. Trust section tanpa logo terasa kurang kuat.
+
+Saran judul alternatif:
+
+Built for real teams, not imaginary demos.
+
+Ini lebih tajam, tapi mungkin terlalu agresif. Versi aman:
+
+Real systems built for real organizations.
+
+9. Skills section sudah oke, tapi terlalu “developer resume”
+
+“Skills grouped by what I actually deliver” bagus. Tapi ini masih terasa seperti skill matrix. Untuk calon klien, ini bukan section utama. Jangan biarkan terlalu dominan.
+
+Yang bagus:
+
+Grouping berdasarkan delivery, bukan sekadar daftar teknologi.
+Card rapi.
+Tag skill enak dilihat.
+
+Yang perlu diperbaiki:
+
+Tambahkan konteks hasil.
+Jangan terlalu banyak tag kecil.
+Prioritaskan skill yang relevan dengan positioning: AI, ERP, LMS, automation, dashboard, database, integration.
+
+Saran: ubah beberapa judul agar lebih business-facing.
+
+Misalnya:
+
+AI Automation
+Internal Systems
+Learning Platforms
+Dashboards & Reporting
+Integrations
+
+Bukan sekadar kategori teknis.
+
+10. Experience section masih terlalu padat dan kecil
+
+Ini masih salah satu masalah utama. Section experience terlihat profesional, tapi berat dibaca. Untuk calon klien, mereka tidak akan membaca semua detail.
+
+Kritik tajam: bagian ini masih seperti CV yang ditempel di website. Harus diubah menjadi bukti kredibilitas yang mudah discan.
+
+Saran:
+
+Perbesar title role.
+Kurangi panjang deskripsi.
+Buat bullet lebih pendek.
+Highlight role yang paling relevan.
+Tambahkan label seperti “ERP”, “LMS”, “Automation”, “Full-stack”, “Client project”.
+
+Format ideal:
+
+AI Automation Engineer
+2025–Now · Workflow Automation · Internal Systems
+Built automation workflows for business operations, reporting, and AI-assisted processes.
+
+Jangan semua experience diberi panjang yang sama. Yang paling kuat harus paling menonjol.
+
+11. Awards & Certifications: sudah bagus, tapi accordion menyembunyikan trust
+
+Kalau ada sertifikasi penting, jangan semuanya disembunyikan di accordion. Orang tidak akan klik semua.
+
+Bagian kiri yang menampilkan award sudah bagus. Tapi sisi kanan accordion membuat sisanya terasa kurang penting.
+
+Saran:
+Tampilkan 3 sertifikasi paling penting secara terbuka, lalu sisanya accordion.
+
+Misalnya:
+
+Best Developer of the Year
+Google / AWS / Dicoding / Alibaba Cloud certification
+Relevant AI/Web/Cloud certification
+
+Jika ada sertifikasi yang kurang relevan, jangan terlalu ditonjolkan.
+
+12. CTA akhir jauh lebih baik
+
+Copy:
+
+Tell me what process feels messy, repetitive, or hard to scale.
+
+Ini sangat bagus. Ini jauh lebih manusiawi dan relevan daripada CTA generic. Calon klien bisa langsung mengaitkan dengan masalah mereka.
+
+Tapi section ini masih terasa agak kecil. CTA akhir harus lebih “besar” secara visual. Ini adalah tempat kamu menutup penjualan. Sekarang masih terasa seperti section biasa.
+
+Saran:
+
+Perbesar headline.
+Tambahkan 1 kalimat lebih tajam.
+Buat tombol lebih besar.
+Tambahkan reassurance.
+
+Contoh:
+
+You don’t need to know the exact system yet.
+Tell me what feels messy. I’ll help map the workflow and turn it into a working product.
+
+Tombol:
+Start a Project Discussion
+
+13. Masalah desain utama yang masih tersisa
+Pertama: typography masih terlalu kecil
+
+Ini masih problem paling besar. Website kamu punya banyak copy bagus, tapi sebagian terlalu kecil untuk benar-benar dinikmati. Dark mode + font kecil + contrast rendah = cepat melelahkan.
+
+Naikkan:
+
+Body text: +1 sampai +2 px.
+Card descriptions: +1 px.
+Navbar: +1 px.
+Metadata kecil: jangan terlalu kecil.
+Kedua: terlalu banyak card gelap yang mirip
+
+Website terasa rapi, tapi beberapa section mulai terasa repetitif: card gelap, border tipis, teks kecil, aksen cyan. Ini bagus di awal, tapi kalau terlalu banyak jadi monoton.
+
+Tambahkan variasi:
+
+satu section dengan layout split,
+satu section dengan horizontal process,
+satu section dengan screenshot/mockup,
+satu section dengan testimonial/quote besar,
+satu section dengan metric besar.
+Ketiga: kurang screenshot produk
+
+Ini masih PR terbesar kalau ingin naik ke 9+. Kamu menjual sistem, tapi belum cukup menunjukkan sistemnya.
+
+Tambahkan minimal:
+
+1 screenshot dashboard,
+1 screenshot admin panel,
+1 diagram workflow automation,
+1 mockup learning platform,
+1 before-after process map.
+
+Tanpa visual bukti, website masih terasa “klaim yang rapi”. Dengan visual bukti, dia akan terasa “serius dan terbukti”.
+
+14. Yang paling bagus dari update ini
+
+Perubahan terbaik:
+
+Headline jauh lebih kuat.
+Sekarang positioning kamu lebih jelas.
+Section “Problems I solve” sangat tepat.
+Ini membuat website lebih B2B dan tidak terlalu developer-centric.
+Section messy → structured sangat strategis.
+Ini menunjukkan cara berpikir sistem.
+Klaim trust lebih aman dan kredibel.
+Tidak terlalu overclaim seperti “enterprises”.
+CTA akhir lebih manusiawi.
+Sangat cocok untuk calon klien yang belum bisa menjelaskan kebutuhan teknisnya.

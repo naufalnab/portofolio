@@ -55,7 +55,7 @@ html {
 
 body {
     font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.7;
     color: var(--text);
     background: var(--bg);
@@ -83,27 +83,27 @@ section {
 
 .section-eyebrow {
     display: inline-block;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.16em;
     color: var(--accent);
     margin-bottom: 1rem;
 }
 
 .section-title {
-    font-size: clamp(2.25rem, 4.5vw, 3.1rem);
+    font-size: clamp(2.4rem, 4.8vw, 3.4rem);
     font-weight: 700;
-    line-height: 1.15;
+    line-height: 1.12;
     letter-spacing: -0.02em;
     margin-bottom: 1.25rem;
     color: var(--text);
 }
 
 .section-subtitle {
-    font-size: 1.18rem;
+    font-size: 1.25rem;
     color: var(--text-muted);
-    max-width: 680px;
+    max-width: 720px;
     line-height: 1.7;
     margin-bottom: 3.5rem;
 }
