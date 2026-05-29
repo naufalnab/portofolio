@@ -1,0 +1,9 @@
+/* Service Commercial — pricing tiers, showcase, FAQ */
+
+.service-commercial {
+    background: var(--bg);
+}
+
+.service-commercial+.service-commercial {
+    background: var(--bg-alt);
+}
