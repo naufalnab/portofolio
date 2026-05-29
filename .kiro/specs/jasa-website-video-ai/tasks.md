@@ -100,7 +100,7 @@ Bahasa implementasi: **JavaScript vanilla (ES2015+)** dan **CSS** (sesuai stack 
     - Disembunyikan di `<= 900px` mengikuti pola `.nav-links { display: none; }` (boleh ditambah di langkah 6.1)
     - _Requirements: 6.1, 6.2, 6.5, 10.2, 11.4_
 
-- [ ] 7. Markup HTML, SEO, dan integrasi (`index.html`)
+- [x] 7. Markup HTML, SEO, dan integrasi (`index.html`)
   - [x] 7.1 Update `<head>` index.html — `lang`, title, description, OG, Twitter, CSS link baru, version bump, script tag baru
     - `<html lang="id">`
     - `<title>Naufal Nabila — Jasa Pembuatan Website & Video AI · Indonesia</title>`
@@ -120,11 +120,11 @@ Bahasa implementasi: **JavaScript vanilla (ES2015+)** dan **CSS** (sesuai stack 
     - Tambah class `fade-in` di wrapper utama untuk dipungut Reveal_Module existing
     - Setiap link eksternal: `target="_blank" rel="noopener noreferrer"`
     - _Requirements: 2.1, 2.3, 2.5, 2.6, 2.7, 2.8, 3.1, 3.2, 3.3, 3.4, 3.5, 4.4, 4.6, 5.3, 7.1, 7.3, 7.4, 7.5, 10.1, 10.3_
-  - [-] 7.4 Tambah section `#jasa-video-ai` di index.html — setelah `#jasa-website`, sebelum `#packages`
+  - [x] 7.4 Tambah section `#jasa-video-ai` di index.html — setelah `#jasa-website`, sebelum `#packages`
     - Sama strukturnya dengan 7.3, tetapi `data-service="video-ai"`, harga `Rp 750.000` / `Rp 2.000.000` / `Mulai Rp 5.000.000`, FAQ dari `FAQ_VIDEO_AI` (≥5 item)
     - Tambah satu showcase dengan `data-format="vertical"` agar varian aspect-ratio 9:16 kepakai
     - _Requirements: 2.2, 2.3, 2.5, 2.6, 2.7, 2.8, 3.1, 3.2, 3.3, 3.4, 3.5, 4.5, 4.6, 5.3, 7.2, 7.3, 7.4, 7.5, 10.1, 10.3_
-  - [~] 7.5 Tambah dua blok JSON-LD `<script type="application/ld+json">` Service di akhir `<body>` index.html
+  - [x] 7.5 Tambah dua blok JSON-LD `<script type="application/ld+json">` Service di akhir `<body>` index.html
     - Block 1: `serviceType: "Pembuatan Website"`, `provider.name: "Naufal Nabila"`, `areaServed: "Indonesia"`, `hasOfferCatalog` 3 Offer (Basic 2500000 / Pro 6500000 / Custom 15000000), semua `priceCurrency: "IDR"`
     - Block 2: `serviceType: "Pembuatan Video AI"`, struktur sama, harga (Basic 750000 / Pro 2000000 / Custom 5000000)
     - _Requirements: 8.5, 8.6_
@@ -141,7 +141,7 @@ Bahasa implementasi: **JavaScript vanilla (ES2015+)** dan **CSS** (sesuai stack 
     - Daftar manual checks yang dijalankan reviewer sebelum deploy: tier CTA klik buka WhatsApp dengan pesan benar (Basic/Pro/Custom × Web/Video AI = 6 kombinasi), theme toggle dark/light, resize 540/900/1200, semua FAQ buka-tutup, lighthouse target ≥ 90/95/95
     - _Requirements: 1.1, 1.2, 4.1, 9.1, 9.2, 10.2_
 
-- [~] 9. Final checkpoint
+- [x] 9. Final checkpoint
   - Ensure all tests pass, ask the user if questions arise.
 
 ## Notes
