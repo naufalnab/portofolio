@@ -71,6 +71,18 @@
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
+
+    .tier-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tier-card.featured {
+        transform: none;
+    }
+
+    .svc-flow {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 640px) {
@@ -123,5 +135,13 @@
 
     .contact-panel {
         padding: 2rem 1.5rem;
+    }
+
+    .svc-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .tier-price-amount {
+        font-size: 1.6rem;
     }
 }

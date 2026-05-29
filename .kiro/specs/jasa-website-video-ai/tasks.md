@@ -21,22 +21,22 @@ Bahasa implementasi: **JavaScript vanilla (ES2015+)** dan **CSS** (sesuai stack 
     - Pola IIFE `(function () { 'use strict'; const WHATSAPP_PHONE = '6282328591004'; window.__services = {}; })();` tanpa logika apa pun, semata-mata supaya file ada untuk wiring `<script>` di langkah berikutnya
     - _Requirements: 5.5, 11.1, 11.5_
 
-- [ ] 2. Implementasi modul JS `services.js`
-  - [-] 2.1 Implementasikan `buildWaUrl(phone, service, tier, price)` sebagai fungsi murni
+- [x] 2. Implementasi modul JS `services.js`
+  - [x] 2.1 Implementasikan `buildWaUrl(phone, service, tier, price)` sebagai fungsi murni
     - Map `service` ke label Bahasa Indonesia: `"website"` → `"Pembuatan Website"`, `"video-ai"` → `"Pembuatan Video AI"`, default → `"Layanan"`
     - Rakit pesan: `"Halo Mas Naufal, saya tertarik dengan paket {tier} untuk layanan {serviceLabel} ({price}). Bisa minta info lebih lanjut?"`
     - Encode pakai `encodeURIComponent` lalu return `"https://wa.me/" + phone + "?text=" + encoded`
     - Tidak boleh menyentuh DOM, melempar error, atau melakukan I/O
     - Expose lewat `window.__services.buildWaUrl` untuk testing
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.6_
-  - [~] 2.2 Implementasikan utility `formatTimeline(days)`
+  - [x] 2.2 Implementasikan utility `formatTimeline(days)`
     - `days < 7` → `"{days} hari"`
     - `days % 7 === 0 && days < 28` → `"{days/7} minggu"`
     - `days >= 28 && days % 30 === 0` → `"{days/30} bulan"`
     - else → `"~{Math.round(days/7)} minggu"`
     - Expose lewat `window.__services.formatTimeline`
     - _Requirements: 2.4_
-  - [~] 2.3 Implementasikan `initServiceCtaHandlers(root)` dengan idempotency, validasi data attribute, popup-blocker fallback
+  - [x] 2.3 Implementasikan `initServiceCtaHandlers(root)` dengan idempotency, validasi data attribute, popup-blocker fallback
     - Selektor `[data-cta="service"]`, skip jika `dataset.ctaAttached === "true"`, set `dataset.ctaAttached = "true"` setelah attach
     - Pada click: `event.preventDefault()`, validasi `dataset.service`, `dataset.tier`, `dataset.price`. Jika salah satu kosong/missing, panggil `console.warn('[services] Missing data attributes on CTA', btn)` lalu `window.open("https://wa.me/" + WHATSAPP_PHONE, "_blank", "noopener,noreferrer")` dan return.
     - Jika valid, panggil `buildWaUrl` lalu `const opened = window.open(url, "_blank", "noopener,noreferrer")`. Kalau `opened === null`, fallback ke `window.location.href = url`
@@ -62,38 +62,38 @@ Bahasa implementasi: **JavaScript vanilla (ES2015+)** dan **CSS** (sesuai stack 
     - Generator: `fc.tuple(fc.integer({min:1,max:1000}), fc.integer({min:1,max:1000}))` lalu sortir `[d1, d2]`
     - **Validates: Requirements 2.4_
 
-- [~] 4. Checkpoint — modul JS terverifikasi
+- [x] 4. Checkpoint — modul JS terverifikasi
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 5. Implementasi `assets/css/services-commercial.css`
-  - [~] 5.1 Implementasikan tier-grid + tier-card + tier-flag + tier-price + tier-deliverables + tier-cta
+- [x] 5. Implementasi `assets/css/services-commercial.css`
+  - [x] 5.1 Implementasikan tier-grid + tier-card + tier-flag + tier-price + tier-deliverables + tier-cta
     - Grid 3 kolom desktop, `.tier-card.featured` dengan elevasi `translateY(-4px)`, badge "Paling populer" via `.tier-flag`
     - Gunakan token `var(--surface)`, `var(--border)`, `var(--accent)`, `var(--gradient)`, `var(--radius-lg)`, `var(--shadow)`
     - List `.tier-deliverables li::before` dengan content `'✓'` warna `var(--accent)`
     - _Requirements: 2.1, 2.2, 2.3, 2.5, 9.1, 10.2, 11.2, 11.6_
-  - [~] 5.2 Implementasikan service process strip `.svc-flow` & `.svc-step`
+  - [x] 5.2 Implementasikan service process strip `.svc-flow` & `.svc-step`
     - Grid 4 kolom di desktop. `.svc-step-num` dengan `background-clip: text` ke `var(--gradient)`
     - _Requirements: 7.5, 9.1, 11.2_
-  - [~] 5.3 Implementasikan showcase gallery `.showcase-grid` & `.showcase-card`
+  - [x] 5.3 Implementasikan showcase gallery `.showcase-grid` & `.showcase-card`
     - `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`
     - `.showcase-thumb { aspect-ratio: 16/10; object-fit: cover; background: var(--bg-soft); }`
     - Variant `.showcase-card[data-format="vertical"] .showcase-thumb { aspect-ratio: 9/16; }`
     - Gunakan `loading="lazy"` dari sisi markup; sisi CSS: pastikan layout tidak kolaps saat thumbnail belum load (`aspect-ratio` cukup)
     - _Requirements: 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 11.8_
-  - [~] 5.4 Implementasikan FAQ accordion styles native `<details>`
+  - [x] 5.4 Implementasikan FAQ accordion styles native `<details>`
     - `.faq-list`, `.faq-item`, `.faq-q`, `.faq-a`
     - Hilangkan marker default: `.faq-q::-webkit-details-marker { display: none; }`, custom `+` / `−` via `::after`
     - Highlight border ketika `[open]`: `border-color: color-mix(in srgb, var(--accent) 30%, var(--border))`
     - _Requirements: 4.1, 4.2, 4.3, 4.6, 10.4, 11.2_
 
-- [ ] 6. Responsive & navigation dropdown styling
-  - [~] 6.1 Tambah breakpoint baru di `assets/css/responsive.css`
+- [x] 6. Responsive & navigation dropdown styling
+  - [x] 6.1 Tambah breakpoint baru di `assets/css/responsive.css`
     - `@media (max-width: 900px)` — `.tier-grid { grid-template-columns: 1fr; }`, `.tier-card.featured { transform: none; }`, `.svc-flow { grid-template-columns: repeat(2, 1fr); }`
     - `@media (max-width: 540px)` — `.svc-flow { grid-template-columns: 1fr; }`, `.tier-price-amount { font-size: 1.6rem; }`
     - Sub-link nav-dropdown tetap hidden di mobile mengikuti pola `.nav-links { display: none; }` existing
     - Pastikan setiap `.tier-cta` punya `min-height: 44px` (boleh ditambah di `services-commercial.css` saja, tapi konfirmasi via responsive juga)
     - _Requirements: 6.4, 9.1, 9.2, 9.3, 9.4, 9.5, 11.3_
-  - [~] 6.2 Tambah styling `.nav-dropdown` di `assets/css/layout.css` (extend, jangan rewrite)
+  - [x] 6.2 Tambah styling `.nav-dropdown` di `assets/css/layout.css` (extend, jangan rewrite)
     - `.nav-dropdown { position: relative; }`, `.nav-dropdown-menu { position: absolute; top: 100%; opacity: 0; pointer-events: none; transition: opacity 0.2s ease; }`
     - State open via `:hover` dan `:focus-within`: `opacity: 1; pointer-events: auto`
     - Token: `var(--surface)`, `var(--border)`, `var(--radius)`, `var(--shadow)`
@@ -101,7 +101,7 @@ Bahasa implementasi: **JavaScript vanilla (ES2015+)** dan **CSS** (sesuai stack 
     - _Requirements: 6.1, 6.2, 6.5, 10.2, 11.4_
 
 - [ ] 7. Markup HTML, SEO, dan integrasi (`index.html`)
-  - [~] 7.1 Update `<head>` index.html — `lang`, title, description, OG, Twitter, CSS link baru, version bump, script tag baru
+  - [x] 7.1 Update `<head>` index.html — `lang`, title, description, OG, Twitter, CSS link baru, version bump, script tag baru
     - `<html lang="id">`
     - `<title>Naufal Nabila — Jasa Pembuatan Website & Video AI · Indonesia</title>`
     - `<meta name="description" content="Jasa pembuatan website profesional dan video AI untuk bisnis di Indonesia. Paket Basic/Pro/Custom dengan harga transparan, timeline jelas, dan dukungan WhatsApp langsung.">`
@@ -110,17 +110,17 @@ Bahasa implementasi: **JavaScript vanilla (ES2015+)** dan **CSS** (sesuai stack 
     - Tambah `<link rel="stylesheet" href="assets/css/services-commercial.css?v=7">` setelah `responsive.css`
     - Tambah `<script src="assets/js/services.js?v=7" defer></script>` di akhir `<head>` atau sebelum `</body>` (konsisten dengan modul JS lain di codebase)
     - _Requirements: 8.1, 8.2, 8.3, 8.4, 11.7_
-  - [~] 7.2 Tambah markup nav dropdown "Layanan" di `<nav id="navbar">` index.html
+  - [x] 7.2 Tambah markup nav dropdown "Layanan" di `<nav id="navbar">` index.html
     - Sisipkan `<li class="nav-dropdown"><a href="#jasa-website" aria-haspopup="true">Layanan</a><ul class="nav-dropdown-menu"><li><a href="#jasa-website">Website</a></li><li><a href="#jasa-video-ai">Video AI</a></li></ul></li>` di antara `<li>Founded</li>` dan `<li>Packages</li>` di `.nav-links`
     - _Requirements: 6.1, 6.2, 6.3, 6.5_
-  - [~] 7.3 Tambah section `#jasa-website` di index.html — sebelum section `#packages`, setelah `#credentials`
+  - [x] 7.3 Tambah section `#jasa-website` di index.html — sebelum section `#packages`, setelah `#credentials`
     - Struktur: `<section class="service-commercial" id="jasa-website"><div class="container">…</div></section>` dengan turunan `section-eyebrow`, `section-title`, `section-subtitle`, `.tier-grid`, `.svc-flow`, `.showcase-grid`, `.faq-list`
     - 3 `.tier-card` (Basic, Pro featured, Custom). Setiap CTA: `<a class="package-cta tier-cta" data-cta="service" data-service="website" data-tier="{Basic|Pro|Custom}" data-price="{label harga}">`
     - 4 `.svc-step`, ≥3 `.showcase-card` (boleh placeholder image), ≥5 `.faq-item` dari `FAQ_WEBSITE` di design
     - Tambah class `fade-in` di wrapper utama untuk dipungut Reveal_Module existing
     - Setiap link eksternal: `target="_blank" rel="noopener noreferrer"`
     - _Requirements: 2.1, 2.3, 2.5, 2.6, 2.7, 2.8, 3.1, 3.2, 3.3, 3.4, 3.5, 4.4, 4.6, 5.3, 7.1, 7.3, 7.4, 7.5, 10.1, 10.3_
-  - [~] 7.4 Tambah section `#jasa-video-ai` di index.html — setelah `#jasa-website`, sebelum `#packages`
+  - [-] 7.4 Tambah section `#jasa-video-ai` di index.html — setelah `#jasa-website`, sebelum `#packages`
     - Sama strukturnya dengan 7.3, tetapi `data-service="video-ai"`, harga `Rp 750.000` / `Rp 2.000.000` / `Mulai Rp 5.000.000`, FAQ dari `FAQ_VIDEO_AI` (≥5 item)
     - Tambah satu showcase dengan `data-format="vertical"` agar varian aspect-ratio 9:16 kepakai
     - _Requirements: 2.2, 2.3, 2.5, 2.6, 2.7, 2.8, 3.1, 3.2, 3.3, 3.4, 3.5, 4.5, 4.6, 5.3, 7.2, 7.3, 7.4, 7.5, 10.1, 10.3_
