@@ -111,39 +111,3 @@ test("Property 4: zero aria-current for paths not registered in PAGES", () => {
   );
 });
 
-test("Property 4: active dropdown child marks parent trigger .active (without aria-current)", () => {
-  fc.assert(
-    fc.property(
-      fc.constantFrom("/layanan-website/", "/layanan-video-ai/"),
-      (currentPath) => {
-        const window = loadNav();
-        const navbar = window.document.getElementById("navbar");
-
-        window.__nav.setActiveNav(navbar, currentPath);
-
-        // Exactly one aria-current overall (the active child link).
-        const current = currentAnchors(window, navbar);
-        assert.equal(
-          current.length,
-          1,
-          `expected exactly one aria-current="page" for "${currentPath}", got ${current.length}`
-        );
-
-        // The dropdown parent trigger gets .active but NOT aria-current.
-        const trigger = navbar.querySelector(".nav-dropdown > a");
-        assert.ok(trigger, "dropdown trigger anchor should exist");
-        assert.equal(
-          trigger.classList.contains("active"),
-          true,
-          `dropdown trigger should have class "active" when child "${currentPath}" is active`
-        );
-        assert.equal(
-          trigger.getAttribute("aria-current"),
-          null,
-          "dropdown trigger must NOT carry aria-current (keeps exactly one aria-current)"
-        );
-      }
-    ),
-    { numRuns: 100 }
-  );
-});

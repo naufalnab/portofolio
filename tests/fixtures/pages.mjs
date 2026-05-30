@@ -45,18 +45,10 @@ export const CONTENT_PAGES = Object.freeze(PAGES.filter((p) => p.slug !== "404")
  */
 export const NAV_ITEMS = Object.freeze([
   { label: "Services", href: "/services/", matchSlug: "services" },
-  { label: "Process", href: "/services/#process", matchSlug: "services" },
   { label: "Case Studies", href: "/case-studies/", matchSlug: "case-studies" },
   { label: "Founded", href: "/founded/", matchSlug: "founded" },
-  {
-    label: "Layanan",
-    href: "/layanan-website/",
-    matchSlug: "layanan",
-    children: [
-      { label: "Website", href: "/layanan-website/", matchSlug: "layanan-website" },
-      { label: "Video AI", href: "/layanan-video-ai/", matchSlug: "layanan-video-ai" },
-    ],
-  },
+  { label: "Website", href: "/layanan-website/", matchSlug: "layanan-website" },
+  { label: "Video AI", href: "/layanan-video-ai/", matchSlug: "layanan-video-ai" },
   { label: "Packages", href: "/packages/", matchSlug: "packages" },
 ]);
 
@@ -236,18 +228,10 @@ export function navItemsFor(locale) {
   const L = NAV_LABELS[locale];
   return Object.freeze([
     { label: L.services, href: href("/services/"), matchSlug: "services" },
-    { label: L.process, href: href("/services/#process"), matchSlug: "services" },
     { label: L.caseStudies, href: href("/case-studies/"), matchSlug: "case-studies" },
     { label: L.founded, href: href("/founded/"), matchSlug: "founded" },
-    {
-      label: L.layanan,
-      href: href("/layanan-website/"),
-      matchSlug: "layanan",
-      children: [
-        { label: L.website, href: href("/layanan-website/"), matchSlug: "layanan-website" },
-        { label: L.videoAi, href: href("/layanan-video-ai/"), matchSlug: "layanan-video-ai" },
-      ],
-    },
+    { label: L.website, href: href("/layanan-website/"), matchSlug: "layanan-website" },
+    { label: L.videoAi, href: href("/layanan-video-ai/"), matchSlug: "layanan-video-ai" },
     { label: L.packages, href: href("/packages/"), matchSlug: "packages" },
   ]);
 }
