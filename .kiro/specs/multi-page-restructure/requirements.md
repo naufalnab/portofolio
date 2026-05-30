@@ -52,7 +52,7 @@ _Berdasarkan section design: "High-Level: Peta Navigasi (Internal Linking)", "Se
 #### Acceptance Criteria
 
 1. THE Situs SHALL memastikan setiap link internal (yakni `<a href>` selain tautan eksternal `http(s)` ke domain lain, `mailto:`, `tel:`, dan `wa.me`) pada setiap halaman, setelah dinormalisasi, menunjuk ke path yang terdaftar di `PAGES`, dan tidak memuat link anchor `#section` yang menunjuk ke section yang telah dipindahkan ke halaman lain. _(validates correctness properties PROP-3, PROP-12)_
-2. WHEN sebuah halaman dimuat, THE Modul*Navigasi SHALL membandingkan path tiap link nav dengan `location.pathname` memakai normalisasi path yang deterministik dan idempoten (membuang hash dan query, menyamakan trailing slash), lalu menetapkan class `.active` dan atribut `aria-current="page"` pada tepat satu item nav top-level yang cocok, dan nol item pada halaman `/404.html`. *(validates correctness properties PROP-4, PROP-10)\_
+2. WHEN sebuah halaman dimuat (`DOMContentLoaded`), THE Modul_Navigasi SHALL membandingkan path tiap link nav dengan `location.pathname` memakai normalisasi path yang deterministik dan idempoten (membuang hash dan query, `""` → `"/"`, menambahkan trailing slash untuk path non-`.html`), lalu menetapkan class `.active` dan atribut `aria-current="page"` pada tepat satu item nav top-level yang cocok, dan nol item bila path halaman tidak terdaftar di `PAGES` (mis. `/404.html`). _(validates correctness properties PROP-4, PROP-10)_
 3. WHEN item nav "Process" diklik dari halaman mana pun, THE Situs SHALL mengarahkan ke `/services/#process` di mana halaman `/services/` memuat section Process sehingga browser memosisikan tampilan ke section tersebut setelah halaman dimuat.
 4. WHERE item nav "Layanan" memiliki sub-menu, THE Situs SHALL menyediakan dropdown berisi tepat dua link — `/layanan-website/` dan `/layanan-video-ai/`; dan WHEN salah satu child cocok dengan halaman aktif, THE Modul_Navigasi SHALL menandai link induk dropdown dengan class `.active` (tanpa `aria-current`, agar tetap tepat satu `aria-current` per halaman).
 
@@ -64,9 +64,11 @@ _Berdasarkan section design: "Sequence: Navigasi Antar Halaman + Pencegahan Them
 
 #### Acceptance Criteria
 
-1. WHILE nilai `localStorage.theme` adalah "light", THE Skrip*Anti_FOUC SHALL menetapkan class `light-mode` pada `documentElement` secara sinkron sebelum `<link rel="stylesheet">` pertama dievaluasi, sehingga paint pertama setiap halaman menampilkan tema yang sesuai tanpa flash. *(validates correctness property PROP-5)\_
-2. WHEN tombol theme toggle ditekan dua kali berturut-turut, THE Modul*Tema SHALL mengembalikan class `documentElement` dan nilai `localStorage.theme` ke kondisi semula (involutif). *(validates correctness property PROP-9)\_
-3. IF akses `localStorage` gagal (mis. private mode atau diblokir kebijakan browser), THEN THE Modul_Tema SHALL menggunakan tema dark sebagai default tanpa melempar error.
+1. WHILE nilai `localStorage.theme` adalah "light", THE Skrip_Anti_FOUC SHALL menetapkan class `light-mode` pada `documentElement` secara sinkron sebelum `<link rel="stylesheet">` pertama dievaluasi, sehingga pada paint pertama `documentElement` sudah membawa class `light-mode` dan tidak terjadi perubahan tema setelah paint pertama (tanpa flash). _(validates correctness property PROP-5)_
+2. WHILE nilai `localStorage.theme` bukan "light" (dark, kosong, tidak ada, atau nilai tak dikenal), THE Skrip_Anti_FOUC SHALL tidak menetapkan class `light-mode` pada `documentElement` sehingga paint pertama menampilkan tema dark default. _(validates correctness property PROP-5)_
+3. WHEN tombol theme toggle ditekan satu kali, THE Modul_Tema SHALL membalik class `light-mode` pada `documentElement` dan menyimpan nilai `localStorage.theme` secara persis sebagai `"light"` atau `"dark"` sesuai state baru, serta menyinkronkan ikon/teks tombol. _(validates correctness property PROP-9)_
+4. WHEN tombol theme toggle ditekan dua kali berturut-turut, THE Modul_Tema SHALL mengembalikan class `documentElement` dan nilai `localStorage.theme` ke kondisi persis semula (involutif). _(validates correctness property PROP-9)_
+5. IF akses baca `localStorage` (di Skrip_Anti_FOUC) atau akses tulis `localStorage` (di Modul_Tema) gagal — mis. private mode atau diblokir kebijakan browser — THEN THE Situs SHALL menggunakan tema dark sebagai default tanpa melempar exception yang tidak tertangani, dan toggle tema tetap berfungsi secara visual dalam sesi berjalan.
 
 ### Requirement 4: Pemuatan Aset Per Halaman (Root-Relative, Tanpa Aset Berlebih)
 
@@ -76,9 +78,11 @@ _Berdasarkan section design: "Daftar Aset Wajib per Halaman", "Penamaan File & C
 
 #### Acceptance Criteria
 
-1. THE Setiap*Halaman SHALL memuat seluruh CSS core (`base`, `layout`, `sections`, `components`, `responsive`) dan JS core (`theme`, `nav`, `reveal`, `main`); halaman Layanan Website dan Layanan Video AI tambahan memuat `services-commercial.css` dan `services.js`; halaman Case Studies dan Founded tambahan memuat `toggles.js`; dan tidak memuat aset yang tidak dibutuhkan halaman tersebut. *(validates correctness property PROP-6)\_
-2. THE Setiap_Halaman SHALL mereferensikan seluruh aset CSS, JS, dan gambar memakai path root-relative yang diawali `/assets/...`.
-3. WHERE halaman adalah Home, THE Home SHALL memuat `hero.css`, dan halaman lain SHALL tidak memuat `hero.css`.
+1. THE Setiap_Halaman SHALL memuat tepat kelima berkas CSS core (`base`, `layout`, `sections`, `components`, `responsive`) dan keempat berkas JS core (`theme`, `nav`, `reveal`, `main`). _(validates correctness property PROP-6)_
+2. THE Setiap_Halaman SHALL mereferensikan seluruh aset CSS, JS, dan gambar memakai path root-relative yang diawali `/assets/`, tanpa memuat referensi aset berpath relatif-dokumen (mis. `assets/...` atau `../assets/...`).
+3. WHERE halaman adalah Layanan Website atau Layanan Video AI, THE Setiap_Halaman SHALL memuat tambahan `services-commercial.css` dan `services.js`; halaman selain kedua halaman tersebut SHALL tidak memuat `services-commercial.css` maupun `services.js`. _(validates correctness property PROP-6)_
+4. WHERE halaman adalah Case Studies atau Founded, THE Setiap_Halaman SHALL memuat tambahan `toggles.js`; halaman selain kedua halaman tersebut SHALL tidak memuat `toggles.js`. _(validates correctness property PROP-6)_
+5. WHERE halaman adalah Home, THE Home SHALL memuat `hero.css`; halaman selain Home SHALL tidak memuat `hero.css`. _(validates correctness property PROP-6)_
 
 ### Requirement 5: SEO Per Halaman (Meta Unik dan JSON-LD Tepat Sasaran)
 
@@ -88,8 +92,9 @@ _Berdasarkan section design: "Example Usage — Struktur `<head>` tiap halaman",
 
 #### Acceptance Criteria
 
-1. THE Setiap*Halaman SHALL memiliki `<title>` dan `link[rel=canonical]` yang unik antar halaman, `meta[name=description]` sepanjang 50–160 karakter, serta tag Open Graph `og:title`, `og:description`, `og:url`, `og:image`, dan `og:type`; di mana nilai `canonical` adalah URL absolut yang cocok dengan path kanonik halaman. *(validates correctness property PROP-7)\_
-2. THE Situs SHALL menempatkan schema JSON-LD `Service` "Pembuatan Website" hanya pada `/layanan-website/` dan schema JSON-LD `Service` "Pembuatan Video AI" hanya pada `/layanan-video-ai/`, tepat satu schema `Service` per halaman tersebut, dan tidak menempatkan schema `Service` pada halaman lain. _(validates correctness property PROP-8)_
+1. THE Setiap_Halaman SHALL memiliki `<title>` non-kosong dan `link[rel=canonical]` yang unik antar halaman dalam `PAGES`, serta `meta[name=description]` non-kosong sepanjang 50–160 karakter; di mana nilai `canonical` adalah URL absolut (menyertakan skema dan host) yang cocok dengan path kanonik halaman. _(validates correctness property PROP-7)_
+2. THE Setiap_Halaman SHALL menyertakan tag Open Graph `og:title`, `og:description`, `og:url`, `og:image`, dan `og:type` dengan `content` non-kosong; di mana `og:url` sama dengan nilai `canonical` halaman dan `og:image` adalah URL absolut. _(validates correctness property PROP-7)_
+3. THE Situs SHALL menempatkan schema JSON-LD `Service` "Pembuatan Website" hanya pada `/layanan-website/` dan schema JSON-LD `Service` "Pembuatan Video AI" hanya pada `/layanan-video-ai/` — masing-masing sebagai blok `<script type="application/ld+json">` yang valid di-parse, tepat satu schema `Service` per halaman tersebut, dan tidak menempatkan schema `Service` pada halaman lain. _(validates correctness property PROP-8)_
 
 ### Requirement 6: Pemecahan Konten ke 7 Halaman dengan Struktur Heading yang Benar
 
@@ -99,9 +104,10 @@ _Berdasarkan section design: "Pemetaan 7 Halaman", "Rasional penempatan konten y
 
 #### Acceptance Criteria
 
-1. THE Setiap*Halaman SHALL memiliki tepat satu elemen `<h1>`. *(validates correctness property PROP-2)\_
-2. THE Situs SHALL memetakan section existing ke halaman sesuai tabel pemetaan 7 halaman — Home: Hero + About; Services: `#services` + `#process`; Case Studies: `#projects` + `#clients`; Founded: `#founded` + `#skills` + `#experience` + `#credentials`; Layanan Website: `#jasa-website`; Layanan Video AI: `#jasa-video-ai`; Packages: `#packages` + `#contact` — tanpa menghilangkan konten existing.
-3. WHEN sebuah URL yang tidak dikenal diminta, THE Situs SHALL menyajikan `/404.html` yang memuat `<meta name="robots" content="noindex">` dan link "Kembali ke Home" menuju `/`.
+1. THE Setiap_Halaman SHALL memiliki tepat satu elemen `<h1>` yang berisi teks non-kosong (minimal 1 karakter terlihat setelah trim whitespace). _(validates correctness property PROP-2)_
+2. THE Situs SHALL memetakan section existing ke halaman sesuai tabel pemetaan 7 halaman — Home: Hero (`#home`) + About (`#about`); Services: `#services` + `#process`; Case Studies: `#projects` + `#clients`; Founded: `#founded` + `#skills` + `#experience` + `#credentials`; Layanan Website: `#jasa-website`; Layanan Video AI: `#jasa-video-ai`; Packages: `#packages` + `#contact` — sehingga setiap section existing dari `index.html` muncul tepat pada satu dari ketujuh halaman, tidak ada section yang hilang, dan tidak ada section yang terduplikasi di lebih dari satu halaman.
+3. IF sebuah URL yang tidak terdaftar di `PAGES` diminta, THEN THE Situs SHALL menyajikan `/404.html` yang memuat tepat satu `<meta name="robots" content="noindex">` dan tepat satu link "Kembali ke Home" dengan href `/`.
+4. THE Setiap_Halaman SHALL menyusun heading secara hierarkis tanpa melompati level — elemen `<h1>` muncul sebagai heading pertama dalam urutan dokumen, dan tidak ada heading yang melompati level (mis. tidak ada `<h3>` tanpa `<h2>` yang mendahuluinya pada halaman yang sama).
 
 ### Requirement 7: Navigasi Mobile (Hamburger Menu)
 
@@ -111,9 +117,12 @@ _Berdasarkan section design: "Algoritma 6: Mobile Hamburger Nav", "`initMobileNa
 
 #### Acceptance Criteria
 
-1. WHILE viewport berukuran `<900px` dan setelah `initMobileNav` dijalankan, THE Menu*Mobile SHALL default dalam keadaan tertutup (`#navbar` tanpa class `.nav-open`, tombol hamburger `aria-expanded="false"`), membuka saat tombol hamburger diklik (`#navbar` memiliki `.nav-open`, `aria-expanded="true"`), dan menutup pada klik tombol berikutnya. *(validates correctness property PROP-13)\_
-2. WHEN pengguna mengklik salah satu link nav, menekan tombol Escape, atau mengubah ukuran viewport ke `>=900px`, THE Menu*Mobile SHALL menutup dengan menghapus class `.nav-open` dan menetapkan `aria-expanded="false"`. *(validates correctness property PROP-13)\_
-3. WHEN `initMobileNav` dipanggil lebih dari sekali pada `#navbar` yang sama, THE Modul*Navigasi SHALL tidak menambahkan event listener ganda (menggunakan guard `dataset.bound`). *(validates correctness property PROP-13)\_
+1. WHILE viewport berukuran `<900px`, THE Menu_Mobile SHALL menampilkan tombol hamburger `.nav-toggle` sebagai kontrol navigasi yang dapat diklik, dan—setelah `initMobileNav` dijalankan—berada dalam keadaan tertutup secara default (`#navbar` tanpa class `.nav-open`, tombol hamburger `aria-expanded="false"`, dan `.nav-links` tidak ditampilkan sebagai panel navigasi terbuka). _(validates correctness property PROP-13)_
+2. WHEN tombol hamburger `.nav-toggle` diklik sedangkan menu dalam keadaan tertutup, THE Menu_Mobile SHALL membuka dengan menambahkan class `.nav-open` pada `#navbar`, menetapkan `aria-expanded="true"`, dan menampilkan seluruh link `.nav-links` dalam keadaan terlihat dan dapat diklik. _(validates correctness property PROP-13)_
+3. WHEN tombol hamburger `.nav-toggle` diklik sedangkan menu dalam keadaan terbuka, THE Menu_Mobile SHALL menutup dengan menghapus class `.nav-open` dari `#navbar` dan menetapkan `aria-expanded="false"`. _(validates correctness property PROP-13)_
+4. WHEN pengguna mengklik salah satu link pada `.nav-links`, menekan tombol Escape, atau mengubah ukuran viewport menjadi `>=900px`, THE Menu_Mobile SHALL menutup dengan menghapus class `.nav-open` dari `#navbar` dan menetapkan `aria-expanded="false"`. _(validates correctness property PROP-13)_
+5. WHEN `initMobileNav` dipanggil lebih dari sekali pada `#navbar` yang sama, THE Modul_Navigasi SHALL tidak menambahkan event listener ganda (menggunakan guard `dataset.bound`), sehingga satu klik tombol hamburger tetap mengubah state menu tepat satu kali tanpa toggle ganda. _(validates correctness property PROP-13)_
+6. IF `initMobileNav` dijalankan pada `#navbar` yang tidak memuat tombol `.nav-toggle` atau daftar `.nav-links`, THEN THE Modul_Navigasi SHALL berhenti tanpa melempar error dan tanpa mengubah state nav (tidak menambahkan class `.nav-open` maupun atribut `aria-expanded`). _(validates correctness property PROP-13)_
 
 ### Requirement 8: Situs Tetap Statis dengan Clean URL Berbasis Folder
 
