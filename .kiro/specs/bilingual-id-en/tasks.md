@@ -171,85 +171,85 @@ so no implementation-language selection is required.
     - Generate `sitemap.xml` deterministically from `PAGES_BILINGUAL` (14 content URLs + xhtml alternates) to avoid manual drift; zero npm deps; dev-only tooling
     - _Requirements: 5.1, 5.2_
 
-- [ ] 10. Localize `Service` JSON-LD on the four service pages
-  - [-] 10.1 Localize JSON-LD on Layanan Website (ID + EN)
+- [x] 10. Localize `Service` JSON-LD on the four service pages
+  - [x] 10.1 Localize JSON-LD on Layanan Website (ID + EN)
     - Embed exactly one `Service` block in `layanan-website/index.html` and `en/layanan-website/index.html` directly in raw HTML; localize `serviceType`/`name`/`description` per locale; set `inLanguage` = `"id"`/`"en"` matching `<html lang>`; keep `OfferCatalog` `price`/`priceCurrency` numeric values identical between the pair; ensure each block `JSON.parse`s to a non-null object
     - _Requirements: 8.1, 8.2, 8.3, 8.4, 8.5, 8.6_
 
-  - [-] 10.2 Localize JSON-LD on Layanan Video AI (ID + EN)
+  - [x] 10.2 Localize JSON-LD on Layanan Video AI (ID + EN)
     - Embed exactly one `Service` block in `layanan-video-ai/index.html` and `en/layanan-video-ai/index.html`; localize text per locale; set `inLanguage` per locale; keep `price`/`priceCurrency` identical between the pair; valid JSON
     - _Requirements: 8.1, 8.2, 8.3, 8.4, 8.5, 8.6_
 
-- [~] 11. Checkpoint - shell and all 16 pages assembled
+- [x] 11. Checkpoint - shell and all 16 pages assembled
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 12. Full validation: bilingual enumerative & property tests over `PAGES_BILINGUAL`
-  - [ ]\* 12.1 Write language-switcher tests
+- [x] 12. Full validation: bilingual enumerative & property tests over `PAGES_BILINGUAL`
+  - [x]\* 12.1 Write language-switcher tests
     - **Property 2 (PROP-2): the opposite-locale option's href equals `pairPath(X.path)` and the self-locale option points to `X.path`** and **Property 6 (PROP-6): exactly one active indicator (`aria-current`) equals the page locale**
     - File: `tests/pages.langswitcher.test.mjs`; domain: `PAGES_BILINGUAL`
     - **Validates: Requirements 2.2, 2.3, 2.4, 11.2, 11.6**
 
-  - [ ]\* 12.2 Write bilingual SEO tests
+  - [x]\* 12.2 Write bilingual SEO tests
     - **Property 3 (PROP-3): exactly one lowercase `<html lang>` = page locale**, **Property 4 (PROP-4): exactly three self-referencing absolute-https hreflang (id/en/x-default) resolving into `PAGES_BILINGUAL`**, **Property 5 (PROP-5): canonical = `ORIGIN + path`, equal to the page's own hreflang**, and **Property 17: title 10–70 / description 50–160, non-empty + unique per locale; `og:locale`/`og:locale:alternate`/`og:url`=canonical; `og:title`/`og:description` non-empty**
     - File: `tests/pages.bilingual-seo.test.mjs`; domain: `PAGES_BILINGUAL` / `CONTENT_PAGES_BILINGUAL`
     - **Validates: Requirements 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 11.3, 11.4, 11.5**
 
-  - [ ]\* 12.3 Write intra-locale internal-link test
+  - [x]\* 12.3 Write intra-locale internal-link test
     - **Property 7 (PROP-7): every internal `<a href>` except the switcher is intra-locale, resolves into `PAGES_BILINGUAL`, and never contains `/en/en/`**
     - File: `tests/pages.bilingual-links.test.mjs`; domain: `PAGES_BILINGUAL` × anchors
     - **Validates: Requirements 1.6, 7.3, 7.6, 11.7**
 
-  - [ ]\* 12.4 Write bilingual sitemap test
+  - [x]\* 12.4 Write bilingual sitemap test
     - **Property 11 (PROP-10): `<loc>` set equals the 14 content URLs (no dupes, no 404), each equal to the page canonical; each `<url>` has exactly three `xhtml:link` (id/en/x-default) identical between paired pages; document is well-formed with both namespaces**
     - File: `tests/sitemap.bilingual.test.mjs`; parse `sitemap.xml` vs `PAGES_BILINGUAL`
     - **Validates: Requirements 5.1, 5.2, 5.4, 5.5, 11.10**
 
-  - [ ]\* 12.5 Write JSON-LD `Service` test
+  - [x]\* 12.5 Write JSON-LD `Service` test
     - **Property 12 (PROP-11): exactly one `Service` block on each of the four service pages and zero elsewhere; every JSON-LD block `JSON.parse`s to a non-null object; `Service.inLanguage` equals the page locale and `<html lang>`**
     - File: `tests/pages.bilingual-jsonld.test.mjs`; domain: `PAGES_BILINGUAL`
     - **Validates: Requirements 8.1, 8.3, 8.4, 11.11**
 
-  - [ ]\* 12.6 Write per-locale active-nav property test
+  - [x]\* 12.6 Write per-locale active-nav property test
     - **Property 13 (PROP-12): after `setActiveNav` on the matching locale shell, exactly one top-level `aria-current="page"` for content pages and zero for 404; the active anchor's `normalizePath(href)` equals `normalizePath(path)`**
     - File: `tests/nav.setActiveNav.bilingual.test.mjs`; generator: random valid + foreign paths per shell; ≥100 runs
     - **Validates: Requirements 10.2, 11.12**
 
-  - [ ]\* 12.7 Write fixture-structure tests
+  - [x]\* 12.7 Write fixture-structure tests
     - **Property 14: `PAGES_BILINGUAL` has exactly 16 entries (14 indexable + 2 404), each maps to exactly one existing file with a canonical path mirroring the URL scheme** and **Property 15: exactly one `<nav id="navbar">` and one `<footer>` per page**
     - File: `tests/pages.bilingual-structure.test.mjs`; domain: `PAGES_BILINGUAL`
     - **Validates: Requirements 1.1, 1.2, 1.4, 7.1, 9.1, 9.6**
 
-  - [ ]\* 12.8 Write per-locale shell-consistency test
+  - [x]\* 12.8 Write per-locale shell-consistency test
     - **Property 16: nav and footer are byte-identical between any two pages of the same locale after normalization (neutralize `aria-current`, `active` class, `.lang-option` hrefs, per-line indentation)**
     - File: `tests/pages.bilingual-shell.test.mjs`; per-locale comparison
     - **Validates: Requirements 7.2**
 
-  - [ ]\* 12.9 Write raw-HTML presence test
+  - [x]\* 12.9 Write raw-HTML presence test
     - **Property 18: nav/footer anchors, switcher, and service-page JSON-LD are present in raw static HTML (no JS); main landmarks (`<h1>`, nav, footer) non-empty; inline theme-init precedes the first `<link rel="stylesheet">`**
     - File: `tests/pages.bilingual-raw.test.mjs`; raw `readPage`
     - **Validates: Requirements 7.4, 8.6, 9.4, 10.1**
 
-  - [ ]\* 12.10 Write price-parity test
+  - [x]\* 12.10 Write price-parity test
     - **Property 19: for each service `PAGE_PAIRS`, the multiset of price tokens (currency symbol + numeric value) in page text is identical between ID and EN, and `OfferCatalog` `price`/`priceCurrency` are identical between the pair**
     - File: `tests/pages.price-parity.test.mjs`; domain: service `PAGE_PAIRS`
     - **Validates: Requirements 6.5, 8.5**
 
-  - [ ]\* 12.11 Extend asset-path test for bilingual pages
+  - [x]\* 12.11 Extend asset-path test for bilingual pages
     - **Property 20: every CSS/JS/image reference uses a root-relative path starting `/assets/`, resolving identically from any folder depth including `/en/`**
     - File: `tests/pages.assets.test.mjs` (extend to iterate `PAGES_BILINGUAL`)
     - **Validates: Requirements 10.5**
 
-  - [ ]\* 12.12 Write per-locale hamburger property test
+  - [x]\* 12.12 Write per-locale hamburger property test
     - **Property 21: for either shell and any random sequence of {toggle, nav-link click, Escape, resize}, `initMobileNav` starts closed, toggle flips, link/Escape/resize≥900px always closes, and double-init adds no duplicate listeners**
     - File: `tests/nav.initMobileNav.bilingual.test.mjs`; generator: random action sequences × shell id/en; ≥100 runs
     - **Validates: Requirements 10.3**
 
-  - [ ]\* 12.13 Write per-locale 404 test
+  - [x]\* 12.13 Write per-locale 404 test
     - **Property 22: each 404 page has exactly one `<meta name="robots" content="noindex">` and exactly one home link to the same-locale home (`/` for ID, `/en/` for EN)**
     - File: `tests/pages.404.test.mjs`; domain: the two 404 pages
     - **Validates: Requirements 6.3**
 
-- [~] 13. Final checkpoint - full suite green
+- [x] 13. Final checkpoint - full suite green
   - Run `node --test tests/`; ensure all property and enumerative tests pass, ask the user if questions arise.
 
 ## Notes

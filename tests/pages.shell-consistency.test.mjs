@@ -57,15 +57,33 @@ function stripActiveState(markup) {
 }
 
 /**
+ * Neutralize the per-page language-switcher hrefs. Each `.lang-option` anchor
+ * points at the current page (self path) and its locale pair, so its `href`
+ * legitimately differs between two same-locale pages. Replace those hrefs with
+ * a constant placeholder so the rest of the shell markup can still be compared
+ * byte-for-byte. This mirrors `tests/pages.bilingual-shell.test.mjs`.
+ * @param {string} markup
+ * @returns {string}
+ */
+function neutralizeLangSwitcherHrefs(markup) {
+  return markup.replace(
+    /<a\b[^>]*\blang-option\b[^>]*>/g,
+    (tag) => tag.replace(/href="[^"]*"/g, 'href="#"'),
+  );
+}
+
+/**
  * Normalize a shell block for robust-but-meaningful comparison:
  *   - neutralize active-state attributes (runtime-only)
+ *   - neutralize the per-page `.lang-option` switcher hrefs (correct-by-design
+ *     to differ per page — the switcher points at the current page)
  *   - trim leading/trailing whitespace per line (indentation differs per page,
  *     since some pages keep the shell at column 0 and others indent it)
  * @param {string} markup
  * @returns {string}
  */
 function normalizeShell(markup) {
-  return stripActiveState(markup)
+  return neutralizeLangSwitcherHrefs(stripActiveState(markup))
     .split("\n")
     .map((line) => line.trim())
     .join("\n");

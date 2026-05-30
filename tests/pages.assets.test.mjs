@@ -23,7 +23,7 @@ import { describe, test } from "node:test";
 import assert from "node:assert/strict";
 
 import { readPage } from "./helpers.mjs";
-import { PAGES } from "./fixtures/pages.mjs";
+import { PAGES, PAGES_BILINGUAL } from "./fixtures/pages.mjs";
 
 // ---------------------------------------------------------------------------
 // Canonical asset sets
@@ -169,6 +169,41 @@ describe("Property 6 — all css/js/img asset paths are root-relative (/assets/)
         assert.ok(
           ref.startsWith("/assets/"),
           `${page.file}: asset "${ref}" must be root-relative starting with "/assets/"`,
+        );
+      }
+    });
+  }
+});
+
+// ---------------------------------------------------------------------------
+// Property 20 — bilingual aset root-relative
+//
+// Validates: Requirements 10.5
+//
+// For ANY page in PAGES_BILINGUAL (all 16: 7 content slugs x {id,en} + 404 x
+// {id,en}), every CSS/JS/image reference must be a ROOT-RELATIVE path starting
+// with "/assets/" so it resolves identically from any folder depth — including
+// EN pages served under "/en/...". A document-relative "../assets/..." or
+// "assets/..." (no leading slash) would break on the deeper "/en/" pages, which
+// is exactly what this property guards. This iteration also subsumes the
+// single-locale PAGES coverage above (the id-locale entries are the same files).
+// ---------------------------------------------------------------------------
+
+describe("Property 20 — bilingual css/js/img asset paths are root-relative (/assets/)", () => {
+  for (const page of PAGES_BILINGUAL) {
+    const label = `${page.file} [${page.locale}]`;
+
+    test(`${label}: every asset ref is root-relative under /assets/`, () => {
+      const html = readPage(page.file);
+      const refs = [...stylesheetHrefs(html), ...scriptSrcs(html), ...imgSrcs(html)];
+
+      assert.ok(refs.length > 0, `${page.file} should reference at least one asset`);
+
+      for (const ref of refs) {
+        assert.ok(
+          ref.startsWith("/assets/"),
+          `${page.file} [${page.locale}]: asset "${ref}" must be root-relative ` +
+            `starting with "/assets/" (no "../assets/" or "assets/..." — would break under "/en/")`,
         );
       }
     });

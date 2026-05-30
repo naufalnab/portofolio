@@ -8,7 +8,11 @@
  *     link (an <a href> that is NOT external http(s) to another domain, NOT
  *     mailto:, NOT tel:, NOT a wa.me link, and NOT a pure same-page "#anchor")
  *     resolves — after stripping the hash and normalizing the path — to a known
- *     page path in { normalizePath(p.path) for p in PAGES }.
+ *     page path in { normalizePath(p.path) for p in PAGES }. The language
+ *     switcher (`.lang-switcher` → `a.lang-option`) is excluded here: it is the
+ *     only legitimately cross-locale link (its EN option targets the page's
+ *     `/en/...` pair, outside the single-locale ID-only PAGES set). That link
+ *     is validated by Property 7 in pages.bilingual-links.test.mjs.
  *
  *   - Property 12 (no dead anchors to moved sections): no page contains a
  *     pure same-page href="#X" whose id X is NOT present on that same page.
@@ -125,6 +129,12 @@ for (const p of PAGES) {
 
     const broken = [];
     for (const a of anchors) {
+      // The language switcher is the ONLY legitimately cross-locale link: its
+      // EN option points at the page's pair under `/en/...`, which is not in
+      // the single-locale ID-only KNOWN_PATHS by design. Skip it here; its
+      // correctness is covered by Property 7 in pages.bilingual-links.test.mjs.
+      if (a.closest(".lang-switcher")) continue;
+
       const raw = a.getAttribute("href");
       const c = classifyHref(raw);
       if (c.kind !== "internal") continue; // external / mailto / tel / wa.me / hash
