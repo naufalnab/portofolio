@@ -24,7 +24,7 @@
     --max-w: 1200px;
 }
 
-body.light-mode {
+html.light-mode {
     --bg: #ffffff;
     --bg-alt: #f6f7fb;
     --bg-soft: #fafbff;

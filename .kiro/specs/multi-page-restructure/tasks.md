@@ -12,8 +12,8 @@ Catatan penting eksekusi: banyak task menulis ke file yang sama atau membaca `in
 
 ## Tasks
 
-- [ ] 1. Siapkan shared shell (partials) dan harness test
-  - [ ] 1.1 Buat `partials/_header.html` sebagai source of truth nav
+- [x] 1. Siapkan shared shell (partials) dan harness test
+  - [x] 1.1 Buat `partials/_header.html` sebagai source of truth nav
     - Tulis `<nav id="navbar">` tepat satu, dengan `.nav-container`, logo `<a href="/">`, dan `.nav-right`
     - Tambah tombol hamburger `<button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">` berisi 3 `.nav-toggle-bar`
     - `.nav-links#nav-links` dengan link cross-page root-relative: Services `/services/`, Process `/services/#process`, Case Studies `/case-studies/`, Founded `/founded/`, dropdown Layanan (`/layanan-website/` + `/layanan-video-ai/`), Packages `/packages/`
@@ -21,7 +21,7 @@ Catatan penting eksekusi: banyak task menulis ke file yang sama atau membaca `in
     - Semua link sebagai `<a href>` literal di raw HTML (tanpa injeksi JS)
     - _Requirements: 1.1, 1.2, 1.3, 2.3, 2.4, 7.1_
 
-  - [ ] 1.2 Buat `partials/_footer.html` sebagai source of truth footer
+  - [x] 1.2 Buat `partials/_footer.html` sebagai source of truth footer
     - Tulis tepat satu `<footer>` dengan brand, kolom Explore (link cross-page root-relative ke 7 halaman), Contact (WhatsApp/email `mailto:`/`wa.me`), dan Founded
     - Pastikan seluruh link internal root-relative dan dapat dinavigasi tanpa JavaScript
     - _Requirements: 1.1, 1.2, 1.3, 1.5_
@@ -32,19 +32,19 @@ Catatan penting eksekusi: banyak task menulis ke file yang sama atau membaca `in
     - Buat `tests/helpers.mjs` (load file HTML → jsdom document, util `normalizePath` mirror untuk test)
     - _Requirements: 8.1_
 
-- [ ] 2. Refactor sistem tema untuk anti-FOUC
-  - [ ] 2.1 Refactor `assets/js/theme.js` menargetkan `documentElement`
+- [x] 2. Refactor sistem tema untuk anti-FOUC
+  - [x] 2.1 Refactor `assets/js/theme.js` menargetkan `documentElement`
     - Ubah target classList dari `body` ke `document.documentElement`
     - `toggleTheme()` membalik `light-mode`, persist `localStorage.theme` `"light"`/`"dark"`, sinkron `#theme-icon`/`#theme-text`
     - Bungkus baca/tulis `localStorage` dengan `try/catch` (default dark, tanpa throw)
     - _Requirements: 3.3, 3.4, 3.5_
 
-  - [ ] 2.2 Sesuaikan selector tema di `assets/css/base.css`
+  - [x] 2.2 Sesuaikan selector tema di `assets/css/base.css`
     - Ubah selector `body.light-mode` → `.light-mode` / `html.light-mode` agar konsisten dengan class di `documentElement`
     - Verifikasi seluruh variabel tema light masih ter-apply saat class ada di `<html>`
     - _Requirements: 3.1, 3.2_
 
-  - [ ] 2.3 Buat snippet inline anti-FOUC sebagai source of truth
+  - [x] 2.3 Buat snippet inline anti-FOUC sebagai source of truth
     - Buat `partials/_theme-init.html` berisi script inline sinkron `(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();`
     - Snippet ini akan disisipkan di `<head>` setiap halaman **sebelum** `<link rel="stylesheet">` pertama
     - _Requirements: 3.1, 3.2, 3.5_
@@ -53,20 +53,20 @@ Catatan penting eksekusi: banyak task menulis ke file yang sama atau membaca `in
     - **Property 9: Idempotensi toggle tema (involutif)** — `toggleTheme(); toggleTheme();` mengembalikan `html.classList` dan `localStorage.theme` ke nilai semula (jsdom + fast-check atas state awal acak)
     - **Validates: Requirements 3.3, 3.4**
 
-- [ ] 3. Refactor modul navigasi (`nav.js`) dan CSS nav
-  - [ ] 3.1 Refactor `assets/js/nav.js`
+- [x] 3. Refactor modul navigasi (`nav.js`) dan CSS nav
+  - [x] 3.1 Refactor `assets/js/nav.js`
     - Pertahankan `.scrolled` state; tambah `normalizePath(p)` (buang hash/query, `""`→`"/"`, trailing slash untuk non-`.html`)
     - Tambah `setActiveNav(navRoot, currentPath)`: tepat satu top-level `.active`+`aria-current="page"`, induk dropdown `.active` (tanpa `aria-current`), nol bila path tak terdaftar
     - Tambah `initMobileNav(navRoot)`: toggle `.nav-open`+`aria-expanded`, tutup saat klik link/Escape/resize `>=900px`, guard `dataset.bound`, no-op bila `.nav-toggle`/`.nav-links` tidak ada
     - Panggil `setActiveNav` + `initMobileNav` di IIFE dan expose `window.__nav = { normalizePath, setActiveNav, initMobileNav }` untuk testing
     - _Requirements: 2.2, 2.4, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6_
 
-  - [ ] 3.2 Tambah styling active-state + hamburger di `assets/css/layout.css`
+  - [x] 3.2 Tambah styling active-state + hamburger di `assets/css/layout.css`
     - `.nav-links a.active` / `.nav-dropdown > a.active` (warna accent + underline gradient)
     - `.nav-toggle` (default `display:none`) + `.nav-toggle-bar`
     - _Requirements: 2.2, 7.1_
 
-  - [ ] 3.3 Sesuaikan `assets/css/responsive.css` untuk hamburger
+  - [x] 3.3 Sesuaikan `assets/css/responsive.css` untuk hamburger
     - Pada `@media (max-width: 900px)`: tampilkan `.nav-toggle`, ubah `.nav-links` jadi panel (`display:none` default), `#navbar.nav-open .nav-links`/`.nav-cta` tampil, animasi bar→X; selaraskan agar tidak bertabrakan dengan aturan lama `.nav-links/.nav-cta { display:none }`
     - _Requirements: 7.1, 7.2, 7.4_
 
@@ -82,57 +82,57 @@ Catatan penting eksekusi: banyak task menulis ke file yang sama atau membaca `in
     - **Property 13: Mobile hamburger toggle benar** — state awal tertutup; klik → buka; klik lagi → tutup; klik link/Escape/resize`>=900px` → tutup; `initMobileNav` dua kali tidak menambah listener ganda (fast-check atas urutan aksi acak)
     - **Validates: Requirements 7.1, 7.2, 7.3, 7.4, 7.5, 7.6**
 
-- [ ] 4. Checkpoint — fondasi shared shell, tema, dan navigasi
+- [x] 4. Checkpoint — fondasi shared shell, tema, dan navigasi
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 5. Carve section dari `index.html` ke halaman terpisah
-  - [ ] 5.1 Buat `services/index.html`
+- [x] 5. Carve section dari `index.html` ke halaman terpisah
+  - [x] 5.1 Buat `services/index.html`
     - Potong-tempel section `#services` + `#process` dari `index.html` apa adanya
     - Sisipkan `<head>` (anti-FOUC inline, CSS/JS core root-relative `?v=8`), header & footer dari partials
     - SEO unik: `<title>`, `meta[name=description]` (50–160 char), `link[rel=canonical]` absolut `/services/`, OG lengkap (`og:url`=canonical)
     - Promosikan heading pertama jadi `<h1>` tunggal; jaga hierarki heading tanpa lompat; pastikan anchor Process aktif sebagai target `#process`
     - _Requirements: 4.1, 4.2, 5.1, 5.2, 6.1, 6.2, 6.4, 8.2, 8.4_
 
-  - [ ] 5.2 Buat `case-studies/index.html`
+  - [x] 5.2 Buat `case-studies/index.html`
     - Potong-tempel section `#projects` + `#clients`; tambahkan `toggles.js` (untuk `toggleClients`) di samping JS core
     - Head root-relative `?v=8` + anti-FOUC + header/footer partials; SEO unik + OG; satu `<h1>`
     - _Requirements: 4.1, 4.2, 4.4, 5.1, 5.2, 6.1, 6.2, 6.4_
 
-  - [ ] 5.3 Buat `founded/index.html`
+  - [x] 5.3 Buat `founded/index.html`
     - Potong-tempel section `#founded` + `#skills` + `#experience` + `#credentials`; tambahkan `toggles.js` (untuk `toggleCerts`)
     - Head root-relative `?v=8` + anti-FOUC + header/footer partials; SEO unik + OG; satu `<h1>`
     - _Requirements: 4.1, 4.2, 4.4, 5.1, 5.2, 6.1, 6.2, 6.4_
 
-  - [ ] 5.4 Buat `layanan-website/index.html`
+  - [x] 5.4 Buat `layanan-website/index.html`
     - Potong-tempel section `#jasa-website`; tambahkan `services-commercial.css` + `services.js`
     - Pindahkan JSON-LD `Service` "Pembuatan Website" ke halaman ini sebagai `<script type="application/ld+json">` (tepat satu, valid parse)
     - Head root-relative `?v=8` + anti-FOUC + header/footer partials; SEO unik + OG; satu `<h1>`
     - _Requirements: 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 6.1, 6.2_
 
-  - [ ] 5.5 Buat `layanan-video-ai/index.html`
+  - [x] 5.5 Buat `layanan-video-ai/index.html`
     - Potong-tempel section `#jasa-video-ai`; tambahkan `services-commercial.css` + `services.js`
     - Pindahkan JSON-LD `Service` "Pembuatan Video AI" ke halaman ini (tepat satu, valid parse)
     - Head root-relative `?v=8` + anti-FOUC + header/footer partials; SEO unik + OG; satu `<h1>`
     - _Requirements: 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 6.1, 6.2_
 
-  - [ ] 5.6 Buat `packages/index.html`
+  - [x] 5.6 Buat `packages/index.html`
     - Potong-tempel section `#packages` + `#contact`; JS/CSS core saja (tanpa `hero.css`/`services-*`/`toggles.js`)
     - Head root-relative `?v=8` + anti-FOUC + header/footer partials; SEO unik + OG; satu `<h1>`; CTA `#contact` aktif sebagai target
     - _Requirements: 4.1, 4.2, 4.5, 5.1, 5.2, 6.1, 6.2, 6.4_
 
-  - [ ] 5.7 Buat `404.html`
+  - [x] 5.7 Buat `404.html`
     - Head dengan anti-FOUC + tepat satu `<meta name="robots" content="noindex">`; header/footer partials; aset root-relative `?v=8`
     - Konten: satu `<h1>` "404 …" + tepat satu link "Kembali ke Home" `href="/"`
     - _Requirements: 6.3, 8.2_
 
-  - [ ] 5.8 Rewrite `index.html` menjadi Home (Hero + About)
+  - [x] 5.8 Rewrite `index.html` menjadi Home (Hero + About)
     - Sisakan section `#home` (Hero) + `#about`; hapus section yang sudah dipindah ke halaman lain (tidak ada duplikasi/section hilang)
     - Konversi semua aset ke root-relative `?v=8`; muat `hero.css` (hanya di Home); sisipkan anti-FOUC inline + header/footer partials
     - Ganti seluruh anchor lama (`#services`, `#process`, dst.) ke URL cross-page (mis. `/services/#process`) agar tidak ada anchor mati
     - SEO unik + OG; promosikan heading Hero jadi `<h1>` tunggal
     - _Requirements: 4.1, 4.2, 4.5, 5.1, 5.2, 6.1, 6.2, 6.4, 8.3_
 
-- [ ] 6. Checkpoint — seluruh halaman ter-carve & ter-assemble
+- [x] 6. Checkpoint — seluruh halaman ter-carve & ter-assemble
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 7. Artefak SEO & tooling pendukung
@@ -173,7 +173,7 @@ Catatan penting eksekusi: banyak task menulis ke file yang sama atau membaca `in
     - **Property 5: Tema persist lintas navigasi tanpa flash** — di tiap `<head>`, script inline theme-init muncul sebelum `<link rel="stylesheet">` pertama; bila `localStorage.theme="light"` maka `html.classList.contains("light-mode")` true (jsdom)
     - **Validates: Requirements 3.1**
 
-- [ ] 9. Checkpoint final — seluruh test lulus
+- [x] 9. Checkpoint final — seluruh test lulus
   - Ensure all tests pass, ask the user if questions arise.
 
 ## Notes

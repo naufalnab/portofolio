@@ -26,12 +26,46 @@
         padding: 8rem 0 5rem;
     }
 
+    .nav-toggle {
+        display: inline-flex;
+    }
+
     .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 1rem 2rem;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+    }
+
+    #navbar.nav-open .nav-links {
+        display: flex;
+    }
+
+    #navbar.nav-open .nav-cta {
+        display: inline-flex;
     }
 
     .nav-cta {
         display: none;
+    }
+
+    /* animasi bar jadi "X" saat terbuka */
+    #navbar.nav-open .nav-toggle-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    #navbar.nav-open .nav-toggle-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #navbar.nav-open .nav-toggle-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 
     .hero-stats {

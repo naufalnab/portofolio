@@ -291,3 +291,35 @@ footer {
     font-size: 0.75em;
     opacity: 0.6;
 }
+
+/* Active nav state */
+.nav-links a.active,
+.nav-dropdown > a.active {
+  color: var(--accent);
+  opacity: 1;
+}
+.nav-links a.active::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: var(--gradient);
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+/* Hamburger — hanya tampil < 900px (default hidden, shown in responsive.css) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+.nav-toggle-bar {
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}

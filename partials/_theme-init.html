@@ -1,0 +1,10 @@
+<!--
+  Anti-FOUC theme-init snippet (SOURCE OF TRUTH).
+  Salin blok <script> di bawah ke dalam <head> SETIAP halaman,
+  TEPAT SEBELUM <link rel="stylesheet"> pertama.
+  Script ini inline + sinkron agar dieksekusi sebelum paint pertama:
+  ia membaca localStorage 'theme' dan menambahkan class 'light-mode'
+  pada <html> (documentElement) sehingga tema benar sejak paint pertama,
+  mencegah theme flash (FOUC). Jangan jadikan eksternal/defer.
+-->
+<script>(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();</script>
