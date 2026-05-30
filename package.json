@@ -1,0 +1,13 @@
+{
+  "name": "portofolio-tests",
+  "private": true,
+  "type": "module",
+  "description": "Dev-only test harness for the multi-page-restructure feature. Not part of the deployed static artifacts.",
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "devDependencies": {
+    "fast-check": "^3.22.0",
+    "jsdom": "^25.0.1"
+  }
+}

@@ -26,7 +26,7 @@ Catatan penting eksekusi: banyak task menulis ke file yang sama atau membaca `in
     - Pastikan seluruh link internal root-relative dan dapat dinavigasi tanpa JavaScript
     - _Requirements: 1.1, 1.2, 1.3, 1.5_
 
-  - [ ]\* 1.3 Set up harness test (Node + fast-check + jsdom)
+  - [x]\* 1.3 Set up harness test (Node + fast-check + jsdom)
     - Buat `package.json` (devDependencies: `fast-check`, `jsdom`; script `"test"`) — hanya devDependency, tidak memengaruhi artefak statis yang di-deploy
     - Buat `tests/fixtures/pages.mjs` berisi konstanta `PAGES` dan `NAV_ITEMS` sesuai Data Models di design (sumber kebenaran untuk test enumeratif)
     - Buat `tests/helpers.mjs` (load file HTML → jsdom document, util `normalizePath` mirror untuk test)
@@ -49,7 +49,7 @@ Catatan penting eksekusi: banyak task menulis ke file yang sama atau membaca `in
     - Snippet ini akan disisipkan di `<head>` setiap halaman **sebelum** `<link rel="stylesheet">` pertama
     - _Requirements: 3.1, 3.2, 3.5_
 
-  - [ ]\* 2.4 Tulis property test untuk `toggleTheme`
+  - [-]\* 2.4 Tulis property test untuk `toggleTheme`
     - **Property 9: Idempotensi toggle tema (involutif)** — `toggleTheme(); toggleTheme();` mengembalikan `html.classList` dan `localStorage.theme` ke nilai semula (jsdom + fast-check atas state awal acak)
     - **Validates: Requirements 3.3, 3.4**
 
@@ -70,15 +70,15 @@ Catatan penting eksekusi: banyak task menulis ke file yang sama atau membaca `in
     - Pada `@media (max-width: 900px)`: tampilkan `.nav-toggle`, ubah `.nav-links` jadi panel (`display:none` default), `#navbar.nav-open .nav-links`/`.nav-cta` tampil, animasi bar→X; selaraskan agar tidak bertabrakan dengan aturan lama `.nav-links/.nav-cta { display:none }`
     - _Requirements: 7.1, 7.2, 7.4_
 
-  - [ ]\* 3.4 Tulis property test untuk `normalizePath`
+  - [-]\* 3.4 Tulis property test untuk `normalizePath`
     - **Property 10: `normalizePath` idempoten & deterministik** — `normalizePath(normalizePath(s)) === normalizePath(s)` untuk string `s` acak (fast-check)
     - **Validates: Requirements 2.2**
 
-  - [ ]\* 3.5 Tulis property test untuk `setActiveNav`
+  - [-]\* 3.5 Tulis property test untuk `setActiveNav`
     - **Property 4: Active nav cocok dengan halaman** — fixture nav (jsdom), untuk `currentPath` acak dari path valid → tepat satu `aria-current="page"` pada path yang cocok; untuk path asing (mis. `/404.html`) → nol
     - **Validates: Requirements 2.2**
 
-  - [ ]\* 3.6 Tulis property test untuk `initMobileNav`
+  - [-]\* 3.6 Tulis property test untuk `initMobileNav`
     - **Property 13: Mobile hamburger toggle benar** — state awal tertutup; klik → buka; klik lagi → tutup; klik link/Escape/resize`>=900px` → tutup; `initMobileNav` dua kali tidak menambah listener ganda (fast-check atas urutan aksi acak)
     - **Validates: Requirements 7.1, 7.2, 7.3, 7.4, 7.5, 7.6**
 
@@ -135,41 +135,41 @@ Catatan penting eksekusi: banyak task menulis ke file yang sama atau membaca `in
 - [x] 6. Checkpoint — seluruh halaman ter-carve & ter-assemble
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 7. Artefak SEO & tooling pendukung
-  - [ ]\* 7.1 Buat `sitemap.xml` + `robots.txt`
+- [x] 7. Artefak SEO & tooling pendukung
+  - [x]\* 7.1 Buat `sitemap.xml` + `robots.txt`
     - `sitemap.xml` memuat 7 URL kanonik absolut; `robots.txt` menunjuk ke sitemap (artefak statis murni)
     - _Requirements: 8.2, 8.3_
 
-  - [ ]\* 7.2 Buat `tools/build-pages.mjs` (opsional, zero npm deps)
+  - [x]\* 7.2 Buat `tools/build-pages.mjs` (opsional, zero npm deps)
     - Hanya pakai `node:fs`/`node:path`; rakit tiap halaman dari `partials/_header.html`, `partials/_footer.html`, snippet anti-FOUC, dan konten per halaman
     - Output deterministik & idempoten (byte-identik bila dijalankan ulang), tanpa menyisakan placeholder `{{...}}`; tidak menambah dependensi runtime pada artefak yang di-deploy
     - _Requirements: 1.4, 8.5_
 
 - [ ] 8. Test korektnes enumeratif atas himpunan 8 halaman
-  - [ ]\* 8.1 Tulis test struktur dasar tiap halaman
+  - [-]\* 8.1 Tulis test struktur dasar tiap halaman
     - **Property 1: Tepat satu nav & footer** — `count(p, "nav#navbar")=1` ∧ `count(p, "footer")=1` ∀ p ∈ PAGES
     - **Property 2: Tepat satu H1 per halaman** — `count(p, "h1")=1` dan teksnya non-kosong setelah trim
     - **Validates: Requirements 1.1, 6.1**
 
-  - [ ]\* 8.2 Tulis test konsistensi shared shell
+  - [-]\* 8.2 Tulis test konsistensi shared shell
     - **Property 11: Header/footer konsisten lintas halaman** — markup nav & footer (di luar atribut active runtime `.active`/`aria-current`) identik byte-per-byte di seluruh `PAGES`
     - **Validates: Requirements 1.2**
 
-  - [ ]\* 8.3 Tulis test pemuatan aset per halaman
+  - [-]\* 8.3 Tulis test pemuatan aset per halaman
     - **Property 6: Aset wajib termuat, tanpa aset berlebih** — semua CSS+JS core ter-link; Layanan memuat `services-commercial.css`+`services.js`; Case Studies/Founded memuat `toggles.js`; `hero.css` hanya Home; tidak ada aset berlebih (mis. `services.js` di Home); semua path root-relative `/assets/`
     - **Validates: Requirements 4.1, 4.3, 4.4, 4.5**
 
-  - [ ]\* 8.4 Tulis test SEO meta & JSON-LD
+  - [-]\* 8.4 Tulis test SEO meta & JSON-LD
     - **Property 7: SEO meta unik & lengkap** — `title` & `canonical` unik antar halaman; `description` 50–160 char; OG (`og:title/description/url/image/type`) ada; `canonical` absolut cocok `p.path`; `og:url`=canonical
     - **Property 8: JSON-LD tepat sasaran** — schema `Service` "Pembuatan Website" hanya di `/layanan-website/`, "Pembuatan Video AI" hanya di `/layanan-video-ai/`, tepat satu per halaman, tidak ada di halaman lain
     - **Validates: Requirements 5.1, 5.2, 5.3**
 
-  - [ ]\* 8.5 Tulis test resolusi link internal
+  - [-]\* 8.5 Tulis test resolusi link internal
     - **Property 3: Semua link internal resolve** — `normalizePath(link) ∈ {normalizePath(q.path)}` untuk semua link internal (lihat Algoritma 5)
     - **Property 12: Tidak ada anchor mati ke section yang sudah pindah** — tidak ada `#section` yang menunjuk ke ID yang kini di halaman lain (mis. Home harus `/services/#process`, bukan `#process`)
     - **Validates: Requirements 2.1**
 
-  - [ ]\* 8.6 Tulis test anti-FOUC ordering
+  - [-]\* 8.6 Tulis test anti-FOUC ordering
     - **Property 5: Tema persist lintas navigasi tanpa flash** — di tiap `<head>`, script inline theme-init muncul sebelum `<link rel="stylesheet">` pertama; bila `localStorage.theme="light"` maka `html.classList.contains("light-mode")` true (jsdom)
     - **Validates: Requirements 3.1**
 
