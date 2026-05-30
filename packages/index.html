@@ -5,24 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ANTI-FOUC: harus paling atas, inline, sinkron, sebelum CSS -->
+    <!-- (1) DETEKSI BAHASA (opsional, gated OFF secara default) — paling atas, inline, sinkron -->
+    <script>(function(){var AUTO=false;if(!AUTO)return;try{var stored=localStorage.getItem('lang');var here=(location.pathname.indexOf('/en/')===0||location.pathname==='/en')?'en':'id';var want=(stored==='id'||stored==='en')?stored:(/^en/i.test(navigator.language||'')?'en':'id');if(want!==here){var dest=here==='en'?(location.pathname.replace(/^\/en/,'')||'/'):'/en'+location.pathname;if(dest!==location.pathname)location.replace(location.origin+dest);}}catch(e){}})();</script>
+
+    <!-- (2) ANTI-FOUC: harus paling atas, inline, sinkron, sebelum CSS -->
     <script>(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();</script>
 
-    <!-- SEO per-halaman -->
-    <title>Packages &amp; Contact — Ways I Can Help · Naufal Nabila</title>
+    <!-- (3) SEO per-locale -->
+    <title>Paket &amp; Kontak — Cara Saya Bisa Membantu · Naufal Nabila</title>
     <meta name="description"
-        content="Paket kerja sama Naufal Nabila: Operations System Audit, AI workflow build, internal tools/dashboard, dan systems retainer. Hubungi via WhatsApp atau email.">
+        content="Paket kerja sama Naufal Nabila: audit sistem operasi, pembuatan alur kerja AI, alat internal dan dashboard, serta retainer sistem. Hubungi via WhatsApp.">
+
+    <!-- canonical = self (ID) -->
     <link rel="canonical" href="https://naufalnabila.my.id/packages/">
+
+    <!-- hreflang: id, en, x-default (self-referencing, absolute https) -->
+    <link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/packages/">
+    <link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/packages/">
+    <link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/packages/">
+
+    <!-- Open Graph per-locale -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://naufalnabila.my.id/packages/">
-    <meta property="og:title" content="Packages &amp; Contact · Naufal Nabila">
+    <meta property="og:title" content="Paket &amp; Kontak · Naufal Nabila">
     <meta property="og:description"
-        content="Pilih titik masuk yang pas: audit operasi, AI workflow build, internal tools, atau retainer. Mulai dari WhatsApp atau email.">
+        content="Pilih titik masuk yang pas: audit operasi, pembuatan alur kerja AI, alat internal, atau retainer. Mulai dari WhatsApp atau email.">
     <meta property="og:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:locale:alternate" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Packages &amp; Contact · Naufal Nabila">
+    <meta name="twitter:title" content="Paket &amp; Kontak · Naufal Nabila">
     <meta name="twitter:description"
-        content="Pilih titik masuk yang pas: audit operasi, AI workflow build, internal tools, atau retainer.">
+        content="Pilih titik masuk yang pas: audit operasi, pembuatan alur kerja AI, alat internal, atau retainer.">
     <meta name="twitter:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
 
     <!-- CSS core — root-relative, v8 -->
@@ -37,17 +51,17 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="/" class="logo">Naufal<span>.</span></a>
-            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+            <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links">
                 <span class="nav-toggle-bar"></span>
                 <span class="nav-toggle-bar"></span>
                 <span class="nav-toggle-bar"></span>
             </button>
             <div class="nav-right">
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="/services/">Services</a></li>
-                    <li><a href="/services/#process">Process</a></li>
-                    <li><a href="/case-studies/">Case Studies</a></li>
-                    <li><a href="/founded/">Founded</a></li>
+                    <li><a href="/services/">Layanan</a></li>
+                    <li><a href="/services/#process">Proses</a></li>
+                    <li><a href="/case-studies/">Studi Kasus</a></li>
+                    <li><a href="/founded/">Dirikan</a></li>
                     <li class="nav-dropdown">
                         <a href="/layanan-website/" aria-haspopup="true" aria-expanded="false">Layanan</a>
                         <ul class="nav-dropdown-menu">
@@ -55,114 +69,120 @@
                             <li><a href="/layanan-video-ai/">Video AI</a></li>
                         </ul>
                     </li>
-                    <li><a href="/packages/">Packages</a></li>
+                    <li><a href="/packages/">Paket</a></li>
                 </ul>
-                <a href="/packages/#contact" class="nav-cta">Book a Systems Audit</a>
-                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                <a href="/packages/#contact" class="nav-cta">Pesan Audit Sistem</a>
+                <div class="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
+                    <a class="lang-option" hreflang="id" data-lang="id" href="/packages/" aria-current="true">ID</a>
+                    <a class="lang-option" hreflang="en" data-lang="en" href="/en/packages/">EN</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Ganti tema">
                     <span id="theme-icon">☀️</span>
-                    <span id="theme-text">Light</span>
+                    <span id="theme-text">Terang</span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- PACKAGES — Ways I Can Help -->
+    <!-- PACKAGES — Cara Saya Bisa Membantu -->
     <section class="packages" id="packages">
         <div class="container">
-            <span class="section-eyebrow fade-in">Ways I Can Help</span>
-            <h1 class="section-title fade-in">Pick the entry point that fits your situation.</h1>
-            <p class="section-subtitle fade-in">Most engagements start small — usually with an audit or a
-                focused build — and grow from there as we map what your operations actually need.</p>
+            <span class="section-eyebrow fade-in">Cara Saya Bisa Membantu</span>
+            <h1 class="section-title fade-in">Pilih titik masuk yang paling sesuai dengan situasi Anda.</h1>
+            <p class="section-subtitle fade-in">Sebagian besar kerja sama dimulai dari yang kecil — biasanya lewat
+                audit atau satu build terfokus — lalu berkembang seiring kita memetakan apa yang sebenarnya
+                dibutuhkan operasi Anda.</p>
 
             <div class="packages-grid fade-in">
                 <div class="package-card featured">
-                    <span class="package-flag">Start here</span>
-                    <div class="package-name">Operations System Audit</div>
-                    <div class="package-for">For founders who need clarity</div>
-                    <p class="package-desc">A focused diagnosis of your current workflows. We map the mess,
-                        identify the highest-leverage automations, and decide what to build first.</p>
+                    <span class="package-flag">Mulai di sini</span>
+                    <div class="package-name">Audit Sistem Operasi</div>
+                    <div class="package-for">Untuk founder yang butuh kejelasan</div>
+                    <p class="package-desc">Diagnosis terfokus atas alur kerja Anda saat ini. Kita memetakan
+                        kekacauannya, mengidentifikasi otomatisasi berdampak terbesar, dan menentukan apa yang
+                        dibangun lebih dulu.</p>
                     <ul class="package-deliverables">
-                        <li>Workflow map of your operations</li>
-                        <li>Bottleneck and risk list</li>
-                        <li>Prioritized automation plan</li>
-                        <li>Recommended first system to build</li>
+                        <li>Peta alur kerja operasi Anda</li>
+                        <li>Daftar bottleneck dan risiko</li>
+                        <li>Rencana otomatisasi yang diprioritaskan</li>
+                        <li>Rekomendasi sistem pertama untuk dibangun</li>
                     </ul>
-                    <a href="#contact" class="package-cta">Book an Audit</a>
+                    <a href="#contact" class="package-cta">Pesan Audit</a>
                 </div>
 
                 <div class="package-card">
-                    <div class="package-name">AI Workflow Build</div>
-                    <div class="package-for">For teams ready to automate</div>
-                    <p class="package-desc">A focused engagement to design and ship one critical AI workflow
-                        — lead handling, ticketing, follow-ups, reporting, or content operations.</p>
+                    <div class="package-name">Pembuatan Alur Kerja AI</div>
+                    <div class="package-for">Untuk tim yang siap berotomatisasi</div>
+                    <p class="package-desc">Kerja sama terfokus untuk merancang dan merilis satu alur kerja AI yang
+                        krusial — penanganan lead, ticketing, follow-up, pelaporan, atau operasi konten.</p>
                     <ul class="package-deliverables">
-                        <li>n8n workflow with AI agents</li>
-                        <li>WhatsApp / email integrations</li>
-                        <li>Dashboards and alerts</li>
-                        <li>Documentation and handover</li>
+                        <li>Alur kerja n8n dengan AI agent</li>
+                        <li>Integrasi WhatsApp / email</li>
+                        <li>Dashboard dan peringatan</li>
+                        <li>Dokumentasi dan serah terima</li>
                     </ul>
-                    <a href="#contact" class="package-cta">Discuss a build</a>
+                    <a href="#contact" class="package-cta">Diskusikan build</a>
                 </div>
 
                 <div class="package-card">
-                    <div class="package-name">Internal Tool / Dashboard</div>
-                    <div class="package-for">For businesses needing control</div>
-                    <p class="package-desc">A custom internal system — Odoo modules, admin panels, or
-                        SvelteKit dashboards — built around how your team actually works.</p>
+                    <div class="package-name">Alat Internal / Dashboard</div>
+                    <div class="package-for">Untuk bisnis yang butuh kendali</div>
+                    <p class="package-desc">Sistem internal khusus — modul Odoo, panel admin, atau dashboard
+                        SvelteKit — yang dibangun mengikuti cara kerja tim Anda sebenarnya.</p>
                     <ul class="package-deliverables">
-                        <li>Custom Odoo modules or dashboard app</li>
-                        <li>Role-based access &amp; approvals</li>
-                        <li>Reports and KPI tracking</li>
-                        <li>Production deploy and training</li>
+                        <li>Modul Odoo khusus atau aplikasi dashboard</li>
+                        <li>Akses berbasis peran &amp; persetujuan</li>
+                        <li>Laporan dan pelacakan KPI</li>
+                        <li>Deploy produksi dan pelatihan</li>
                     </ul>
-                    <a href="#contact" class="package-cta">Discuss a build</a>
+                    <a href="#contact" class="package-cta">Diskusikan build</a>
                 </div>
 
                 <div class="package-card">
-                    <div class="package-name">Systems Retainer</div>
-                    <div class="package-for">For ongoing improvement</div>
-                    <p class="package-desc">Monthly engagement for teams that already have systems running
-                        and need continuous improvement, automation, and operational support.</p>
+                    <div class="package-name">Retainer Sistem</div>
+                    <div class="package-for">Untuk peningkatan berkelanjutan</div>
+                    <p class="package-desc">Kerja sama bulanan untuk tim yang sudah punya sistem berjalan dan butuh
+                        peningkatan berkelanjutan, otomatisasi, serta dukungan operasional.</p>
                     <ul class="package-deliverables">
-                        <li>New automations each cycle</li>
-                        <li>Performance tuning &amp; bug fixes</li>
-                        <li>Quarterly system review</li>
-                        <li>Priority WhatsApp support</li>
+                        <li>Otomatisasi baru tiap siklus</li>
+                        <li>Tuning performa &amp; perbaikan bug</li>
+                        <li>Tinjauan sistem tiap kuartal</li>
+                        <li>Dukungan WhatsApp prioritas</li>
                     </ul>
-                    <a href="#contact" class="package-cta">Discuss a retainer</a>
+                    <a href="#contact" class="package-cta">Diskusikan retainer</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT — large gradient panel -->
+    <!-- CONTACT — panel gradien besar -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-panel fade-in">
                 <div class="contact-wrap">
                     <div>
-                        <span class="section-eyebrow">Let's talk</span>
-                        <h2>If your business still depends on manual follow-ups, scattered tools, and repeated
-                            admin work — let's turn it into a system.</h2>
-                        <p class="contact-reassure">No pitch deck. No vague AI hype. Just a practical
-                            conversation about what should be automated, simplified, or rebuilt.</p>
-                        <p>You don't need to know the exact system yet. Tell me what feels messy. I'll help
-                            map the workflow and turn it into a working product. WhatsApp gets the fastest
-                            reply.</p>
+                        <span class="section-eyebrow">Mari bicara</span>
+                        <h2>Jika bisnis Anda masih bergantung pada follow-up manual, tools yang berserakan, dan
+                            pekerjaan administratif berulang — mari ubah jadi sebuah sistem.</h2>
+                        <p class="contact-reassure">Tanpa pitch deck. Tanpa hype AI yang mengawang. Hanya percakapan
+                            praktis tentang apa yang sebaiknya diotomatiskan, disederhanakan, atau dibangun ulang.</p>
+                        <p>Anda belum perlu tahu sistem persisnya. Ceritakan saja apa yang terasa berantakan. Saya
+                            bantu memetakan alur kerjanya dan mengubahnya jadi produk yang berfungsi. WhatsApp paling
+                            cepat saya balas.</p>
                     </div>
                     <div class="contact-actions">
                         <a href="https://wa.me/6282328591004" target="_blank" rel="noopener"
                             class="contact-action primary">
                             <span class="contact-action-icon">💬</span>
                             <span class="contact-action-text">
-                                <span class="contact-action-label">Book a Systems Audit · fastest reply</span>
+                                <span class="contact-action-label">Pesan Audit Sistem · balasan tercepat</span>
                                 <span class="contact-action-value">+62 823-2859-1004</span>
                             </span>
                         </a>
                         <a href="mailto:naufal.nabila.2008@gmail.com" class="contact-action">
                             <span class="contact-action-icon">📧</span>
                             <span class="contact-action-text">
-                                <span class="contact-action-label">Email me directly</span>
+                                <span class="contact-action-label">Email saya langsung</span>
                                 <span class="contact-action-value">naufal.nabila.2008@gmail.com</span>
                             </span>
                         </a>
@@ -177,25 +197,25 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="/" class="footer-logo">Naufal<span>.</span></a>
-                    <p>I build AI-powered systems for businesses, schools, and organizations that have
-                        outgrown spreadsheets and manual workflows.</p>
+                    <p>Saya membangun sistem bertenaga AI untuk bisnis, sekolah, dan organisasi yang sudah
+                        melampaui spreadsheet dan alur kerja manual.</p>
                 </div>
 
                 <div class="footer-col">
-                    <h5>Explore</h5>
+                    <h5>Jelajahi</h5>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/services/">Services</a></li>
-                        <li><a href="/case-studies/">Case Studies</a></li>
-                        <li><a href="/founded/">Founded</a></li>
+                        <li><a href="/">Beranda</a></li>
+                        <li><a href="/services/">Layanan</a></li>
+                        <li><a href="/case-studies/">Studi Kasus</a></li>
+                        <li><a href="/founded/">Dirikan</a></li>
                         <li><a href="/layanan-website/">Layanan Website</a></li>
                         <li><a href="/layanan-video-ai/">Layanan Video AI</a></li>
-                        <li><a href="/packages/">Packages</a></li>
+                        <li><a href="/packages/">Paket</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h5>Contact</h5>
+                    <h5>Kontak</h5>
                     <ul>
                         <li><a href="https://wa.me/6282328591004" target="_blank" rel="noopener">WhatsApp</a></li>
                         <li><a href="mailto:naufal.nabila.2008@gmail.com">Email</a></li>
@@ -205,7 +225,7 @@
                 </div>
 
                 <div class="footer-col">
-                    <h5>Founded by Me</h5>
+                    <h5>Didirikan oleh Saya</h5>
                     <ul>
                         <li><a href="https://pembelajarbelajar.com" target="_blank"
                                 rel="noopener">pembelajarbelajar.com</a></li>
@@ -219,11 +239,11 @@
             </div>
 
             <div class="footer-bottom">
-                <span>© 2026 Naufal Nabila. Built with care, code, and a lot of automation.</span>
+                <span>© 2026 Naufal Nabila. Dibuat dengan ketelitian, kode, dan banyak otomasi.</span>
                 <span class="footer-meta">
                     <span>📍 Indonesia</span>
                     <span class="dot-sep">·</span>
-                    <span>Available for new projects</span>
+                    <span>Tersedia untuk proyek baru</span>
                 </span>
             </div>
         </div>
@@ -231,6 +251,7 @@
 
     <script src="/assets/js/theme.js?v=8" defer></script>
     <script src="/assets/js/nav.js?v=8" defer></script>
+    <script src="/assets/js/lang.js?v=8" defer></script>
     <script src="/assets/js/reveal.js?v=8" defer></script>
     <script src="/assets/js/main.js?v=8" defer></script>
 </body>

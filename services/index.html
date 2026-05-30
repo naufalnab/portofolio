@@ -5,22 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- DETEKSI BAHASA (opsional, gated OFF default) — paling atas, inline, sinkron -->
+    <script>(function(){var AUTO=false;if(!AUTO)return;try{var stored=localStorage.getItem('lang');var here=(location.pathname.indexOf('/en/')===0||location.pathname==='/en')?'en':'id';var want=(stored==='id'||stored==='en')?stored:(/^en/i.test(navigator.language||'')?'en':'id');if(want!==here){var dest=here==='en'?(location.pathname.replace(/^\/en/,'')||'/'):'/en'+location.pathname;if(dest!==location.pathname)location.replace(location.origin+dest);}}catch(e){}})();</script>
+
     <!-- ANTI-FOUC: inline, sinkron, sebelum CSS apa pun -->
     <script>(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();</script>
 
     <!-- SEO per-halaman -->
-    <title>Services — AI Automation, ERP &amp; Internal Tools · Naufal Nabila</title>
+    <title>Layanan — Otomasi AI, ERP &amp; Internal Tools · Naufal Nabila</title>
     <meta name="description"
         content="Layanan otomasi workflow AI, sistem ERP/Odoo, internal tools, dan learning platform — mengubah operasi bisnis yang berantakan menjadi sistem terstruktur.">
     <link rel="canonical" href="https://naufalnabila.my.id/services/">
+
+    <!-- hreflang: id, en, x-default (self-referencing, absolut https) -->
+    <link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/services/">
+    <link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/services/">
+    <link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/services/">
+
+    <!-- Open Graph per-locale -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://naufalnabila.my.id/services/">
-    <meta property="og:title" content="Services — AI Automation, ERP &amp; Internal Tools · Naufal Nabila">
+    <meta property="og:title" content="Layanan — Otomasi AI, ERP &amp; Internal Tools · Naufal Nabila">
     <meta property="og:description"
         content="Otomasi workflow AI, sistem ERP/Odoo, internal tools, dan learning platform untuk operasi bisnis yang terstruktur.">
     <meta property="og:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:locale:alternate" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Services — AI Automation, ERP &amp; Internal Tools · Naufal Nabila">
+    <meta name="twitter:title" content="Layanan — Otomasi AI, ERP &amp; Internal Tools · Naufal Nabila">
     <meta name="twitter:description"
         content="Otomasi workflow AI, sistem ERP/Odoo, internal tools, dan learning platform untuk operasi bisnis yang terstruktur.">
     <meta name="twitter:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
@@ -37,17 +49,17 @@
 <nav id="navbar">
     <div class="nav-container">
         <a href="/" class="logo">Naufal<span>.</span></a>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
         </button>
         <div class="nav-right">
             <ul class="nav-links" id="nav-links">
-                <li><a href="/services/">Services</a></li>
-                <li><a href="/services/#process">Process</a></li>
-                <li><a href="/case-studies/">Case Studies</a></li>
-                <li><a href="/founded/">Founded</a></li>
+                <li><a href="/services/">Layanan</a></li>
+                <li><a href="/services/#process">Proses</a></li>
+                <li><a href="/case-studies/">Studi Kasus</a></li>
+                <li><a href="/founded/">Dirikan</a></li>
                 <li class="nav-dropdown">
                     <a href="/layanan-website/" aria-haspopup="true" aria-expanded="false">Layanan</a>
                     <ul class="nav-dropdown-menu">
@@ -55,12 +67,16 @@
                         <li><a href="/layanan-video-ai/">Video AI</a></li>
                     </ul>
                 </li>
-                <li><a href="/packages/">Packages</a></li>
+                <li><a href="/packages/">Paket</a></li>
             </ul>
-            <a href="/packages/#contact" class="nav-cta">Book a Systems Audit</a>
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+            <a href="/packages/#contact" class="nav-cta">Pesan Audit Sistem</a>
+            <div class="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
+                <a class="lang-option" hreflang="id" data-lang="id" href="/services/" aria-current="true">ID</a>
+                <a class="lang-option" hreflang="en" data-lang="en" href="/en/services/">EN</a>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Ganti tema">
                 <span id="theme-icon">☀️</span>
-                <span id="theme-text">Light</span>
+                <span id="theme-text">Terang</span>
             </button>
         </div>
     </div>
@@ -69,81 +85,84 @@
     <!-- SERVICES — pain-point led -->
     <section class="services-section" id="services">
         <div class="container">
-            <span class="section-eyebrow fade-in">Problems I Solve</span>
-            <h1 class="section-title fade-in">If any of this feels familiar, we should talk.</h1>
-            <p class="section-subtitle fade-in">Most clients don't come to me asking for "an Odoo module" or
-                "an n8n workflow". They come because something in their operations is broken. Here's what
-                that usually looks like.</p>
+            <span class="section-eyebrow fade-in">Masalah yang Saya Selesaikan</span>
+            <h1 class="section-title fade-in">Kalau ada yang terasa familier, kita perlu bicara.</h1>
+            <p class="section-subtitle fade-in">Kebanyakan klien tidak datang meminta "modul Odoo" atau
+                "workflow n8n". Mereka datang karena ada yang rusak di operasi mereka. Beginilah biasanya
+                bentuknya.</p>
 
             <div class="services-grid fade-in">
                 <div class="service-card">
                     <span class="service-icon">🤖</span>
-                    <h3>Manual Workflows</h3>
-                    <p class="service-pain">Your team <strong>repeats the same tasks every day</strong> across
-                        spreadsheets, WhatsApp groups, and disconnected tools.</p>
-                    <p class="service-target">I build AI agents and n8n workflows that take that work off
-                        their plate — lead handling, ticketing, follow-ups, reporting.</p>
+                    <h3>Workflow Manual</h3>
+                    <p class="service-pain">Tim Anda <strong>mengulang tugas yang sama setiap hari</strong> di
+                        spreadsheet, grup WhatsApp, dan tools yang tidak terhubung.</p>
+                    <p class="service-target">Saya membangun AI agent dan workflow n8n yang mengambil alih
+                        pekerjaan itu — penanganan lead, ticketing, follow-up, dan pelaporan.</p>
                     <div class="service-stack">n8n · Vertex AI · WhatsApp API</div>
                 </div>
 
                 <div class="service-card">
                     <span class="service-icon">🧩</span>
-                    <h3>Scattered Tools</h3>
-                    <p class="service-pain">Your business is spread across <strong>WhatsApp, Sheets, Notion,
-                            and memory</strong> — nothing connects, nothing is the source of truth.</p>
-                    <p class="service-target">I consolidate it into one Odoo or microservice system with the
-                        dashboards, role-based access, and reports you can actually trust.</p>
+                    <h3>Tools Berserakan</h3>
+                    <p class="service-pain">Bisnis Anda tersebar di <strong>WhatsApp, Sheets, Notion, dan
+                            ingatan</strong> — tidak ada yang terhubung, tidak ada sumber kebenaran tunggal.</p>
+                    <p class="service-target">Saya menyatukannya ke dalam satu sistem Odoo atau microservice
+                        dengan dashboard, akses berbasis peran, dan laporan yang benar-benar bisa Anda
+                        percaya.</p>
                     <div class="service-stack">Odoo 16 · Python · PostgreSQL</div>
                 </div>
 
                 <div class="service-card">
                     <span class="service-icon">⚠️</span>
-                    <h3>Team Dependency</h3>
-                    <p class="service-pain"><strong>Everything breaks when one person is unavailable</strong>
-                        because the process lives in their head, not in a system.</p>
-                    <p class="service-target">I document the workflow, build the internal tools, and turn
-                        tribal knowledge into something the team can actually use without you.</p>
-                    <div class="service-stack">Internal tools · Admin panels · SOPs</div>
+                    <h3>Ketergantungan pada Orang</h3>
+                    <p class="service-pain"><strong>Semua berhenti saat satu orang tidak ada</strong> karena
+                        prosesnya ada di kepala mereka, bukan di dalam sistem.</p>
+                    <p class="service-target">Saya mendokumentasikan workflow, membangun internal tools, dan
+                        mengubah pengetahuan yang tersimpan di kepala menjadi sesuatu yang bisa dipakai tim
+                        tanpa bergantung pada Anda.</p>
+                    <div class="service-stack">Internal tools · Admin panel · SOP</div>
                 </div>
 
                 <div class="service-card">
                     <span class="service-icon">🎓</span>
-                    <h3>Scattered Learning</h3>
-                    <p class="service-pain">Your education content, student progress, and assessments are
-                        <strong>scattered without a structured system</strong>.
+                    <h3>Pembelajaran Berserakan</h3>
+                    <p class="service-pain">Konten edukasi, progres siswa, dan penilaian Anda
+                        <strong>berserakan tanpa sistem yang terstruktur</strong>.
                     </p>
-                    <p class="service-target">I build learning platforms with certificates, tracking, and
-                        AI-assisted content — not another generic LMS.</p>
+                    <p class="service-target">Saya membangun learning platform dengan sertifikat, pelacakan,
+                        dan konten berbantuan AI — bukan sekadar LMS generik.</p>
                     <div class="service-stack">SvelteKit · AI Pipelines · Drizzle</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROCESS — From messy operations to structured systems (visual flow) -->
+    <!-- PROCESS — Dari operasi berantakan ke sistem terstruktur (visual flow) -->
     <section class="process" id="process">
         <div class="container">
-            <span class="section-eyebrow fade-in">How I Work</span>
-            <h2 class="section-title fade-in">From messy operations to structured systems.</h2>
-            <p class="process-intro fade-in">I don't start with code. I start by mapping the mess.</p>
+            <span class="section-eyebrow fade-in">Cara Saya Bekerja</span>
+            <h2 class="section-title fade-in">Dari operasi berantakan ke sistem terstruktur.</h2>
+            <p class="process-intro fade-in">Saya tidak mulai dari kode. Saya mulai dengan memetakan
+                kekacauannya.</p>
 
             <div class="process-grid fade-in">
                 <div class="process-step problem">
                     <span class="process-step-num">01</span>
                     <span class="process-step-icon">🗺️</span>
-                    <h3>Diagnose the Mess</h3>
+                    <h3>Diagnosa Kekacauan</h3>
                     <ul>
-                        <li>Find repetitive tasks and manual bottlenecks</li>
-                        <li>Spot scattered data and duplicated effort</li>
-                        <li>Listen to the team that lives the workflow</li>
-                        <li>Identify what's actually slowing growth</li>
+                        <li>Temukan tugas berulang dan hambatan manual</li>
+                        <li>Kenali data yang berserakan dan pekerjaan ganda</li>
+                        <li>Dengarkan tim yang menjalani workflow itu</li>
+                        <li>Identifikasi apa yang sebenarnya menghambat pertumbuhan</li>
                     </ul>
                     <div class="process-deliverables">
-                        <div class="process-deliverables-label">Deliverables</div>
+                        <div class="process-deliverables-label">Hasil</div>
                         <div class="process-deliverables-tags">
-                            <span>Workflow map</span>
-                            <span>Bottleneck list</span>
-                            <span>Automation opportunities</span>
+                            <span>Peta workflow</span>
+                            <span>Daftar hambatan</span>
+                            <span>Peluang otomasi</span>
                         </div>
                     </div>
                 </div>
@@ -151,20 +170,20 @@
                 <div class="process-step">
                     <span class="process-step-num">02</span>
                     <span class="process-step-icon">📐</span>
-                    <h3>Build the System</h3>
+                    <h3>Bangun Sistemnya</h3>
                     <ul>
-                        <li>Turn the process into roles and workflows</li>
-                        <li>Design the data model and integrations</li>
-                        <li>Decide what to automate and what stays human</li>
-                        <li>Plan for scale, edge cases, and handover</li>
+                        <li>Ubah proses menjadi peran dan workflow</li>
+                        <li>Rancang model data dan integrasinya</li>
+                        <li>Putuskan apa yang diotomasi dan apa yang tetap ditangani manusia</li>
+                        <li>Rencanakan untuk skala, kasus tepi, dan serah terima</li>
                     </ul>
                     <div class="process-deliverables">
-                        <div class="process-deliverables-label">Deliverables</div>
+                        <div class="process-deliverables-label">Hasil</div>
                         <div class="process-deliverables-tags">
                             <span>Dashboard</span>
-                            <span>AI workflow</span>
+                            <span>Workflow AI</span>
                             <span>Internal tool</span>
-                            <span>Admin panel</span>
+                            <span>Panel admin</span>
                         </div>
                     </div>
                 </div>
@@ -172,20 +191,20 @@
                 <div class="process-step">
                     <span class="process-step-num">03</span>
                     <span class="process-step-icon">🚀</span>
-                    <h3>Make It Operational</h3>
+                    <h3>Jadikan Operasional</h3>
                     <ul>
-                        <li>Ship dashboards, portals, and admin panels</li>
-                        <li>Wire up AI assistants and automated reports</li>
-                        <li>Train the team and document the system</li>
-                        <li>Iterate based on what they actually use</li>
+                        <li>Luncurkan dashboard, portal, dan panel admin</li>
+                        <li>Sambungkan asisten AI dan laporan otomatis</li>
+                        <li>Latih tim dan dokumentasikan sistemnya</li>
+                        <li>Iterasi berdasarkan apa yang benar-benar mereka pakai</li>
                     </ul>
                     <div class="process-deliverables">
-                        <div class="process-deliverables-label">Deliverables</div>
+                        <div class="process-deliverables-label">Hasil</div>
                         <div class="process-deliverables-tags">
-                            <span>Documentation</span>
-                            <span>Handover</span>
-                            <span>Iteration</span>
-                            <span>Team training</span>
+                            <span>Dokumentasi</span>
+                            <span>Serah terima</span>
+                            <span>Iterasi</span>
+                            <span>Pelatihan tim</span>
                         </div>
                     </div>
                 </div>
@@ -198,25 +217,25 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="/" class="footer-logo">Naufal<span>.</span></a>
-                <p>I build AI-powered systems for businesses, schools, and organizations that have
-                    outgrown spreadsheets and manual workflows.</p>
+                <p>Saya membangun sistem bertenaga AI untuk bisnis, sekolah, dan organisasi yang sudah
+                    melampaui spreadsheet dan alur kerja manual.</p>
             </div>
 
             <div class="footer-col">
-                <h5>Explore</h5>
+                <h5>Jelajahi</h5>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/services/">Services</a></li>
-                    <li><a href="/case-studies/">Case Studies</a></li>
-                    <li><a href="/founded/">Founded</a></li>
+                    <li><a href="/">Beranda</a></li>
+                    <li><a href="/services/">Layanan</a></li>
+                    <li><a href="/case-studies/">Studi Kasus</a></li>
+                    <li><a href="/founded/">Dirikan</a></li>
                     <li><a href="/layanan-website/">Layanan Website</a></li>
                     <li><a href="/layanan-video-ai/">Layanan Video AI</a></li>
-                    <li><a href="/packages/">Packages</a></li>
+                    <li><a href="/packages/">Paket</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h5>Contact</h5>
+                <h5>Kontak</h5>
                 <ul>
                     <li><a href="https://wa.me/6282328591004" target="_blank" rel="noopener">WhatsApp</a></li>
                     <li><a href="mailto:naufal.nabila.2008@gmail.com">Email</a></li>
@@ -226,7 +245,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Founded by Me</h5>
+                <h5>Didirikan oleh Saya</h5>
                 <ul>
                     <li><a href="https://pembelajarbelajar.com" target="_blank"
                             rel="noopener">pembelajarbelajar.com</a></li>
@@ -240,11 +259,11 @@
         </div>
 
         <div class="footer-bottom">
-            <span>© 2026 Naufal Nabila. Built with care, code, and a lot of automation.</span>
+            <span>© 2026 Naufal Nabila. Dibuat dengan ketelitian, kode, dan banyak otomasi.</span>
             <span class="footer-meta">
                 <span>📍 Indonesia</span>
                 <span class="dot-sep">·</span>
-                <span>Available for new projects</span>
+                <span>Tersedia untuk proyek baru</span>
             </span>
         </div>
     </div>
@@ -252,6 +271,7 @@
 
     <script src="/assets/js/theme.js?v=8" defer></script>
     <script src="/assets/js/nav.js?v=8" defer></script>
+    <script src="/assets/js/lang.js?v=8" defer></script>
     <script src="/assets/js/reveal.js?v=8" defer></script>
     <script src="/assets/js/main.js?v=8" defer></script>
 </body>

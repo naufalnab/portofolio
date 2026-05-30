@@ -53,7 +53,7 @@ so no implementation-language selection is required.
     - File: `tests/lang.detect.test.mjs`; generator: `(enabled, storedRaw, currentPath, explicitOnThisNav, navLang)`; ≥100 runs
     - **Validates: Requirements 3.3, 3.5, 11.9**
 
-  - [ ]\* 1.6 Write property test for precedence + navigator detection
+  - [x]\* 1.6 Write property test for precedence + navigator detection
     - **Property 10 (PROP-9 support): `resolveLocale` follows precedence explicit > valid-stored > navigator > id, ignoring invalid stored values; `detectFromNavigator` returns `en` iff the string starts with `en` case-insensitively, else `id` (incl. empty/null)**
     - File: `tests/lang.detect.test.mjs` (same file as 1.5, separate test case); generator: `(storedRaw, navLang)`; ≥100 runs
     - **Validates: Requirements 3.2, 3.4, 3.7**
@@ -115,46 +115,46 @@ so no implementation-language selection is required.
     - Bilingual `<head>` + EN shell + switcher + `lang.js`; keep existing English Packages/Contact content
     - _Requirements: 1.2, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 6.1, 7.3, 10.5_
 
-- [ ] 6. Translate the 7 root ID pages and update their `<head>` SEO
-  - [-] 6.1 Update `index.html` (Home, `/`)
+- [x] 6. Translate the 7 root ID pages and update their `<head>` SEO
+  - [x] 6.1 Update `index.html` (Home, `/`)
     - Translate all user-visible English copy (text nodes + `alt`/`aria-label`/`title`/`placeholder`) to Indonesian; update `<head>`: keep `<html lang="id">`, add hreflang id/en/x-default (identical set to the EN pair), set canonical = self ID, `og:locale id_ID` + `og:locale:alternate en_US`, `og:url`=canonical; insert the gated lang-detection inline script before theme-init; embed the ID shell with switcher (`id`→`/`, `en`→`/en/`) and `lang.js`
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 6.1, 6.2, 7.3, 10.1, 10.5_
 
-  - [-] 6.2 Update `services/index.html` (`/services/`)
+  - [x] 6.2 Update `services/index.html` (`/services/`)
     - Translate visible copy to Indonesian; update `<head>` (hreflang/canonical self/og per locale); embed ID shell + switcher + `lang.js`
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 6.1, 6.2, 7.3, 10.5_
 
-  - [-] 6.3 Update `case-studies/index.html` (`/case-studies/`)
+  - [x] 6.3 Update `case-studies/index.html` (`/case-studies/`)
     - Translate visible copy to Indonesian; update `<head>`; embed ID shell + switcher + `lang.js`; keep `toggles` JS
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 6.1, 6.2, 7.3, 10.5, 10.6_
 
-  - [-] 6.4 Update `founded/index.html` (`/founded/`)
+  - [x] 6.4 Update `founded/index.html` (`/founded/`)
     - Translate visible copy to Indonesian; update `<head>`; embed ID shell + switcher + `lang.js`; keep `toggles` JS
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 6.1, 6.2, 7.3, 10.5, 10.6_
 
-  - [-] 6.5 Update `packages/index.html` (`/packages/`)
+  - [x] 6.5 Update `packages/index.html` (`/packages/`)
     - Translate visible copy to Indonesian; update `<head>`; embed ID shell + switcher + `lang.js`
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 6.1, 6.2, 7.3, 10.5_
 
-  - [-] 6.6 Update `layanan-website/index.html` (`/layanan-website/`)
+  - [x] 6.6 Update `layanan-website/index.html` (`/layanan-website/`)
     - Content already Indonesian — update `<head>` only (hreflang id/en/x-default, canonical self ID, og per locale); embed ID shell + switcher (`en`→`/en/layanan-website/`) + `lang.js`; include `services-commercial` CSS + `services` JS
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 6.5, 7.3, 10.5, 10.6_
 
-  - [-] 6.7 Update `layanan-video-ai/index.html` (`/layanan-video-ai/`)
+  - [x] 6.7 Update `layanan-video-ai/index.html` (`/layanan-video-ai/`)
     - Content already Indonesian — update `<head>` only; embed ID shell + switcher (`en`→`/en/layanan-video-ai/`) + `lang.js`; include `services-commercial` CSS + `services` JS
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 6.5, 7.3, 10.5, 10.6_
 
-- [ ] 7. Per-locale 404 pages
-  - [-] 7.1 Update `404.html` (ID)
+- [x] 7. Per-locale 404 pages
+  - [x] 7.1 Update `404.html` (ID)
     - Ensure exactly one `<meta name="robots" content="noindex">`, all text in Indonesian, ID shell, and exactly one "kembali ke beranda" link pointing to `/`
     - _Requirements: 6.3, 7.1_
 
-  - [-] 7.2 Create `en/404.html` (EN)
+  - [x] 7.2 Create `en/404.html` (EN)
     - English 404 with exactly one `<meta name="robots" content="noindex">`, EN shell, and exactly one "back to home" link pointing to `/en/`
     - _Requirements: 1.7, 6.3, 7.1_
 
-- [ ] 8. Make `build-pages.mjs` language-aware
-  - [~] 8.1 Extend `tools/build-pages.mjs` to assemble 16 pages per locale
+- [x] 8. Make `build-pages.mjs` language-aware
+  - [x] 8.1 Extend `tools/build-pages.mjs` to assemble 16 pages per locale
     - Replace the internal `PAGES` with the 16-entry bilingual set carrying `locale`; read all four partials (`_header.html`/`_footer.html` for ID, `_header.en.html`/`_footer.en.html` for EN); select the partial set per `locale`; add `fillLangSwitcherHrefs(header, self, pairPath(self), locale)` so each page gets its own switcher hrefs + active indicator; keep the existing safety checks (no `{{`, exactly one nav + one footer) and run `--check` then apply; verify deterministic/idempotent (second run reports 0 changed)
     - _Requirements: 7.5_
 
@@ -167,16 +167,16 @@ so no implementation-language selection is required.
     - Verify no `Disallow` blocks any content URL (including `/en/...`) and that exactly one `Sitemap: https://naufalnabila.my.id/sitemap.xml` directive is present
     - _Requirements: 5.3_
 
-  - [ ]\* 9.3 Add optional `tools/build-sitemap.mjs` generator
+  - [x]\* 9.3 Add optional `tools/build-sitemap.mjs` generator
     - Generate `sitemap.xml` deterministically from `PAGES_BILINGUAL` (14 content URLs + xhtml alternates) to avoid manual drift; zero npm deps; dev-only tooling
     - _Requirements: 5.1, 5.2_
 
 - [ ] 10. Localize `Service` JSON-LD on the four service pages
-  - [~] 10.1 Localize JSON-LD on Layanan Website (ID + EN)
+  - [-] 10.1 Localize JSON-LD on Layanan Website (ID + EN)
     - Embed exactly one `Service` block in `layanan-website/index.html` and `en/layanan-website/index.html` directly in raw HTML; localize `serviceType`/`name`/`description` per locale; set `inLanguage` = `"id"`/`"en"` matching `<html lang>`; keep `OfferCatalog` `price`/`priceCurrency` numeric values identical between the pair; ensure each block `JSON.parse`s to a non-null object
     - _Requirements: 8.1, 8.2, 8.3, 8.4, 8.5, 8.6_
 
-  - [~] 10.2 Localize JSON-LD on Layanan Video AI (ID + EN)
+  - [-] 10.2 Localize JSON-LD on Layanan Video AI (ID + EN)
     - Embed exactly one `Service` block in `layanan-video-ai/index.html` and `en/layanan-video-ai/index.html`; localize text per locale; set `inLanguage` per locale; keep `price`/`priceCurrency` identical between the pair; valid JSON
     - _Requirements: 8.1, 8.2, 8.3, 8.4, 8.5, 8.6_
 

@@ -169,3 +169,195 @@ describe("PROP-9: decideRedirect is gated, anti-loop, and idempotent", () => {
     }
   });
 });
+
+/* --------------------------------------------------------------------------
+ * PROP-10 — resolveLocale precedence + detectFromNavigator semantics
+ * Validates: Requirements 3.2, 3.4, 3.7
+ *
+ * resolveLocale follows precedence explicit > valid-stored > navigator > id,
+ * ignoring invalid stored values; detectFromNavigator returns "en" iff the
+ * string starts with "en" case-insensitively, else "id" (incl. empty/null).
+ *
+ * Reuses the shared `storedRawArb` / `navLangArb` arbitraries declared above
+ * and the already-loaded `win.__lang` surface; appended without touching the
+ * PROP-9 blocks.
+ * ------------------------------------------------------------------------ */
+
+const { resolveLocale } = win.__lang;
+
+// explicitChoice as passed by callers: valid locales, null, or stray/invalid
+// values that must be ignored so precedence falls through to stored/navigator.
+const explicitArb = fc.oneof(
+  fc.constantFrom("id", "en"),
+  fc.constant(null),
+  fc.constantFrom("EN", "ID", "", "fr", "english"),
+  fc.string(),
+);
+
+// Independent reference model for navigator detection (mirrors the spec, not
+// the implementation's internals): empty/null => "id"; otherwise "en" iff the
+// trimmed value starts with "en" case-insensitively.
+const expectedDetect = (language) => {
+  if (language === null || language === undefined || language === "") return "id";
+  return /^en/i.test(String(language).trim()) ? "en" : "id";
+};
+
+const isValidLocale = (value) => value === "id" || value === "en";
+
+describe("PROP-10: detectFromNavigator — en-prefix (case-insensitive) else id", () => {
+  test("any value whose first two chars are 'en' (any case) resolves to 'en'", () => {
+    // Smart generator: a cased "en" prefix (no leading whitespace) + arbitrary
+    // suffix. trim() cannot strip the prefix, so these must all detect as "en".
+    const enPrefixArb = fc
+      .tuple(
+        fc.constantFrom("en", "EN", "eN", "En"),
+        fc.string(),
+      )
+      .map(([prefix, suffix]) => prefix + suffix);
+
+    fc.assert(
+      fc.property(enPrefixArb, (language) => {
+        assert.equal(
+          detectFromNavigator(language),
+          "en",
+          `"${language}" starts with en (case-insensitive) => "en"`,
+        );
+      }),
+      { numRuns: 200 },
+    );
+  });
+
+  test("values not starting with 'en' (after trim) resolve to 'id'", () => {
+    // Strings whose trimmed/lowercased form does not start with "en".
+    const nonEnArb = fc
+      .string()
+      .filter((s) => !/^en/i.test(s.trim()));
+
+    fc.assert(
+      fc.property(nonEnArb, (language) => {
+        assert.equal(
+          detectFromNavigator(language),
+          "id",
+          `"${language}" does not start with en => "id"`,
+        );
+      }),
+      { numRuns: 200 },
+    );
+  });
+
+  test("agrees with the reference model across the shared navLang arbitrary", () => {
+    fc.assert(
+      fc.property(navLangArb, (navLang) => {
+        const result = detectFromNavigator(navLang);
+        assert.ok(isValidLocale(result), "result is always a valid locale");
+        assert.equal(result, expectedDetect(navLang));
+      }),
+      { numRuns: 200 },
+    );
+  });
+
+  test("explicit empty-string / null / case-insensitive ^en cases", () => {
+    // Empty string and null (incl. missing navigator.language) => "id".
+    assert.equal(detectFromNavigator(""), "id", "empty string => id");
+    assert.equal(detectFromNavigator(null), "id", "null => id");
+    assert.equal(detectFromNavigator(undefined), "id", "undefined => id");
+    assert.equal(detectFromNavigator("   "), "id", "whitespace-only => id");
+    // Case-insensitive ^en => "en".
+    for (const lang of ["en", "EN", "En", "eN", "en-US", "EN-GB", "en_AU"]) {
+      assert.equal(detectFromNavigator(lang), "en", `${lang} => en`);
+    }
+    // Non-en languages => "id".
+    for (const lang of ["id", "id-ID", "fr", "de-DE", "es", "zh"]) {
+      assert.equal(detectFromNavigator(lang), "id", `${lang} => id`);
+    }
+  });
+});
+
+describe("PROP-10: resolveLocale precedence — explicit > valid-stored > navigator > id", () => {
+  test("precedence holds for all (explicit, storedRaw, navLang) combinations", () => {
+    fc.assert(
+      fc.property(
+        explicitArb,
+        storedRawArb,
+        navLangArb,
+        (explicit, storedRaw, navLang) => {
+          const result = resolveLocale(explicit, storedRaw, navLang);
+
+          // Result is always a defined locale.
+          assert.ok(isValidLocale(result), "result is always 'id' or 'en'");
+
+          if (isValidLocale(explicit)) {
+            // (a) Explicit valid choice wins outright, ignoring stored/navigator.
+            assert.equal(
+              result,
+              explicit,
+              "valid explicit choice takes precedence",
+            );
+          } else if (isValidLocale(storedRaw)) {
+            // (b) Valid stored value wins when no explicit choice.
+            assert.equal(
+              result,
+              storedRaw,
+              "valid stored value wins when explicit is absent/invalid",
+            );
+          } else {
+            // (c)/(d) Fall through to navigator detection (which defaults to id).
+            assert.equal(
+              result,
+              expectedDetect(navLang),
+              "falls through to navigator detection (default id)",
+            );
+          }
+        },
+      ),
+      { numRuns: 300 },
+    );
+  });
+
+  test("invalid stored values are ignored (treated as absent)", () => {
+    // With no explicit choice and an invalid stored value, the outcome must be
+    // identical to detecting from the navigator alone.
+    const invalidStoredArb = fc
+      .oneof(fc.string(), fc.constant(null), fc.constantFrom("EN", "ID", "", "de"))
+      .filter((s) => s !== "id" && s !== "en");
+
+    fc.assert(
+      fc.property(invalidStoredArb, navLangArb, (storedRaw, navLang) => {
+        assert.equal(
+          resolveLocale(null, storedRaw, navLang),
+          detectFromNavigator(navLang),
+          "invalid stored value is ignored => navigator detection",
+        );
+      }),
+      { numRuns: 200 },
+    );
+  });
+
+  test("deterministic precedence table cases", () => {
+    // [explicit, storedRaw, navLang] -> expected
+    const cases = [
+      // Explicit wins over everything.
+      ["en", "id", "id-ID", "en"],
+      ["id", "en", "en-US", "id"],
+      // Invalid explicit ignored; valid stored wins.
+      ["EN", "en", "id", "en"],
+      [null, "id", "en-US", "id"],
+      // No explicit, invalid stored; navigator decides.
+      [null, "xx", "en-GB", "en"],
+      [null, "", "fr", "id"],
+      [null, null, "EN", "en"],
+      // No explicit, no stored, empty/garbage navigator => default id.
+      [null, null, "", "id"],
+      [null, "de", null, "id"],
+    ];
+    for (const [explicit, storedRaw, navLang, expected] of cases) {
+      assert.equal(
+        resolveLocale(explicit, storedRaw, navLang),
+        expected,
+        `resolveLocale(${JSON.stringify(explicit)}, ${JSON.stringify(
+          storedRaw,
+        )}, ${JSON.stringify(navLang)}) should be ${JSON.stringify(expected)}`,
+      );
+    }
+  });
+});
