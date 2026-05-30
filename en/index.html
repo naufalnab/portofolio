@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Skrip_Deteksi_Bahasa: gated (AUTO=false ⇒ no-op), sinkron, sebelum theme-init -->
+    <script>(function(){var AUTO=false;if(!AUTO)return;try{var s=localStorage.getItem('lang');var here=(location.pathname.indexOf('/en/')===0||location.pathname==='/en')?'en':'id';var w=(s==='id'||s==='en')?s:(/^en/i.test(navigator.language||'')?'en':'id');if(w!==here){var d=here==='en'?(location.pathname.replace(/^\/en/,'')||'/'):'/en'+location.pathname;if(d!==location.pathname)location.replace(location.origin+d);}}catch(e){}})();</script>
+
+    <!-- ANTI-FOUC: inline, sinkron, sebelum CSS apa pun -->
+    <script>(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();</script>
+
+    <!-- SEO per-halaman (EN) -->
+    <title>Naufal Nabila — AI Automation, ERP &amp; Digital Product Builder</title>
+    <meta name="description"
+        content="I turn messy, manual operations into AI-powered systems — AI automation, ERP/Odoo, internal tools, and digital products for founders and growing teams.">
+    <link rel="canonical" href="https://naufalnabila.my.id/en/">
+
+    <!-- hreflang alternates (id / en / x-default) -->
+    <link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/">
+    <link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/">
+    <link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/">
+
+    <!-- Open Graph / Twitter (EN) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://naufalnabila.my.id/en/">
+    <meta property="og:title" content="Naufal Nabila — AI Automation, ERP &amp; Digital Product Builder">
+    <meta property="og:description"
+        content="I turn messy, manual operations into AI-powered systems — AI automation, ERP/Odoo, internal tools, and digital products for founders and growing teams.">
+    <meta property="og:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Naufal Nabila — AI Automation, ERP &amp; Digital Product Builder">
+    <meta name="twitter:description"
+        content="I turn messy, manual operations into AI-powered systems — AI automation, ERP/Odoo, internal tools, and digital products for founders and growing teams.">
+    <meta name="twitter:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
+
+    <!-- CSS core — root-relative, v8 (hero.css hanya di Home) -->
+    <link rel="stylesheet" href="/assets/css/base.css?v=8">
+    <link rel="stylesheet" href="/assets/css/layout.css?v=8">
+    <link rel="stylesheet" href="/assets/css/hero.css?v=8">
+    <link rel="stylesheet" href="/assets/css/sections.css?v=8">
+    <link rel="stylesheet" href="/assets/css/components.css?v=8">
+    <link rel="stylesheet" href="/assets/css/responsive.css?v=8">
+</head>
+
+<body>
+<nav id="navbar">
+    <div class="nav-container">
+        <a href="/en/" class="logo">Naufal<span>.</span></a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+        <div class="nav-right">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/en/services/">Services</a></li>
+                <li><a href="/en/services/#process">Process</a></li>
+                <li><a href="/en/case-studies/">Case Studies</a></li>
+                <li><a href="/en/founded/">Founded</a></li>
+                <li class="nav-dropdown">
+                    <a href="/en/layanan-website/" aria-haspopup="true" aria-expanded="false">Services</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/en/layanan-website/">Website</a></li>
+                        <li><a href="/en/layanan-video-ai/">Video AI</a></li>
+                    </ul>
+                </li>
+                <li><a href="/en/packages/">Packages</a></li>
+            </ul>
+            <a href="/en/packages/#contact" class="nav-cta">Book a Systems Audit</a>
+            <div class="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
+                <a class="lang-option" hreflang="id" data-lang="id" href="/">ID</a>
+                <a class="lang-option" hreflang="en" data-lang="en" href="/en/" aria-current="true">EN</a>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                <span id="theme-icon">☀️</span>
+                <span id="theme-text">Light</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="dot"></span>
+                    Available for AI, ERP &amp; Learning Platform projects
+                </div>
+                <h1>Your business is growing. Your operations are breaking. <span class="accent">I build the
+                        AI systems in between.</span></h1>
+                <p class="hero-subtitle">I help founders and growing teams replace messy workflows, scattered
+                    tools, and repetitive manual work with AI-powered systems that make the business easier
+                    to manage, delegate, and scale.</p>
+
+                <!-- Before → After visual proof -->
+                <div class="hero-visual" aria-label="From scattered work to structured systems">
+                    <div class="hero-visual-card before">
+                        <div class="hero-visual-label">Before</div>
+                        <ul class="hero-visual-list">
+                            <li>Scattered WhatsApp threads</li>
+                            <li>Spreadsheet chaos</li>
+                            <li>Repeated manual admin</li>
+                            <li>Missed follow-ups</li>
+                        </ul>
+                    </div>
+                    <div class="hero-visual-arrow" aria-hidden="true">→</div>
+                    <div class="hero-visual-card after">
+                        <div class="hero-visual-label">After</div>
+                        <ul class="hero-visual-list">
+                            <li>Centralized dashboard</li>
+                            <li>Automated client intake</li>
+                            <li>AI-assisted operations</li>
+                            <li>Measurable workflows</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="/en/packages/#contact" class="btn btn-primary">Book a Systems Audit</a>
+                    <a href="/en/case-studies/" class="btn btn-ghost">See Selected Projects</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="stat-num">5+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">20+</div>
+                        <div class="stat-label">Projects Shipped</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">15+</div>
+                        <div class="stat-label">Organizations Served</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">4</div>
+                        <div class="stat-label">EdTech Platforms Founded</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid fade-in">
+                <div class="about-image-wrap">
+                    <img src="/assets/images/profile.jpeg" alt="Naufal Nabila" class="profile-img">
+                    <div class="profile-badges">
+                        <span class="profile-badge"><span class="icon">📍</span>Based in Indonesia</span>
+                        <span class="profile-badge"><span class="icon">⚙️</span>AI · ERP · LMS Systems</span>
+                    </div>
+                    <div class="about-positioning">
+                        I don't just write code. I map business processes, design the workflow, and build
+                        systems that teams can actually use.
+                    </div>
+                </div>
+                <div>
+                    <span class="section-eyebrow">About</span>
+                    <h2 class="section-title">Specialized in turning complex business problems into clean,
+                        intelligent systems.</h2>
+                    <p class="about-lead">I work with founders and teams stuck with scattered tools,
+                        repeated manual tasks, unclear handoffs, and operations that depend too much on
+                        memory. My job is to turn that mess into dashboards, automations, internal tools,
+                        AI workflows, and operating systems that make the business easier to run.</p>
+
+                    <div class="about-pillars">
+                        <div class="pillar">
+                            <h4>Who I Am</h4>
+                            <p>An engineer and EdTech founder with 5+ years across mobile (Flutter), ERP
+                                (Odoo), and AI workflow automation (n8n + Vertex AI). I bridge product
+                                thinking with deep technical execution.</p>
+                        </div>
+                        <div class="pillar">
+                            <h4>What I Do</h4>
+                            <p>End-to-end AI automation, custom Odoo modules, microservice web platforms with
+                                SvelteKit, and AI-powered learning products with multi-language video
+                                pipelines.</p>
+                        </div>
+                        <div class="pillar">
+                            <h4>Proof of Work</h4>
+                            <p>Founder of Pembelajar Belajar, Al Muta'allim, Belajar Sekejap, and The Learning
+                                Learner. Trusted by Yamaha Motor Parts, Telkom Sigma, SUCOFINDO, Duniatex,
+                                PT. Adhi Karya, PT. Naska Jala Dewa, and PT. Kripto Syariah Indonesia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/en/" class="footer-logo">Naufal<span>.</span></a>
+                <p>I build AI-powered systems for businesses, schools, and organizations that have
+                    outgrown spreadsheets and manual workflows.</p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="/en/">Home</a></li>
+                    <li><a href="/en/services/">Services</a></li>
+                    <li><a href="/en/case-studies/">Case Studies</a></li>
+                    <li><a href="/en/founded/">Founded</a></li>
+                    <li><a href="/en/layanan-website/">Website Service</a></li>
+                    <li><a href="/en/layanan-video-ai/">AI Video Service</a></li>
+                    <li><a href="/en/packages/">Packages</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="https://wa.me/6282328591004" target="_blank" rel="noopener">WhatsApp</a></li>
+                    <li><a href="mailto:naufal.nabila.2008@gmail.com">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/" target="_blank"
+                            rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Founded by Me</h5>
+                <ul>
+                    <li><a href="https://pembelajarbelajar.com" target="_blank"
+                            rel="noopener">pembelajarbelajar.com</a></li>
+                    <li><a href="https://almutaalim.com" target="_blank" rel="noopener">almutaalim.com</a></li>
+                    <li><a href="https://belajarsekejap.com" target="_blank"
+                            rel="noopener">belajarsekejap.com</a></li>
+                    <li><a href="https://thelearinglearner.com" target="_blank"
+                            rel="noopener">thelearinglearner.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Naufal Nabila. Built with care, code, and a lot of automation.</span>
+            <span class="footer-meta">
+                <span>📍 Indonesia</span>
+                <span class="dot-sep">·</span>
+                <span>Available for new projects</span>
+            </span>
+        </div>
+    </div>
+</footer>
+
+    <script src="/assets/js/theme.js?v=8" defer></script>
+    <script src="/assets/js/nav.js?v=8" defer></script>
+    <script src="/assets/js/lang.js?v=8" defer></script>
+    <script src="/assets/js/reveal.js?v=8" defer></script>
+    <script src="/assets/js/main.js?v=8" defer></script>
+</body>
+
+</html>

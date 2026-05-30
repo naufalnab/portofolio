@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- (1) LANGUAGE DETECTION (optional, gated OFF by default) — topmost, inline, sync -->
+    <script>(function(){var AUTO=false;if(!AUTO)return;try{var stored=localStorage.getItem('lang');var here=(location.pathname.indexOf('/en/')===0||location.pathname==='/en')?'en':'id';var want=(stored==='id'||stored==='en')?stored:(/^en/i.test(navigator.language||'')?'en':'id');if(want!==here){var dest=here==='en'?(location.pathname.replace(/^\/en/,'')||'/'):'/en'+location.pathname;if(dest!==location.pathname)location.replace(location.origin+dest);}}catch(e){}})();</script>
+
+    <!-- (2) ANTI-FOUC: must be topmost, inline, sync, before CSS -->
+    <script>(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();</script>
+
+    <!-- (3) SEO per-locale -->
+    <title>Packages &amp; Contact — Ways I Can Help · Naufal Nabila</title>
+    <meta name="description"
+        content="Ways Naufal Nabila can help: operations system audit, AI workflow builds, internal tools and dashboards, and a systems retainer. Contact via WhatsApp or email.">
+
+    <!-- canonical = self (EN) -->
+    <link rel="canonical" href="https://naufalnabila.my.id/en/packages/">
+
+    <!-- hreflang: id, en, x-default (self-referencing, absolute https) -->
+    <link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/packages/">
+    <link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/packages/">
+    <link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/packages/">
+
+    <!-- Open Graph per-locale -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://naufalnabila.my.id/en/packages/">
+    <meta property="og:title" content="Packages &amp; Contact · Naufal Nabila">
+    <meta property="og:description"
+        content="Pick the entry point that fits: operations audit, AI workflow build, internal tools, or a retainer. Start on WhatsApp or email.">
+    <meta property="og:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Packages &amp; Contact · Naufal Nabila">
+    <meta name="twitter:description"
+        content="Pick the entry point that fits: operations audit, AI workflow build, internal tools, or a retainer.">
+    <meta name="twitter:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
+
+    <!-- CSS core — root-relative, v8 -->
+    <link rel="stylesheet" href="/assets/css/base.css?v=8">
+    <link rel="stylesheet" href="/assets/css/layout.css?v=8">
+    <link rel="stylesheet" href="/assets/css/sections.css?v=8">
+    <link rel="stylesheet" href="/assets/css/components.css?v=8">
+    <link rel="stylesheet" href="/assets/css/responsive.css?v=8">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="logo">Naufal<span>.</span></a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="/en/services/">Services</a></li>
+                    <li><a href="/en/services/#process">Process</a></li>
+                    <li><a href="/en/case-studies/">Case Studies</a></li>
+                    <li><a href="/en/founded/">Founded</a></li>
+                    <li class="nav-dropdown">
+                        <a href="/en/layanan-website/" aria-haspopup="true" aria-expanded="false">Services</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="/en/layanan-website/">Website</a></li>
+                            <li><a href="/en/layanan-video-ai/">Video AI</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/en/packages/">Packages</a></li>
+                </ul>
+                <a href="/en/packages/#contact" class="nav-cta">Book a Systems Audit</a>
+                <div class="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
+                    <a class="lang-option" hreflang="id" data-lang="id" href="/packages/">ID</a>
+                    <a class="lang-option" hreflang="en" data-lang="en" href="/en/packages/" aria-current="true">EN</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                    <span id="theme-icon">☀️</span>
+                    <span id="theme-text">Light</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PACKAGES — Ways I Can Help -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <span class="section-eyebrow fade-in">Ways I Can Help</span>
+            <h1 class="section-title fade-in">Pick the entry point that fits your situation.</h1>
+            <p class="section-subtitle fade-in">Most engagements start small — usually with an audit or a
+                focused build — and grow from there as we map what your operations actually need.</p>
+
+            <div class="packages-grid fade-in">
+                <div class="package-card featured">
+                    <span class="package-flag">Start here</span>
+                    <div class="package-name">Operations System Audit</div>
+                    <div class="package-for">For founders who need clarity</div>
+                    <p class="package-desc">A focused diagnosis of your current workflows. We map the mess,
+                        identify the highest-leverage automations, and decide what to build first.</p>
+                    <ul class="package-deliverables">
+                        <li>Workflow map of your operations</li>
+                        <li>Bottleneck and risk list</li>
+                        <li>Prioritized automation plan</li>
+                        <li>Recommended first system to build</li>
+                    </ul>
+                    <a href="#contact" class="package-cta">Book an Audit</a>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-name">AI Workflow Build</div>
+                    <div class="package-for">For teams ready to automate</div>
+                    <p class="package-desc">A focused engagement to design and ship one critical AI workflow
+                        — lead handling, ticketing, follow-ups, reporting, or content operations.</p>
+                    <ul class="package-deliverables">
+                        <li>n8n workflow with AI agents</li>
+                        <li>WhatsApp / email integrations</li>
+                        <li>Dashboards and alerts</li>
+                        <li>Documentation and handover</li>
+                    </ul>
+                    <a href="#contact" class="package-cta">Discuss a build</a>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-name">Internal Tool / Dashboard</div>
+                    <div class="package-for">For businesses needing control</div>
+                    <p class="package-desc">A custom internal system — Odoo modules, admin panels, or
+                        SvelteKit dashboards — built around how your team actually works.</p>
+                    <ul class="package-deliverables">
+                        <li>Custom Odoo modules or dashboard app</li>
+                        <li>Role-based access &amp; approvals</li>
+                        <li>Reports and KPI tracking</li>
+                        <li>Production deploy and training</li>
+                    </ul>
+                    <a href="#contact" class="package-cta">Discuss a build</a>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-name">Systems Retainer</div>
+                    <div class="package-for">For ongoing improvement</div>
+                    <p class="package-desc">Monthly engagement for teams that already have systems running
+                        and need continuous improvement, automation, and operational support.</p>
+                    <ul class="package-deliverables">
+                        <li>New automations each cycle</li>
+                        <li>Performance tuning &amp; bug fixes</li>
+                        <li>Quarterly system review</li>
+                        <li>Priority WhatsApp support</li>
+                    </ul>
+                    <a href="#contact" class="package-cta">Discuss a retainer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT — large gradient panel -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-panel fade-in">
+                <div class="contact-wrap">
+                    <div>
+                        <span class="section-eyebrow">Let's talk</span>
+                        <h2>If your business still depends on manual follow-ups, scattered tools, and repeated
+                            admin work — let's turn it into a system.</h2>
+                        <p class="contact-reassure">No pitch deck. No vague AI hype. Just a practical
+                            conversation about what should be automated, simplified, or rebuilt.</p>
+                        <p>You don't need to know the exact system yet. Tell me what feels messy. I'll help
+                            map the workflow and turn it into a working product. WhatsApp gets the fastest
+                            reply.</p>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="https://wa.me/6282328591004" target="_blank" rel="noopener"
+                            class="contact-action primary">
+                            <span class="contact-action-icon">💬</span>
+                            <span class="contact-action-text">
+                                <span class="contact-action-label">Book a Systems Audit · fastest reply</span>
+                                <span class="contact-action-value">+62 823-2859-1004</span>
+                            </span>
+                        </a>
+                        <a href="mailto:naufal.nabila.2008@gmail.com" class="contact-action">
+                            <span class="contact-action-icon">📧</span>
+                            <span class="contact-action-text">
+                                <span class="contact-action-label">Email me directly</span>
+                                <span class="contact-action-value">naufal.nabila.2008@gmail.com</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/en/" class="footer-logo">Naufal<span>.</span></a>
+                    <p>I build AI-powered systems for businesses, schools, and organizations that have
+                        outgrown spreadsheets and manual workflows.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="/en/">Home</a></li>
+                        <li><a href="/en/services/">Services</a></li>
+                        <li><a href="/en/case-studies/">Case Studies</a></li>
+                        <li><a href="/en/founded/">Founded</a></li>
+                        <li><a href="/en/layanan-website/">Website Service</a></li>
+                        <li><a href="/en/layanan-video-ai/">AI Video Service</a></li>
+                        <li><a href="/en/packages/">Packages</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><a href="https://wa.me/6282328591004" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><a href="mailto:naufal.nabila.2008@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Founded by Me</h5>
+                    <ul>
+                        <li><a href="https://pembelajarbelajar.com" target="_blank"
+                                rel="noopener">pembelajarbelajar.com</a></li>
+                        <li><a href="https://almutaalim.com" target="_blank" rel="noopener">almutaalim.com</a></li>
+                        <li><a href="https://belajarsekejap.com" target="_blank"
+                                rel="noopener">belajarsekejap.com</a></li>
+                        <li><a href="https://thelearinglearner.com" target="_blank"
+                                rel="noopener">thelearinglearner.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Naufal Nabila. Built with care, code, and a lot of automation.</span>
+                <span class="footer-meta">
+                    <span>📍 Indonesia</span>
+                    <span class="dot-sep">·</span>
+                    <span>Available for new projects</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/theme.js?v=8" defer></script>
+    <script src="/assets/js/nav.js?v=8" defer></script>
+    <script src="/assets/js/lang.js?v=8" defer></script>
+    <script src="/assets/js/reveal.js?v=8" defer></script>
+    <script src="/assets/js/main.js?v=8" defer></script>
+</body>
+
+</html>

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- (1) DETEKSI BAHASA (opsional, gated OFF default) — paling atas, inline, sinkron -->
+    <!-- (1) LANGUAGE DETECTION (optional, gated OFF by default) — topmost, inline, synchronous -->
     <script>(function(){var AUTO=false;if(!AUTO)return;try{var stored=localStorage.getItem('lang');var here=(location.pathname.indexOf('/en/')===0||location.pathname==='/en')?'en':'id';var want=(stored==='id'||stored==='en')?stored:(/^en/i.test(navigator.language||'')?'en':'id');if(want!==here){var dest=here==='en'?(location.pathname.replace(/^\/en/,'')||'/'):'/en'+location.pathname;if(dest!==location.pathname)location.replace(location.origin+dest);}}catch(e){}})();</script>
 
-    <!-- (2) ANTI-FOUC theme-init: inline, sinkron, sebelum CSS -->
+    <!-- (2) ANTI-FOUC theme-init: inline, synchronous, before CSS -->
     <script>(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();</script>
 
-    <!-- (3) SEO per-halaman -->
-    <title>Jasa Pembuatan Website Profesional · Naufal Nabila</title>
+    <!-- (3) SEO per-page (EN) -->
+    <title>Website Development Service · Naufal Nabila</title>
     <meta name="description"
-        content="Jasa pembuatan website profesional: paket Basic, Pro, Custom dengan harga transparan dan terhubung WhatsApp langsung untuk bisnis Anda di Indonesia.">
-    <link rel="canonical" href="https://naufalnabila.my.id/layanan-website/">
+        content="Professional website development: Basic, Pro, and Custom packages with transparent pricing and direct WhatsApp integration for your business in Indonesia.">
+    <link rel="canonical" href="https://naufalnabila.my.id/en/layanan-website/">
 
     <!-- hreflang: id, en, x-default (self-referencing, absolute https) -->
     <link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/layanan-website/">
@@ -24,17 +24,17 @@
 
     <!-- Open Graph per-locale -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://naufalnabila.my.id/layanan-website/">
-    <meta property="og:title" content="Jasa Pembuatan Website Profesional · Naufal Nabila">
+    <meta property="og:url" content="https://naufalnabila.my.id/en/layanan-website/">
+    <meta property="og:title" content="Website Development Service · Naufal Nabila">
     <meta property="og:description"
-        content="Paket website Basic, Pro, dan Custom dengan harga transparan, terhubung WhatsApp langsung. Siap jadi mesin lead bisnis Anda.">
+        content="Basic, Pro, and Custom website packages with transparent pricing, wired straight to WhatsApp. Ready to become your business lead machine.">
     <meta property="og:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
-    <meta property="og:locale" content="id_ID">
-    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="id_ID">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jasa Pembuatan Website Profesional · Naufal Nabila">
+    <meta name="twitter:title" content="Website Development Service · Naufal Nabila">
     <meta name="twitter:description"
-        content="Paket website Basic, Pro, dan Custom dengan harga transparan, terhubung WhatsApp langsung.">
+        content="Basic, Pro, and Custom website packages with transparent pricing, wired straight to WhatsApp.">
     <meta name="twitter:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
 
     <!-- CSS core — root-relative ?v=8 (Home-only hero stylesheet intentionally omitted) -->
@@ -49,7 +49,7 @@
 <body>
     <nav id="navbar">
         <div class="nav-container">
-            <a href="/" class="logo">Naufal<span>.</span></a>
+            <a href="/en/" class="logo">Naufal<span>.</span></a>
             <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
                 <span class="nav-toggle-bar"></span>
                 <span class="nav-toggle-bar"></span>
@@ -57,24 +57,24 @@
             </button>
             <div class="nav-right">
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="/services/">Services</a></li>
-                    <li><a href="/services/#process">Process</a></li>
-                    <li><a href="/case-studies/">Case Studies</a></li>
-                    <li><a href="/founded/">Founded</a></li>
+                    <li><a href="/en/services/">Services</a></li>
+                    <li><a href="/en/services/#process">Process</a></li>
+                    <li><a href="/en/case-studies/">Case Studies</a></li>
+                    <li><a href="/en/founded/">Founded</a></li>
                     <li class="nav-dropdown">
-                        <a href="/layanan-website/" aria-haspopup="true" aria-expanded="false">Layanan</a>
+                        <a href="/en/layanan-website/" aria-haspopup="true" aria-expanded="false">Services</a>
                         <ul class="nav-dropdown-menu">
-                            <li><a href="/layanan-website/">Website</a></li>
-                            <li><a href="/layanan-video-ai/">Video AI</a></li>
+                            <li><a href="/en/layanan-website/">Website</a></li>
+                            <li><a href="/en/layanan-video-ai/">Video AI</a></li>
                         </ul>
                     </li>
-                    <li><a href="/packages/">Packages</a></li>
+                    <li><a href="/en/packages/">Packages</a></li>
                 </ul>
-                <a href="/packages/#contact" class="nav-cta">Book a Systems Audit</a>
+                <a href="/en/packages/#contact" class="nav-cta">Book a Systems Audit</a>
                 <div class="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
-                    <a class="lang-option" hreflang="id" data-lang="id" href="/layanan-website/"
-                        aria-current="true">ID</a>
-                    <a class="lang-option" hreflang="en" data-lang="en" href="/en/layanan-website/">EN</a>
+                    <a class="lang-option" hreflang="id" data-lang="id" href="/layanan-website/">ID</a>
+                    <a class="lang-option" hreflang="en" data-lang="en" href="/en/layanan-website/"
+                        aria-current="true">EN</a>
                 </div>
                 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
                     <span id="theme-icon">☀️</span>
@@ -84,14 +84,14 @@
         </div>
     </nav>
 
-    <!-- JASA PEMBUATAN WEBSITE -->
+    <!-- WEBSITE DEVELOPMENT SERVICE -->
     <section class="service-commercial" id="jasa-website">
         <div class="container">
-            <span class="section-eyebrow fade-in">Layanan Komersial · Website</span>
-            <h1 class="section-title fade-in">Pembuatan website yang siap kerja, bukan sekadar tampilan.</h1>
-            <p class="section-subtitle fade-in">Saya bangun website yang langsung berfungsi sebagai mesin lead —
-                terhubung WhatsApp, ter-tracking analytics, dan terstruktur agar tim Anda mudah update kontennya
-                sendiri.</p>
+            <span class="section-eyebrow fade-in">Commercial Service · Website</span>
+            <h1 class="section-title fade-in">Websites built to work, not just to look good.</h1>
+            <p class="section-subtitle fade-in">I build websites that work as lead machines from day one —
+                wired to WhatsApp, tracked with analytics, and structured so your team can update the
+                content on their own.</p>
 
             <!-- Pricing Tiers -->
             <div class="tier-grid fade-in">
@@ -100,57 +100,57 @@
                     <div class="tier-name">Basic</div>
                     <div class="tier-price">
                         <span class="tier-price-amount">Rp 2.500.000</span>
-                        <span class="tier-price-note">sekali bayar · 1 minggu</span>
+                        <span class="tier-price-note">one-time · 1 week</span>
                     </div>
-                    <p class="tier-ideal">Untuk UMKM atau personal brand yang baru go-online.</p>
+                    <p class="tier-ideal">For small businesses or personal brands going online for the first time.</p>
                     <ul class="tier-deliverables">
-                        <li>1 landing page (1 halaman, sampai 5 section)</li>
+                        <li>1 landing page (single page, up to 5 sections)</li>
                         <li>Domain &amp; hosting setup (.com / .my.id)</li>
-                        <li>Mobile-responsive · SEO basic on-page</li>
-                        <li>Form WhatsApp / kontak terhubung langsung</li>
-                        <li>Revisi 2x dalam masa pengerjaan</li>
+                        <li>Mobile-responsive · basic on-page SEO</li>
+                        <li>WhatsApp / contact form wired directly</li>
+                        <li>2 rounds of revisions during the build</li>
                     </ul>
-                    <a href="/packages/#contact" class="package-cta tier-cta" data-cta="service" data-service="website"
-                        data-tier="Basic" data-price="Rp 2.500.000">Diskusi paket Basic</a>
+                    <a href="/en/packages/#contact" class="package-cta tier-cta" data-cta="service" data-service="website"
+                        data-tier="Basic" data-price="Rp 2.500.000">Discuss the Basic package</a>
                 </article>
 
                 <!-- Pro (Featured) -->
                 <article class="tier-card featured" data-tier-id="web-pro">
-                    <span class="tier-flag">Paling populer</span>
+                    <span class="tier-flag">Most popular</span>
                     <div class="tier-name">Pro</div>
                     <div class="tier-price">
                         <span class="tier-price-amount">Rp 6.500.000</span>
-                        <span class="tier-price-note">sekali bayar · 2-3 minggu</span>
+                        <span class="tier-price-note">one-time · 2-3 weeks</span>
                     </div>
-                    <p class="tier-ideal">Untuk bisnis yang sudah jalan dan butuh website company profile.</p>
+                    <p class="tier-ideal">For established businesses that need a company-profile website.</p>
                     <ul class="tier-deliverables">
-                        <li>Sampai 8 halaman (Home, About, Services, Blog, Kontak)</li>
-                        <li>CMS sederhana untuk update konten sendiri</li>
-                        <li>Integrasi WhatsApp, Google Analytics, Meta Pixel</li>
+                        <li>Up to 8 pages (Home, About, Services, Blog, Contact)</li>
+                        <li>Simple CMS to update content yourself</li>
+                        <li>WhatsApp, Google Analytics, and Meta Pixel integration</li>
                         <li>SEO setup · sitemap · meta · schema.org</li>
-                        <li>Revisi 3x · dukungan 30 hari setelah live</li>
+                        <li>3 rounds of revisions · 30 days of support after launch</li>
                     </ul>
-                    <a href="/packages/#contact" class="package-cta tier-cta" data-cta="service" data-service="website"
-                        data-tier="Pro" data-price="Rp 6.500.000">Diskusi paket Pro</a>
+                    <a href="/en/packages/#contact" class="package-cta tier-cta" data-cta="service" data-service="website"
+                        data-tier="Pro" data-price="Rp 6.500.000">Discuss the Pro package</a>
                 </article>
 
                 <!-- Custom -->
                 <article class="tier-card" data-tier-id="web-custom">
                     <div class="tier-name">Custom</div>
                     <div class="tier-price">
-                        <span class="tier-price-amount">Mulai Rp 15.000.000</span>
-                        <span class="tier-price-note">kuotasi · 4+ minggu</span>
+                        <span class="tier-price-amount">From Rp 15.000.000</span>
+                        <span class="tier-price-note">quote-based · 4+ weeks</span>
                     </div>
-                    <p class="tier-ideal">Untuk web app, dashboard, e-commerce, atau sistem internal.</p>
+                    <p class="tier-ideal">For web apps, dashboards, e-commerce, or internal systems.</p>
                     <ul class="tier-deliverables">
-                        <li>Custom UI/UX sesuai kebutuhan</li>
-                        <li>Database &amp; autentikasi (login, role, dashboard)</li>
-                        <li>Integrasi payment, marketplace, atau API pihak ketiga</li>
-                        <li>Deploy ke production · CI/CD · monitoring</li>
-                        <li>Dokumentasi &amp; handover</li>
+                        <li>Custom UI/UX tailored to your needs</li>
+                        <li>Database &amp; authentication (login, roles, dashboard)</li>
+                        <li>Payment, marketplace, or third-party API integration</li>
+                        <li>Production deployment · CI/CD · monitoring</li>
+                        <li>Documentation &amp; handover</li>
                     </ul>
-                    <a href="/packages/#contact" class="package-cta tier-cta" data-cta="service" data-service="website"
-                        data-tier="Custom" data-price="Mulai Rp 15.000.000">Konsultasi custom</a>
+                    <a href="/en/packages/#contact" class="package-cta tier-cta" data-cta="service" data-service="website"
+                        data-tier="Custom" data-price="Mulai Rp 15.000.000">Custom consultation</a>
                 </article>
             </div>
 
@@ -158,23 +158,23 @@
             <div class="svc-flow fade-in">
                 <div class="svc-step">
                     <span class="svc-step-num">01</span>
-                    <div class="svc-step-title">Diskusi &amp; Brief</div>
-                    <p class="svc-step-desc">Kita bahas tujuan bisnis, target audiens, dan fitur yang dibutuhkan.</p>
+                    <div class="svc-step-title">Discovery &amp; Brief</div>
+                    <p class="svc-step-desc">We discuss your business goals, target audience, and the features you need.</p>
                 </div>
                 <div class="svc-step">
                     <span class="svc-step-num">02</span>
-                    <div class="svc-step-title">Desain &amp; Struktur</div>
-                    <p class="svc-step-desc">Wireframe dan desain visual disetujui sebelum coding dimulai.</p>
+                    <div class="svc-step-title">Design &amp; Structure</div>
+                    <p class="svc-step-desc">Wireframes and visual design get approved before any coding starts.</p>
                 </div>
                 <div class="svc-step">
                     <span class="svc-step-num">03</span>
                     <div class="svc-step-title">Development</div>
-                    <p class="svc-step-desc">Coding, integrasi, dan testing di staging environment.</p>
+                    <p class="svc-step-desc">Coding, integrations, and testing in a staging environment.</p>
                 </div>
                 <div class="svc-step">
                     <span class="svc-step-num">04</span>
                     <div class="svc-step-title">Launch &amp; Handover</div>
-                    <p class="svc-step-desc">Deploy ke production, training tim, dan serah terima akses penuh.</p>
+                    <p class="svc-step-desc">Production deployment, team training, and full access handover.</p>
                 </div>
             </div>
 
@@ -182,7 +182,7 @@
             <div class="showcase-grid fade-in">
                 <div class="showcase-card">
                     <img src="/assets/images/showcase/web-cryptosharia.png"
-                        alt="CryptoSharia — Platform edukasi kripto syariah dengan 6 microservice SvelteKit"
+                        alt="CryptoSharia — Sharia-compliant crypto education platform with 6 SvelteKit microservices"
                         class="showcase-thumb" loading="lazy">
                     <div class="showcase-body">
                         <div class="showcase-cat">E-Learning Platform</div>
@@ -196,7 +196,7 @@
                 </div>
                 <div class="showcase-card">
                     <img src="/assets/images/showcase/web-erisk.png"
-                        alt="E-Risk PT Adhi Karya — Sistem manajemen risiko enterprise dengan 30+ modul Odoo"
+                        alt="E-Risk PT Adhi Karya — Enterprise risk management system with 30+ Odoo modules"
                         class="showcase-thumb" loading="lazy">
                     <div class="showcase-body">
                         <div class="showcase-cat">Enterprise Dashboard</div>
@@ -210,11 +210,11 @@
                 </div>
                 <div class="showcase-card">
                     <img src="/assets/images/showcase/web-akademik.png"
-                        alt="Sistem Akademik SMA FG Putri FDS — Informasi akademik siswa dengan n8n automation"
+                        alt="SMA FG Putri FDS Academic System — Student academic information with n8n automation"
                         class="showcase-thumb" loading="lazy">
                     <div class="showcase-body">
                         <div class="showcase-cat">Internal Tool</div>
-                        <div class="showcase-title">Akademik SMA FG Putri</div>
+                        <div class="showcase-title">SMA FG Putri Academics</div>
                         <div class="showcase-tags">
                             <span class="showcase-tag">n8n</span>
                             <span class="showcase-tag">Web App</span>
@@ -226,28 +226,28 @@
             <!-- FAQ -->
             <div class="faq-list fade-in">
                 <details class="faq-item" id="faq-w-1">
-                    <summary class="faq-q">Berapa lama proses pengerjaan?</summary>
-                    <div class="faq-a">Basic 1 minggu, Pro 2-3 minggu, Custom mulai 4 minggu tergantung scope.</div>
+                    <summary class="faq-q">How long does the project take?</summary>
+                    <div class="faq-a">Basic takes 1 week, Pro 2-3 weeks, and Custom starts at 4 weeks depending on scope.</div>
                 </details>
                 <details class="faq-item" id="faq-w-2">
-                    <summary class="faq-q">Apakah saya dapat source code?</summary>
-                    <div class="faq-a">Ya. Semua source code, akses domain, dan akses hosting menjadi milik Anda penuh.
+                    <summary class="faq-q">Do I get the source code?</summary>
+                    <div class="faq-a">Yes. All source code, domain access, and hosting access become fully yours.
                     </div>
                 </details>
                 <details class="faq-item" id="faq-w-3">
-                    <summary class="faq-q">Bagaimana sistem revisinya?</summary>
-                    <div class="faq-a">Revisi terbatas sesuai paket. Revisi major di luar scope dihitung terpisah dengan
-                        kuotasi transparan sebelum dieksekusi.</div>
+                    <summary class="faq-q">How do revisions work?</summary>
+                    <div class="faq-a">Revisions are limited per package. Major revisions outside scope are quoted
+                        separately and transparently before any work starts.</div>
                 </details>
                 <details class="faq-item" id="faq-w-4">
-                    <summary class="faq-q">Apakah bisa update sendiri setelah jadi?</summary>
-                    <div class="faq-a">Paket Pro dan Custom dilengkapi CMS. Paket Basic landing page biasanya update via
-                        permintaan kecil.</div>
+                    <summary class="faq-q">Can I update the site myself once it's live?</summary>
+                    <div class="faq-a">The Pro and Custom packages include a CMS. The Basic landing page is usually
+                        updated through small requests.</div>
                 </details>
                 <details class="faq-item" id="faq-w-5">
-                    <summary class="faq-q">Bagaimana cara pembayarannya?</summary>
-                    <div class="faq-a">DP 50% di awal, pelunasan saat website live. Untuk Custom bisa termin per
-                        milestone.</div>
+                    <summary class="faq-q">How does payment work?</summary>
+                    <div class="faq-a">50% deposit upfront, with the balance due when the website goes live. Custom
+                        projects can be billed per milestone.</div>
                 </details>
             </div>
         </div>
@@ -257,7 +257,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="/" class="footer-logo">Naufal<span>.</span></a>
+                    <a href="/en/" class="footer-logo">Naufal<span>.</span></a>
                     <p>I build AI-powered systems for businesses, schools, and organizations that have
                         outgrown spreadsheets and manual workflows.</p>
                 </div>
@@ -265,13 +265,13 @@
                 <div class="footer-col">
                     <h5>Explore</h5>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/services/">Services</a></li>
-                        <li><a href="/case-studies/">Case Studies</a></li>
-                        <li><a href="/founded/">Founded</a></li>
-                        <li><a href="/layanan-website/">Layanan Website</a></li>
-                        <li><a href="/layanan-video-ai/">Layanan Video AI</a></li>
-                        <li><a href="/packages/">Packages</a></li>
+                        <li><a href="/en/">Home</a></li>
+                        <li><a href="/en/services/">Services</a></li>
+                        <li><a href="/en/case-studies/">Case Studies</a></li>
+                        <li><a href="/en/founded/">Founded</a></li>
+                        <li><a href="/en/layanan-website/">Website Service</a></li>
+                        <li><a href="/en/layanan-video-ai/">AI Video Service</a></li>
+                        <li><a href="/en/packages/">Packages</a></li>
                     </ul>
                 </div>
 
@@ -309,29 +309,6 @@
             </div>
         </div>
     </footer>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Pembuatan Website",
-      "provider": {
-        "@type": "Person",
-        "name": "Naufal Nabila",
-        "url": "https://naufalnabila.my.id/"
-      },
-      "areaServed": "Indonesia",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Paket Pembuatan Website",
-        "itemListElement": [
-          { "@type": "Offer", "name": "Basic",  "price": "2500000",  "priceCurrency": "IDR" },
-          { "@type": "Offer", "name": "Pro",    "price": "6500000",  "priceCurrency": "IDR" },
-          { "@type": "Offer", "name": "Custom", "price": "15000000", "priceCurrency": "IDR" }
-        ]
-      }
-    }
-    </script>
 
     <script src="/assets/js/theme.js?v=8" defer></script>
     <script src="/assets/js/nav.js?v=8" defer></script>

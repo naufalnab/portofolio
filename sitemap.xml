@@ -1,43 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://naufalnabila.my.id/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/"/>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://naufalnabila.my.id/en/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/"/>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://naufalnabila.my.id/services/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/services/"/>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://naufalnabila.my.id/en/services/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/services/"/>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://naufalnabila.my.id/case-studies/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/case-studies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/case-studies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/case-studies/"/>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://naufalnabila.my.id/en/case-studies/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/case-studies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/case-studies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/case-studies/"/>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://naufalnabila.my.id/founded/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/founded/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/founded/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/founded/"/>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://naufalnabila.my.id/en/founded/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/founded/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/founded/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/founded/"/>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://naufalnabila.my.id/layanan-website/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/layanan-website/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/layanan-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/layanan-website/"/>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://naufalnabila.my.id/en/layanan-website/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/layanan-website/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/layanan-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/layanan-website/"/>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://naufalnabila.my.id/layanan-video-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/layanan-video-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/layanan-video-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/layanan-video-ai/"/>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://naufalnabila.my.id/en/layanan-video-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/layanan-video-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/layanan-video-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/layanan-video-ai/"/>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://naufalnabila.my.id/packages/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/packages/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/packages/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/packages/"/>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://naufalnabila.my.id/en/packages/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/packages/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/packages/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/packages/"/>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

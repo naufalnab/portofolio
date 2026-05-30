@@ -323,3 +323,32 @@ footer {
   background: var(--text);
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
+
+/* Language switcher (Pemilih_Bahasa) */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  margin-left: 0.5rem;
+}
+.lang-switcher .lang-option {
+  padding: 0.2rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.6;
+  text-decoration: none;
+  color: var(--text);
+}
+.lang-switcher .lang-option:hover {
+  opacity: 0.85;
+}
+.lang-switcher .lang-option[aria-current="true"] {
+  opacity: 1;
+  background: var(--surface, rgba(127, 127, 127, 0.15));
+}
+@media (max-width: 900px) {
+  .lang-switcher {
+    margin-left: 0;
+  }
+}

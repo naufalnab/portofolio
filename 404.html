@@ -2,11 +2,18 @@
 <html lang="id">
 
 <head>
-    <script>(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Skrip_Deteksi_Bahasa: gated (AUTO=false ⇒ no-op), sinkron, sebelum theme-init -->
+    <script>(function(){var AUTO=false;if(!AUTO)return;try{var s=localStorage.getItem('lang');var here=(location.pathname.indexOf('/en/')===0||location.pathname==='/en')?'en':'id';var w=(s==='id'||s==='en')?s:(/^en/i.test(navigator.language||'')?'en':'id');if(w!==here){var d=here==='en'?(location.pathname.replace(/^\/en/,'')||'/'):'/en'+location.pathname;if(d!==location.pathname)location.replace(location.origin+d);}}catch(e){}})();</script>
+
+    <!-- ANTI-FOUC: inline, sinkron, sebelum CSS apa pun -->
+    <script>(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();</script>
+
     <meta name="robots" content="noindex">
     <title>404 — Halaman Tidak Ditemukan · Naufal Nabila</title>
+
     <link rel="stylesheet" href="/assets/css/base.css?v=8">
     <link rel="stylesheet" href="/assets/css/layout.css?v=8">
     <link rel="stylesheet" href="/assets/css/hero.css?v=8">
@@ -16,105 +23,110 @@
 </head>
 
 <body>
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="/" class="logo">Naufal<span>.</span></a>
-            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-            </button>
-            <div class="nav-right">
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="/services/">Services</a></li>
-                    <li><a href="/services/#process">Process</a></li>
-                    <li><a href="/case-studies/">Case Studies</a></li>
-                    <li><a href="/founded/">Founded</a></li>
-                    <li class="nav-dropdown">
-                        <a href="/layanan-website/" aria-haspopup="true" aria-expanded="false">Layanan</a>
-                        <ul class="nav-dropdown-menu">
-                            <li><a href="/layanan-website/">Website</a></li>
-                            <li><a href="/layanan-video-ai/">Video AI</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/packages/">Packages</a></li>
-                </ul>
-                <a href="/packages/#contact" class="nav-cta">Book a Systems Audit</a>
-                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-                    <span id="theme-icon">☀️</span>
-                    <span id="theme-text">Light</span>
-                </button>
+<nav id="navbar">
+    <div class="nav-container">
+        <a href="/" class="logo">Naufal<span>.</span></a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+        <div class="nav-right">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/services/#process">Process</a></li>
+                <li><a href="/case-studies/">Case Studies</a></li>
+                <li><a href="/founded/">Founded</a></li>
+                <li class="nav-dropdown">
+                    <a href="/layanan-website/" aria-haspopup="true" aria-expanded="false">Layanan</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/layanan-website/">Website</a></li>
+                        <li><a href="/layanan-video-ai/">Video AI</a></li>
+                    </ul>
+                </li>
+                <li><a href="/packages/">Packages</a></li>
+            </ul>
+            <a href="/packages/#contact" class="nav-cta">Book a Systems Audit</a>
+            <div class="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
+                <a class="lang-option" hreflang="id" data-lang="id" href="/" aria-current="true">ID</a>
+                <a class="lang-option" hreflang="en" data-lang="en" href="/en/">EN</a>
             </div>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                <span id="theme-icon">☀️</span>
+                <span id="theme-text">Light</span>
+            </button>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <section class="hero" style="min-height:70vh">
         <div class="container" style="text-align:center">
             <h1>404 — Halaman tidak ditemukan</h1>
-            <p>Halaman yang Anda cari sudah dipindah atau tidak ada.</p>
-            <a href="/" class="btn btn-primary">Kembali ke Home</a>
+            <p>Halaman yang Anda cari sudah dipindahkan atau tidak tersedia.</p>
+            <a href="/" class="btn btn-primary">Kembali ke Beranda</a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="footer-logo">Naufal<span>.</span></a>
-                    <p>I build AI-powered systems for businesses, schools, and organizations that have
-                        outgrown spreadsheets and manual workflows.</p>
-                </div>
-
-                <div class="footer-col">
-                    <h5>Explore</h5>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/services/">Services</a></li>
-                        <li><a href="/case-studies/">Case Studies</a></li>
-                        <li><a href="/founded/">Founded</a></li>
-                        <li><a href="/layanan-website/">Layanan Website</a></li>
-                        <li><a href="/layanan-video-ai/">Layanan Video AI</a></li>
-                        <li><a href="/packages/">Packages</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h5>Contact</h5>
-                    <ul>
-                        <li><a href="https://wa.me/6282328591004" target="_blank" rel="noopener">WhatsApp</a></li>
-                        <li><a href="mailto:naufal.nabila.2008@gmail.com">Email</a></li>
-                        <li><a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/" target="_blank"
-                                rel="noopener">LinkedIn</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h5>Founded by Me</h5>
-                    <ul>
-                        <li><a href="https://pembelajarbelajar.com" target="_blank"
-                                rel="noopener">pembelajarbelajar.com</a></li>
-                        <li><a href="https://almutaalim.com" target="_blank" rel="noopener">almutaalim.com</a></li>
-                        <li><a href="https://belajarsekejap.com" target="_blank"
-                                rel="noopener">belajarsekejap.com</a></li>
-                        <li><a href="https://thelearinglearner.com" target="_blank"
-                                rel="noopener">thelearinglearner.com</a></li>
-                    </ul>
-                </div>
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="footer-logo">Naufal<span>.</span></a>
+                <p>I build AI-powered systems for businesses, schools, and organizations that have
+                    outgrown spreadsheets and manual workflows.</p>
             </div>
 
-            <div class="footer-bottom">
-                <span>© 2026 Naufal Nabila. Built with care, code, and a lot of automation.</span>
-                <span class="footer-meta">
-                    <span>📍 Indonesia</span>
-                    <span class="dot-sep">·</span>
-                    <span>Available for new projects</span>
-                </span>
+            <div class="footer-col">
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/case-studies/">Case Studies</a></li>
+                    <li><a href="/founded/">Founded</a></li>
+                    <li><a href="/layanan-website/">Layanan Website</a></li>
+                    <li><a href="/layanan-video-ai/">Layanan Video AI</a></li>
+                    <li><a href="/packages/">Packages</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="https://wa.me/6282328591004" target="_blank" rel="noopener">WhatsApp</a></li>
+                    <li><a href="mailto:naufal.nabila.2008@gmail.com">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/" target="_blank"
+                            rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Founded by Me</h5>
+                <ul>
+                    <li><a href="https://pembelajarbelajar.com" target="_blank"
+                            rel="noopener">pembelajarbelajar.com</a></li>
+                    <li><a href="https://almutaalim.com" target="_blank" rel="noopener">almutaalim.com</a></li>
+                    <li><a href="https://belajarsekejap.com" target="_blank"
+                            rel="noopener">belajarsekejap.com</a></li>
+                    <li><a href="https://thelearinglearner.com" target="_blank"
+                            rel="noopener">thelearinglearner.com</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+
+        <div class="footer-bottom">
+            <span>© 2026 Naufal Nabila. Built with care, code, and a lot of automation.</span>
+            <span class="footer-meta">
+                <span>📍 Indonesia</span>
+                <span class="dot-sep">·</span>
+                <span>Available for new projects</span>
+            </span>
+        </div>
+    </div>
+</footer>
 
     <script src="/assets/js/theme.js?v=8" defer></script>
     <script src="/assets/js/nav.js?v=8" defer></script>
+    <script src="/assets/js/lang.js?v=8" defer></script>
     <script src="/assets/js/reveal.js?v=8" defer></script>
     <script src="/assets/js/main.js?v=8" defer></script>
 </body>
