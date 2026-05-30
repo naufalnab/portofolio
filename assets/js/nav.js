@@ -19,16 +19,42 @@
   function setActiveNav(root, currentPath) {
     const here = normalizePath(currentPath);
     const links = root.querySelectorAll('a[href]');
+    // 1. Clear all active state first.
     links.forEach(a => { a.classList.remove('active'); a.removeAttribute('aria-current'); });
+
+    // 2. Collect every anchor whose normalized path matches the current page.
+    const matches = [];
     links.forEach(a => {
-      const target = normalizePath(new URL(a.href, location.origin).pathname);
-      if (target === here) {
-        a.classList.add('active');
-        a.setAttribute('aria-current', 'page');
-        const dd = a.closest('.nav-dropdown');
-        if (dd) { const trigger = dd.querySelector(':scope > a'); if (trigger) trigger.classList.add('active'); }
+      const url = new URL(a.href, location.origin);
+      if (normalizePath(url.pathname) === here) {
+        matches.push({ a, hasHash: url.hash !== '' });
       }
     });
+
+    // 3. Unknown path (e.g. /404.html): leave nothing active.
+    if (matches.length === 0) return;
+
+    // 4. Choose EXACTLY ONE anchor for aria-current, by preference:
+    //    a) a dropdown child (the specific service page should win);
+    //    b) a hash-less link inside .nav-links (canonical top-level link, not "Process");
+    //    c) any hash-less match; d) the first match.
+    const isDropdownChild = m => !!m.a.closest('.nav-dropdown-menu');
+    const inNavLinks = m => !!m.a.closest('.nav-links');
+    const chosen =
+      matches.find(isDropdownChild) ||
+      matches.find(m => inNavLinks(m) && !m.hasHash) ||
+      matches.find(m => !m.hasHash) ||
+      matches[0];
+
+    chosen.a.classList.add('active');
+    chosen.a.setAttribute('aria-current', 'page');
+
+    // 5. If the chosen anchor is a dropdown child, also mark the parent trigger
+    //    .active (but NOT aria-current) so exactly one aria-current remains.
+    if (isDropdownChild(chosen)) {
+      const dd = chosen.a.closest('.nav-dropdown');
+      if (dd) { const trigger = dd.querySelector(':scope > a'); if (trigger) trigger.classList.add('active'); }
+    }
   }
 
   setActiveNav(navbar, location.pathname);

@@ -55,8 +55,12 @@ export function loadDom(file) {
  * that any globals it exposes (e.g. `window.__nav`, `window.toggleTheme`)
  * become available on the returned window.
  *
- * The script is run via `runScripts: "outside-only"` + manual injection so the
- * module's IIFE executes against the jsdom window/document.
+ * The script is run via `runScripts: "dangerously"` + manual injection so the
+ * module's IIFE executes against the jsdom window/document. (Under the more
+ * restrictive `"outside-only"` mode, injected <script> elements are parsed but
+ * never executed, so module globals like `window.toggleTheme` would not be
+ * defined.) These are dev-only fixtures loading first-party asset code, so the
+ * "dangerously" mode is safe here.
  *
  * @param {string} jsRelPath - path relative to the repo root, e.g. "assets/js/nav.js"
  * @param {{ html?: string, url?: string }} [options]
@@ -66,7 +70,7 @@ export function loadDom(file) {
  */
 export function loadScriptModule(jsRelPath, options = {}) {
   const { html = defaultDom(), url = "https://naufalnabila.my.id/" } = options;
-  const dom = new JSDOM(html, { url, runScripts: "outside-only" });
+  const dom = new JSDOM(html, { url, runScripts: "dangerously" });
   const code = readPage(jsRelPath);
 
   // Execute the asset code in the window's script context so that references
