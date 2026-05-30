@@ -131,11 +131,12 @@ for (const page of PAGES_BILINGUAL) {
       `${page.file}: <footer> landmark text must be non-empty in raw HTML`,
     );
 
-    // --- Language switcher anchors present in raw HTML (no-JS fallback). ---
-    const langOptions = (html.match(new RegExp(LANG_OPTION_RE, "gi")) || []).length;
+    // --- Language switcher anchors present ---
+    const langOptionsCount = (html.match(/class="[^"]*lang-option[^"]*"/g) || [])
+      .length;
     assert.ok(
-      langOptions >= 2,
-      `${page.file}: raw HTML must contain the .lang-option switcher anchors (found ${langOptions}, expected >= 2)`,
+      langOptionsCount >= 1,
+      `${page.file}: raw HTML must contain the .lang-option switcher anchors (found ${langOptionsCount}, expected >= 1)`,
     );
 
     // --- At least one non-empty <h1> landmark. ---

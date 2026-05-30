@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- (1) LANGUAGE DETECTION (optional, gated OFF by default) — topmost, inline, synchronous -->
-    <script>(function(){var AUTO=false;if(!AUTO)return;try{var stored=localStorage.getItem('lang');var here=(location.pathname.indexOf('/en/')===0||location.pathname==='/en')?'en':'id';var want=(stored==='id'||stored==='en')?stored:(/^en/i.test(navigator.language||'')?'en':'id');if(want!==here){var dest=here==='en'?(location.pathname.replace(/^\/en/,'')||'/'):'/en'+location.pathname;if(dest!==location.pathname)location.replace(location.origin+dest);}}catch(e){}})();</script>
+    <script>(function () { var AUTO = false; if (!AUTO) return; try { var stored = localStorage.getItem('lang'); var here = (location.pathname.indexOf('/en/') === 0 || location.pathname === '/en') ? 'en' : 'id'; var want = (stored === 'id' || stored === 'en') ? stored : (/^en/i.test(navigator.language || '') ? 'en' : 'id'); if (want !== here) { var dest = here === 'en' ? (location.pathname.replace(/^\/en/, '') || '/') : '/en' + location.pathname; if (dest !== location.pathname) location.replace(location.origin + dest); } } catch (e) { } })();</script>
 
     <!-- (2) ANTI-FOUC: must be topmost of theme logic, inline, synchronous, before CSS -->
-    <script>(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();</script>
+    <script>(function () { try { if (localStorage.getItem('theme') === 'light') { document.documentElement.classList.add('light-mode'); } } catch (e) { } })();</script>
 
     <!-- SEO per-page -->
     <title>Founded Platforms &amp; Track Record · Naufal Nabila</title>
@@ -68,10 +68,8 @@
                     </li>
                     <li><a href="/en/packages/">Packages</a></li>
                 </ul>
-                <a href="/en/packages/#contact" class="nav-cta">Book a Systems Audit</a>
                 <div class="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
-                    <a class="lang-option" hreflang="id" data-lang="id" href="/founded/">ID</a>
-                    <a class="lang-option" hreflang="en" data-lang="en" href="/en/founded/" aria-current="true">EN</a>
+                    <a class="lang-option" hreflang="id" data-lang="id" href="/founded/">🇮🇩</a>
                 </div>
                 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
                     <span id="theme-icon">☀️</span>
@@ -154,7 +152,7 @@
                         <div class="founded-mark">🌍</div>
                         <div class="founded-meta">
                             <div class="founded-role">Founder · Global EdTech</div>
-                            <div class="founded-domain">thelearinglearner.com</div>
+                            <div class="founded-domain">thelearninglearner.com</div>
                         </div>
                     </div>
                     <p class="founded-desc">An English-first learning platform for self-driven learners — the
@@ -164,8 +162,8 @@
                         <span class="founded-tag">Self-paced</span>
                         <span class="founded-tag">AI assisted</span>
                     </div>
-                    <a href="https://thelearinglearner.com" target="_blank" rel="noopener" class="founded-link">Visit
-                        thelearinglearner.com</a>
+                    <a href="https://thelearninglearner.com" target="_blank" rel="noopener" class="founded-link">Visit
+                        thelearninglearner.com</a>
                 </article>
             </div>
 
@@ -505,10 +503,10 @@
                         <li><a href="https://pembelajarbelajar.com" target="_blank"
                                 rel="noopener">pembelajarbelajar.com</a></li>
                         <li><a href="https://almutaalim.com" target="_blank" rel="noopener">almutaalim.com</a></li>
-                        <li><a href="https://belajarsekejap.com" target="_blank"
-                                rel="noopener">belajarsekejap.com</a></li>
-                        <li><a href="https://thelearinglearner.com" target="_blank"
-                                rel="noopener">thelearinglearner.com</a></li>
+                        <li><a href="https://belajarsekejap.com" target="_blank" rel="noopener">belajarsekejap.com</a>
+                        </li>
+                        <li><a href="https://thelearninglearner.com" target="_blank"
+                                rel="noopener">thelearninglearner.com</a></li>
                     </ul>
                 </div>
             </div>

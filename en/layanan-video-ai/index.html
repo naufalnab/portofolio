@@ -17,11 +17,11 @@
                     var dest = here === "en" ? location.pathname.replace(/^\/en/, "") || "/" : "/en" + location.pathname;
                     if (dest !== location.pathname) location.replace(location.origin + dest);
                 }
-            } catch (e) {}
+            } catch (e) { }
         })();
     </script>
     <!-- (2) ANTI-FOUC theme-init — inline, sync, before CSS -->
-    <script>(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();</script>
+    <script>(function () { try { if (localStorage.getItem('theme') === 'light') { document.documentElement.classList.add('light-mode'); } } catch (e) { } })();</script>
     <title>AI Video Production Service · Naufal Nabila</title>
     <meta name="description"
         content="AI video production for ads and social media content. Natural voiceover, automatic subtitles, multi-format. Basic, Pro, and Custom packages available.">
@@ -51,40 +51,38 @@
 </head>
 
 <body>
-<nav id="navbar">
-    <div class="nav-container">
-        <a href="/en/" class="logo">Naufal<span>.</span></a>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-        </button>
-        <div class="nav-right">
-            <ul class="nav-links" id="nav-links">
-                <li><a href="/en/services/">Services</a></li>
-                <li><a href="/en/case-studies/">Case Studies</a></li>
-                <li><a href="/en/founded/">Founded</a></li>
-                <li class="nav-dropdown">
-                    <a href="/en/layanan-website/" aria-haspopup="true" aria-expanded="false">Services</a>
-                    <ul class="nav-dropdown-menu">
-                        <li><a href="/en/layanan-website/">Website</a></li>
-                        <li><a href="/en/layanan-video-ai/">Video AI</a></li>
-                    </ul>
-                </li>
-                <li><a href="/en/packages/">Packages</a></li>
-            </ul>
-            <a href="/en/packages/#contact" class="nav-cta">Book a Systems Audit</a>
-            <div class="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
-                <a class="lang-option" hreflang="id" data-lang="id" href="/layanan-video-ai/">ID</a>
-                <a class="lang-option" hreflang="en" data-lang="en" href="/en/layanan-video-ai/" aria-current="true">EN</a>
-            </div>
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-                <span id="theme-icon">☀️</span>
-                <span id="theme-text">Light</span>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="logo">Naufal<span>.</span></a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
             </button>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="/en/services/">Services</a></li>
+                    <li><a href="/en/case-studies/">Case Studies</a></li>
+                    <li><a href="/en/founded/">Founded</a></li>
+                    <li class="nav-dropdown">
+                        <a href="/en/layanan-website/" aria-haspopup="true" aria-expanded="false">Services</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="/en/layanan-website/">Website</a></li>
+                            <li><a href="/en/layanan-video-ai/">Video AI</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/en/packages/">Packages</a></li>
+                </ul>
+                <div class="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
+                    <a class="lang-option" hreflang="id" data-lang="id" href="/layanan-video-ai/">🇮🇩</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                    <span id="theme-icon">☀️</span>
+                    <span id="theme-text">Light</span>
+                </button>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <!-- AI VIDEO PRODUCTION SERVICE -->
     <section class="service-commercial" id="jasa-video-ai">
@@ -112,8 +110,8 @@
                         <li>1 minor revision (script or music)</li>
                         <li>Final mp4 file + raw asset</li>
                     </ul>
-                    <a href="/en/packages/#contact" class="package-cta tier-cta" data-cta="service" data-service="video-ai"
-                        data-tier="Basic" data-price="Rp 750.000">Discuss the Basic package</a>
+                    <a href="/en/packages/#contact" class="package-cta tier-cta" data-cta="service"
+                        data-service="video-ai" data-tier="Basic" data-price="Rp 750.000">Discuss the Basic package</a>
                 </article>
 
                 <!-- Pro (Featured) -->
@@ -132,8 +130,8 @@
                         <li>AI B-roll · text animation · brand color</li>
                         <li>2 revisions · multi-platform format (TikTok, IG, YouTube)</li>
                     </ul>
-                    <a href="/en/packages/#contact" class="package-cta tier-cta" data-cta="service" data-service="video-ai"
-                        data-tier="Pro" data-price="Rp 2.000.000">Discuss the Pro package</a>
+                    <a href="/en/packages/#contact" class="package-cta tier-cta" data-cta="service"
+                        data-service="video-ai" data-tier="Pro" data-price="Rp 2.000.000">Discuss the Pro package</a>
                 </article>
 
                 <!-- Custom -->
@@ -151,8 +149,9 @@
                         <li>Publishing schedule · content performance iteration</li>
                         <li>Monthly retainer available</li>
                     </ul>
-                    <a href="/en/packages/#contact" class="package-cta tier-cta" data-cta="service" data-service="video-ai"
-                        data-tier="Custom" data-price="Mulai Rp 5.000.000">Custom consultation</a>
+                    <a href="/en/packages/#contact" class="package-cta tier-cta" data-cta="service"
+                        data-service="video-ai" data-tier="Custom" data-price="Mulai Rp 5.000.000">Custom
+                        consultation</a>
                 </article>
             </div>
 
@@ -177,7 +176,8 @@
                 <div class="svc-step">
                     <span class="svc-step-num">04</span>
                     <div class="svc-step-title">Deliver &amp; Publish</div>
-                    <p class="svc-step-desc">The final file is delivered in formats ready to upload to every platform.</p>
+                    <p class="svc-step-desc">The final file is delivered in formats ready to upload to every platform.
+                    </p>
                 </div>
             </div>
 
@@ -185,8 +185,8 @@
             <div class="showcase-grid fade-in">
                 <div class="showcase-card" data-format="vertical">
                     <img src="/assets/images/showcase/vid-reels-sample.png"
-                        alt="AI reels video sample — 30-second product ad in vertical 9:16 format" class="showcase-thumb"
-                        loading="lazy">
+                        alt="AI reels video sample — 30-second product ad in vertical 9:16 format"
+                        class="showcase-thumb" loading="lazy">
                     <div class="showcase-body">
                         <div class="showcase-cat">Reels / Short Video</div>
                         <div class="showcase-title">30-Second Product Ad</div>
@@ -254,62 +254,62 @@
         </div>
     </section>
 
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <a href="/en/" class="footer-logo">Naufal<span>.</span></a>
-                <p>I build AI-powered systems for businesses, schools, and organizations that have
-                    outgrown spreadsheets and manual workflows.</p>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/en/" class="footer-logo">Naufal<span>.</span></a>
+                    <p>I build AI-powered systems for businesses, schools, and organizations that have
+                        outgrown spreadsheets and manual workflows.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="/en/">Home</a></li>
+                        <li><a href="/en/services/">Services</a></li>
+                        <li><a href="/en/case-studies/">Case Studies</a></li>
+                        <li><a href="/en/founded/">Founded</a></li>
+                        <li><a href="/en/layanan-website/">Website Service</a></li>
+                        <li><a href="/en/layanan-video-ai/">AI Video Service</a></li>
+                        <li><a href="/en/packages/">Packages</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><a href="https://wa.me/6282328591004" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><a href="mailto:naufal.nabila.2008@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Founded by Me</h5>
+                    <ul>
+                        <li><a href="https://pembelajarbelajar.com" target="_blank"
+                                rel="noopener">pembelajarbelajar.com</a></li>
+                        <li><a href="https://almutaalim.com" target="_blank" rel="noopener">almutaalim.com</a></li>
+                        <li><a href="https://belajarsekejap.com" target="_blank" rel="noopener">belajarsekejap.com</a>
+                        </li>
+                        <li><a href="https://thelearninglearner.com" target="_blank"
+                                rel="noopener">thelearninglearner.com</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="footer-col">
-                <h5>Explore</h5>
-                <ul>
-                    <li><a href="/en/">Home</a></li>
-                    <li><a href="/en/services/">Services</a></li>
-                    <li><a href="/en/case-studies/">Case Studies</a></li>
-                    <li><a href="/en/founded/">Founded</a></li>
-                    <li><a href="/en/layanan-website/">Website Service</a></li>
-                    <li><a href="/en/layanan-video-ai/">AI Video Service</a></li>
-                    <li><a href="/en/packages/">Packages</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h5>Contact</h5>
-                <ul>
-                    <li><a href="https://wa.me/6282328591004" target="_blank" rel="noopener">WhatsApp</a></li>
-                    <li><a href="mailto:naufal.nabila.2008@gmail.com">Email</a></li>
-                    <li><a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/" target="_blank"
-                            rel="noopener">LinkedIn</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h5>Founded by Me</h5>
-                <ul>
-                    <li><a href="https://pembelajarbelajar.com" target="_blank"
-                            rel="noopener">pembelajarbelajar.com</a></li>
-                    <li><a href="https://almutaalim.com" target="_blank" rel="noopener">almutaalim.com</a></li>
-                    <li><a href="https://belajarsekejap.com" target="_blank"
-                            rel="noopener">belajarsekejap.com</a></li>
-                    <li><a href="https://thelearinglearner.com" target="_blank"
-                            rel="noopener">thelearinglearner.com</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <span>© 2026 Naufal Nabila. Built with care, code, and a lot of automation.</span>
+                <span class="footer-meta">
+                    <span>📍 Indonesia</span>
+                    <span class="dot-sep">·</span>
+                    <span>Available for new projects</span>
+                </span>
             </div>
         </div>
-
-        <div class="footer-bottom">
-            <span>© 2026 Naufal Nabila. Built with care, code, and a lot of automation.</span>
-            <span class="footer-meta">
-                <span>📍 Indonesia</span>
-                <span class="dot-sep">·</span>
-                <span>Available for new projects</span>
-            </span>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script type="application/ld+json">
     {

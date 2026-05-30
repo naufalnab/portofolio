@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Skrip_Deteksi_Bahasa: gated (AUTO=false ⇒ no-op), sinkron, sebelum theme-init -->
-    <script>(function(){var AUTO=false;if(!AUTO)return;try{var s=localStorage.getItem('lang');var here=(location.pathname.indexOf('/en/')===0||location.pathname==='/en')?'en':'id';var w=(s==='id'||s==='en')?s:(/^en/i.test(navigator.language||'')?'en':'id');if(w!==here){var d=here==='en'?(location.pathname.replace(/^\/en/,'')||'/'):'/en'+location.pathname;if(d!==location.pathname)location.replace(location.origin+d);}}catch(e){}})();</script>
+    <script>(function () { var AUTO = false; if (!AUTO) return; try { var s = localStorage.getItem('lang'); var here = (location.pathname.indexOf('/en/') === 0 || location.pathname === '/en') ? 'en' : 'id'; var w = (s === 'id' || s === 'en') ? s : (/^en/i.test(navigator.language || '') ? 'en' : 'id'); if (w !== here) { var d = here === 'en' ? (location.pathname.replace(/^\/en/, '') || '/') : '/en' + location.pathname; if (d !== location.pathname) location.replace(location.origin + d); } } catch (e) { } })();</script>
 
     <!-- ANTI-FOUC: inline, sinkron, sebelum CSS apa pun -->
-    <script>(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-mode');}}catch(e){}})();</script>
+    <script>(function () { try { if (localStorage.getItem('theme') === 'light') { document.documentElement.classList.add('light-mode'); } } catch (e) { } })();</script>
 
     <meta name="robots" content="noindex">
     <title>404 — Page Not Found · Naufal Nabila</title>
@@ -46,8 +46,7 @@
                     <li><a href="/en/packages/">Packages</a></li>
                 </ul>
                 <div class="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
-                    <a class="lang-option" hreflang="id" data-lang="id" href="/404.html">ID</a>
-                    <a class="lang-option" hreflang="en" data-lang="en" href="/en/404.html" aria-current="true">EN</a>
+                    <a class="lang-option" hreflang="id" data-lang="id" href="/404.html">🇮🇩</a>
                 </div>
                 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
                     <span id="theme-icon">☀️</span>
@@ -103,10 +102,10 @@
                         <li><a href="https://pembelajarbelajar.com" target="_blank"
                                 rel="noopener">pembelajarbelajar.com</a></li>
                         <li><a href="https://almutaalim.com" target="_blank" rel="noopener">almutaalim.com</a></li>
-                        <li><a href="https://belajarsekejap.com" target="_blank"
-                                rel="noopener">belajarsekejap.com</a></li>
-                        <li><a href="https://thelearinglearner.com" target="_blank"
-                                rel="noopener">thelearinglearner.com</a></li>
+                        <li><a href="https://belajarsekejap.com" target="_blank" rel="noopener">belajarsekejap.com</a>
+                        </li>
+                        <li><a href="https://thelearninglearner.com" target="_blank"
+                                rel="noopener">thelearninglearner.com</a></li>
                     </ul>
                 </div>
             </div>
