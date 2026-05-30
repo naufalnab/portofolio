@@ -1077,7 +1077,6 @@ Padanan ID `/services/` identik strukturnya, dengan: `<html lang="id">`, `canoni
     <div class="nav-right">
       <ul class="nav-links" id="nav-links">
         <li><a href="/en/services/">Services</a></li>
-        <li><a href="/en/services/#process">Process</a></li>
         <li><a href="/en/case-studies/">Case Studies</a></li>
         <li><a href="/en/founded/">Founded</a></li>
         <li class="nav-dropdown">
