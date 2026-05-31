@@ -203,6 +203,10 @@
     display: block;
 }
 
+.showcase-card[data-format="vertical"] {
+    grid-row: span 2;
+}
+
 .showcase-card[data-format="vertical"] .showcase-thumb {
     aspect-ratio: 9 / 16;
 }
