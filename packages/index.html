@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="/assets/css/sections.css?v=8">
     <link rel="stylesheet" href="/assets/css/components.css?v=8">
     <link rel="stylesheet" href="/assets/css/responsive.css?v=8">
+    <link rel="stylesheet" href="/assets/css/services-commercial.css?v=8">
 </head>
 
 <body>
@@ -80,68 +81,211 @@
     <section class="packages" id="packages">
         <div class="container">
             <span class="section-eyebrow fade-in">Cara Saya Bisa Membantu</span>
-            <h1 class="section-title fade-in">Pilih titik masuk yang paling sesuai dengan situasi Anda.</h1>
-            <p class="section-subtitle fade-in">Sebagian besar kerja sama dimulai dari yang kecil — biasanya lewat
-                audit atau satu build terfokus — lalu berkembang seiring kita memetakan apa yang sebenarnya
-                dibutuhkan operasi Anda.</p>
+            <h1 class="section-title fade-in">Pilih bantuan yang paling sesuai dengan kondisi operasional Anda saat
+                ini.</h1>
+            <p class="section-subtitle fade-in">Anda tidak perlu tahu solusinya dari awal. Cukup ceritakan bagian
+                kerja yang paling sering lambat, berulang, atau berantakan — follow-up manual, data tersebar, laporan
+                telat, atau admin yang kerja ulang. Dari situ kita tentukan apakah Anda butuh audit, alur kerja AI,
+                dashboard, atau retainer.</p>
 
+            <!-- Mini Flow -->
+            <div class="pkg-flow fade-in">
+                <div class="pkg-flow-step">
+                    <span class="pkg-flow-num">01</span>
+                    <div class="pkg-flow-title">Petakan dulu</div>
+                    <p class="pkg-flow-desc">Cari bottleneck, pekerjaan berulang, data berserakan, dan prioritas
+                        sistem pertama.</p>
+                </div>
+                <div class="pkg-flow-step">
+                    <span class="pkg-flow-num">02</span>
+                    <div class="pkg-flow-title">Bangun yang paling berdampak</div>
+                    <p class="pkg-flow-desc">Misalnya workflow follow-up, dashboard operasional, atau panel admin.</p>
+                </div>
+                <div class="pkg-flow-step">
+                    <span class="pkg-flow-num">03</span>
+                    <div class="pkg-flow-title">Jalankan &amp; ukur</div>
+                    <p class="pkg-flow-desc">Setelah tim memakai sistem, kita ukur hasilnya dan dengarkan feedback
+                        langsung.</p>
+                </div>
+                <div class="pkg-flow-step">
+                    <span class="pkg-flow-num">04</span>
+                    <div class="pkg-flow-title">Iterasi berdasarkan data nyata</div>
+                    <p class="pkg-flow-desc">Perbaiki berdasarkan data dan kebiasaan kerja nyata, bukan asumsi.</p>
+                </div>
+            </div>
+
+            <!-- Section label -->
+            <span class="section-eyebrow fade-in">Mulai dari sini</span>
+
+            <!-- 3 Package Cards -->
             <div class="packages-grid fade-in">
                 <div class="package-card featured">
-                    <span class="package-flag">Mulai di sini</span>
+                    <span class="package-flag">Direkomendasikan</span>
                     <div class="package-name">Audit Sistem Operasi</div>
-                    <div class="package-for">Untuk founder yang butuh kejelasan</div>
-                    <p class="package-desc">Diagnosis terfokus atas alur kerja Anda saat ini. Kita memetakan
-                        kekacauannya, mengidentifikasi otomatisasi berdampak terbesar, dan menentukan apa yang
-                        dibangun lebih dulu.</p>
+                    <div class="package-for">Untuk founder yang belum yakin harus membangun apa dulu</div>
+                    <p class="package-desc">Audit terfokus untuk memetakan alur kerja saat ini, menemukan bottleneck,
+                        pekerjaan berulang, risiko data, dan peluang otomasi paling berdampak.</p>
+                    <div class="package-estimate">⏱ Estimasi: 3–7 hari kerja</div>
                     <ul class="package-deliverables">
-                        <li>Peta alur kerja operasi Anda</li>
-                        <li>Daftar bottleneck dan risiko</li>
-                        <li>Rencana otomatisasi yang diprioritaskan</li>
-                        <li>Rekomendasi sistem pertama untuk dibangun</li>
+                        <li>Peta workflow saat ini dan workflow ideal</li>
+                        <li>Daftar bottleneck, pekerjaan ganda, dan risiko operasional</li>
+                        <li>Prioritas otomasi berdasarkan dampak dan kemudahan implementasi</li>
+                        <li>Rekomendasi sistem pertama yang paling layak dibangun</li>
                     </ul>
+                    <a href="#contact" class="package-cta">Mulai dari audit</a>
                 </div>
 
                 <div class="package-card">
-                    <div class="package-name">Pembuatan Alur Kerja AI</div>
-                    <div class="package-for">Untuk tim yang siap berotomatisasi</div>
-                    <p class="package-desc">Kerja sama terfokus untuk merancang dan merilis satu alur kerja AI yang
-                        krusial — penanganan lead, ticketing, follow-up, pelaporan, atau operasi konten.</p>
+                    <div class="package-name">Alur Kerja AI</div>
+                    <div class="package-for">Untuk tim yang sudah tahu proses mana yang ingin dipercepat</div>
+                    <p class="package-desc">Kita merancang dan membangun satu workflow AI yang membantu proses penting
+                        seperti follow-up lead, laporan otomatis, klasifikasi pesan, ticketing, atau operasi konten.</p>
+                    <div class="package-estimate">⏱ Estimasi: 1–3 minggu</div>
                     <ul class="package-deliverables">
-                        <li>Alur kerja n8n dengan AI agent</li>
-                        <li>Integrasi WhatsApp / email</li>
-                        <li>Dashboard dan peringatan</li>
-                        <li>Dokumentasi dan serah terima</li>
+                        <li>Workflow otomatis untuk satu proses prioritas</li>
+                        <li>Integrasi WhatsApp, email, form, spreadsheet, database, atau API</li>
+                        <li>Notifikasi, approval, dan pengecekan manual bila dibutuhkan</li>
+                        <li>Dokumentasi dan serah terima ke tim</li>
                     </ul>
-                    <a href="#contact" class="package-cta">Diskusikan build</a>
+                    <a href="#contact" class="package-cta">Bahas workflow AI</a>
                 </div>
 
                 <div class="package-card">
-                    <div class="package-name">Alat Internal / Dashboard</div>
-                    <div class="package-for">Untuk bisnis yang butuh kendali</div>
-                    <p class="package-desc">Sistem internal khusus — modul Odoo, panel admin, atau dashboard
-                        SvelteKit — yang dibangun mengikuti cara kerja tim Anda sebenarnya.</p>
+                    <div class="package-name">Dashboard / Alat Internal</div>
+                    <div class="package-for">Untuk bisnis yang butuh satu pusat kontrol operasional</div>
+                    <p class="package-desc">Dashboard atau panel internal untuk melihat data, mengelola pekerjaan,
+                        memberi approval, memantau KPI, dan menggantikan spreadsheet yang sudah terlalu rumit.</p>
+                    <div class="package-estimate">⏱ Estimasi: 2–6 minggu</div>
                     <ul class="package-deliverables">
-                        <li>Modul Odoo khusus atau aplikasi dashboard</li>
-                        <li>Akses berbasis peran &amp; persetujuan</li>
-                        <li>Laporan dan pelacakan KPI</li>
-                        <li>Deploy produksi dan pelatihan</li>
+                        <li>Dashboard operasional atau panel admin</li>
+                        <li>Hak akses berdasarkan role tim</li>
+                        <li>Laporan, tracking status, dan KPI</li>
+                        <li>Peluncuran sistem, training, dan dokumentasi penggunaan</li>
                     </ul>
-                    <a href="#contact" class="package-cta">Diskusikan build</a>
+                    <a href="#contact" class="package-cta">Bahas dashboard</a>
                 </div>
+            </div>
 
-                <div class="package-card">
+            <!-- Retainer — horizontal full-width -->
+            <div class="pkg-retainer-label fade-in">
+                <span class="section-eyebrow">Lanjutkan dengan pendampingan</span>
+            </div>
+            <div class="package-card retainer-wide fade-in">
+                <div class="package-content">
                     <div class="package-name">Retainer Sistem</div>
-                    <div class="package-for">Untuk peningkatan berkelanjutan</div>
-                    <p class="package-desc">Kerja sama bulanan untuk tim yang sudah punya sistem berjalan dan butuh
-                        peningkatan berkelanjutan, otomatisasi, serta dukungan operasional.</p>
+                    <div class="package-for">Untuk bisnis yang sistemnya sudah berjalan dan perlu terus dirapikan</div>
+                    <p class="package-desc">Pendampingan bulanan untuk memperbaiki bug, menambah otomasi,
+                        menyempurnakan dashboard, dan mengiterasi sistem berdasarkan penggunaan nyata tim. Retainer
+                        bukan unlimited development — setiap bulan kita sepakati prioritas perbaikan dan pengembangan
+                        yang paling berdampak.</p>
                     <ul class="package-deliverables">
-                        <li>Otomatisasi baru tiap siklus</li>
-                        <li>Tuning performa &amp; perbaikan bug</li>
-                        <li>Tinjauan sistem tiap kuartal</li>
-                        <li>Dukungan WhatsApp prioritas</li>
+                        <li>Iterasi workflow dan dashboard setiap bulan</li>
+                        <li>Perbaikan bug dan optimasi proses</li>
+                        <li>Review bottleneck dan kebutuhan baru</li>
+                        <li>Dukungan prioritas via WhatsApp</li>
                     </ul>
-                    <a href="#contact" class="package-cta">Diskusikan retainer</a>
                 </div>
+                <div class="package-side">
+                    <div class="package-estimate">⏱ Bulanan</div>
+                    <a href="#contact" class="package-cta">Bahas retainer bulanan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="packages">
+        <div class="container">
+            <span class="section-eyebrow fade-in">Tidak yakin pilih yang mana?</span>
+            <h2 class="section-title fade-in" style="font-size:clamp(1.8rem,3.5vw,2.4rem);">Cocokkan kondisi Anda
+                dengan paket yang tepat.</h2>
+
+            <div class="pkg-comparison fade-in">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kondisi Anda</th>
+                            <th>Pilihan terbaik</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Masih bingung masalah utamanya di mana</td>
+                            <td>Audit Sistem Operasi</td>
+                        </tr>
+                        <tr>
+                            <td>Sudah tahu satu proses yang ingin diotomatisasi</td>
+                            <td>Alur Kerja AI</td>
+                        </tr>
+                        <tr>
+                            <td>Data dan pekerjaan tim butuh satu panel pusat</td>
+                            <td>Dashboard / Alat Internal</td>
+                        </tr>
+                        <tr>
+                            <td>Sudah punya sistem dan butuh iterasi rutin</td>
+                            <td>Retainer Sistem</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Example Problems -->
+            <span class="section-eyebrow fade-in">Contoh masalah yang bisa dibantu</span>
+            <div class="pkg-problems-grid fade-in">
+                <div class="pkg-problem-item">
+                    <span class="pkg-problem-icon">🔁</span>
+                    <span class="pkg-problem-text">Admin masih rekap manual dari WhatsApp ke spreadsheet</span>
+                </div>
+                <div class="pkg-problem-item">
+                    <span class="pkg-problem-icon">📊</span>
+                    <span class="pkg-problem-text">Owner harus minta laporan berkali-kali</span>
+                </div>
+                <div class="pkg-problem-item">
+                    <span class="pkg-problem-icon">📂</span>
+                    <span class="pkg-problem-text">Data leads tercecer di banyak tempat</span>
+                </div>
+                <div class="pkg-problem-item">
+                    <span class="pkg-problem-icon">📩</span>
+                    <span class="pkg-problem-text">Follow-up calon pembeli tidak konsisten</span>
+                </div>
+                <div class="pkg-problem-item">
+                    <span class="pkg-problem-icon">❓</span>
+                    <span class="pkg-problem-text">Tim tidak tahu status pekerjaan terbaru</span>
+                </div>
+                <div class="pkg-problem-item">
+                    <span class="pkg-problem-icon">⚙️</span>
+                    <span class="pkg-problem-text">Banyak pekerjaan berulang yang sebenarnya bisa semi-otomatis</span>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <span class="section-eyebrow fade-in">Pertanyaan umum</span>
+            <div class="faq-list fade-in">
+                <details class="faq-item" id="faq-p-1">
+                    <summary class="faq-q">Apakah saya harus sudah punya SOP sebelum mulai?</summary>
+                    <div class="faq-a">Tidak. Justru kalau SOP belum rapi, audit bisa membantu memetakan alur kerja
+                        yang sebenarnya terjadi, bukan yang di atas kertas.</div>
+                </details>
+                <details class="faq-item" id="faq-p-2">
+                    <summary class="faq-q">Apakah semua proses akan diotomatisasi dengan AI?</summary>
+                    <div class="faq-a">Tidak. Beberapa proses lebih aman tetap ditangani manusia. AI dipakai hanya di
+                        bagian yang memang membantu mempercepat, merapikan, atau memberi rekomendasi.</div>
+                </details>
+                <details class="faq-item" id="faq-p-3">
+                    <summary class="faq-q">Apakah bisa pakai tools yang sudah kami gunakan?</summary>
+                    <div class="faq-a">Bisa, selama tools tersebut memungkinkan integrasi — melalui API, webhook,
+                        email, spreadsheet, atau export/import data.</div>
+                </details>
+                <details class="faq-item" id="faq-p-4">
+                    <summary class="faq-q">Apakah sistemnya langsung besar dari awal?</summary>
+                    <div class="faq-a">Tidak harus. Biasanya lebih aman mulai dari satu workflow kecil yang berdampak
+                        besar, lalu berkembang seiring kebutuhan nyata.</div>
+                </details>
+                <details class="faq-item" id="faq-p-5">
+                    <summary class="faq-q">Apakah setelah selesai akan diajarkan ke tim?</summary>
+                    <div class="faq-a">Ya. Setiap sistem yang dibangun dilengkapi dokumentasi dan pelatihan singkat
+                        agar benar-benar dipakai oleh tim, bukan hanya oleh saya.</div>
+                </details>
             </div>
         </div>
     </section>
@@ -157,23 +301,23 @@
                             pekerjaan administratif berulang — mari ubah jadi sebuah sistem.</h2>
                         <p class="contact-reassure">Tanpa pitch deck. Tanpa hype AI yang mengawang. Hanya percakapan
                             praktis tentang apa yang sebaiknya diotomatiskan, disederhanakan, atau dibangun ulang.</p>
-                        <p>Anda belum perlu tahu sistem persisnya. Ceritakan saja apa yang terasa berantakan. Saya
-                            bantu memetakan alur kerjanya dan mengubahnya jadi produk yang berfungsi. WhatsApp paling
-                            cepat saya balas.</p>
+                        <p>Anda belum perlu tahu sistem apa yang harus dibuat. Cukup ceritakan bagian kerja yang paling
+                            sering terasa lambat, berulang, atau berantakan. Saya bantu petakan alurnya, tentukan
+                            prioritasnya, lalu ubah menjadi sistem yang bisa dipakai tim.</p>
                     </div>
                     <div class="contact-actions">
-                        <a href="https://wa.me/6282328591004" target="_blank" rel="noopener"
-                            class="contact-action primary">
+                        <a href="https://wa.me/6282328591004?text=Mas%2C%20saya%20ingin%20audit%20workflow%20bisnis%20saya."
+                            target="_blank" rel="noopener" class="contact-action primary">
                             <span class="contact-action-icon">💬</span>
                             <span class="contact-action-text">
-                                <span class="contact-action-label">Pesan Audit Sistem · balasan tercepat</span>
+                                <span class="contact-action-label">Chat via WhatsApp · balasan tercepat</span>
                                 <span class="contact-action-value">+62 823-2859-1004</span>
                             </span>
                         </a>
                         <a href="mailto:naufal.nabila.2008@gmail.com" class="contact-action">
                             <span class="contact-action-icon">📧</span>
                             <span class="contact-action-text">
-                                <span class="contact-action-label">Email saya langsung</span>
+                                <span class="contact-action-label">Kirim email untuk brief lebih lengkap</span>
                                 <span class="contact-action-value">naufal.nabila.2008@gmail.com</span>
                             </span>
                         </a>

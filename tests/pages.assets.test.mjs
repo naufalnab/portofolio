@@ -34,6 +34,7 @@ const CORE_JS = ["theme.js", "nav.js", "reveal.js", "main.js"];
 
 // Slugs that get each page-specific asset.
 const SERVICES_SLUGS = new Set(["layanan-website", "layanan-video-ai"]);
+const SERVICES_CSS_SLUGS = new Set(["layanan-website", "layanan-video-ai", "packages"]);
 const TOGGLES_SLUGS = new Set(["case-studies", "founded"]);
 // 404.html reuses the .hero layout, so hero.css is permitted on Home + 404.
 const HERO_SLUGS = new Set(["", "404"]);
@@ -114,14 +115,19 @@ describe("Property 6 — per-page asset loading (required, no surplus)", () => {
       }
     });
 
-    test(`${label}: services-commercial.css + services.js present iff Layanan page`, () => {
-      const { css, js } = assetInventory(page.file);
-      const expected = SERVICES_SLUGS.has(page.slug);
+    test(`${label}: services-commercial.css present iff Layanan or Packages page`, () => {
+      const { css } = assetInventory(page.file);
+      const expected = SERVICES_CSS_SLUGS.has(page.slug);
       assert.equal(
         css.has("services-commercial.css"),
         expected,
         `${page.file} services-commercial.css presence should be ${expected}`,
       );
+    });
+
+    test(`${label}: services.js present iff Layanan page`, () => {
+      const { js } = assetInventory(page.file);
+      const expected = SERVICES_SLUGS.has(page.slug);
       assert.equal(
         js.has("services.js"),
         expected,
