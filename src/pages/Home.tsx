@@ -16,7 +16,7 @@ export function Home() {
       <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <motion.div 
+            <motion.div
               className="hero-badge"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -24,13 +24,13 @@ export function Home() {
             >
               <span className="pulse-dot"></span> Menerima proyek dashboard, ERP, dan otomasi AI
             </motion.div>
-            
+
             <h1 className="hero-title">
               <TextReveal text="Dari WhatsApp, Spreadsheet, dan Tugas Manual — Menjadi " as="span" />
               <GradientText>Sistem Operasional yang Rapi.</GradientText>
             </h1>
-            
-            <motion.p 
+
+            <motion.p
               className="hero-subtitle"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -50,9 +50,9 @@ export function Home() {
                 <li>Laporan dibuat manual</li>
               </ul>
             </TiltCard>
-            
+
             <div className="hero-visual-arrow">→</div>
-            
+
             <TiltCard className="hero-visual-card after" maxRotation={5}>
               <div className="hero-visual-label">Sesudah</div>
               <ul className="hero-visual-list">
@@ -64,7 +64,7 @@ export function Home() {
             </TiltCard>
           </SectionReveal>
 
-          <motion.div 
+          <motion.div
             className="hero-cta"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,9 +101,9 @@ export function Home() {
         <div className="container">
           <div className="about-grid">
             <SectionReveal direction="left" className="about-image-wrap">
-              <motion.img 
-                src="/assets/images/profile.jpeg" 
-                alt="Naufal Nabila" 
+              <motion.img
+                src="/assets/images/profile.jpeg"
+                alt="Naufal Nabila"
                 className="profile-img"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 200, damping: 20 }}
@@ -116,7 +116,7 @@ export function Home() {
                 Saya tidak mulai dari kode. Saya mulai dari memahami alur kerja, titik macet, dan kebiasaan tim — lalu membangunnya menjadi sistem yang benar-benar dipakai.
               </div>
             </SectionReveal>
-            
+
             <SectionReveal direction="up" className="about-content">
               <span className="section-eyebrow">Tentang</span>
               <h2 className="section-title">
@@ -197,6 +197,24 @@ export function Home() {
             <MagneticButton href="/services" primary={true}>
               Lihat Solusinya
             </MagneticButton>
+          </SectionReveal>
+        </div>
+      </section>
+
+      {/* CTA SECTION */}
+      <section className="cta-final">
+        <div className="container">
+          <SectionReveal direction="up" className="cta-content">
+            <h2>Siap Memulai?</h2>
+            <p>Mulai dari konsultasi workflow gratis atau diskusi proyek langsung.</p>
+            <div className="cta-buttons">
+              <MagneticButton href="mailto:hello@naufalnabila.my.id" primary={true}>
+                Diskusi Proyek
+              </MagneticButton>
+              <MagneticButton href="/case-studies" primary={false}>
+                Lihat Studi Kasus Dulu
+              </MagneticButton>
+            </div>
           </SectionReveal>
         </div>
       </section>

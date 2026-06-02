@@ -32,7 +32,7 @@ export function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div className="footer-links-group">
             <h4 className="footer-title">Services</h4>
             <ul className="footer-links">
@@ -41,7 +41,7 @@ export function Footer() {
               <li><NavLink to="/packages">Premium Packages</NavLink></li>
             </ul>
           </div>
-          
+
           <div className="footer-links-group">
             <h4 className="footer-title">Portfolio</h4>
             <ul className="footer-links">
@@ -59,7 +59,7 @@ export function Footer() {
             </MagneticButton>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
           <p>&copy; {currentYear} Naufal Nabila. All rights reserved.</p>
           <div className="footer-legal">

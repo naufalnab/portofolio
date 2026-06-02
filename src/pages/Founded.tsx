@@ -30,7 +30,7 @@ export function Founded() {
       <section className="platforms-section" id="platforms">
         <div className="container">
           <div className="platforms-grid">
-            
+
             <TiltCard className="platform-card" maxRotation={3}>
               <div className="platform-header">
                 <div className="platform-logo pb">PB</div>
@@ -125,7 +125,7 @@ export function Founded() {
       <section className="background-section" id="background">
         <div className="container">
           <div className="bg-grid">
-            
+
             {/* Timeline */}
             <SectionReveal direction="left" className="bg-col">
               <span className="section-eyebrow">Perjalanan</span>
@@ -166,9 +166,9 @@ export function Founded() {
             <SectionReveal direction="right" className="bg-col">
               <span className="section-eyebrow">Kredensial</span>
               <h2 className="section-title">Sertifikasi Industri</h2>
-              
+
               <div className="cert-list">
-                
+
                 <div className="cert-item">
                   <div className="cert-info">
                     <div className="cert-name">Back-End Application Development</div>
@@ -218,8 +218,8 @@ export function Founded() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-                
-                <button 
+
+                <button
                   className="cert-toggle"
                   onClick={() => setShowAllCerts(!showAllCerts)}
                 >

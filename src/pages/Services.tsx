@@ -3,6 +3,7 @@ import { SectionReveal } from '../components/ui/SectionReveal';
 import { TextReveal } from '../components/ui/TextReveal';
 import { TiltCard } from '../components/ui/TiltCard';
 import { StaggerList, StaggerItem } from '../components/ui/StaggerList';
+import { MagneticButton } from '../components/ui/MagneticButton';
 import './Services.css';
 
 export function Services() {
@@ -26,7 +27,7 @@ export function Services() {
       <section className="services-list" id="services">
         <div className="container">
           <div className="services-grid">
-            
+
             <TiltCard className="service-card" maxRotation={5}>
               <span className="service-icon">🤖</span>
               <h3>Otomasi Alur Kerja AI</h3>
@@ -113,7 +114,7 @@ export function Services() {
           </SectionReveal>
 
           <StaggerList className="process-grid" once={true}>
-            
+
             <StaggerItem className="process-step problem">
               <span className="process-step-num">01</span>
               <span className="process-step-icon">🗺️</span>
@@ -177,6 +178,19 @@ export function Services() {
             </StaggerItem>
 
           </StaggerList>
+        </div>
+      </section>
+
+      {/* CTA SECTION */}
+      <section className="services-cta">
+        <div className="container">
+          <SectionReveal direction="up" className="cta-box">
+            <h2>Siap Merapikan Operasional Anda?</h2>
+            <p>Mulai dari audit workflow gratis atau konsultasi sistem langsung. Tidak ada komitmen, hanya diskusi tentang kebutuhan bisnis Anda.</p>
+            <MagneticButton href="mailto:hello@naufalnabila.my.id" primary={true}>
+              Mulai Konsultasi
+            </MagneticButton>
+          </SectionReveal>
         </div>
       </section>
     </PageTransition>
