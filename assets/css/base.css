@@ -51,6 +51,7 @@ html.light-mode {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-clearance, 6rem);
 }
 
 body {
@@ -73,6 +74,10 @@ body {
 section {
     padding: 7rem 0;
     position: relative;
+}
+
+section[id] {
+    scroll-margin-top: var(--nav-clearance, 6rem);
 }
 
 .container {

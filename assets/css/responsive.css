@@ -18,12 +18,24 @@
 }
 
 @media (max-width: 900px) {
+    :root {
+        --nav-clearance: calc(5.5rem + env(safe-area-inset-top, 0px));
+    }
+
     section {
         padding: 5rem 0;
     }
 
+    body > section:first-of-type {
+        padding-top: max(5rem, var(--nav-clearance));
+    }
+
     .hero {
         padding: 8rem 0 5rem;
+    }
+
+    body > .hero:first-of-type {
+        padding-top: max(8rem, var(--nav-clearance));
     }
 
     .nav-toggle {
@@ -155,6 +167,14 @@
 
     section {
         padding: 4rem 0;
+    }
+
+    body > section:first-of-type {
+        padding-top: max(4rem, var(--nav-clearance));
+    }
+
+    body > .hero:first-of-type {
+        padding-top: max(7rem, var(--nav-clearance));
     }
 
     .container {

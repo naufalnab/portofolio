@@ -311,3 +311,45 @@
     font-size: 1rem;
     line-height: 1.65;
 }
+
+@media (max-width: 900px) {
+    .tier-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tier-card,
+    .svc-step,
+    .showcase-card {
+        min-width: 0;
+    }
+
+    .tier-card.featured {
+        transform: none;
+    }
+
+    .svc-flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 540px) {
+    .tier-card {
+        padding: 1.65rem;
+    }
+
+    .tier-flag {
+        position: static;
+        align-self: flex-start;
+        margin-bottom: 0.9rem;
+    }
+
+    .tier-price-amount {
+        font-size: 1.6rem;
+        overflow-wrap: anywhere;
+    }
+
+    .svc-flow,
+    .showcase-grid {
+        grid-template-columns: 1fr;
+    }
+}
