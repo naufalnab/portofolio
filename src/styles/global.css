@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Global Styles — reset, typography, base styles
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-clearance, 6rem);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: #0b0b0f;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-2);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-soft);
+}
+
+/* Layout primitives */
+section {
+  padding: 7rem 0;
+  position: relative;
+}
+
+section[id] {
+  scroll-margin-top: var(--nav-clearance, 6rem);
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: clamp(2.4rem, 4.8vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 720px;
+  line-height: 1.7;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --nav-clearance: calc(5.5rem + env(safe-area-inset-top, 0px));
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  body > main > section:first-of-type {
+    padding-top: max(5rem, var(--nav-clearance));
+  }
+}
+
+@media (max-width: 540px) {
+  body {
+    font-size: 17px;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  body > main > section:first-of-type {
+    padding-top: max(4rem, var(--nav-clearance));
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+}
