@@ -1,0 +1,1403 @@
+Berikut kritik tajam dan detailnya. Aku akan bahas sebagai portfolio personal / agency landing page untuk jasa sistem, dashboard, ERP, AI workflow, website, dan platform pembelajaran.
+
+Nilai sementara menurutku:
+
+Visual / desain: 8.6/10
+Copywriting: 7.4/10
+Positioning bisnis: 7.2/10
+Trust & credibility: 7.8/10
+Conversion / potensi dapat klien: 6.8/10
+Kerapian keseluruhan: 8.5/10
+
+Secara visual halaman ini sudah jauh lebih matang, premium, konsisten, dan terlihat seperti portfolio developer modern. Tapi dari sisi bisnis, halaman ini masih terlalu terasa seperti “portfolio orang pintar yang membangun banyak hal”, belum sepenuhnya menjadi “halaman penjualan yang membuat calon klien paham masalahnya, percaya, lalu ingin konsultasi.”
+
+Masalah terbesarnya bukan di estetika. Masalah terbesarnya ada di kejelasan target, kedalaman bukti, dan conversion path.
+
+1. Kesan pertama: sudah premium, tapi masih terlalu “developer-centric”
+
+Secara tampilan, halaman ini punya aura bagus: dark, clean, spacing lega, typography besar, gradient brand personal “Naufal Nabila”, card rapi, dan nuansa tech premium.
+
+Tapi begitu dibaca sebagai calon klien, ada sedikit kebingungan:
+
+“Ini orang jual jasa apa sebenarnya?”
+“Dia bikin website?”
+“Dia bikin ERP?”
+“Dia bikin AI automation?”
+“Dia founder platform pendidikan?”
+“Dia developer portfolio?”
+“Atau ini personal branding untuk karier?”
+
+Karena ada beberapa narasi yang bercampur:
+
+Personal portfolio developer.
+Agency/consultant sistem operasional.
+Founder beberapa platform EdTech.
+Penyedia jasa website development.
+Penyedia jasa AI video production.
+Penyedia jasa ERP/internal tool.
+Case studies B2B.
+Sertifikasi karier.
+
+Semua ini bagus, tapi harus ada hirarki. Saat ini kesannya seperti semua ingin ditonjolkan sekaligus.
+
+Saran arah besarnya:
+
+Jadikan narasi utama:
+
+“Saya membantu bisnis yang operasionalnya berantakan menjadi sistem digital yang rapi: dashboard, portal klien, ERP ringan, otomasi AI, dan internal tools.”
+
+Lalu semua elemen lain mendukung narasi itu.
+
+Jangan jadikan “saya membangun produk sendiri” sebagai pesan utama di home, kecuali targetnya investor, partner, atau personal branding founder. Kalau targetnya klien jasa, pesan itu harus menjadi bukti pendukung, bukan headline utama.
+
+2. Kritik besar untuk halaman Home
+Hero section: bagus secara visual, tapi headline masih bisa lebih menjual
+
+Headline sekarang:
+
+Membangun Sistem yang Mengubah Kekacauan menjadi Kejelasan.
+
+Ini sudah cukup kuat. Jauh lebih baik daripada sekadar “Full-Stack Developer”. Ada problem dan outcome. Namun masih agak abstrak.
+
+“Kekacauan” dan “kejelasan” bagus secara emosional, tapi calon klien B2B biasanya butuh segera tahu bentuk konkretnya. Kekacauan apa? Sistem apa? Untuk siapa?
+
+Versi yang lebih tajam:
+
+Ubah Operasional Manual Menjadi Dashboard, Workflow, dan Otomasi yang Rapi.
+
+Atau:
+
+Saya Membantu Bisnis Mengubah Spreadsheet, WhatsApp, dan Proses Manual Menjadi Sistem Operasional yang Terukur.
+
+Atau lebih premium:
+
+Bangun Sistem Internal yang Membuat Operasional Bisnis Lebih Rapi, Cepat, dan Mudah Dikontrol.
+
+Yang paling kuat menurutku:
+
+Dari WhatsApp, Spreadsheet, dan Tugas Manual — Menjadi Sistem Operasional yang Rapi.
+
+Kenapa ini kuat? Karena langsung menyebut realitas calon klien. Banyak bisnis tidak merasa “butuh sistem”, tapi mereka merasa:
+
+data berserakan di WhatsApp,
+file spreadsheet terlalu banyak,
+follow-up sering kelewat,
+owner tidak tahu progres,
+tim kerja manual,
+laporan lama dibuat,
+proses tergantung satu orang.
+
+Jadi copy harus lebih “mendarat”.
+
+Subheadline sekarang:
+
+Saya Naufal Nabila. Saya merancang, merencanakan, dan membangun dashboard, portal klien, internal tools, dan alur kerja AI yang mengotomatiskan operasional Anda yang berantakan.
+
+Ini sudah cukup jelas, tapi masih agak panjang dan repetitif karena “merancang, merencanakan, dan membangun” terasa mirip.
+
+Saran:
+
+Saya membantu bisnis merapikan operasional yang masih bergantung pada WhatsApp, spreadsheet, dan proses manual menjadi dashboard, portal klien, internal tools, dan otomasi AI yang bisa dipakai tim setiap hari.
+
+Ini lebih konkret.
+
+3. Badge “Tersedia untuk proyek” bagus, tapi kurang dimanfaatkan
+
+Badge hijau “Tersedia untuk proyek” bagus. Tapi posisinya masih terasa dekoratif.
+
+Saran: jadikan badge ini lebih conversion-driven.
+
+Misalnya:
+
+● Tersedia untuk 2 proyek baru bulan ini
+
+Atau:
+
+● Menerima proyek dashboard, ERP ringan, dan otomasi AI
+
+Atau:
+
+● Slot konsultasi proyek tersedia minggu ini
+
+Ini membuat calon klien merasa ada konteks nyata.
+
+“Tersedia untuk proyek” masih terlalu umum. Semua freelancer juga bisa bilang begitu.
+
+4. Before-after card di hero sangat bagus, tapi bisa dibuat lebih tajam
+
+Bagian “Sebelum → Sesudah” adalah salah satu elemen terbaik di halaman ini. Ini membuat jasa kamu langsung terasa konkret.
+
+Sekarang isi “Sebelum”:
+
+Percakapan WhatsApp berserakan
+Spreadsheet yang berantakan
+Pekerjaan admin manual berulang
+Tindak lanjut yang terlewat
+
+“Sesudah”:
+
+Dashboard terpusat
+Penerimaan klien otomatis
+Operasional dibantu AI
+Alur kerja yang terukur
+
+Ini bagus. Tapi akan lebih kuat kalau dibuat lebih spesifik dan sejajar.
+
+Contoh:
+
+Sebelum
+
+Order masuk dari banyak chat
+Data klien tersebar di spreadsheet
+Follow-up sering lupa
+Laporan dibuat manual
+
+Sesudah
+
+Semua data masuk ke dashboard
+Status pekerjaan terlihat real-time
+Reminder & follow-up otomatis
+Laporan siap tanpa rekap ulang
+
+Ini lebih mudah dibayangkan oleh calon klien.
+
+Masalah kecil: tulisan dalam card agak kecil dan kontrasnya rendah. Di screenshot, bagian “Sebelum” terlihat terlalu redup. Estetikanya bagus, tapi dari sisi readability kurang. Untuk bagian hero, semua teks harus mudah dibaca karena ini area jualan utama.
+
+5. Statistik di bawah hero bagus, tapi perlu pembuktian dan framing
+
+Statistik sekarang:
+
+5+ Tahun Pengalaman
+20+ Proyek Selesai
+15+ Organisasi Dilayani
+4 Platform EdTech Didirikan
+
+Ini bagus untuk trust. Tapi ada satu masalah: angkanya terlihat “dilempar” tanpa konteks. Apakah 20+ proyek itu website? dashboard? mobile app? AI? internal tool? Kalau calon klien B2B membaca, dia ingin tahu relevansinya.
+
+Saran:
+
+5+ Tahun membangun aplikasi web, mobile, ERP, dan dashboard
+20+ Proyek digital selesai
+15+ Organisasi & bisnis dibantu
+4 Platform pendidikan dibangun dan dijalankan
+
+Atau versi ringkas:
+
+5+
+Tahun membangun sistem digital
+
+20+
+Website, dashboard, aplikasi, dan otomasi selesai
+
+15+
+Bisnis & organisasi dilayani
+
+4
+Platform EdTech aktif dikembangkan
+
+Lebih menjual karena tidak hanya angka, tapi makna.
+
+6. Section “Tentang” kuat, tapi terlalu banyak teks kecil
+
+Bagian “Tentang” dengan foto kamu itu penting. Ini memberi wajah manusia. Bagus. Bahkan untuk personal service, foto nyata sangat membantu trust.
+
+Namun, ada beberapa masalah:
+
+Foto terlalu casual untuk positioning premium B2B
+
+Foto kamu terlihat real dan human, tapi untuk positioning “premium digital experiences for global clients”, foto ini agak terlalu santai. Bukan buruk, tapi belum sekuat narasi premium-nya.
+
+Kalau targetnya UMKM, founder, operator bisnis, foto ini masih oke. Kalau targetnya B2B yang lebih serius, sebaiknya gunakan foto yang:
+
+lebih terang,
+background lebih bersih,
+ekspresi lebih confident,
+pose lebih profesional,
+tetap natural, bukan corporate kaku.
+
+Tidak harus jas. Bisa tetap smart casual. Tapi pencahayaan dan komposisi perlu lebih premium.
+
+Quote bubble bagus, tapi kalimatnya perlu diperkuat
+
+Sekarang:
+
+Saya tidak sekadar menulis kode. Saya memetakan proses bisnis, merancang alur kerja, dan membangun sistem yang benar-benar bisa digunakan tim.
+
+Ini sudah bagus. Bisa dibuat lebih tajam:
+
+Saya tidak mulai dari kode. Saya mulai dari memahami alur kerja, titik macet, dan kebiasaan tim — lalu membangunnya menjadi sistem yang benar-benar dipakai.
+
+Ini lebih terasa konsultan, bukan hanya developer.
+
+Headline “Berfokus mengubah masalah bisnis yang kompleks menjadi sistem yang rapi dan cerdas.”
+
+Bagus, tapi agak panjang dan generik. “Masalah bisnis kompleks” terdengar luas sekali.
+
+Alternatif:
+
+Saya membangun sistem internal untuk bisnis yang mulai kewalahan dengan proses manual.
+
+Atau:
+
+Saya membantu owner dan tim operasional melihat, mengontrol, dan mengotomasi pekerjaan mereka dalam satu sistem.
+
+Lebih spesifik.
+
+Paragraf terlalu padat
+
+Teks panjang di “Tentang” cukup informatif, tapi karena font kecil dan line-height rapat, kemungkinan banyak orang tidak baca. Di landing page, bagian about harus cepat dipindai.
+
+Saran struktur:
+
+Siapa Saya
+Founder dan engineer dengan pengalaman 5+ tahun membangun aplikasi web, mobile, ERP ringan, dan otomasi AI.
+
+Apa yang Saya Bantu
+Saya membantu bisnis merapikan proses manual menjadi dashboard, portal klien, internal tools, sistem laporan, dan workflow AI.
+
+Bukti Kerja
+Membangun Pembelajar Belajar, Belajar Sekejap, AI Muta’allim, The Learning Learner, serta dipercaya oleh beberapa bisnis dan organisasi.
+
+Buat tiap paragraf lebih pendek. Jangan terlalu banyak koma dalam satu kalimat.
+
+7. Section Services: visual bagus, tapi copy masih campur antara problem, solusi, dan teknologi
+
+Halaman Services berjudul:
+
+Sistem yang Dibangun untuk Bekerja Sebagaimana Tim Anda Bekerja.
+
+Ini bagus, tapi agak abstrak. Bisa lebih lugas:
+
+Sistem yang Saya Bangun untuk Merapikan Operasional Bisnis Anda.
+
+Atau:
+
+Dari Dashboard, ERP Ringan, sampai Workflow AI — Dibangun Sesuai Cara Tim Anda Bekerja.
+
+Card-card service sudah bagus, tapi ada beberapa catatan serius.
+
+Service terlalu teknis di beberapa bagian
+
+Contoh:
+
+N8N · VERTEX AI · WEBHOOKS · OPENAI API
+
+Untuk calon klien non-teknis, ini bisa membuat mereka merasa “wah teknis sekali, apakah ini untuk saya?” Padahal kamu ingin mereka memahami manfaatnya.
+
+Teknologi boleh ditampilkan, tapi seharusnya sebagai lapisan kedua. Yang utama harus benefit.
+
+Misalnya card “Otomasi Alur Kerja AI”:
+
+Sekarang sudah menjelaskan masalah dengan cukup baik. Tapi akan lebih kuat kalau formatnya:
+
+Masalah yang diselesaikan:
+
+Tim membuang waktu untuk input data, merangkum dokumen, dan membalas hal berulang.
+Banyak pekerjaan bisa dibantu AI, tapi belum punya alur yang aman dan rapi.
+
+Yang dibangun:
+
+AI assistant internal
+Ringkasan otomatis
+Routing data
+Notifikasi
+Integrasi dengan database/dashboard
+
+Hasil:
+
+Admin lebih cepat
+Follow-up lebih rapi
+Owner bisa melihat proses tanpa mengecek manual
+
+Saat ini card terlihat cantik, tapi belum cukup “menusuk rasa sakit” calon klien.
+
+Nama service perlu disesuaikan dengan bahasa calon klien
+
+Beberapa nama sudah oke:
+
+Otomasi Alur Kerja AI
+Sistem Manajemen Operasional & ERP
+Aplikasi Mobile untuk Tenaga Lapangan
+Portal Klien & Dashboard Khusus
+Internal Tools & SOP Management
+Platform Pembelajaran AI
+
+Tapi “SOP Management” campur Inggris-Indonesia. Bisa pilih salah satu:
+
+Internal Tools & Manajemen SOP
+Alat Internal dan SOP Digital
+Sistem SOP dan Operasional Internal
+
+Kalau targetnya Indonesia/Malaysia, hindari campuran istilah kecuali brand voice kamu memang tech global.
+
+Card “Platform Pembelajaran AI” agak tidak satu keluarga dengan service lainnya
+
+Services lain fokus operasional bisnis. Lalu tiba-tiba ada “Platform Pembelajaran AI”. Ini masih relevan karena kamu punya EdTech, tapi untuk calon klien B2B umum, ini bisa terasa spesifik.
+
+Saran: pisahkan menjadi:
+
+Platform Pembelajaran & LMS
+bukan “Platform Pembelajaran AI”
+
+Karena calon klien mungkin butuh LMS biasa, training portal, member area, kursus online, sertifikat, progress tracking. Kata “AI” bisa membuatnya terdengar sempit.
+
+Lebih kuat:
+
+Platform Pembelajaran, LMS, dan Member Area
+Untuk bisnis edukasi, komunitas, training center, atau sekolah yang ingin punya sistem belajar online dengan progress, sertifikat, konten, dan dashboard admin.
+
+Ini lebih menjual.
+
+8. Section “Cara Saya Bekerja”: ini salah satu bagian terbaik, tapi masih bisa lebih powerful
+
+Judul:
+
+Dari operasi berantakan ke sistem terstruktur.
+
+Ini bagus sekali. Sangat sesuai positioning.
+
+Tiga tahap:
+
+Diagnosis Kekacauan
+Bangun Sistemnya
+Jadikan Operasional
+
+Ini sudah sangat kuat. Bahkan menurutku ini bisa menjadi inti metode kerja kamu.
+
+Tapi ada masalah kecil: tahap 1 tampilannya terlalu “merah/berbahaya” dibanding tahap 2 dan 3. Memang maksudnya problem, tapi card pertama terlihat seperti error state. Bisa tetap pakai aksen merah, tapi jangan terlalu dominan agar tidak terlihat seperti card rusak.
+
+Tahap 1: Diagnosis Kekacauan
+
+Copy sekarang sudah bagus:
+
+Temukan tugas berulang dan hambatan manual
+Kenali data yang berserakan dan pekerjaan ganda
+Dengarkan tim yang menjalani workflow itu
+Identifikasi apa yang sebenarnya menghambat pertumbuhan
+
+Ini bagus, tapi bisa dibuat lebih konkret:
+
+Audit alur kerja dari chat, spreadsheet, form, dan dokumen
+Petakan pekerjaan manual yang paling membuang waktu
+Temukan titik macet: approval, follow-up, input data, laporan
+Tentukan bagian mana yang perlu sistem, otomasi, atau SOP
+
+Output “Peta workflow, daftar hambatan, peluang otomasi” bagus.
+
+Tahap 2: Bangun Sistemnya
+
+Bagus. Tapi “ubah proses menjadi peran dan workflow” agak abstrak. Saran:
+
+Rancang database, role pengguna, status pekerjaan, dan alur approval
+Bangun dashboard, form, portal, atau modul ERP sesuai prioritas
+Sambungkan dengan WhatsApp, email, payment, spreadsheet, atau AI bila perlu
+Uji dengan kasus nyata dari operasional harian
+
+Output saat ini: dashboard, workflow AI, internal tool, panel admin. Bagus.
+
+Tahap 3: Jadikan Operasional
+
+Ini juga bagus. Tapi istilah “Jadikan Operasional” agak kurang natural dalam bahasa Indonesia. Lebih baik:
+
+Operasionalkan Sistemnya
+Luncurkan dan Latih Tim
+Jalankan, Ukur, dan Iterasi
+Buat Sistemnya Benar-benar Dipakai
+
+Menurutku yang paling kuat:
+
+Buat Sistemnya Benar-benar Dipakai
+
+Karena masalah terbesar software custom adalah: dibuat, tapi tidak dipakai.
+
+Isi bisa dibuat:
+
+Launch sistem ke tim secara bertahap
+Latih pengguna dan buat dokumentasi singkat
+Pantau penggunaan nyata selama masa awal
+Iterasi berdasarkan kebiasaan tim, bukan asumsi
+
+Output: Dokumentasi, serah terima, pelatihan tim, iterasi. Bagus.
+
+9. Section Projects Founded: bagus untuk kredibilitas, tapi hati-hati mengalihkan fokus
+
+Halaman “Founded” menampilkan:
+
+Pembelajar Belajar
+AI Muta’allim
+Belajar Sekejap
+The Learning Learner
+
+Ini bagus sebagai bukti bahwa kamu bukan hanya membangun untuk klien, tapi juga membangun produk sendiri. Namun, dalam konteks jasa, section ini harus diposisikan sebagai bukti pengalaman produk, bukan daftar kebanggaan semata.
+
+Headline sekarang:
+
+Membangun Produk dari Awal hingga Diluncurkan.
+
+Bagus, tapi masih lebih cocok untuk audience founder/investor. Untuk calon klien jasa, mungkin lebih tepat:
+
+Produk yang Saya Bangun dan Jalankan Sendiri.
+
+Atau:
+
+Saya Tidak Hanya Membuat Sistem untuk Klien — Saya Juga Membangun Produk Saya Sendiri.
+
+Ini lebih relatable.
+
+Subheadline sekarang:
+
+Selain membantu klien, saya membangun, meluncurkan, dan menskalakan platform saya sendiri. Inilah yang saya pelajari tentang retensi pengguna, infrastruktur, dan produk manajemen di dunia nyata.
+
+Ada sedikit kesalahan naturalness: “produk manajemen” kurang pas. Seharusnya “manajemen produk”.
+
+Saran:
+
+Selain membantu klien, saya juga membangun dan menjalankan platform saya sendiri. Dari sini saya belajar langsung tentang retensi pengguna, infrastruktur, konten, otomasi, pembayaran, dan manajemen produk di dunia nyata.
+
+Lebih kuat.
+
+Card produk bagus, tapi kurang bukti real
+
+Card Pembelajar Belajar punya metric: 4 bahasa dan 100% video AI. Bagus. Tapi card lain tidak punya metric, sehingga terlihat tidak seimbang.
+
+Saran: setiap card punya minimal 2 metrik/atribut:
+
+Pembelajar Belajar
+
+4 bahasa
+100% video AI
+EdTech global
+
+AI Muta’allim
+
+LMS berbasis Moodle
+Progress tracking
+Sertifikasi
+
+Belajar Sekejap
+
+Mobile-first
+Micro-learning
+Malaysia market
+
+The Learning Learner
+
+English content
+Article network
+Global audience
+
+Atau kalau belum ada data, jangan paksa angka. Pakai label fitur.
+
+Label “Aktif Beroperasi” bagus, tapi mungkin terlalu banyak
+
+Semua card punya badge “Aktif Beroperasi”. Ini bagus sebagai trust. Tapi jika semua sama, efeknya berkurang. Bisa diganti status yang berbeda:
+
+Aktif Beroperasi
+Dalam Pengembangan
+Publik
+Private Beta
+Live Platform
+
+Kalau memang semuanya aktif, tetap oke. Tapi bisa dibuat lebih kecil agar tidak terlalu dominan.
+
+10. Section Career & Certifications: bagus, tapi mungkin tidak perlu terlalu tinggi prioritasnya
+
+Bagian “Lintasan Karier” dan “Sertifikasi Industri” memberi kredibilitas. Tapi untuk landing page jasa, ini bukan yang paling penting.
+
+Masalahnya: calon klien lebih peduli:
+
+Pernah menyelesaikan masalah seperti saya?
+Bisa dipercaya?
+Hasilnya apa?
+Berapa lama?
+Berapa kisaran biaya?
+Bagaimana proses kerja?
+Apa next step?
+
+Sertifikasi dari Dicoding dan AWS bagus, tapi untuk B2B service, jangan sampai terlihat seperti halaman CV. Kalau homepage terlalu menonjolkan karier dan sertifikasi, positioning berubah dari “consultant/vendor” menjadi “job-seeker/developer portfolio”.
+
+Saran:
+
+Pindahkan “Lintasan Karier” dan “Sertifikasi” ke halaman About atau bagian bawah. Di homepage, cukup ringkas:
+
+Dipercaya membangun aplikasi web, mobile, ERP ringan, dan workflow AI sejak 2019. Bersertifikasi AWS Cloud Practitioner dan beberapa program software development.
+
+Jangan terlalu dominan.
+
+Kalau halaman “Founded” memang untuk personal portfolio, tidak masalah. Tapi untuk jasa, prioritasnya perlu diturunkan.
+
+11. Case Studies: desain bagus, tapi masih terlalu “summary”, belum benar-benar studi kasus
+
+Halaman Case Studies punya headline:
+
+Studi Kasus: Sistem di Dunia Nyata.
+
+Ini bagus. Tapi isi card-nya masih seperti ringkasan project, belum studi kasus.
+
+Studi kasus yang kuat biasanya punya struktur:
+
+Masalah awal
+Tantangan
+Solusi yang dibangun
+Teknologi
+Hasil terukur
+Dampak bisnis
+
+Sekarang card case study berisi deskripsi singkat dan tech stack. Belum ada kedalaman.
+
+Contoh card:
+
+Sistem Pembuatan Video Multi-Bahasa
+Mengembangkan pipeline AI komprehensif untuk merek EdTech untuk secara otomatis menerjemahkan, men-dubbing, dan mempublikasikan konten pendidikan ke dalam 4 bahasa. Mengurangi waktu produksi sebesar 80% dan memungkinkan jangkauan audiens global.
+
+Ini yang paling kuat karena ada angka 80%. Tapi masih bisa jauh lebih tajam:
+
+Masalah:
+Produksi video multi-bahasa membutuhkan proses manual: translate, voice over, editing, upload, dan penyesuaian metadata.
+
+Solusi:
+Membangun workflow otomatis menggunakan n8n, Vertex AI, ElevenLabs/voice AI, subtitle pipeline, dan publishing automation.
+
+Hasil:
+Waktu produksi turun ±80%, konten bisa diproduksi dalam 4 bahasa, dan proses tidak bergantung sepenuhnya pada editor manual.
+
+Ini baru terasa seperti case study.
+
+Card “Digitalisasi Rantai Pasok Manufaktur”
+
+Bagus, tapi perlu lebih spesifik.
+
+Sekarang:
+
+mengintegrasikan 12 spreadsheet berbeda, memberikan visibilitas real-time ke tingkat inventaris, dan mengotomatiskan proses persetujuan pengadaan.
+
+Ini sudah kuat. Tapi perlu hasil:
+
+Berapa jam hemat?
+Kesalahan stok berkurang?
+Approval lebih cepat?
+Owner bisa lihat stok harian?
+Divisi mana yang terlibat?
+
+Kalau belum ada data, tulis “membantu tim memantau”. Jangan klaim terlalu besar tanpa bukti.
+
+Card “Aplikasi Teknisi Lapangan Offline-First”
+
+Ini juga bagus. Ada hasil “menghilangkan 15 jam entry data manual setiap minggu”. Ini kuat.
+
+Saran: tonjolkan hasil ini secara visual. Jangan hanya di paragraf kecil. Buat badge besar:
+
+15 jam/minggu pekerjaan manual dihapus
+
+Atau:
+
+Offline-first
+Auto-sync
+-15 jam input manual/minggu
+
+Case study harus menjual hasil, bukan hanya teknologi.
+
+12. Section “Dipercaya oleh bisnis yang sedang berkembang” bagus, tapi rawan terlihat fiktif
+
+Bagian daftar klien sangat penting. Tapi perlu hati-hati: kalau tidak ada logo asli, nama-nama seperti “Telkom Sigma”, “Yamaha Motor Parts”, “PT SUCOFINDO” bisa membuat trust naik, tapi juga bisa membuat orang bertanya:
+
+“Ini benar kerja langsung dengan mereka atau hanya proyek tidak langsung?”
+“Apakah boleh menampilkan nama mereka?”
+“Ada link / bukti / testimoni?”
+
+Kalau memang benar, bagus. Tapi kalau sebagian melalui vendor, freelance, subcontract, atau simulasi, sebaiknya jujur dalam wording.
+
+Misalnya:
+
+“Pernah terlibat dalam proyek untuk/bersama…”
+“Pengalaman proyek mencakup…”
+“Beberapa organisasi yang pernah saya bantu / proyek terkait…”
+
+Jangan pakai “Dipercaya oleh” kalau relasinya tidak langsung atau belum ada izin eksplisit. Itu bisa jadi risiko trust.
+
+Lebih aman:
+
+Pengalaman proyek lintas industri.
+
+Lalu bawahnya:
+
+Saya pernah membangun sistem untuk kebutuhan telekomunikasi, manufaktur otomotif, konstruksi, sertifikasi, fintech syariah, dan platform pendidikan.
+
+Kalau punya izin tampilkan klien, baru gunakan “Dipercaya oleh”.
+
+Card klien terlalu kecil dan kurang kuat
+
+Setiap card punya nama dan deskripsi, tapi secara visual terlihat seperti filler. Akan lebih kuat jika ada kategori problem:
+
+Telkom Sigma
+Layanan TI dan data center
+Sistem manajemen layanan dan solusi data center.
+
+Ini oke, tapi lebih baik kalau bentuknya:
+
+Telkom Sigma
+Area: Telekomunikasi & IT
+Kontribusi: sistem manajemen layanan / dashboard / internal tool
+
+Lebih jelas.
+
+13. Footer rapi, tapi CTA terlalu lemah
+
+Footer bagus, rapi, premium. Namun CTA “Let’s Talk” terlalu kecil dan hanya ada di footer. Untuk halaman jasa, ini kurang agresif.
+
+Di seluruh halaman, CTA utama harus muncul beberapa kali:
+
+Di hero.
+Setelah services.
+Setelah cara kerja.
+Setelah case studies.
+Footer.
+
+Sekarang CTA utama terlihat hanya “Lihat Proyek Pilihan” dan “Let’s Talk”. Ini belum cukup.
+
+Saran CTA:
+
+Konsultasikan Sistem Anda
+Diskusikan Proyek
+Audit Workflow Gratis
+Ceritakan Masalah Operasional Anda
+Minta Estimasi Sistem
+Jadwalkan Konsultasi
+
+Untuk market Indonesia, “Let’s Talk” terasa keren tapi kurang action-oriented. Lebih baik:
+
+Diskusi Proyek
+
+Atau:
+
+Konsultasi Sistem
+
+Kalau tetap ingin English, gunakan “Start a Project”. Tapi karena konten utama Indonesia, CTA juga sebaiknya Indonesia.
+
+14. Masalah bahasa: campuran Indonesia-English perlu diputuskan
+
+Halaman ini campur:
+
+Home
+Services
+Case Studies
+Founded
+Start a Project
+Let’s Talk
+Premium Packages
+Website Development
+AI Video Production
+Projects Founded
+All Services
+Privacy Policy
+
+Tapi isi utama Indonesia.
+
+Ini tidak salah, karena target mungkin global. Tapi kalau halaman ID, sebaiknya lebih konsisten.
+
+Saran untuk versi Indonesia:
+
+Home → Beranda
+Services → Layanan
+Case Studies → Studi Kasus
+Founded → Produk
+Start a Project → Mulai Proyek
+Let’s Talk → Diskusi
+Premium Packages → Paket Premium
+Website Development → Pengembangan Website
+AI Video Production → Produksi Video AI
+Projects Founded → Produk Dibangun
+All Services → Semua Layanan
+
+Kalau kamu ingin terlihat global, boleh pakai English di nav, tapi isi harus mendukung. Saat ini ada toggle ID/EN, jadi lebih baik tiap bahasa benar-benar konsisten.
+
+15. Masalah positioning: “Full-Stack Developer & UI/UX Engineer” mungkin terlalu kecil untuk jasa yang ditawarkan
+
+Footer menyebut:
+
+Independent Full-Stack Developer & UI/UX Engineer based in Indonesia, building premium digital experiences for global clients.
+
+Ini terdengar bagus, tapi kurang cocok dengan layanan kamu yang lebih besar:
+
+ERP
+dashboard
+portal klien
+workflow AI
+internal tools
+LMS
+automation
+business process mapping
+
+“Full-Stack Developer & UI/UX Engineer” membuat orang membayangkan kamu hanya eksekutor teknis. Padahal halaman mencoba memosisikan kamu sebagai problem-solver operasional.
+
+Alternatif positioning:
+
+Independent System Builder & Full-Stack Developer based in Indonesia, helping businesses turn manual operations into dashboards, internal tools, and AI-powered workflows.
+
+Versi Indonesia:
+
+Saya membantu bisnis mengubah proses manual menjadi dashboard, internal tools, portal klien, dan otomasi AI yang siap dipakai tim.
+
+Atau:
+
+System Builder, Full-Stack Developer, dan AI Workflow Consultant untuk bisnis yang ingin merapikan operasional digitalnya.
+
+Istilah System Builder cocok untuk kamu. Lebih luas dari developer, tapi tidak terlalu buzzword.
+
+16. Kelemahan terbesar: belum ada “paket / bentuk kerja / estimasi mulai dari”
+
+Saat calon klien tertarik, mereka akan bertanya:
+
+Mulai dari berapa?
+Proyek seperti ini biasanya berapa lama?
+Apakah bisa mulai kecil?
+Apakah ada audit dulu?
+Apakah bisa maintenance?
+Apakah hanya coding atau sampai training tim?
+Apakah bisa integrasi WhatsApp/payment/API?
+Apakah bisa pakai sistem yang sudah ada?
+
+Halaman ini belum menjawab.
+
+Kamu tidak harus tampilkan harga final, tapi minimal tampilkan bentuk engagement.
+
+Contoh:
+
+Cara Mulai Kerja Sama
+
+1. Workflow Audit
+Untuk bisnis yang belum tahu sistem apa yang perlu dibangun.
+Output: peta proses, daftar masalah, rekomendasi sistem.
+
+2. MVP Dashboard / Internal Tool
+Untuk mulai dari satu alur penting seperti leads, order, inventory, laporan, atau approval.
+Estimasi: 2–4 minggu.
+
+3. Custom System Build
+Untuk dashboard, portal, ERP ringan, LMS, atau workflow AI yang lebih lengkap.
+Estimasi: 1–3 bulan.
+
+4. Maintenance & Iteration
+Untuk update fitur, perbaikan bug, training tim, dan optimasi sistem.
+
+Ini akan meningkatkan conversion besar-besaran.
+
+17. Belum ada testimoni manusia
+
+Halaman ini punya “clients”, “case studies”, “certifications”, dan “founded products”. Tapi belum ada suara manusia.
+
+Testimoni sangat penting, apalagi untuk jasa custom system. Orang ingin tahu:
+
+Apakah kamu enak diajak komunikasi?
+Apakah bisa memahami bisnis?
+Apakah tepat waktu?
+Apakah setelah selesai masih dibantu?
+Apakah sistemnya benar-benar dipakai?
+
+Tambahkan 2–3 testimoni pendek.
+
+Format:
+
+“Sebelumnya proses laporan kami masih manual dan tersebar. Setelah dibuatkan dashboard, tim bisa melihat status pekerjaan dan laporan lebih cepat.”
+Nama — Jabatan, Perusahaan
+
+Kalau belum bisa pakai nama asli, gunakan:
+
+Founder bisnis edukasi
+Manajer operasional manufaktur
+Tim administrasi lembaga pendidikan
+
+Tapi testimoni anonim kurang kuat. Idealnya nama asli.
+
+18. Desain visual: sangat rapi, tapi ada beberapa isu
+Terlalu banyak ruang kosong di beberapa area
+
+Dark premium memang butuh ruang napas. Tapi di beberapa halaman, jarak antar section terasa terlalu panjang. Ini membuat halaman terasa sinematik tapi bisa memperlambat scanning.
+
+Terutama bagian:
+
+setelah hero menuju statistik,
+antara hero dan about,
+halaman case studies bagian atas,
+halaman founded bagian atas.
+
+Untuk portfolio artistik, ini oke. Untuk landing jasa, sebaiknya lebih padat sedikit agar pesan cepat sampai.
+
+Kontras teks kecil kurang kuat
+
+Banyak paragraf abu-abu kecil di atas background gelap. Secara estetika bagus, tapi readability agak menurun.
+
+Saran:
+
+Naikkan ukuran body text sedikit.
+Naikkan contrast dari gray rendah ke gray yang lebih terang.
+Hindari teks panjang dengan font terlalu kecil.
+Pastikan line-height nyaman.
+
+Calon klien usia 35–50 mungkin tidak nyaman membaca teks kecil seperti ini.
+
+Icon emoji di service card kurang konsisten dengan premium feel
+
+Ada icon seperti robot, chart, smartphone, laptop, gedung, graduation cap. Ini membuat card lebih hidup, tapi sebagian terasa seperti emoji default, bukan ikon custom premium.
+
+Kalau ingin lebih premium, gunakan:
+
+line icons custom,
+3D minimal icons dengan style konsisten,
+atau icon monochrome cyan/purple.
+
+Emoji membuat halaman sedikit turun kelas dari “premium consultant” menjadi “personal fun portfolio”. Bukan fatal, tapi perlu diputuskan.
+
+Brand gradient cyan-pink bagus, tapi jangan terlalu banyak aksen
+
+Naufal Nabila dengan gradient cyan-pink bagus. Kata “Kejelasan” juga gradient. Aksen cyan di label bagus. Namun pastikan tidak semua elemen berebut perhatian. CTA sebaiknya punya warna paling jelas.
+
+Sekarang CTA putih “Let’s Talk” tidak terlalu nyambung dengan warna brand, tapi cukup kontras. Bisa tetap putih, tapi CTA utama di hero sebaiknya lebih kuat.
+
+19. Navigasi: “Founded” kurang jelas
+
+Menu:
+
+Home
+Services
+Case Studies
+Founded
+
+“Founded” secara bahasa agak aneh sebagai menu. Maksudnya “Projects Founded” atau “Founded Products”. Untuk user umum, “Founded” sendiri kurang jelas.
+
+Saran:
+
+Produk
+My Products
+Built Products
+Projects
+Ventures
+Produk Saya
+
+Kalau halaman Indonesia:
+
+Beranda
+Layanan
+Studi Kasus
+Produk
+Kontak
+
+Menurutku harus ada “Kontak” di nav. Jangan hanya CTA footer.
+
+20. Halaman Case Studies perlu tombol detail
+
+Sekarang case study card terlihat tidak bisa diklik atau tidak ada CTA jelas. Kalau hanya ringkasan, calon klien tidak bisa menggali.
+
+Tambahkan:
+
+Lihat studi kasus
+Baca detail
+Apa yang dibangun
+Hasil proyek
+
+Buat minimal 1 case study detail yang benar-benar panjang. Misalnya:
+
+Sistem Pembuatan Video Multi-Bahasa
+
+Background
+Problem
+Workflow lama
+Workflow baru
+Tools
+Arsitektur
+Tantangan
+Hasil
+Screenshot anonymized
+Lessons learned
+
+Ini akan membuat kredibilitas kamu naik jauh.
+
+21. Halaman Services perlu “siapa yang cocok”
+
+Setiap service perlu menjawab “ini cocok untuk siapa?”
+
+Contoh:
+
+Otomasi Alur Kerja AI
+
+Cocok untuk:
+
+tim admin yang sering copy-paste data,
+bisnis yang banyak menerima dokumen,
+lembaga edukasi yang ingin produksi konten lebih cepat,
+owner yang ingin laporan otomatis.
+ERP Ringan & Operasional
+
+Cocok untuk:
+
+manufaktur kecil-menengah,
+distribusi,
+bisnis jasa dengan banyak status pekerjaan,
+tim yang sudah kewalahan dengan spreadsheet.
+Portal Klien
+
+Cocok untuk:
+
+agency,
+konsultan,
+vendor jasa,
+lembaga training,
+bisnis yang sering update progres ke klien.
+
+Ini membuat calon klien merasa “ini untuk saya”.
+
+22. Copy “premium digital experiences for global clients” kurang cocok dengan isi utama
+
+Frasa ini terdengar bagus, tapi terlalu umum dan agak template. Banyak website designer memakai kata-kata seperti:
+
+premium digital experiences
+global clients
+modern solutions
+seamless workflows
+
+Padahal kekuatan kamu justru di konkret:
+
+dashboard,
+ERP,
+workflow,
+AI automation,
+internal tools,
+portal,
+LMS.
+
+Lebih baik buang frasa generic dan pakai kalimat yang lebih spesifik.
+
+Contoh footer:
+
+Saya membantu bisnis membangun website, dashboard, portal klien, internal tools, LMS, dan workflow AI — dari mapping proses sampai sistem siap dipakai tim.
+
+Ini lebih menjual daripada “premium digital experiences”.
+
+23. Struktur homepage yang lebih kuat
+
+Menurutku urutan homepage ideal:
+
+Hero
+headline problem-solution
+subheadline
+CTA utama: Konsultasikan Sistem
+CTA sekunder: Lihat Studi Kasus
+before-after
+Problem Section
+“Apakah operasional Anda masih seperti ini?”
+WhatsApp berserakan
+spreadsheet banyak versi
+laporan manual
+follow-up kelewat
+owner tidak punya visibility
+Solution Section
+dashboard
+portal
+ERP ringan
+automation
+workflow AI
+Services
+4–6 layanan utama
+Process
+Diagnosis → Bangun → Launch & Iterate
+Case Studies
+3 proyek dengan hasil terukur
+Founded Products
+sebagai bukti kamu bisa build product end-to-end
+Testimonials / Clients
+trust
+About
+ringkas
+CTA akhir
+“Ceritakan workflow yang ingin Anda rapikan.”
+
+Saat ini About muncul terlalu cepat setelah hero. Tidak salah, tapi untuk jasa, lebih baik calon klien dulu merasa masalahnya dipahami.
+
+24. Tambahkan section “Masalah yang biasa saya bantu”
+
+Ini sangat penting. Kamu butuh section yang membuat calon klien merasa tertampar.
+
+Contoh:
+
+Masalah yang Biasanya Saya Bantu Rapikan
+Data klien tersebar di WhatsApp, spreadsheet, dan catatan manual.
+Tim harus input data yang sama berkali-kali.
+Owner sulit melihat status pekerjaan secara real-time.
+Laporan butuh waktu lama karena harus direkap manual.
+Approval dan follow-up sering tertunda.
+Sistem yang ada terlalu kaku atau tidak sesuai cara tim bekerja.
+AI sudah ingin dipakai, tapi belum tahu alur yang aman dan berguna.
+
+Lalu lanjut:
+
+Kalau masalahnya seperti ini, biasanya solusinya bukan sekadar website. Anda butuh sistem operasional yang dirancang sesuai alur kerja tim.
+
+Ini akan sangat kuat.
+
+25. Tambahkan section “Bukan sekadar bikin website”
+
+Karena kamu juga menjual website development, tapi sebenarnya positioning lebih tinggi dari website biasa. Kamu bisa bikin section:
+
+Bukan Sekadar Website
+
+Website hanya bagian depan. Yang sering lebih penting adalah sistem di belakangnya:
+
+dashboard admin,
+database,
+workflow internal,
+form penerimaan klien,
+laporan otomatis,
+integrasi WhatsApp/email/payment,
+portal klien,
+AI assistant untuk pekerjaan berulang.
+
+Ini membedakan kamu dari jasa website murah.
+
+26. Perlu memperjelas target klien
+
+Saat ini halaman bisa menarik banyak orang, tapi belum spesifik. Kamu perlu menentukan target utama.
+
+Kemungkinan target terbaik untuk kamu:
+
+Founder UMKM/SME yang operasionalnya mulai kompleks.
+Lembaga pendidikan / EdTech / training center.
+Agency atau konsultan yang butuh portal klien.
+Bisnis jasa yang banyak workflow dan follow-up.
+Manufaktur/distribusi kecil-menengah yang masih pakai spreadsheet.
+Organisasi yang butuh LMS/internal dashboard.
+
+Kalau semua target dimasukkan sekaligus, halaman melebar. Saran: jadikan narasi utama untuk bisnis yang operasionalnya manual dan ingin sistem custom. Lalu EdTech, manufaktur, agency, dan konstruksi masuk sebagai contoh industri.
+
+27. Kredibilitas perlu dibuat lebih “terverifikasi”
+
+Kamu punya banyak klaim bagus:
+
+20+ proyek
+15+ organisasi
+4 platform EdTech
+Telkom Sigma
+Yamaha Motor Parts
+SUCOFINDO
+Crypto Syariah Indonesia
+80% waktu produksi berkurang
+15 jam/minggu entry data manual hilang
+
+Ini semua kuat. Tapi perlu tampil dengan cara yang terasa trustworthy.
+
+Saran:
+
+Tambahkan link ke produk yang aktif.
+Tambahkan screenshot dashboard, meskipun disamarkan.
+Tambahkan testimoni.
+Tambahkan “Selected work” dengan detail.
+Tambahkan “Role saya dalam proyek”.
+Tambahkan “Tech stack”.
+Tambahkan “Status: live / internal / private”.
+
+Untuk klaim klien besar, tambahkan konteks:
+
+Peran: developer / system implementer / subcontract / founder / consultant.
+
+Ini membuat kamu terlihat jujur dan profesional.
+
+28. Halaman terlalu sedikit menunjukkan hasil visual sistem
+
+Untuk jasa dashboard/internal tools, screenshot atau mockup sangat penting. Saat ini halaman banyak card teks, tapi kurang bukti visual berupa:
+
+screenshot dashboard,
+diagram workflow,
+tampilan portal klien,
+contoh form,
+contoh laporan,
+contoh before-after proses,
+contoh automation flow.
+
+Calon klien ingin melihat “oh sistemnya seperti ini”. Jika tidak bisa tampilkan data asli, buat dummy/anonymized.
+
+Tambahkan section:
+
+Contoh Sistem yang Bisa Dibangun
+Dashboard status proyek
+CRM sederhana
+Portal klien
+ERP inventory ringan
+Approval pengadaan
+LMS + sertifikat
+AI content pipeline
+Rekap laporan otomatis
+
+Setiap contoh bisa pakai mini preview.
+
+Ini akan meningkatkan trust dan membuat jasa kamu lebih kebayang.
+
+29. CTA utama harus lebih sering dan lebih spesifik
+
+Saat ini “Lihat Proyek Pilihan” bagus, tapi bukan CTA pembelian. “Let’s Talk” juga terlalu umum.
+
+Saran CTA utama:
+
+Ceritakan Workflow Anda
+
+Atau:
+
+Konsultasikan Sistem Anda
+
+Atau:
+
+Minta Audit Workflow
+
+CTA sekunder:
+
+Lihat Studi Kasus
+
+Hero ideal:
+
+CTA utama: Konsultasikan Sistem
+CTA sekunder: Lihat Studi Kasus
+
+Setelah Services:
+
+Punya proses manual yang ingin dirapikan?
+Diskusikan Sistem yang Anda Butuhkan
+
+Setelah Case Studies:
+
+Ingin hasil seperti ini untuk bisnis Anda?
+Mulai dari Audit Workflow
+
+Footer:
+
+Operasional masih berantakan di WhatsApp dan spreadsheet?
+Ceritakan masalahnya — saya bantu petakan sistemnya.
+
+30. Copy yang perlu diperbaiki satu per satu
+
+Beberapa kalimat yang menurutku perlu revisi:
+
+“Membangun Produk dari Awal hingga Diluncurkan.”
+
+Lebih kuat:
+
+Produk yang Saya Bangun, Jalankan, dan Kembangkan Sendiri.
+
+“Inilah yang saya pelajari tentang retensi pengguna, infrastruktur, dan produk manajemen di dunia nyata.”
+
+Perbaiki:
+
+Dari sini saya belajar langsung tentang retensi pengguna, infrastruktur, otomasi konten, dan manajemen produk di dunia nyata.
+
+“Sistem perangkat lunak yang hebat tidak terasa seperti perangkat lunak.”
+
+Bagus, tapi agak filosofis. Bisa dibuat lebih grounded:
+
+Sistem yang baik tidak memaksa tim berubah total. Sistem yang baik mengikuti cara kerja tim — lalu membuatnya lebih rapi.
+
+“Sistem yang Dibangun untuk Bekerja Sebagaimana Tim Anda Bekerja.”
+
+Lebih natural:
+
+Sistem yang Dibangun Sesuai Alur Kerja Tim Anda.
+
+“Dari operasi berantakan ke sistem terstruktur.”
+
+Bagus. Bisa dipertahankan.
+
+“Jadikan Operasional”
+
+Kurang natural. Ganti:
+
+Luncurkan dan Operasionalkan
+
+atau
+
+Buat Sistemnya Benar-benar Dipakai
+
+“Dipercaya oleh bisnis yang sedang berkembang.”
+
+Bagus jika memang ada izin. Kalau tidak:
+
+Pengalaman proyek lintas industri.
+
+“Start a Project”
+
+Kalau halaman ID:
+
+Mulai Proyek
+
+“Let’s Talk”
+
+Kalau halaman ID:
+
+Diskusi Proyek
+
+31. Saran headline final untuk homepage
+
+Beberapa opsi yang menurutku cocok:
+
+Opsi 1 — paling jelas dan menjual
+
+Ubah Operasional Manual Menjadi Sistem Digital yang Rapi.
+
+Subheadline:
+
+Saya membantu bisnis merapikan proses yang masih bergantung pada WhatsApp, spreadsheet, dan pekerjaan manual menjadi dashboard, portal klien, internal tools, dan otomasi AI.
+
+Opsi 2 — lebih emosional
+
+Dari Kekacauan Operasional Menjadi Sistem yang Bisa Dikontrol.
+
+Subheadline:
+
+Saya membangun dashboard, ERP ringan, portal klien, dan workflow AI agar tim Anda tidak lagi tenggelam dalam data berserakan, follow-up manual, dan laporan yang terlambat.
+
+Opsi 3 — lebih premium
+
+Bangun Sistem Internal yang Membuat Bisnis Lebih Mudah Dijalankan.
+
+Subheadline:
+
+Dari mapping proses sampai sistem siap dipakai, saya membantu bisnis membangun dashboard, portal, otomasi, dan internal tools yang sesuai dengan cara kerja tim.
+
+Opsi 4 — lebih tajam
+
+Masih Mengurus Bisnis dari WhatsApp dan Spreadsheet? Saatnya Dibuatkan Sistem.
+
+Subheadline:
+
+Saya membantu merancang dan membangun sistem operasional custom: dashboard, portal klien, ERP ringan, workflow AI, dan laporan otomatis.
+
+Menurutku opsi 4 paling “nendang” untuk conversion. Opsi 1 paling aman dan profesional.
+
+32. Bagian yang sudah sangat bagus dan layak dipertahankan
+
+Agar jelas mana yang jangan diubah total:
+
+Dark premium look sudah bagus.
+Gradient brand Naufal Nabila menarik.
+Before-after hero sangat bagus dan harus dipertahankan.
+Statistik 5+, 20+, 15+, 4 bagus.
+Foto personal bagus untuk trust, meski bisa ditingkatkan.
+Services card sudah rapi.
+Process 3 langkah sangat kuat.
+Case studies dengan hasil angka adalah arah yang benar.
+Founded products memberi diferensiasi kuat.
+Footer rapi dan profesional.
+
+Jadi jangan rombak visual total. Yang perlu diperkuat adalah pesan, hirarki, bukti, dan CTA.
+
+33. Prioritas perbaikan paling penting
+
+Kalau kamu mau memperbaiki dengan urutan paling berdampak, lakukan ini:
+
+Prioritas 1: Perjelas positioning di hero
+
+Jangan biarkan orang menebak jasa kamu. Sebut langsung:
+
+dashboard,
+internal tools,
+ERP ringan,
+portal klien,
+workflow AI,
+dari WhatsApp/spreadsheet/manual menjadi sistem.
+Prioritas 2: Tambahkan CTA utama di hero
+
+Tambahkan dua tombol:
+
+Konsultasikan Sistem
+Lihat Studi Kasus
+Prioritas 3: Tambahkan section problem
+
+Sebelum services, tambahkan section:
+
+“Masalah yang biasa saya bantu rapikan”
+
+Ini akan membuat pengunjung merasa relate.
+
+Prioritas 4: Ubah case studies menjadi hasil terukur
+
+Setiap case study harus punya:
+
+problem,
+solution,
+result,
+tech stack.
+
+Minimal tampilkan hasil besar dalam angka/badge.
+
+Prioritas 5: Tambahkan bentuk kerja sama
+
+Tambahkan:
+
+Workflow Audit
+MVP Dashboard
+Custom System Build
+Maintenance & Iteration
+
+Ini membantu calon klien tahu cara mulai.
+
+Prioritas 6: Tambahkan testimoni
+
+Minimal 2 testimoni pendek.
+
+Prioritas 7: Konsistenkan bahasa ID/EN
+
+Kalau page ID, semua nav dan CTA sebaiknya Indonesia.
+
+34. Versi struktur homepage yang aku sarankan
+
+Ini susunan final yang menurutku paling kuat:
+
+Navbar
+Hero:
+badge slot proyek
+headline problem-solution
+subheadline
+CTA utama & sekunder
+before-after card
+stats
+Problem:
+WhatsApp berserakan
+spreadsheet banyak versi
+follow-up kelewat
+laporan manual
+approval lambat
+Services:
+Dashboard & Internal Tools
+ERP Ringan
+Portal Klien
+Workflow AI
+LMS / Platform Pembelajaran
+Mobile Field App
+Process:
+Audit Workflow
+Bangun Sistem
+Launch & Iterasi
+Case Studies:
+AI Video Pipeline
+ERP Supply Chain
+Offline Field App
+Founded Products:
+4 platform EdTech
+Testimonials / Clients
+About
+Final CTA
+Footer
+
+Dengan struktur ini, halamanmu akan terasa lebih seperti halaman bisnis yang menjual, bukan sekadar portfolio indah.
+
+35. Kesimpulan jujur
+
+Desain halaman ini sudah bagus. Secara visual kamu sudah masuk level profesional. Tidak terlihat murahan. Tidak terlihat template asal. Ada identitas, konsistensi, dan rasa premium.
+
+Tapi secara bisnis, halaman ini masih punya tiga kelemahan besar:
+
+Pertama, positioning belum sepenuhnya tajam.
+Kamu masih terlihat sebagai developer/founder serba bisa. Harus dipersempit menjadi problem-solver operasional: dashboard, internal tools, ERP ringan, portal, dan workflow AI.
+
+Kedua, bukti kerja belum cukup dalam.
+Case studies masih terlalu ringkas. Klien dan hasil sudah ada, tapi belum dikemas sebagai bukti yang meyakinkan. Perlu detail problem → solusi → hasil.
+
+Ketiga, conversion masih lemah.
+CTA kurang sering, kurang spesifik, dan belum ada bentuk kerja sama yang jelas. Calon klien mungkin kagum, tapi belum tentu tahu harus menghubungi kamu untuk apa dan bagaimana mulai.
+
+Kalau diperbaiki, halaman ini bisa naik dari 8-an secara visual menjadi 9-an secara bisnis. Yang perlu dikerjakan bukan mempercantik lagi, tapi membuat halaman ini lebih menjual, lebih konkret, lebih dipercaya, dan lebih mudah membuat orang menghubungi kamu.

@@ -1,0 +1,858 @@
+Secara umum, halaman ini sudah punya arah yang jelas: gelap, teknikal, serius, dan ingin memosisikan dirimu bukan sebagai “jasa bikin website biasa”, tapi sebagai orang yang membantu bisnis merapikan workflow, dashboard, internal tool, AI workflow, dan sistem operasional. Itu arah positioning yang bagus.
+
+Tapi versi mobile ini masih punya beberapa masalah besar: copy terlalu berat, struktur informasi belum cukup cepat dipahami, beberapa bagian terasa terlalu kecil, dan halaman belum cukup “menjual” untuk audiens awam/non-teknis. Saat dibaca di mobile, kesannya masih seperti halaman portfolio developer yang cerdas, bukan halaman jasa yang benar-benar memandu calon klien sampai merasa: “Oh, ini masalah saya. Saya butuh orang ini.”
+
+1. Kritik utama: hero sudah menarik, tapi masih terlalu “abstrak”
+
+Bagian paling atas:
+
+“Kalau ada yang terasa familiar, kita perlu bicara.”
+
+Ini sebenarnya kalimat yang bagus. Ada rasa personal dan conversational. Tapi masalahnya: belum cukup jelas dalam 3 detik pertama kamu menjual apa.
+
+Di mobile, pengunjung biasanya hanya punya waktu sangat pendek untuk memahami:
+
+Ini halaman tentang apa?
+Untuk siapa?
+Masalah apa yang diselesaikan?
+Apa hasil akhirnya?
+Kenapa harus lanjut scroll?
+
+Kalimatmu sekarang terasa misterius, tapi belum cukup eksplisit.
+
+Subcopy:
+
+“Kebanyakan klien tidak datang meminta ‘modul OAuth’ atau ‘workflow n8n’. Mereka datang karena ada yang rusak di operasi mereka. Begini biasanya bentuknya.”
+
+Ini kuat untuk positioning teknikal. Tapi untuk calon klien UMKM, owner bisnis, lembaga, sekolah, atau tim operasional, istilah OAuth dan n8n bisa membuat mereka merasa: “Wah ini terlalu teknis, bukan untuk saya.”
+
+Padahal kamu ingin mengatakan:
+
+Mereka tidak butuh istilah teknis. Mereka butuh pekerjaan berulang jadi rapi, data tidak tercecer, dan tim tidak lagi kerja manual.
+
+Masalahnya, kamu justru membuka dengan istilah teknis. Ini agak kontradiktif.
+
+Saran hero yang lebih kuat
+
+Versi yang lebih jelas:
+
+Operasional bisnismu masih berantakan? Saya bantu rapikan jadi sistem.
+Dari workflow manual, data berserakan, dashboard, panel admin, sampai otomasi AI — saya bantu ubah proses harian menjadi sistem yang bisa dipakai tim.
+
+Atau versi lebih premium:
+
+Saya membantu bisnis mengubah proses manual menjadi sistem digital yang rapi.
+Mulai dari dashboard, internal tool, panel admin, workflow AI, sampai otomasi laporan — agar operasional tidak lagi bergantung pada chat, spreadsheet, dan kerja manual berulang.
+
+Kalau tetap mau mempertahankan kalimat sekarang, jadikan sebagai kalimat pendukung, bukan headline utama:
+
+Kalau operasional terasa mulai berantakan, kita perlu bicara.
+
+Ini lebih jelas daripada “kalau ada yang terasa familiar”.
+
+2. Masalah besar: halaman terlalu gelap dan berat secara visual
+
+Dark mode-nya memang konsisten, tapi di mobile terasa terlalu pekat, sempit, dan melelahkan karena hampir semua area menggunakan background gelap bertumpuk: body gelap, card gelap, footer gelap, teks kecil, aksen cyan kecil.
+
+Masalahnya bukan dark mode-nya. Masalahnya adalah kurang kontras antar-section.
+
+Saat discroll, mata sulit membedakan mana bagian utama, mana transisi, mana CTA, mana penjelasan. Semua terasa seperti “satu gulungan panjang berwarna hitam”.
+
+Saran visual
+
+Gunakan variasi surface:
+
+Background utama: tetap #070A12 atau sejenis.
+Card: sedikit lebih terang, misalnya #111827.
+Section penting: beri gradient halus.
+CTA section: buat lebih standout, jangan terlalu menyatu dengan background.
+Footer: bisa lebih redup, tapi jangan sampai semua terasa sama.
+
+Untuk mobile, kamu butuh lebih banyak “breathing room”. Saat ini beberapa bagian terasa seperti padat, terutama card masalah dan card proses.
+
+3. Card masalah: konsepnya bagus, tapi copy terlalu kecil dan terlalu banyak
+
+Ada 4 card utama:
+
+Workflow Manual
+Tools Berserakan
+Ketergantungan pada Orang
+Pembelajaran Berserakan
+
+Secara konsep ini bagus karena kamu tidak langsung jual “fitur”, tapi memulai dari rasa sakit calon klien. Itu benar.
+
+Tapi di mobile, setiap card terasa cukup berat. Banyak teks kecil, kalimat panjang, dan istilah teknis. Akibatnya, user harus benar-benar niat membaca. Untuk landing page jasa, ini agak berbahaya.
+
+Card 1: Workflow Manual
+
+Kalimat:
+
+“Tim Anda mengulang tugas yang sama setiap hari di spreadsheet, grup WhatsApp, dan alat yang tidak terhubung.”
+
+Ini bagus. Sangat konkret.
+
+Masalahnya ada di bagian bawah:
+
+“Saya membangun AI agent dan self-serve dasbor yang mengambil alih pekerjaan lapisan operasional: ticketing, follow-up, dan pelaporan.”
+
+Ini kuat, tapi terlalu panjang dan agak berat. “Self-serve dasbor” juga kurang natural dalam bahasa Indonesia. Bisa diganti “dashboard mandiri” atau “dashboard internal”.
+
+Saran copy:
+
+Workflow Manual
+Tim masih mengulang pekerjaan yang sama setiap hari: input data, follow-up, rekap, dan update status.
+Saya bantu ubah proses itu menjadi dashboard, sistem ticketing, dan otomasi agar pekerjaan rutin tidak terus dilakukan manual.
+
+Lebih mudah dipahami.
+
+Card 2: Tools Berserakan
+
+Kalimat sekarang:
+
+“Bisnis Anda tersebar di WhatsApp, Sheets, Notion, dan integrasi — tidak ada yang terhubung, tidak ada sumber kebenaran tunggal.”
+
+Ini sangat bagus. Istilah “sumber kebenaran tunggal” cukup menarik, tapi mungkin masih sedikit teknis.
+
+Masalahnya bagian:
+
+“Saya menyatukannya ke dalam satu sistem operasional dengan dashboard, akses, peran, dan laporan yang berjalan bukan cuma kelihatan sibuk.”
+
+Kalimat “bukan cuma kelihatan sibuk” menarik, tapi agak janggal. Maksudnya mungkin: sistemnya benar-benar membantu kerja, bukan hanya tampilan dashboard cantik.
+
+Saran:
+
+Saya bantu satukan data dan proses ke satu sistem yang jelas: siapa mengerjakan apa, statusnya di mana, dan laporan bisa dilihat tanpa tanya manual.
+
+Ini lebih membumi.
+
+Card 3: Ketergantungan pada Orang
+
+Ini pain point yang sangat kuat. Banyak bisnis benar-benar bermasalah karena semua proses hanya ada di kepala satu orang.
+
+Kalimatmu:
+
+“Semua berhenti saat satu orang tidak ada karena prosesnya ada di kepala mereka, bukan di dalam sistem.”
+
+Ini salah satu copy terbaik di halaman ini. Sangat jelas, tajam, dan relevan.
+
+Tapi paragraf berikutnya terlalu panjang:
+
+“Saya membuat struktur operasi yang tetap berjalan saat staf cuti, dan mengubah pengetahuan yang tersimpan pada menjadi aturan yang bisa dipakai tim baru tanpa perlu tanya terus.”
+
+Ada sedikit typo/kejanggalan: “tersimpan pada”. Harusnya “tersimpan pada orang tertentu” atau “tersimpan di kepala seseorang”.
+
+Saran copy:
+
+Saya bantu ubah pengetahuan yang hanya ada di kepala orang tertentu menjadi SOP, dashboard, dan workflow yang bisa dipakai tim baru tanpa harus tanya terus.
+
+Ini lebih bersih.
+
+Card 4: Pembelajaran Berserakan
+
+Bagian ini terasa agak berbeda dari tiga sebelumnya. Tiga card pertama membahas operasional bisnis. Card keempat membahas pembelajaran, LMS, konten, progress siswa.
+
+Ini masih relevan dengan pengalamanmu di produk edukasi, tapi secara positioning halaman services, card ini bisa membuat audiens bertanya: “Ini sebenarnya jasa operasional bisnis atau jasa platform pembelajaran?”
+
+Kalau targetmu memang mencakup lembaga kursus, sekolah, program edukasi, dan komunitas pembelajaran, card ini bagus. Tapi kalau target jasa lebih luas, card ini bisa terasa terlalu spesifik.
+
+Saran: ubah judul menjadi lebih umum.
+
+Dari:
+
+Pembelajaran Berserakan
+
+Menjadi:
+
+Materi, Progress, dan Laporan Berserakan
+
+Atau:
+
+Sistem Edukasi yang Belum Rapi
+
+Kalimat:
+
+“Konten edukasi, progress siswa, dan penilaian Anda berserakan tanpa sistem yang terstruktur.”
+
+Ini bagus untuk niche edukasi.
+
+Namun bagian:
+
+“Saya merancang portal belajar dengan sertifikat, penilaian, dan bar progres berdasarkan AI — bukan sekadar LMS generik.”
+
+Ini bagus tapi “berdasarkan AI” agak kurang jelas. Apa maksudnya AI menilai? AI memberi rekomendasi? AI memantau progres? AI membuat feedback?
+
+Saran:
+
+Saya bantu bangun portal belajar dengan progress tracking, penilaian, sertifikat, dan laporan — disesuaikan dengan cara lembaga Anda mengajar, bukan sekadar LMS template.
+
+Ini lebih dipercaya.
+
+4. Label kecil di bawah card terlalu kecil dan kurang berguna
+
+Di bawah setiap card ada label seperti:
+
+N8N
+VERTEX AI
+WHATSAPP API
+BACKEND
+PYTHON
+POSTGRESQL
+INTERNAL TOOLS
+ADMIN PANEL
+SOP
+ASSESSMENT
+AI PIPELINES
+DRIZZLE
+
+Secara estetika ini memberi kesan teknikal. Tapi di mobile, label-label ini terlihat sangat kecil. Untuk developer mungkin menarik, tapi untuk klien awam, sebagian besar tidak bermakna.
+
+Masalahnya: calon klien tidak peduli kamu pakai Drizzle atau Postgres. Mereka peduli pekerjaannya jadi lebih cepat, data lebih rapi, tim lebih gampang dikontrol, laporan lebih jelas.
+
+Saran
+
+Pisahkan antara “hasil untuk klien” dan “teknologi yang digunakan”.
+
+Di card utama, tampilkan hasil:
+
+Follow-up otomatis
+Dashboard operasional
+Data terpusat
+Laporan otomatis
+SOP digital
+Portal belajar
+Panel admin
+
+Teknologi bisa tetap ada, tapi taruh di bagian bawah halaman sebagai:
+
+Teknologi yang biasa saya gunakan: n8n, WhatsApp API, Vertex AI, PostgreSQL, Laravel, Next.js, Python, dan lainnya.
+
+Dengan begitu halaman terasa lebih client-facing, bukan developer-facing.
+
+5. Section “Dan operasi berantakan ke sistem terstruktur” perlu diperbaiki
+
+Bagian ini:
+
+Dan operasi berantakan ke sistem terstruktur.
+
+Secara maksud bagus, tapi kalimatnya agak patah. Ada yang hilang. Mungkin maksudmu:
+
+Dari operasi berantakan ke sistem terstruktur.
+
+Ini harus diperbaiki. Kata “Dan” di awal membuat headline terasa salah grammar.
+
+Subcopy:
+
+“Saya tidak mulai dari kode. Saya mulai dengan memetakan kekacauannya.”
+
+Ini bagus. Sangat kuat. Ini positioning yang bagus sekali karena membedakan kamu dari developer biasa.
+
+Tapi bagian ini bisa dibuat lebih powerful:
+
+Saya tidak mulai dari kode. Saya mulai dari alur kerja yang sebenarnya terjadi: siapa mengerjakan apa, data masuk dari mana, keputusan dibuat berdasarkan apa, dan bagian mana yang paling sering bikin macet.
+
+Ini lebih detail dan lebih meyakinkan.
+
+6. Bagian proses kerja: bagus, tapi kurang konsisten dan masih terlalu kecil
+
+Kamu punya 3 langkah:
+
+Investigasi manual
+Bangun Sistemnya
+Jadikan Operasional
+
+Secara struktur ini sangat bagus. Ini penting karena jasa sistem/otomasi sering terasa abstrak. Dengan membagi proses menjadi 3 tahap, calon klien lebih mudah membayangkan cara kerja kamu.
+
+Tapi ada beberapa masalah.
+
+Step 1: Investigasi manual
+
+Pada screenshot, step pertama terlihat seperti card gelap dengan daftar bullet dan tag hasil:
+
+Pain...
+Decision...
+Owner...
+Output...
+Dependencies...
+dsb.
+
+Masalahnya: teks terlalu kecil, dan beberapa istilah terlalu teknikal/kurang natural.
+
+Judul “Investigasi manual” juga agak kurang enak. Bisa terdengar seperti “investigasi pekerjaan manual”, bukan “audit proses manual”.
+
+Saran judul:
+
+Audit Workflow Manual
+
+Atau:
+
+Petakan Kekacauan
+
+Atau:
+
+Diagnosa Operasional
+
+Kalau ingin lebih manusiawi:
+
+Saya bedah proses yang sedang berjalan
+
+Isi yang lebih mudah dipahami:
+
+Saya lihat bagaimana pekerjaan benar-benar berjalan hari ini: dari chat, spreadsheet, form, admin, sampai laporan. Tujuannya bukan langsung bikin sistem, tapi menemukan bagian mana yang paling sering lambat, dobel, tercecer, atau bergantung pada orang tertentu.
+
+Hasil:
+
+Peta alur kerja
+Titik bottleneck
+Data yang perlu dirapikan
+Prioritas otomasi
+
+Ini lebih menjual daripada istilah teknis.
+
+Step 2: Bangun Sistemnya
+
+Judul ini cukup bagus. Lebih natural daripada “Build System”.
+
+Isi sekarang:
+
+Ubah proses menjadi peran dan workflow
+Rancang model data dan integrasinya
+Putuskan apa yang diotomasi dan apa yang tetap ditangani manusia
+Rencanakan untuk skala, kasus tepi, dan serah terima
+
+Ini bagus, tapi di mobile cukup padat. Masalahnya bukan substansi, tapi kepadatan.
+
+Saran ringkas:
+
+Setelah alurnya jelas, saya ubah proses itu menjadi sistem: dashboard, panel admin, database, integrasi WhatsApp, AI workflow, atau internal tool sesuai kebutuhan.
+
+Lalu bullet:
+
+Role dan akses pengguna
+Struktur data
+Dashboard dan panel admin
+Integrasi API/WhatsApp
+Otomasi yang tetap aman dikontrol manusia
+
+Ini lebih mudah dibaca.
+
+Step 3: Jadikan Operasional
+
+Judul “Jadikan Operasional” agak kurang natural. Maksudnya mungkin “Jadikan sistem ini benar-benar dipakai dalam operasional”.
+
+Saran judul:
+
+Luncurkan dan Biasakan Tim Memakainya
+
+Atau:
+
+Implementasi ke Operasional Harian
+
+Atau:
+
+Sistem Dipakai, Bukan Cuma Jadi Demo
+
+Yang terakhir lebih tajam dan sangat bagus untuk jasa seperti ini.
+
+Isi sekarang:
+
+Luncurkan dashboard, portal, dan panel admin
+Sambungkan asisten AI dan laporan otomatis
+Latih tim dan dokumentasikan sistemnya
+Iterasi berdasarkan apa yang benar-benar mereka pakai
+
+Ini bagus. Tapi akan lebih kuat kalau kamu tambahkan kontras:
+
+Banyak sistem gagal bukan karena teknologinya jelek, tapi karena tim tidak memakainya. Karena itu saya bantu sampai sistemnya masuk ke kebiasaan kerja harian.
+
+Ini sangat penting. Tambahkan ini di step 3.
+
+7. Card proses terlalu mirip dengan card masalah
+
+Secara visual, card masalah dan card proses sama-sama gelap, rounded, teks kecil, ikon kecil. Akibatnya, saat scroll panjang, semua bagian terasa seperti kumpulan kartu yang mirip.
+
+Kamu perlu membuat perbedaan visual antara:
+
+Bagian “masalah”
+Bagian “cara kerja”
+Bagian “hasil”
+Bagian “kontak”
+
+Saat ini hierarkinya belum cukup kuat.
+
+Saran layout mobile
+
+Urutan yang lebih tajam:
+
+Hero: masalah + jasa utama + CTA
+Pain points: 4 masalah utama
+“Apa yang saya bangun”: dashboard, AI workflow, internal tool, admin panel, portal, laporan otomatis
+Proses kerja: audit → bangun → implementasi
+Contoh kasus/use case
+CTA kontak
+Footer
+
+Sekarang halamanmu punya pain point dan proses, tapi belum punya bagian “apa yang saya bangun” yang benar-benar kuat sebagai showcase.
+
+8. Kamu butuh CTA lebih cepat di bagian atas
+
+Di screenshot, aku tidak melihat CTA yang kuat di hero seperti:
+
+“Diskusikan workflow”
+“Konsultasi via WhatsApp”
+“Lihat cara kerja”
+“Audit workflow saya”
+
+Kalau CTA baru ada bawah, itu terlalu telat.
+
+Mobile user harus langsung melihat tombol.
+
+Saran CTA hero
+
+Setelah subcopy hero, tambahkan dua tombol:
+
+Primary:
+
+Konsultasi Workflow
+
+Secondary:
+
+Lihat Cara Kerja
+
+Atau lebih spesifik:
+
+Audit Operasional Saya
+
+dan
+
+Lihat Contoh Sistem
+
+Kalau target utama dari halaman ini adalah mendapatkan leads, CTA harus muncul lebih awal.
+
+9. Footer terlalu lemah dan terlalu kecil
+
+Footer di bawah berisi:
+
+Naufal.
+“Saya membangun sistem internal…”
+Jelajahi
+Kontak
+Dibangun oleh saya
+
+Secara struktur boleh. Tapi di mobile, footer terlihat terlalu kecil dan agak “menghilang”.
+
+Masalahnya, setelah user membaca halaman panjang, kamu menutupnya dengan footer biasa. Seharusnya sebelum footer ada CTA terakhir yang lebih kuat.
+
+Contoh:
+
+Operasionalmu masih berjalan dari chat, spreadsheet, dan ingatan orang?
+Saya bisa bantu petakan alurnya dan ubah menjadi sistem yang lebih rapi.
+[Bicara via WhatsApp]
+
+Baru setelah itu footer.
+
+Footer jangan jadi penutup utama. CTA harus jadi penutup utama.
+
+10. Font size: beberapa teks terlalu kecil untuk mobile
+
+Ini salah satu masalah paling nyata dari screenshot. Banyak teks kecil yang mungkin terlihat elegan di desktop, tapi di mobile jadi melelahkan.
+
+Yang perlu diperbesar:
+
+Body text di card
+Bullet list di proses kerja
+Tag hasil
+Footer links
+Navigasi kecil
+
+Minimal rekomendasi:
+
+Body mobile: 15–16px
+Card description: 14.5–15.5px
+Label/tag kecil: 11–12px, tapi jangan terlalu tipis
+Heading section: 24–30px
+Card title: 16–18px
+
+Kalau body text sekarang sekitar 12–13px, naikkan. Mobile butuh lebih manusiawi.
+
+11. Spacing antar-section sudah lumayan, tapi dalam card masih terasa padat
+
+Ada whitespace antar-section, tapi isi dalam card kadang terasa sesak. Terutama card masalah yang punya ikon, title, paragraf, paragraf kedua, tag.
+
+Saran:
+
+Tambahkan padding card menjadi sekitar 20–24px.
+Jarak antara title dan paragraph sekitar 10–12px.
+Jarak antar paragraph sekitar 12–14px.
+Tag jangan terlalu dekat dengan paragraph.
+Bullet list di process card beri line-height lebih lega.
+
+Mobile dark mode dengan teks kecil dan line-height rapat akan cepat melelahkan.
+
+12. Icon bagus, tapi belum cukup komunikatif
+
+Ikon kecil di tiap card memberi karakter. Tapi sebagian ikon masih terasa dekoratif, bukan membantu memahami.
+
+Misalnya:
+
+Workflow manual: ikon koper/toolbox? kurang langsung.
+Tools berserakan: ikon puzzle/gear? cukup.
+Ketergantungan orang: warning icon bagus.
+Pembelajaran berserakan: ikon roket? agak kurang cocok.
+
+Saran ikon lebih spesifik:
+
+Workflow manual: repeat/loop/checklist
+Tools berserakan: connected nodes atau broken link
+Ketergantungan orang: user warning / single person
+Pembelajaran berserakan: book/open layers/progress chart
+Audit: magnifying glass
+Build: code/database
+Operational: rocket/check circle
+
+Ikon tidak harus literal, tapi harus membantu scanning.
+
+13. Masalah copy: terlalu banyak istilah teknis bercampur dengan bahasa emosional
+
+Saat ini tone halaman berada di tengah-tengah:
+
+Ada bahasa emosional: “operasi berantakan”, “kekacauannya”, “kalau terasa familiar”
+Ada bahasa teknis: “n8n”, “OAuth”, “Vertex AI”, “API”, “model data”, “integrasi”, “AI pipelines”, “Drizzle”
+
+Gabungan ini sebenarnya bisa bagus kalau rapi. Tapi sekarang kadang membuat arah audiens kurang jelas.
+
+Kalau audiensmu adalah founder/owner/operator, gunakan bahasa bisnis dulu, teknis belakangan.
+
+Contoh struktur kalimat yang lebih baik:
+
+Buruk untuk klien awam:
+
+Saya membangun AI agent dan self-serve dashboard dengan integrasi API.
+
+Lebih bagus:
+
+Saya bantu tim mengurangi pekerjaan berulang seperti follow-up, rekap, dan laporan manual. Di belakangnya, sistem bisa menggunakan dashboard, AI agent, dan integrasi API sesuai kebutuhan.
+
+Prinsipnya:
+
+Masalah manusia dulu → hasil bisnis → teknologi sebagai alat.
+
+Bukan:
+
+Teknologi dulu → baru manfaat.
+
+14. Halaman belum cukup menunjukkan “hasil nyata”
+
+Saat ini halaman menjelaskan masalah dan proses. Tapi belum cukup menjawab:
+
+Setelah kerja dengan kamu, apa yang berubah?
+
+Calon klien butuh membayangkan hasil akhirnya.
+
+Tambahkan section:
+
+“Yang biasanya berubah setelah sistemnya jadi”
+
+Isi:
+
+Admin tidak perlu rekap manual setiap hari.
+Owner bisa melihat status operasional dari dashboard.
+Follow-up customer berjalan otomatis.
+Data tidak tercecer di banyak tempat.
+Tim baru lebih cepat onboarding karena alurnya terdokumentasi.
+Laporan bisa dibuat otomatis tanpa menunggu staf tertentu.
+Pekerjaan yang berulang dipindahkan ke sistem.
+
+Ini jauh lebih kuat untuk jualan.
+
+15. Perlu section “untuk siapa halaman ini?”
+
+Karena jasamu bisa luas, calon klien perlu tahu apakah dia termasuk targetmu.
+
+Tambahkan section pendek:
+
+Cocok untuk bisnis yang mulai kewalahan mengelola proses manual.
+
+Contoh:
+
+Lembaga kursus / sekolah / program edukasi
+UMKM dengan banyak order dan follow-up
+Tim sales/admin yang masih pakai WhatsApp + spreadsheet
+Komunitas berbayar / membership
+Agency kecil yang mulai butuh dashboard internal
+Bisnis jasa yang butuh portal customer/admin
+
+Ini akan membuat halaman lebih cepat relevan.
+
+16. Perlu section “contoh sistem yang bisa dibuat”
+
+Kamu sudah menyebut hasil di beberapa tag, tapi belum ada section showcase yang jelas.
+
+Tambahkan:
+
+“Contoh yang bisa saya bangun”
+
+Card kecil:
+
+Dashboard Operasional
+Pantau status order, progress pekerjaan, laporan, dan performa tim.
+Panel Admin
+Kelola user, konten, transaksi, data customer, dan aktivitas internal.
+Workflow AI
+Otomasi follow-up, klasifikasi pesan, reminder, ringkasan, atau laporan.
+Portal Belajar / Membership
+Materi, progress, sertifikat, penilaian, dan akses peserta.
+Integrasi WhatsApp & Form
+Hubungkan form, spreadsheet, database, WhatsApp, dan notifikasi.
+Laporan Otomatis
+Ringkasan harian/mingguan untuk owner atau tim.
+
+Ini akan membuat jasa kamu lebih konkret.
+
+17. Perlu bukti atau contoh, meskipun sederhana
+
+Halaman ini masih terasa seperti klaim. Tidak ada bukti visual, contoh case, screenshot dashboard, atau cerita singkat.
+
+Kalau kamu belum punya case study besar, pakai format mini:
+
+Contoh kasus:
+Sebuah lembaga edukasi punya data peserta di spreadsheet, pembayaran di chat, progress belajar di grup, dan laporan manual. Sistem yang dibangun: portal peserta, dashboard admin, progress tracking, notifikasi WhatsApp, dan laporan otomatis.
+
+Atau:
+
+Sebelum: admin rekap manual dari WhatsApp dan Sheets.
+Sesudah: data masuk ke dashboard, status bisa dipantau, follow-up otomatis, laporan tinggal dibuka.
+
+Tidak harus sebut nama klien. Yang penting calon klien bisa membayangkan.
+
+18. Navigasi mobile terlalu kecil dan kurang jelas
+
+Di atas terlihat brand “Naufal.” dan menu kecil. Secara estetika minimalis, tapi di mobile tombol navigasi/CTA kurang menonjol.
+
+Saran:
+
+Brand tetap kiri.
+Kanan: tombol “WhatsApp” atau “Diskusi”.
+Menu hamburger jika perlu.
+Jangan hanya mengandalkan menu kecil.
+
+Landing jasa butuh CTA permanen atau minimal sangat mudah ditemukan.
+
+Bahkan kamu bisa tambahkan sticky bottom CTA di mobile:
+
+Diskusikan Workflow
+
+atau
+
+Konsultasi via WhatsApp
+
+Sticky CTA di mobile bisa sangat efektif untuk halaman jasa.
+
+19. Masalah bahasa: “operasi” vs “operasional”
+
+Kamu memakai “operasi” beberapa kali, misalnya:
+
+“ada yang rusak di operasi mereka”
+
+Dalam bahasa Indonesia bisnis, kata operasi bisa terdengar seperti surgery/medical atau terlalu terjemahan langsung dari “operations”.
+
+Lebih natural:
+
+operasional
+proses kerja
+alur kerja
+kerja harian
+sistem internal
+
+Contoh:
+
+Dari:
+
+“ada yang rusak di operasi mereka”
+
+Menjadi:
+
+“ada yang macet di operasional mereka”
+
+Atau:
+
+“ada proses kerja yang mulai berantakan”
+
+Dari:
+
+“Dan operasi berantakan ke sistem terstruktur.”
+
+Menjadi:
+
+“Dari operasional berantakan menjadi sistem yang terstruktur.”
+
+Ini jauh lebih natural.
+
+20. Masalah positioning: ini bukan “jasa website biasa”, tapi perlu dibuat lebih eksplisit
+
+Dari halaman ini aku menangkap kamu ingin naik kelas dari “pembuat website” menjadi:
+
+sistem operasional
+workflow automation
+dashboard internal
+admin panel
+AI workflow
+portal belajar
+integrasi WhatsApp/API
+
+Ini bagus. Tapi kamu perlu menegaskan positioning secara eksplisit.
+
+Contoh headline positioning:
+
+Bukan sekadar membuat website. Saya membangun sistem operasional untuk bisnis yang mulai kewalahan.
+
+Ini sangat kuat untuk membedakan kamu dari jasa website murah.
+
+Atau:
+
+Website hanya tampilan depan. Yang sering rusak justru sistem di belakangnya. Saya bantu rapikan bagian itu.
+
+Ini sangat tajam dan cocok dengan arah halamanmu.
+
+21. Struktur halaman yang lebih kuat
+
+Aku sarankan urutan mobile-nya seperti ini:
+
+1. Hero
+
+Bukan sekadar website. Saya bantu bangun sistem operasional bisnis.
+Untuk bisnis yang masih bergantung pada chat, spreadsheet, follow-up manual, dan data yang tersebar di banyak tempat.
+
+CTA:
+
+Konsultasi Workflow
+Lihat Cara Kerja
+2. Pain points
+
+Judul:
+
+Biasanya masalahnya terlihat seperti ini
+
+Card:
+
+Workflow manual
+Tools berserakan
+Bergantung pada satu orang
+Progress/laporan tidak terlihat
+3. Outcome
+
+Judul:
+
+Yang bisa dibuat lebih rapi
+
+Card:
+
+Dashboard operasional
+Panel admin
+Workflow AI
+Integrasi WhatsApp/API
+Portal belajar/membership
+Laporan otomatis
+4. Process
+
+Judul:
+
+Cara saya bekerja
+
+Step:
+
+Audit workflow
+Bangun sistem
+Implementasi ke operasional
+5. Example case
+
+Contoh kasus sederhana
+
+Sebelum/sesudah.
+
+6. CTA akhir
+
+Mau tahu bagian mana dari operasionalmu yang paling layak dibuat sistem?
+Ceritakan alurnya, saya bantu petakan.
+
+CTA:
+
+Bicara via WhatsApp
+7. Footer
+
+Footer ringkas.
+
+22. Revisi copy lengkap yang bisa kamu pakai
+
+Ini contoh versi yang lebih tajam untuk halamanmu.
+
+Hero
+
+Bukan sekadar website. Saya bantu bisnis membangun sistem operasional yang rapi.
+Kalau tim masih kerja lewat WhatsApp, spreadsheet, follow-up manual, dan data yang tersebar di banyak tempat, saya bantu ubah proses itu menjadi dashboard, workflow, dan sistem internal yang bisa dipakai setiap hari.
+
+CTA:
+
+Audit Workflow Saya
+Lihat Cara Kerja
+
+Section masalah
+
+Biasanya masalahnya bukan kurang rajin. Sistemnya yang belum rapi.
+
+Workflow Manual
+
+Tim mengulang pekerjaan yang sama setiap hari: input data, follow-up, rekap, update status, dan laporan manual.
+Saya bantu pindahkan pekerjaan berulang itu ke sistem agar tim tidak terus menghabiskan waktu untuk tugas yang sama.
+
+Tools Berserakan
+
+Data ada di WhatsApp, Sheets, Notion, form, dan chat pribadi. Akhirnya tidak ada satu tempat yang benar-benar bisa dipercaya.
+Saya bantu satukan alurnya agar data, status, dan laporan bisa dilihat dari satu sistem.
+
+Bergantung pada Satu Orang
+
+Operasional berhenti saat satu orang tidak ada, karena alurnya hanya ada di kepala mereka.
+Saya bantu ubah pengetahuan itu menjadi SOP, dashboard, role, dan workflow yang bisa dijalankan tim.
+
+Progress Tidak Terlihat
+
+Owner atau leader harus bertanya terus untuk tahu pekerjaan sudah sampai mana.
+Saya bantu buat dashboard dan laporan otomatis agar progress bisa dipantau tanpa mengejar update manual.
+
+Section proses
+
+Saya tidak mulai dari kode. Saya mulai dari kekacauan yang benar-benar terjadi di lapangan.
+
+01 — Audit Workflow
+
+Saya petakan bagaimana pekerjaan berjalan hari ini: dari chat, spreadsheet, form, admin, sampai laporan.
+Hasilnya: alur kerja, titik bottleneck, data yang tercecer, dan prioritas sistem yang perlu dibangun.
+
+02 — Bangun Sistem
+
+Saya ubah proses itu menjadi dashboard, panel admin, database, integrasi, atau workflow AI sesuai kebutuhan.
+Yang diotomasi hanya bagian yang memang layak diotomasi. Sisanya tetap dibuat mudah dikontrol manusia.
+
+03 — Implementasi Operasional
+
+Sistem tidak cukup hanya jadi demo. Saya bantu sampai bisa dipakai dalam kerja harian: dokumentasi, training, handover, dan iterasi berdasarkan pemakaian nyata.
+
+23. Penilaian kasar versi mobile saat ini
+
+Kalau aku nilai secara objektif:
+
+Visual direction: 8/10
+Sudah punya karakter, dark, serius, teknikal.
+Mobile readability: 6.8/10
+Teks masih terlalu kecil dan padat.
+Copywriting: 7/10
+Banyak ide bagus, tapi masih terlalu teknis dan beberapa kalimat kurang natural.
+Clarity jasa: 6.7/10
+Pembaca bisa menangkap kamu bikin sistem, tapi belum langsung jelas dalam 3 detik pertama.
+Conversion potential: 6.5/10
+Belum cukup CTA, belum cukup contoh hasil, belum cukup bukti/case.
+Positioning: 8/10
+Arah positioning sangat bagus: bukan website biasa, tapi sistem operasional. Tinggal dibuat lebih eksplisit.
+Overall mobile version saat ini: 7.1/10
+
+Potensinya bisa naik ke 8.5–9/10 kalau kamu memperbaiki 5 hal utama: hero lebih jelas, font lebih besar, CTA lebih cepat, tambah section outcome/contoh sistem, dan kurangi istilah teknis di bagian utama.

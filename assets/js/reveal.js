@@ -20,7 +20,7 @@
     items.forEach(el => observer.observe(el));
 
     // Make hero immediately visible — it shouldn't wait for scroll
-    document.querySelectorAll('.hero .fade-in, .hero-content').forEach(el => {
+    document.querySelectorAll('.hero .fade-in, .hero-content, .svc-hero .fade-in').forEach(el => {
         el.classList.add('visible');
     });
 })();

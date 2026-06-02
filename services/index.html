@@ -74,87 +74,180 @@
         </div>
     </nav>
 
-    <!-- SERVICES — pain-point led -->
-    <section class="services-section" id="services">
+    <!-- SVC HERO — positioning + CTA cepat -->
+    <section class="svc-hero" id="top">
         <div class="container">
-            <span class="section-eyebrow fade-in">Masalah yang Saya Selesaikan</span>
-            <h1 class="section-title fade-in">Kalau ada yang terasa familier, kita perlu bicara.</h1>
-            <p class="section-subtitle fade-in">Kebanyakan klien tidak datang meminta "modul Odoo" atau
-                "workflow n8n". Mereka datang karena ada yang rusak di operasi mereka. Beginilah biasanya
-                bentuknya.</p>
+            <span class="section-eyebrow fade-in">Sistem Operasional &amp; Otomasi</span>
+            <h1 class="svc-hero-title fade-in">Bukan sekadar bikin website. Saya bantu ubah operasional
+                bisnis jadi sistem yang rapi.</h1>
+            <p class="svc-hero-sub fade-in">Kalau tim masih kerja lewat WhatsApp, spreadsheet, follow-up
+                manual, dan data yang tersebar di banyak tempat — saya bantu ubah proses itu jadi dashboard,
+                panel admin, workflow AI, dan sistem internal yang bisa dipakai setiap hari.</p>
 
-            <div class="services-grid fade-in">
-                <div class="service-card">
-                    <span class="service-icon">🤖</span>
-                    <h3>Workflow Manual</h3>
-                    <p class="service-pain">Tim Anda <strong>mengulang tugas yang sama setiap hari</strong> di
-                        spreadsheet, grup WhatsApp, dan tools yang tidak terhubung.</p>
-                    <p class="service-target">Saya membangun AI agent dan workflow n8n yang mengambil alih
-                        pekerjaan itu — penanganan lead, ticketing, follow-up, dan pelaporan.</p>
-                    <div class="service-stack">n8n · Vertex AI · WhatsApp API</div>
+            <div class="svc-hero-cta fade-in">
+                <a class="btn btn-primary"
+                    href="https://wa.me/6282328591004?text=Halo%20Naufal%2C%20saya%20mau%20diskusi%20soal%20operasional%20bisnis%20saya."
+                    target="_blank" rel="noopener">Konsultasi Workflow</a>
+                <a class="btn btn-ghost" href="#process">Lihat Cara Kerja</a>
+            </div>
+
+            <div class="svc-audience fade-in">
+                <span class="svc-audience-label">Cocok untuk</span>
+                <span>Lembaga kursus &amp; sekolah</span>
+                <span>UMKM dengan banyak order</span>
+                <span>Tim sales / admin</span>
+                <span>Komunitas membership</span>
+                <span>Agency kecil</span>
+            </div>
+
+            <div class="svc-snapshot fade-in">
+                <div class="svc-snapshot-card before">
+                    <div class="svc-snapshot-label">Sebelum</div>
+                    <ul>
+                        <li>Data tersebar di WhatsApp &amp; spreadsheet</li>
+                        <li>Follow-up &amp; rekap masih manual</li>
+                        <li>Owner harus tanya terus buat tahu progres</li>
+                    </ul>
                 </div>
-
-                <div class="service-card">
-                    <span class="service-icon">🧩</span>
-                    <h3>Tools Berserakan</h3>
-                    <p class="service-pain">Bisnis Anda tersebar di <strong>WhatsApp, Sheets, Notion, dan
-                            ingatan</strong> — tidak ada yang terhubung, tidak ada sumber kebenaran tunggal.</p>
-                    <p class="service-target">Saya menyatukannya ke dalam satu sistem Odoo atau microservice
-                        dengan dashboard, akses berbasis peran, dan laporan yang benar-benar bisa Anda
-                        percaya.</p>
-                    <div class="service-stack">Odoo · Python · PostgreSQL</div>
-                </div>
-
-                <div class="service-card">
-                    <span class="service-icon">⚠️</span>
-                    <h3>Ketergantungan pada Orang</h3>
-                    <p class="service-pain"><strong>Semua berhenti saat satu orang tidak ada</strong> karena
-                        prosesnya ada di kepala mereka, bukan di dalam sistem.</p>
-                    <p class="service-target">Saya mendokumentasikan workflow, membangun internal tools, dan
-                        mengubah pengetahuan yang tersimpan di kepala menjadi sesuatu yang bisa dipakai tim
-                        tanpa bergantung pada Anda.</p>
-                    <div class="service-stack">Internal tools · Admin panel · SOP</div>
-                </div>
-
-                <div class="service-card">
-                    <span class="service-icon">🎓</span>
-                    <h3>Pembelajaran Berserakan</h3>
-                    <p class="service-pain">Konten edukasi, progres siswa, dan penilaian Anda
-                        <strong>berserakan tanpa sistem yang terstruktur</strong>.
-                    </p>
-                    <p class="service-target">Saya membangun learning platform dengan sertifikat, pelacakan,
-                        dan konten berbantuan AI — bukan sekadar LMS generik.</p>
-                    <div class="service-stack">SvelteKit · AI Pipelines · Drizzle</div>
+                <div class="svc-snapshot-arrow" aria-hidden="true">→</div>
+                <div class="svc-snapshot-card after">
+                    <div class="svc-snapshot-label">Sesudah</div>
+                    <ul>
+                        <li>Semua data di satu dashboard</li>
+                        <li>Follow-up &amp; laporan jalan otomatis</li>
+                        <li>Progres kelihatan tanpa tanya manual</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROCESS — Dari operasi berantakan ke sistem terstruktur (visual flow) -->
+    <!-- SERVICES — pain-point led -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <span class="section-eyebrow fade-in">Masalah yang Saya Selesaikan</span>
+            <h2 class="section-title fade-in">Biasanya masalahnya bukan kurang rajin. Sistemnya yang belum
+                rapi.</h2>
+            <p class="section-subtitle fade-in">Kebanyakan klien tidak datang minta "modul Odoo" atau
+                "workflow n8n". Mereka datang karena ada yang macet di operasional mereka. Biasanya bentuknya
+                seperti ini.</p>
+
+            <div class="services-grid fade-in">
+                <div class="service-card">
+                    <span class="service-icon">🔁</span>
+                    <h3>Workflow Manual</h3>
+                    <p class="service-pain">Tim mengulang pekerjaan yang sama setiap hari: <strong>input data,
+                            follow-up, rekap, dan update status</strong>.</p>
+                    <p class="service-target">Saya bantu pindahkan pekerjaan berulang itu ke dashboard, sistem
+                        ticketing, dan otomasi — supaya tim tidak terus mengerjakannya manual.</p>
+                    <div class="service-stack">Follow-up otomatis · Dashboard · Ticketing</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🧩</span>
+                    <h3>Tools Berserakan</h3>
+                    <p class="service-pain">Data ada di <strong>WhatsApp, Sheets, Notion, dan chat
+                            pribadi</strong> — tidak ada satu tempat yang benar-benar bisa dipercaya.</p>
+                    <p class="service-target">Saya bantu satukan data dan proses ke satu sistem yang jelas:
+                        siapa mengerjakan apa, statusnya di mana, dan laporan bisa dilihat tanpa tanya
+                        manual.</p>
+                    <div class="service-stack">Data terpusat · Akses per peran · Laporan jelas</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">⚠️</span>
+                    <h3>Bergantung pada Satu Orang</h3>
+                    <p class="service-pain"><strong>Operasional berhenti saat satu orang tidak ada</strong>,
+                        karena alurnya cuma ada di kepala mereka.</p>
+                    <p class="service-target">Saya bantu ubah pengetahuan itu menjadi SOP, dashboard, dan
+                        workflow yang bisa dipakai tim baru tanpa harus tanya terus.</p>
+                    <div class="service-stack">SOP digital · Internal tool · Panel admin</div>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">📚</span>
+                    <h3>Materi, Progres &amp; Laporan Berserakan</h3>
+                    <p class="service-pain">Konten edukasi, progres siswa, dan penilaian
+                        <strong>berserakan tanpa sistem yang terstruktur</strong>.
+                    </p>
+                    <p class="service-target">Saya bantu bangun portal belajar dengan progress tracking,
+                        penilaian, sertifikat, dan laporan — disesuaikan dengan cara lembaga Anda mengajar,
+                        bukan sekadar LMS template.</p>
+                    <div class="service-stack">Portal belajar · Progress tracking · Sertifikat</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUTCOMES — contoh sistem yang bisa dibangun -->
+    <section class="outcomes" id="outcomes">
+        <div class="container">
+            <span class="section-eyebrow fade-in">Yang Bisa Dibuat Lebih Rapi</span>
+            <h2 class="section-title fade-in">Contoh sistem yang biasa saya bangun.</h2>
+            <p class="section-subtitle fade-in">Bukan daftar teknologi — ini hasil yang benar-benar dipakai
+                tim setiap hari.</p>
+
+            <div class="outcome-grid fade-in">
+                <div class="outcome-card">
+                    <span class="outcome-icon">📊</span>
+                    <h3>Dashboard Operasional</h3>
+                    <p>Pantau status order, progres pekerjaan, dan performa tim dalam satu layar.</p>
+                </div>
+                <div class="outcome-card">
+                    <span class="outcome-icon">🛠️</span>
+                    <h3>Panel Admin</h3>
+                    <p>Kelola user, konten, transaksi, dan data customer dari satu tempat.</p>
+                </div>
+                <div class="outcome-card">
+                    <span class="outcome-icon">🤖</span>
+                    <h3>Workflow AI</h3>
+                    <p>Otomasi follow-up, klasifikasi pesan, reminder, dan ringkasan laporan.</p>
+                </div>
+                <div class="outcome-card">
+                    <span class="outcome-icon">💬</span>
+                    <h3>Integrasi WhatsApp &amp; Form</h3>
+                    <p>Hubungkan form, spreadsheet, database, dan notifikasi WhatsApp.</p>
+                </div>
+                <div class="outcome-card">
+                    <span class="outcome-icon">🎓</span>
+                    <h3>Portal Belajar / Membership</h3>
+                    <p>Materi, progres, sertifikat, penilaian, dan akses peserta.</p>
+                </div>
+                <div class="outcome-card">
+                    <span class="outcome-icon">📄</span>
+                    <h3>Laporan Otomatis</h3>
+                    <p>Ringkasan harian atau mingguan untuk owner dan tim, tanpa rekap manual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS — Dari operasional berantakan ke sistem terstruktur (visual flow) -->
     <section class="process" id="process">
         <div class="container">
             <span class="section-eyebrow fade-in">Cara Saya Bekerja</span>
-            <h2 class="section-title fade-in">Dari operasi berantakan ke sistem terstruktur.</h2>
-            <p class="process-intro fade-in">Saya tidak mulai dari kode. Saya mulai dengan memetakan
-                kekacauannya.</p>
+            <h2 class="section-title fade-in">Dari operasional berantakan menjadi sistem yang terstruktur.</h2>
+            <p class="process-intro fade-in">Saya tidak mulai dari kode. Saya mulai dari alur kerja yang
+                sebenarnya terjadi: siapa mengerjakan apa, data masuk dari mana, dan bagian mana yang paling
+                sering bikin macet.</p>
 
             <div class="process-grid fade-in">
                 <div class="process-step problem">
                     <span class="process-step-num">01</span>
-                    <span class="process-step-icon">🗺️</span>
-                    <h3>Diagnosis Kekacauan</h3>
+                    <span class="process-step-icon">🔍</span>
+                    <h3>Audit Workflow</h3>
                     <ul>
-                        <li>Temukan tugas berulang dan hambatan manual</li>
-                        <li>Kenali data yang berserakan dan pekerjaan ganda</li>
-                        <li>Dengarkan tim yang menjalani workflow itu</li>
-                        <li>Identifikasi apa yang sebenarnya menghambat pertumbuhan</li>
+                        <li>Petakan alur kerja yang benar-benar terjadi hari ini</li>
+                        <li>Temukan bagian yang sering lambat, dobel, atau tercecer</li>
+                        <li>Dengarkan tim yang menjalani prosesnya</li>
+                        <li>Tentukan bagian mana yang paling layak dibuat sistem</li>
                     </ul>
                     <div class="process-deliverables">
                         <div class="process-deliverables-label">Hasil</div>
                         <div class="process-deliverables-tags">
-                            <span>Peta workflow</span>
-                            <span>Daftar hambatan</span>
-                            <span>Peluang otomasi</span>
+                            <span>Peta alur kerja</span>
+                            <span>Titik bottleneck</span>
+                            <span>Prioritas otomasi</span>
                         </div>
                     </div>
                 </div>
@@ -162,12 +255,12 @@
                 <div class="process-step">
                     <span class="process-step-num">02</span>
                     <span class="process-step-icon">📐</span>
-                    <h3>Bangun Sistemnya</h3>
+                    <h3>Bangun Sistem</h3>
                     <ul>
-                        <li>Ubah proses menjadi peran dan workflow</li>
-                        <li>Rancang model data dan integrasinya</li>
-                        <li>Putuskan apa yang diotomasi dan apa yang tetap ditangani manusia</li>
-                        <li>Rencanakan untuk skala, kasus tepi, dan serah terima</li>
+                        <li>Ubah proses jadi peran dan akses pengguna</li>
+                        <li>Rancang struktur data dan integrasinya</li>
+                        <li>Otomasi hanya bagian yang memang layak diotomasi</li>
+                        <li>Sisanya tetap dibuat mudah dikontrol manusia</li>
                     </ul>
                     <div class="process-deliverables">
                         <div class="process-deliverables-label">Hasil</div>
@@ -183,7 +276,10 @@
                 <div class="process-step">
                     <span class="process-step-num">03</span>
                     <span class="process-step-icon">🚀</span>
-                    <h3>Jadikan Operasional</h3>
+                    <h3>Sistem Dipakai, Bukan Cuma Jadi Demo</h3>
+                    <p class="process-step-note">Banyak sistem gagal bukan karena teknologinya jelek, tapi
+                        karena tim tidak memakainya. Karena itu saya kawal sampai masuk ke kebiasaan kerja
+                        harian.</p>
                     <ul>
                         <li>Luncurkan dashboard, portal, dan panel admin</li>
                         <li>Sambungkan asisten AI dan laporan otomatis</li>
@@ -195,10 +291,48 @@
                         <div class="process-deliverables-tags">
                             <span>Dokumentasi</span>
                             <span>Serah terima</span>
-                            <span>Iterasi</span>
                             <span>Pelatihan tim</span>
+                            <span>Iterasi</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTS — yang biasanya berubah + teknologi -->
+    <section class="results" id="results">
+        <div class="container">
+            <span class="section-eyebrow fade-in">Hasil Akhir</span>
+            <h2 class="section-title fade-in">Yang biasanya berubah setelah sistemnya jadi.</h2>
+
+            <ul class="results-list fade-in">
+                <li>Admin tidak perlu rekap manual setiap hari</li>
+                <li>Owner bisa lihat status operasional langsung dari dashboard</li>
+                <li>Follow-up customer berjalan otomatis</li>
+                <li>Data tidak lagi tercecer di banyak tempat</li>
+                <li>Tim baru lebih cepat onboarding karena alurnya terdokumentasi</li>
+                <li>Laporan bisa dibuat otomatis tanpa menunggu staf tertentu</li>
+            </ul>
+
+            <p class="results-tech fade-in">Teknologi yang biasa saya pakai: <strong>n8n, WhatsApp API, Vertex
+                    AI, PostgreSQL, Odoo, Python, SvelteKit</strong>, dan lainnya — dipilih sesuai kebutuhan,
+                bukan sebaliknya.</p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="svc-cta" id="contact">
+        <div class="container">
+            <div class="svc-cta-panel fade-in">
+                <h2>Mau tahu bagian mana dari operasionalmu yang paling layak dibuat sistem?</h2>
+                <p>Ceritakan alur kerjamu sekarang — saya bantu petakan dan tunjukkan bagian yang paling cepat
+                    memberi dampak.</p>
+                <div class="svc-cta-actions">
+                    <a class="btn btn-primary"
+                        href="https://wa.me/6282328591004?text=Halo%20Naufal%2C%20saya%20mau%20bahas%20operasional%20bisnis%20saya."
+                        target="_blank" rel="noopener">Bicara via WhatsApp</a>
+                    <a class="btn btn-ghost" href="/packages/">Lihat Paket &amp; Estimasi</a>
                 </div>
             </div>
         </div>
