@@ -126,6 +126,7 @@
 .lang-inactive {
   color: var(--text-muted);
   cursor: pointer;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 .lang-inactive:hover {

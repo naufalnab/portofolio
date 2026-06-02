@@ -12,11 +12,35 @@ const navLinks = [
   { path: '/founded', label: 'Produk' }
 ];
 
+const englishPathByRoute: Record<string, string> = {
+  '/': '/en/',
+  '/services': '/en/services/',
+  '/case-studies': '/en/case-studies/',
+  '/founded': '/en/founded/',
+  '/layanan-website': '/en/layanan-website/',
+  '/layanan-video-ai': '/en/layanan-video-ai/',
+  '/packages': '/en/packages/',
+};
+
+function normalizePath(pathname: string) {
+  return pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
+}
+
+function rememberLanguage(locale: 'id' | 'en') {
+  try {
+    localStorage.setItem('lang', locale);
+    sessionStorage.setItem('langExplicit', '1');
+  } catch {
+    // Storage can be unavailable in private/locked-down browsers.
+  }
+}
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
+  const englishHref = englishPathByRoute[normalizePath(location.pathname)] ?? '/en/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,15 +50,10 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [location.pathname]);
-
   return (
     <header className={`nav-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <NavLink to="/" className="nav-logo">
+        <NavLink to="/" className="nav-logo" onClick={() => setMobileMenuOpen(false)}>
           <GradientText animate={isScrolled}>Naufal Nabila</GradientText>
         </NavLink>
 
@@ -81,11 +100,17 @@ export function Navbar() {
             </motion.div>
           </button>
 
-          {/* Lang switcher dummy for now */}
-          <div className="lang-switcher">
+          <div className="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
             <span className="lang-active">ID</span>
             <span className="lang-separator">/</span>
-            <span className="lang-inactive">EN</span>
+            <a
+              className="lang-inactive"
+              href={englishHref}
+              hrefLang="en"
+              onClick={() => rememberLanguage('en')}
+            >
+              EN
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -124,6 +149,7 @@ export function Navbar() {
                   <NavLink
                     to={link.path}
                     className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
                   </NavLink>
