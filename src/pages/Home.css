@@ -80,8 +80,8 @@
 }
 
 .hero-visual-card.before {
-  opacity: 0.6;
-  filter: grayscale(0.5);
+  opacity: 0.75;
+  filter: grayscale(0.3);
 }
 
 .hero-visual-card.after {
@@ -299,4 +299,57 @@
     margin-top: 2rem;
     max-width: 100%;
   }
+}
+
+/* PROBLEMS SECTION */
+.problems {
+  padding: 6rem 0;
+  background: var(--surface);
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0 3rem;
+}
+
+.problem-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.problem-icon {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--bg);
+  border-radius: var(--radius);
+}
+
+.problem-item p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.problems-cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.problems-cta p {
+  max-width: 600px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
 }

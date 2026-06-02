@@ -22,12 +22,12 @@ export function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <span className="pulse-dot"></span> Tersedia untuk proyek
+              <span className="pulse-dot"></span> Menerima proyek dashboard, ERP, dan otomasi AI
             </motion.div>
             
             <h1 className="hero-title">
-              <TextReveal text="Membangun Sistem yang Mengubah Kekacauan menjadi " as="span" />
-              <GradientText>Kejelasan.</GradientText>
+              <TextReveal text="Dari WhatsApp, Spreadsheet, dan Tugas Manual — Menjadi " as="span" />
+              <GradientText>Sistem Operasional yang Rapi.</GradientText>
             </h1>
             
             <motion.p 
@@ -36,7 +36,7 @@ export function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 1 }}
             >
-              Saya Naufal Nabila. Saya merancang, merencanakan, dan membangun dashboard, portal klien, internal tools, dan alur kerja AI yang mengotomatiskan operasional Anda yang berantakan.
+              Saya membantu bisnis merapikan operasional yang masih bergantung pada WhatsApp, spreadsheet, dan proses manual menjadi dashboard, portal klien, internal tools, dan otomasi AI yang bisa dipakai tim setiap hari.
             </motion.p>
           </div>
 
@@ -44,10 +44,10 @@ export function Home() {
             <TiltCard className="hero-visual-card before" maxRotation={5}>
               <div className="hero-visual-label">Sebelum</div>
               <ul className="hero-visual-list">
-                <li>Percakapan WhatsApp berserakan</li>
-                <li>Spreadsheet yang berantakan</li>
-                <li>Pekerjaan admin manual berulang</li>
-                <li>Tindak lanjut yang terlewat</li>
+                <li>Order masuk dari banyak chat</li>
+                <li>Data klien tersebar di spreadsheet</li>
+                <li>Follow-up sering lupa</li>
+                <li>Laporan dibuat manual</li>
               </ul>
             </TiltCard>
             
@@ -56,10 +56,10 @@ export function Home() {
             <TiltCard className="hero-visual-card after" maxRotation={5}>
               <div className="hero-visual-label">Sesudah</div>
               <ul className="hero-visual-list">
-                <li>Dashboard terpusat</li>
-                <li>Penerimaan klien otomatis</li>
-                <li>Operasional dibantu AI</li>
-                <li>Alur kerja yang terukur</li>
+                <li>Semua data masuk ke dashboard</li>
+                <li>Status pekerjaan terlihat real-time</li>
+                <li>Reminder & follow-up otomatis</li>
+                <li>Laporan siap tanpa rekap ulang</li>
               </ul>
             </TiltCard>
           </SectionReveal>
@@ -78,19 +78,19 @@ export function Home() {
           <SectionReveal delay={1.4} direction="up" className="hero-stats">
             <div>
               <div className="stat-num"><AnimatedCounter value={5} suffix="+" /></div>
-              <div className="stat-label">Tahun Pengalaman</div>
+              <div className="stat-label">Tahun membangun sistem digital</div>
             </div>
             <div>
               <div className="stat-num"><AnimatedCounter value={20} suffix="+" /></div>
-              <div className="stat-label">Proyek Selesai</div>
+              <div className="stat-label">Website, dashboard, aplikasi, dan otomasi selesai</div>
             </div>
             <div>
               <div className="stat-num"><AnimatedCounter value={15} suffix="+" /></div>
-              <div className="stat-label">Organisasi Dilayani</div>
+              <div className="stat-label">Bisnis & organisasi dilayani</div>
             </div>
             <div>
               <div className="stat-num"><AnimatedCounter value={4} /></div>
-              <div className="stat-label">Platform EdTech Didirikan</div>
+              <div className="stat-label">Platform EdTech aktif dikembangkan</div>
             </div>
           </SectionReveal>
         </div>
@@ -113,14 +113,14 @@ export function Home() {
                 <span className="profile-badge"><span className="icon">⚙️</span>Sistem AI · ERP · LMS</span>
               </div>
               <div className="about-positioning">
-                Saya tidak sekadar menulis kode. Saya memetakan proses bisnis, merancang alur kerja, dan membangun sistem yang benar-benar bisa digunakan tim.
+                Saya tidak mulai dari kode. Saya mulai dari memahami alur kerja, titik macet, dan kebiasaan tim — lalu membangunnya menjadi sistem yang benar-benar dipakai.
               </div>
             </SectionReveal>
             
             <SectionReveal direction="up" className="about-content">
               <span className="section-eyebrow">Tentang</span>
               <h2 className="section-title">
-                Berfokus mengubah masalah bisnis yang kompleks menjadi sistem yang rapi dan cerdas.
+                Saya membantu owner dan tim operasional melihat, mengontrol, dan mengotomasi pekerjaan mereka dalam satu sistem.
               </h2>
               <p className="about-lead">
                 Saya bekerja dengan founder dan tim yang terjebak dengan tools yang tersebar, tugas manual berulang, serah-terima yang tidak jelas, dan operasional yang terlalu bergantung pada ingatan. Tugas saya mengubah kekacauan itu menjadi dashboard, otomasi, internal tools, alur kerja AI, dan sistem operasional yang membuat bisnis lebih mudah dijalankan.
@@ -129,21 +129,77 @@ export function Home() {
               <div className="about-pillars">
                 <div className="pillar">
                   <h4>Siapa Saya</h4>
-                  <p>Seorang engineer dan founder EdTech dengan pengalaman 5+ tahun di mobile (Flutter), ERP (Odoo), dan otomasi alur kerja AI (n8n + Vertex AI). Saya menjembatani pemikiran produk dengan eksekusi teknis yang mendalam.</p>
+                  <p>Founder dan engineer dengan 5+ tahun membangun aplikasi web, mobile, ERP ringan, dan otomasi AI.</p>
                 </div>
                 <div className="pillar">
-                  <h4>Apa yang Saya Lakukan</h4>
-                  <p>Otomasi AI end-to-end, modul Odoo kustom, platform web microservice dengan SvelteKit, dan produk pembelajaran bertenaga AI dengan pipeline video multi-bahasa.</p>
+                  <h4>Apa yang Saya Bantu</h4>
+                  <p>Saya membantu bisnis merapikan proses manual menjadi dashboard, portal klien, internal tools, sistem laporan, dan workflow AI.</p>
                 </div>
                 <div className="pillar">
-                  <h4>Bukti Karya</h4>
-                  <p>Founder Pembelajar Belajar, Al Muta'allim, Belajar Sekejap, dan The Learning Learner. Dipercaya oleh Yamaha Motor Parts, Telkom Sigma, SUCOFINDO, Duniatex, PT. Adhi Karya, PT. Naska Jala Dewa, dan PT. Kripto Syariah Indonesia.</p>
+                  <h4>Bukti Kerja</h4>
+                  <p>Membangun Pembelajar Belajar, Belajar Sekejap, AI Muta'allim, The Learning Learner, dan dipercaya oleh beberapa bisnis dan organisasi.</p>
                 </div>
               </div>
             </SectionReveal>
           </div>
         </div>
       </ParallaxSection>
+
+      {/* PROBLEMS SECTION */}
+      <section className="problems">
+        <div className="container">
+          <SectionReveal direction="up">
+            <span className="section-eyebrow">Masalah yang Sering Saya Temui</span>
+            <h2 className="section-title">
+              Apakah operasional Anda masih seperti ini?
+            </h2>
+          </SectionReveal>
+
+          <div className="problems-grid">
+            <SectionReveal direction="up" delay={0.1} className="problem-item">
+              <div className="problem-icon">💬</div>
+              <p>Data klien tersebar di WhatsApp, spreadsheet, dan catatan manual.</p>
+            </SectionReveal>
+
+            <SectionReveal direction="up" delay={0.2} className="problem-item">
+              <div className="problem-icon">🔄</div>
+              <p>Tim harus input data yang sama berkali-kali di berbagai sistem.</p>
+            </SectionReveal>
+
+            <SectionReveal direction="up" delay={0.3} className="problem-item">
+              <div className="problem-icon">👁️</div>
+              <p>Owner sulit melihat status pekerjaan secara real-time.</p>
+            </SectionReveal>
+
+            <SectionReveal direction="up" delay={0.4} className="problem-item">
+              <div className="problem-icon">📋</div>
+              <p>Laporan butuh waktu lama karena harus direkap manual.</p>
+            </SectionReveal>
+
+            <SectionReveal direction="up" delay={0.5} className="problem-item">
+              <div className="problem-icon">⏰</div>
+              <p>Approval dan follow-up sering tertunda atau kelewat.</p>
+            </SectionReveal>
+
+            <SectionReveal direction="up" delay={0.6} className="problem-item">
+              <div className="problem-icon">⚙️</div>
+              <p>Sistem yang ada terlalu kaku atau tidak sesuai cara tim bekerja.</p>
+            </SectionReveal>
+
+            <SectionReveal direction="up" delay={0.7} className="problem-item">
+              <div className="problem-icon">🤖</div>
+              <p>Ingin pakai AI, tapi belum tahu alur kerja yang aman dan berguna.</p>
+            </SectionReveal>
+          </div>
+
+          <SectionReveal direction="up" delay={0.8} className="problems-cta">
+            <p>Kalau masalahnya seperti ini, biasanya solusinya bukan sekadar website. Anda butuh sistem operasional yang dirancang sesuai alur kerja tim.</p>
+            <MagneticButton href="/services" primary={true}>
+              Lihat Solusinya
+            </MagneticButton>
+          </SectionReveal>
+        </div>
+      </section>
     </PageTransition>
   );
 }

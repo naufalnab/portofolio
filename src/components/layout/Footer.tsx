@@ -17,8 +17,7 @@ export function Footer() {
               <GradientText>Naufal Nabila</GradientText>
             </h3>
             <p className="footer-desc">
-              Independent Full-Stack Developer & UI/UX Engineer based in Indonesia, 
-              building premium digital experiences for global clients.
+              System Builder & Full-Stack Developer based in Indonesia, helping businesses build dashboards, ERP systems, client portals, internal tools, and AI workflows — from process diagnosis to live systems your team uses daily.
             </p>
             <div className="footer-social">
               {/* Replace # with actual links */}
@@ -56,7 +55,7 @@ export function Footer() {
             <h4 className="footer-title">Start a Project</h4>
             <p className="footer-desc-small">Available for new opportunities.</p>
             <MagneticButton href="mailto:hello@naufalnabila.my.id" primary={true} className="mt-4">
-              Let's Talk
+              Diskusi Proyek
             </MagneticButton>
           </div>
         </div>

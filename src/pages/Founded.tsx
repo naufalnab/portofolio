@@ -17,12 +17,10 @@ export function Founded() {
         <div className="container">
           <SectionReveal direction="up">
             <h1 className="page-title">
-              <TextReveal text="Membangun Produk dari Awal hingga Diluncurkan." />
+              <TextReveal text="Saya Tidak Hanya Membuat Sistem untuk Klien — Saya Juga Membangun Produk Saya Sendiri." />
             </h1>
             <p className="page-subtitle">
-              Selain membantu klien, saya membangun, meluncurkan, dan menskalakan platform saya sendiri.
-              Inilah yang saya pelajari tentang retensi pengguna, infrastruktur, dan produk
-              manajemen di dunia nyata.
+              Selain membantu klien, saya juga membangun dan menjalankan platform saya sendiri. Dari sini saya belajar langsung tentang retensi pengguna, infrastruktur, konten, otomasi, pembayaran, dan manajemen produk di dunia nyata.
             </p>
           </SectionReveal>
         </div>

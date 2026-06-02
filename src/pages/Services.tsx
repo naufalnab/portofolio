@@ -13,10 +13,10 @@ export function Services() {
         <div className="container">
           <SectionReveal direction="up">
             <h1 className="page-title">
-              <TextReveal text="Sistem yang Dibangun untuk Bekerja Sebagaimana Tim Anda Bekerja." />
+              <TextReveal text="Sistem yang Saya Bangun untuk Merapikan Operasional Bisnis Anda." />
             </h1>
             <p className="page-subtitle">
-              Sistem perangkat lunak yang hebat tidak terasa seperti perangkat lunak. Sistem itu terasa seperti perpanjangan dari otak tim Anda. Inilah bagaimana saya membangunnya.
+              Dari dashboard, ERP ringan, sampai workflow AI — dibangun sesuai cara tim Anda bekerja. Tidak ada software yang terasa kaku, hanya sistem yang langsung bisa dipakai.
             </p>
           </SectionReveal>
         </div>
@@ -119,10 +119,10 @@ export function Services() {
               <span className="process-step-icon">🗺️</span>
               <h3>Diagnosis Kekacauan</h3>
               <ul>
-                <li>Temukan tugas berulang dan hambatan manual</li>
-                <li>Kenali data yang berserakan dan pekerjaan ganda</li>
-                <li>Dengarkan tim yang menjalani workflow itu</li>
-                <li>Identifikasi apa yang sebenarnya menghambat pertumbuhan</li>
+                <li>Audit alur kerja dari chat, spreadsheet, form, dan dokumen</li>
+                <li>Petakan pekerjaan manual yang paling membuang waktu</li>
+                <li>Temukan titik macet: approval, follow-up, input data, laporan</li>
+                <li>Tentukan bagian mana yang perlu sistem, otomasi, atau SOP</li>
               </ul>
               <div className="process-deliverables">
                 <div className="process-deliverables-label">Hasil</div>
@@ -139,10 +139,10 @@ export function Services() {
               <span className="process-step-icon">📐</span>
               <h3>Bangun Sistemnya</h3>
               <ul>
-                <li>Ubah proses menjadi peran dan workflow</li>
-                <li>Rancang model data dan integrasinya</li>
-                <li>Putuskan apa yang diotomasi dan apa yang tetap ditangani manusia</li>
-                <li>Rencanakan untuk skala, kasus tepi, dan serah terima</li>
+                <li>Rancang database, role pengguna, status pekerjaan, dan alur approval</li>
+                <li>Bangun dashboard, form, portal, atau modul ERP sesuai prioritas</li>
+                <li>Sambungkan dengan WhatsApp, email, payment, spreadsheet, atau AI bila perlu</li>
+                <li>Uji dengan kasus nyata dari operasional harian</li>
               </ul>
               <div className="process-deliverables">
                 <div className="process-deliverables-label">Hasil</div>
@@ -158,20 +158,20 @@ export function Services() {
             <StaggerItem className="process-step">
               <span className="process-step-num">03</span>
               <span className="process-step-icon">🚀</span>
-              <h3>Jadikan Operasional</h3>
+              <h3>Buat Sistemnya Benar-benar Dipakai</h3>
               <ul>
-                <li>Luncurkan dashboard, portal, dan panel admin</li>
-                <li>Sambungkan asisten AI dan laporan otomatis</li>
-                <li>Latih tim dan dokumentasikan sistemnya</li>
-                <li>Iterasi berdasarkan apa yang benar-benar mereka pakai</li>
+                <li>Luncurkan sistem ke tim secara bertahap</li>
+                <li>Latih pengguna dan buat dokumentasi singkat</li>
+                <li>Pantau penggunaan nyata selama masa awal</li>
+                <li>Iterasi berdasarkan kebiasaan tim, bukan asumsi</li>
               </ul>
               <div className="process-deliverables">
                 <div className="process-deliverables-label">Hasil</div>
                 <div className="process-deliverables-tags">
                   <span>Dokumentasi</span>
                   <span>Serah terima</span>
-                  <span>Iterasi</span>
                   <span>Pelatihan tim</span>
+                  <span>Iterasi</span>
                 </div>
               </div>
             </StaggerItem>
