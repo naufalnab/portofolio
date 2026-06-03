@@ -1,13 +1,253 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>temp-react-app</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Skrip_Deteksi_Bahasa: gated (AUTO=false ⇒ no-op), sinkron, sebelum theme-init -->
+    <script>(function () { var AUTO = false; if (!AUTO) return; try { var stored = localStorage.getItem('lang'); var here = (location.pathname.indexOf('/en/') === 0 || location.pathname === '/en') ? 'en' : 'id'; var want = (stored === 'id' || stored === 'en') ? stored : (/^en/i.test(navigator.language || '') ? 'en' : 'id'); if (want !== here) { var dest = here === 'en' ? (location.pathname.replace(/^\/en/, '') || '/') : '/en' + location.pathname; if (dest !== location.pathname) location.replace(location.origin + dest); } } catch (e) { } })();</script>
+
+    <!-- ANTI-FOUC: inline, sinkron, sebelum CSS apa pun -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'light') { document.documentElement.classList.add('light-mode'); } } catch (e) { } })();</script>
+
+    <!-- SEO per-halaman (ID) -->
+    <title>Naufal Nabila — Otomasi AI, ERP &amp; Pembangun Produk Digital</title>
+    <meta name="description"
+        content="Saya mengubah operasi manual yang berantakan menjadi sistem bertenaga AI: otomasi AI, ERP/Odoo, internal tools, dan produk digital untuk tim yang berkembang.">
+    <link rel="canonical" href="https://naufalnabila.my.id/">
+
+    <!-- hreflang alternates (id / en / x-default) -->
+    <link rel="alternate" hreflang="id" href="https://naufalnabila.my.id/">
+    <link rel="alternate" hreflang="en" href="https://naufalnabila.my.id/en/">
+    <link rel="alternate" hreflang="x-default" href="https://naufalnabila.my.id/">
+
+    <!-- Open Graph / Twitter (ID) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://naufalnabila.my.id/">
+    <meta property="og:title" content="Naufal Nabila — Otomasi AI, ERP &amp; Pembangun Produk Digital">
+    <meta property="og:description"
+        content="Saya mengubah operasi manual yang berantakan menjadi sistem bertenaga AI: otomasi AI, ERP/Odoo, internal tools, dan produk digital untuk tim yang berkembang.">
+    <meta property="og:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Naufal Nabila — Otomasi AI, ERP &amp; Pembangun Produk Digital">
+    <meta name="twitter:description"
+        content="Saya mengubah operasi manual yang berantakan menjadi sistem bertenaga AI: otomasi AI, ERP/Odoo, internal tools, dan produk digital untuk tim yang berkembang.">
+    <meta name="twitter:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
+
+    <!-- CSS core — root-relative, v8 (hero.css hanya di Home) -->
+    <link rel="stylesheet" href="/assets/css/base.css?v=8">
+    <link rel="stylesheet" href="/assets/css/layout.css?v=8">
+    <link rel="stylesheet" href="/assets/css/hero.css?v=8">
+    <link rel="stylesheet" href="/assets/css/sections.css?v=8">
+    <link rel="stylesheet" href="/assets/css/components.css?v=8">
+    <link rel="stylesheet" href="/assets/css/responsive.css?v=8">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Naufal<span>.</span></a>
+            <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="/services/">Layanan</a></li>
+                    <li><a href="/case-studies/">Studi Kasus</a></li>
+                    <li><a href="/founded/">Didirikan</a></li>
+                    <li><a href="/layanan-website/">Website</a></li>
+                    <li><a href="/layanan-video-ai/">Video AI</a></li>
+                    <li><a href="/packages/">Paket</a></li>
+                </ul>
+                <div class="lang-switcher" role="group" aria-label="Pilih bahasa / Select language">
+                    <a class="lang-option" hreflang="en" data-lang="en" href="/en/">🇬🇧</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Ganti tema">
+                    <span id="theme-icon">☀️</span>
+                    <span id="theme-text">Terang</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="dot"></span>
+                    Tersedia untuk proyek AI, ERP &amp; Learning Platform
+                </div>
+                <h1>Bisnis Anda berkembang. Operasional Anda mulai kewalahan. <span class="accent">Saya membangun
+                        sistem AI di antaranya.</span></h1>
+                <p class="hero-subtitle">Saya membantu founder dan tim yang berkembang mengganti alur kerja yang
+                    berantakan, tools yang tersebar, dan pekerjaan manual berulang dengan sistem bertenaga AI yang
+                    membuat bisnis lebih mudah dikelola, didelegasikan, dan diskalakan.</p>
+
+                <!-- Before → After visual proof -->
+                <div class="hero-visual" aria-label="Dari pekerjaan tersebar menjadi sistem terstruktur">
+                    <div class="hero-visual-card before">
+                        <div class="hero-visual-label">Sebelum</div>
+                        <ul class="hero-visual-list">
+                            <li>Percakapan WhatsApp berserakan</li>
+                            <li>Spreadsheet yang berantakan</li>
+                            <li>Pekerjaan admin manual berulang</li>
+                            <li>Tindak lanjut yang terlewat</li>
+                        </ul>
+                    </div>
+                    <div class="hero-visual-arrow" aria-hidden="true">→</div>
+                    <div class="hero-visual-card after">
+                        <div class="hero-visual-label">Sesudah</div>
+                        <ul class="hero-visual-list">
+                            <li>Dashboard terpusat</li>
+                            <li>Penerimaan klien otomatis</li>
+                            <li>Operasional dibantu AI</li>
+                            <li>Alur kerja yang terukur</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="/case-studies/" class="btn btn-ghost">Lihat Proyek Pilihan</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="stat-num">5+</div>
+                        <div class="stat-label">Tahun Pengalaman</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">20+</div>
+                        <div class="stat-label">Proyek Selesai</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">15+</div>
+                        <div class="stat-label">Organisasi Dilayani</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">4</div>
+                        <div class="stat-label">Platform EdTech Didirikan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid fade-in">
+                <div class="about-image-wrap">
+                    <img src="/assets/images/profile.jpeg" alt="Naufal Nabila" class="profile-img">
+                    <div class="profile-badges">
+                        <span class="profile-badge"><span class="icon">📍</span>Berbasis di Indonesia</span>
+                        <span class="profile-badge"><span class="icon">⚙️</span>Sistem AI · ERP · LMS</span>
+                    </div>
+                    <div class="about-positioning">
+                        Saya tidak sekadar menulis kode. Saya memetakan proses bisnis, merancang alur kerja, dan
+                        membangun sistem yang benar-benar bisa digunakan tim.
+                    </div>
+                </div>
+                <div>
+                    <span class="section-eyebrow">Tentang</span>
+                    <h2 class="section-title">Berfokus mengubah masalah bisnis yang kompleks menjadi sistem yang
+                        rapi dan cerdas.</h2>
+                    <p class="about-lead">Saya bekerja dengan founder dan tim yang terjebak dengan tools yang
+                        tersebar, tugas manual berulang, serah-terima yang tidak jelas, dan operasional yang
+                        terlalu bergantung pada ingatan. Tugas saya mengubah kekacauan itu menjadi dashboard,
+                        otomasi, internal tools, alur kerja AI, dan sistem operasional yang membuat bisnis lebih
+                        mudah dijalankan.</p>
+
+                    <div class="about-pillars">
+                        <div class="pillar">
+                            <h4>Siapa Saya</h4>
+                            <p>Seorang engineer dan founder EdTech dengan pengalaman 5+ tahun di mobile (Flutter),
+                                ERP (Odoo), dan otomasi alur kerja AI (n8n + Vertex AI). Saya menjembatani
+                                pemikiran produk dengan eksekusi teknis yang mendalam.</p>
+                        </div>
+                        <div class="pillar">
+                            <h4>Apa yang Saya Lakukan</h4>
+                            <p>Otomasi AI end-to-end, modul Odoo kustom, platform web microservice dengan
+                                SvelteKit, dan produk pembelajaran bertenaga AI dengan pipeline video
+                                multi-bahasa.</p>
+                        </div>
+                        <div class="pillar">
+                            <h4>Bukti Karya</h4>
+                            <p>Founder Pembelajar Belajar, Al Muta'allim, Belajar Sekejap, dan The Learning
+                                Learner. Dipercaya oleh Yamaha Motor Parts, Telkom Sigma, SUCOFINDO, Duniatex,
+                                PT. Adhi Karya, PT. Naska Jala Dewa, dan PT. Kripto Syariah Indonesia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">Naufal<span>.</span></a>
+                    <p>Saya membangun sistem bertenaga AI untuk bisnis, sekolah, dan organisasi yang sudah
+                        melampaui spreadsheet dan alur kerja manual.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Jelajahi</h5>
+                    <ul>
+                        <li><a href="/">Beranda</a></li>
+                        <li><a href="/services/">Layanan</a></li>
+                        <li><a href="/case-studies/">Studi Kasus</a></li>
+                        <li><a href="/founded/">Didirikan</a></li>
+                        <li><a href="/layanan-website/">Layanan Website</a></li>
+                        <li><a href="/layanan-video-ai/">Layanan Video AI</a></li>
+                        <li><a href="/packages/">Paket</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Kontak</h5>
+                    <ul>
+                        <li><a href="https://wa.me/6282328591004" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><a href="mailto:naufal.nabila.2008@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Didirikan oleh Saya</h5>
+                    <ul>
+                        <li><a href="https://pembelajarbelajar.com" target="_blank" rel="noopener">pembelajarbelajar.com</a>
+                        </li>
+                        <li><a href="https://almutaalim.com" target="_blank" rel="noopener">almutaalim.com</a></li>
+                        <li><a href="https://belajarsekejap.com" target="_blank" rel="noopener">belajarsekejap.com</a></li>
+                        <li><a href="https://thelearninglearner.com" target="_blank"
+                                rel="noopener">thelearninglearner.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Naufal Nabila. Dibuat dengan ketelitian, kode, dan banyak otomasi.</span>
+                <span class="footer-meta">
+                    <span>📍 Indonesia</span>
+                    <span class="dot-sep">·</span>
+                    <span>Tersedia untuk proyek baru</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/theme.js?v=8" defer></script>
+    <script src="/assets/js/nav.js?v=8" defer></script>
+    <script src="/assets/js/lang.js?v=8" defer></script>
+    <script src="/assets/js/reveal.js?v=8" defer></script>
+    <script src="/assets/js/main.js?v=8" defer></script>
+</body>
+
 </html>
