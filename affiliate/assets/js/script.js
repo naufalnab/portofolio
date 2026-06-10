@@ -699,11 +699,31 @@ const App = {
 
     // ==================== CALENDAR & CHECKLIST ====================
     async loadCalendar() {
+        if (!this.contents || this.contents.length === 0) {
+            const resC = await this.apiCall('contents', 'list');
+            if (resC) this.contents = resC.data;
+        }
+        this.updateCalTitleDropdown();
+
         const res = await this.apiCall('calendar', 'list');
         if (res) {
             this.calendar = res.data;
             this.renderCalendar();
         }
+    },
+
+    updateCalTitleDropdown() {
+        const select = document.getElementById('calTitle');
+        if (!select) return;
+        let opts = '<option value="">-- Pilih dari Content Studio --</option>';
+        if (this.contents) {
+            this.contents.forEach(c => {
+                opts += `<option value="${c.title}">${c.title}</option>`;
+            });
+        }
+        const currentVal = select.value;
+        select.innerHTML = opts;
+        if (currentVal) select.value = currentVal;
     },
 
     renderCalendar() {

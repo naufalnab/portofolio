@@ -854,7 +854,9 @@ include __DIR__ . '/includes/sidebar.php';
             </div>
             <div class="form-group">
               <label>Judul / Ide Topik</label>
-              <input type="text" id="calTitle" class="input" required>
+              <select id="calTitle" class="input" required>
+                <option value="">-- Pilih dari Content Studio --</option>
+              </select>
             </div>
             <div class="form-row">
               <div class="form-group">
