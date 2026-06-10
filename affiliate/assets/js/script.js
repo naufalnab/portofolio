@@ -746,10 +746,12 @@ const App = {
         const select = document.getElementById('calTitle');
         if (!select) return;
         let opts = '<option value="">-- Pilih dari Content Studio --</option>';
-        if (this.contents) {
+        if (this.contents && this.contents.length > 0) {
             this.contents.forEach(c => {
-                opts += `<option value="${c.title}">${c.title}</option>`;
+                if (c.title) opts += `<option value="${c.title}">${c.title}</option>`;
             });
+        } else {
+            opts += '<option value="" disabled>Belum ada konten, buat dulu di Content Studio</option>';
         }
         const currentVal = select.value;
         select.innerHTML = opts;
