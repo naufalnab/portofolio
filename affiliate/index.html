@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoSharia Affiliate Command Center</title>
+  <meta name="description" content="Dashboard kerja pribadi affiliate content creator CryptoSharia Masterclass">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <!-- Confirm Modal -->
+  <div id="confirmModal" class="modal-overlay" hidden>
+    <div class="modal">
+      <div class="modal-icon">⚠️</div>
+      <h3 id="confirmTitle">Konfirmasi</h3>
+      <p id="confirmMessage">Apakah Anda yakin?</p>
+      <div class="modal-actions">
+        <button id="confirmCancel" class="btn btn-ghost">Batal</button>
+        <button id="confirmOk" class="btn btn-danger">Hapus</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 40 40" width="40" height="40">
+          <defs>
+            <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#c9a84c"/>
+              <stop offset="100%" style="stop-color:#e8c66a"/>
+            </linearGradient>
+          </defs>
+          <rect width="40" height="40" rx="10" fill="url(#brandGrad)"/>
+          <text x="20" y="27" text-anchor="middle" fill="#0a1628" font-size="18" font-weight="800" font-family="Outfit">CS</text>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">CryptoSharia</span>
+        <span class="brand-sub">Command Center</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#dashboard" class="nav-link active" data-section="dashboard">
+        <span class="nav-icon">📊</span><span class="nav-text">Dashboard</span>
+      </a>
+      <a href="#alur" class="nav-link" data-section="alur">
+        <span class="nav-icon">🔄</span><span class="nav-text">Alur Affiliate</span>
+      </a>
+      <a href="#studio" class="nav-link" data-section="studio">
+        <span class="nav-icon">🎬</span><span class="nav-text">Content Studio</span>
+      </a>
+      <a href="#promo" class="nav-link" data-section="promo">
+        <span class="nav-icon">🏷️</span><span class="nav-text">Promo & WhatsApp</span>
+      </a>
+      <a href="#leads" class="nav-link" data-section="leads">
+        <span class="nav-icon">👥</span><span class="nav-text">Lead Tracker</span>
+      </a>
+      <a href="#performance" class="nav-link" data-section="performance">
+        <span class="nav-icon">📈</span><span class="nav-text">Content Performance</span>
+      </a>
+      <a href="#komisi" class="nav-link" data-section="komisi">
+        <span class="nav-icon">💰</span><span class="nav-text">Komisi Calculator</span>
+      </a>
+      <a href="#calendar" class="nav-link" data-section="calendar">
+        <span class="nav-icon">📅</span><span class="nav-text">Calendar & Checklist</span>
+      </a>
+      <a href="#assets" class="nav-link" data-section="assets">
+        <span class="nav-icon">🎨</span><span class="nav-text">Asset Library</span>
+      </a>
+      <a href="#syariah" class="nav-link" data-section="syariah">
+        <span class="nav-icon">📜</span><span class="nav-text">Prinsip Syariah</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="quick-copy-section">
+        <p class="quick-copy-title">⚡ Quick Copy</p>
+        <button class="btn btn-sm btn-outline" onclick="App.quickCopy('cta')">Copy CTA</button>
+        <button class="btn btn-sm btn-outline" onclick="App.quickCopy('admin')">Copy Pesan Admin</button>
+        <button class="btn btn-sm btn-outline" onclick="App.quickCopy('followup')">Copy Follow Up</button>
+        <button class="btn btn-sm btn-outline" onclick="App.quickCopy('caption')">Copy Caption</button>
+        <button class="btn btn-sm btn-outline" onclick="App.quickCopy('disclaimer')">Copy Disclaimer</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <span class="mobile-brand">CryptoSharia CC</span>
+  </header>
+
+  <!-- Main Content -->
+  <main id="mainContent" class="main-content">
+
+    <!-- ==================== SECTION 1: DASHBOARD ==================== -->
+    <section id="dashboard" class="section active">
+      <div class="section-header">
+        <h1>Dashboard</h1>
+        <p class="section-subtitle">Ringkasan performa affiliate Anda</p>
+      </div>
+
+      <!-- Promo Code Banner -->
+      <div class="promo-banner" id="dashPromo">
+        <div class="promo-banner-content">
+          <span class="promo-label">Kode Promo Anda</span>
+          <span class="promo-code" id="dashPromoCode">M-SA01</span>
+          <button class="btn btn-gold btn-sm" onclick="App.copyPromoCode()">📋 Copy</button>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-blue">👥</div>
+          <div class="stat-info">
+            <span class="stat-value" id="statTotalLeads">0</span>
+            <span class="stat-label">Total Lead</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-purple">📤</div>
+          <div class="stat-info">
+            <span class="stat-value" id="statDirected">0</span>
+            <span class="stat-label">Diarahkan ke Admin</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-green">✅</div>
+          <div class="stat-info">
+            <span class="stat-value" id="statRegistered">0</span>
+            <span class="stat-label">Sudah Daftar</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-orange">🎬</div>
+          <div class="stat-info">
+            <span class="stat-value" id="statContent">0</span>
+            <span class="stat-label">Konten Diposting</span>
+          </div>
+        </div>
+        <div class="stat-card stat-card-highlight">
+          <div class="stat-icon stat-icon-gold">💰</div>
+          <div class="stat-info">
+            <span class="stat-value" id="statKomisi">Rp0</span>
+            <span class="stat-label">Estimasi Komisi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Best Content & CTA -->
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">🏆 Konten Terbaik</h3>
+          <div id="bestContent" class="best-item">
+            <p class="text-muted">Belum ada data konten</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">🎯 CTA Terbaik</h3>
+          <div id="bestCTA" class="best-item">
+            <p class="text-muted">Belum ada data CTA</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Best Content Insights -->
+      <div class="card">
+        <h3 class="card-title">💡 Best Content Insights</h3>
+        <div id="contentInsights" class="insights-container">
+          <p class="text-muted">Insights akan muncul setelah ada data performa konten yang cukup.</p>
+        </div>
+      </div>
+
+      <!-- Progress Target -->
+      <div class="card">
+        <h3 class="card-title">🎯 Progress Target Affiliate</h3>
+        <div class="target-grid">
+          <div class="target-card">
+            <div class="target-header">
+              <span class="target-name">Target 3 Pendaftar</span>
+              <span class="target-badge badge-bronze">Bronze</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress3" style="width:0%"></div>
+            </div>
+            <div class="target-footer">
+              <span id="progress3Text">0/3</span>
+              <span class="target-komisi">Potensi: Rp1.500.000</span>
+            </div>
+          </div>
+          <div class="target-card">
+            <div class="target-header">
+              <span class="target-name">Target 5 Pendaftar</span>
+              <span class="target-badge badge-silver">Silver</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress5" style="width:0%"></div>
+            </div>
+            <div class="target-footer">
+              <span id="progress5Text">0/5</span>
+              <span class="target-komisi">Potensi: Rp3.000.000</span>
+            </div>
+          </div>
+          <div class="target-card">
+            <div class="target-header">
+              <span class="target-name">Target 10 Pendaftar</span>
+              <span class="target-badge badge-gold">Gold</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress10" style="width:0%"></div>
+            </div>
+            <div class="target-footer">
+              <span id="progress10Text">0/10</span>
+              <span class="target-komisi">Potensi: Rp8.000.000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hook A/B Comparison -->
+      <div class="card">
+        <h3 class="card-title">🔬 Hook A/B Comparison</h3>
+        <div class="ab-comparison">
+          <div class="ab-side">
+            <h4>Hook A</h4>
+            <select id="hookASelect" class="input" onchange="App.updateABComparison()">
+              <option value="">Pilih Hook A...</option>
+            </select>
+            <div class="ab-stats" id="hookAStats">
+              <div class="ab-stat"><span class="ab-stat-label">Views</span><input type="number" id="hookAViews" class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">DM</span><input type="number" id="hookADM" class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">Lead</span><input type="number" id="hookALead" class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">Pendaftar</span><input type="number" id="hookAReg" class="input input-sm" value="0" min="0"></div>
+            </div>
+          </div>
+          <div class="ab-vs">VS</div>
+          <div class="ab-side">
+            <h4>Hook B</h4>
+            <select id="hookBSelect" class="input" onchange="App.updateABComparison()">
+              <option value="">Pilih Hook B...</option>
+            </select>
+            <div class="ab-stats" id="hookBStats">
+              <div class="ab-stat"><span class="ab-stat-label">Views</span><input type="number" id="hookBViews" class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">DM</span><input type="number" id="hookBDM" class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">Lead</span><input type="number" id="hookBLead" class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">Pendaftar</span><input type="number" id="hookBReg" class="input input-sm" value="0" min="0"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ab-result" id="abResult">
+          <p class="text-muted">Pilih dua hook dan isi data untuk melihat perbandingan.</p>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" onclick="App.saveABComparison()">💾 Simpan Perbandingan</button>
+          <button class="btn btn-ghost" onclick="App.resetABComparison()">🔄 Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2: ALUR AFFILIATE ==================== -->
+    <section id="alur" class="section">
+      <div class="section-header">
+        <h1>Bagaimana Affiliate Marketing Ini Bekerja</h1>
+        <p class="section-subtitle">Pahami alur dari konten hingga komisi</p>
+      </div>
+
+      <!-- Flowchart Timeline -->
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot">1</div>
+          <div class="timeline-content">
+            <h3>🎬 Membuat Konten</h3>
+            <p>Anda membuat konten edukatif amigurumi 3D faceless tentang crypto syariah di TikTok, Instagram Reels, atau YouTube Shorts.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">2</div>
+          <div class="timeline-content">
+            <h3>👀 Audiens Menonton</h3>
+            <p>Audiens yang tertarik dengan edukasi crypto syariah menonton konten Anda dan mulai engage.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">3</div>
+          <div class="timeline-content">
+            <h3>💬 Audiens DM / Chat / Klik CTA</h3>
+            <p>Audiens menghubungi Anda melalui DM, komentar, atau mengikuti CTA di konten Anda.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">4</div>
+          <div class="timeline-content">
+            <h3>📱 Mengarahkan ke WhatsApp Admin</h3>
+            <p>Anda mengarahkan calon peserta untuk chat langsung dengan admin CryptoSharia via WhatsApp.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">5</div>
+          <div class="timeline-content">
+            <h3>🏷️ Menyebutkan Kode Promo</h3>
+            <p>Calon peserta menyebutkan kode promo Anda saat chat admin agar tercatat sebagai referral Anda.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">6</div>
+          <div class="timeline-content">
+            <h3>📋 Admin Mencatat Kode Promo</h3>
+            <p>Admin CryptoSharia memverifikasi dan mencatat kode promo yang digunakan calon peserta.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">7</div>
+          <div class="timeline-content">
+            <h3>✅ Pendaftaran Valid Dihitung</h3>
+            <p>Pendaftaran berbayar yang sah dihitung sebagai konversi affiliate Anda.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">8</div>
+          <div class="timeline-content">
+            <h3>💰 Komisi Dibayarkan</h3>
+            <p>Komisi affiliate dibayarkan setelah periode pendaftaran Masterclass ditutup.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Funnel -->
+      <div class="card">
+        <h3 class="card-title">📊 Funnel Affiliate</h3>
+        <div class="funnel">
+          <div class="funnel-step funnel-1">
+            <span class="funnel-label">🎬 Konten</span>
+          </div>
+          <div class="funnel-arrow">▼</div>
+          <div class="funnel-step funnel-2">
+            <span class="funnel-label">💬 Interaksi</span>
+          </div>
+          <div class="funnel-arrow">▼</div>
+          <div class="funnel-step funnel-3">
+            <span class="funnel-label">👥 Lead</span>
+          </div>
+          <div class="funnel-arrow">▼</div>
+          <div class="funnel-step funnel-4">
+            <span class="funnel-label">📱 Chat Admin</span>
+          </div>
+          <div class="funnel-arrow">▼</div>
+          <div class="funnel-step funnel-5">
+            <span class="funnel-label">✅ Pendaftaran</span>
+          </div>
+          <div class="funnel-arrow">▼</div>
+          <div class="funnel-step funnel-6">
+            <span class="funnel-label">💰 Komisi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3: CONTENT STUDIO ==================== -->
+    <section id="studio" class="section">
+      <div class="section-header">
+        <h1>Content Studio</h1>
+        <p class="section-subtitle">Buat, kelola, dan simpan semua konten Anda</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tab-bar">
+        <button class="tab-btn active" data-tab="studioCreate">➕ Buat Konten</button>
+        <button class="tab-btn" data-tab="studioList">📋 Daftar Konten</button>
+        <button class="tab-btn" data-tab="studioBank">📚 Bank Konten</button>
+      </div>
+
+      <!-- Tab: Create Content -->
+      <div id="studioCreate" class="tab-content active">
+        <div class="card">
+          <h3 class="card-title">Buat Konten Baru</h3>
+          <form id="contentForm" class="form-grid">
+            <input type="hidden" id="contentEditId" value="">
+            <div class="form-group">
+              <label for="contentTitle">Judul Konten</label>
+              <input type="text" id="contentTitle" class="input" placeholder="Masukkan judul konten..." required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contentPlatform">Platform</label>
+                <select id="contentPlatform" class="input">
+                  <option value="TikTok">TikTok</option>
+                  <option value="Instagram Reels">Instagram Reels</option>
+                  <option value="YouTube Shorts">YouTube Shorts</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contentCategory">Kategori</label>
+                <select id="contentCategory" class="input">
+                  <option value="edukasi">Edukasi</option>
+                  <option value="anti-FOMO">Anti-FOMO</option>
+                  <option value="syariah">Syariah</option>
+                  <option value="pemula">Pemula</option>
+                  <option value="soft selling">Soft Selling</option>
+                  <option value="CTA">CTA</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contentHook">Hook</label>
+              <textarea id="contentHook" class="input" rows="2" placeholder="Hook pembuka konten..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="contentScript">Isi Script</label>
+              <textarea id="contentScript" class="input" rows="5" placeholder="Tulis script lengkap di sini..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="contentCTA">CTA</label>
+              <textarea id="contentCTA" class="input" rows="2" placeholder="Call to action..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="contentCaption">Caption</label>
+              <textarea id="contentCaption" class="input" rows="3" placeholder="Caption untuk posting..."></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contentStatus">Status</label>
+                <select id="contentStatus" class="input">
+                  <option value="draft">Draft</option>
+                  <option value="ready">Ready</option>
+                  <option value="posted">Posted</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contentNotes">Catatan</label>
+              <textarea id="contentNotes" class="input" rows="2" placeholder="Catatan tambahan..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">💾 Simpan Konten</button>
+              <button type="button" class="btn btn-ghost" onclick="App.resetContentForm()">🔄 Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Tab: Content List -->
+      <div id="studioList" class="tab-content">
+        <div class="card">
+          <div class="card-header-row">
+            <h3 class="card-title">Daftar Konten</h3>
+            <div class="card-actions">
+              <input type="text" id="contentSearch" class="input input-sm" placeholder="🔍 Cari konten..." oninput="App.filterContent()">
+              <button class="btn btn-sm btn-danger" onclick="App.resetModule('contents')">🗑️ Reset Data</button>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="table" id="contentTable">
+              <thead>
+                <tr>
+                  <th>Judul</th>
+                  <th>Platform</th>
+                  <th>Kategori</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="contentTableBody"></tbody>
+            </table>
+          </div>
+          <p id="contentEmpty" class="text-muted text-center" hidden>Belum ada konten tersimpan.</p>
+        </div>
+      </div>
+
+      <!-- Tab: Content Bank -->
+      <div id="studioBank" class="tab-content">
+        <div class="grid-2">
+          <!-- Ideas Bank -->
+          <div class="card">
+            <h3 class="card-title">💡 Bank Ide Konten</h3>
+            <div class="bank-list" id="ideaBank"></div>
+          </div>
+          <!-- Hook Bank -->
+          <div class="card">
+            <h3 class="card-title">🎣 Bank Hook</h3>
+            <div class="bank-list" id="hookBank"></div>
+          </div>
+          <!-- CTA Bank -->
+          <div class="card">
+            <h3 class="card-title">🎯 Bank CTA</h3>
+            <div class="bank-list" id="ctaBank"></div>
+          </div>
+          <!-- Script Bank -->
+          <div class="card">
+            <h3 class="card-title">📝 Bank Script Pendek (30–60 detik)</h3>
+            <div class="bank-list" id="scriptBank"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4: PROMO & WHATSAPP ==================== -->
+    <section id="promo" class="section">
+      <div class="section-header">
+        <h1>Promo Code & WhatsApp Tools</h1>
+        <p class="section-subtitle">Pusat alat promosi dan komunikasi</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Promo Code Card -->
+        <div class="card promo-card-big">
+          <div class="promo-display">
+            <span class="promo-label-big">KODE PROMO ANDA</span>
+            <span class="promo-code-big" id="promoCodeDisplay">M-SA01</span>
+            <button class="btn btn-gold" onclick="App.copyPromoCode()">📋 Copy Kode Promo</button>
+          </div>
+          <div class="promo-benefits">
+            <h4>Benefit untuk Calon Peserta:</h4>
+            <ul>
+              <li>✅ Diskon tambahan <strong>Rp250.000</strong></li>
+              <li>✅ Bonus member <strong>Discord Premium 6 bulan</strong> (setara Rp1.000.000)</li>
+            </ul>
+          </div>
+          <div class="promo-format">
+            <h4>Format Kode Promo</h4>
+            <p><strong>M</strong> = Member CryptoSharia<br>
+            <strong>P</strong> = Pengurus CryptoSharia<br>
+            + Inisial nama + Nomor urut</p>
+            <p class="text-muted text-sm">Contoh: M-SA01 | Kode final diberikan admin.</p>
+          </div>
+          <!-- Promo Code Simulator -->
+          <div class="promo-simulator">
+            <h4>Simulasi Format Kode</h4>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="promoType">Tipe</label>
+                <select id="promoType" class="input" onchange="App.simulatePromo()">
+                  <option value="M">M (Member)</option>
+                  <option value="P">P (Pengurus)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="promoInitial">Inisial</label>
+                <input type="text" id="promoInitial" class="input" maxlength="3" placeholder="SA" oninput="App.simulatePromo()">
+              </div>
+              <div class="form-group">
+                <label for="promoNumber">Nomor</label>
+                <input type="text" id="promoNumber" class="input" maxlength="3" placeholder="01" oninput="App.simulatePromo()">
+              </div>
+            </div>
+            <div class="promo-preview">
+              <span>Hasil: </span><strong id="promoSimResult">M-SA01</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp Message Generator -->
+        <div class="card">
+          <h3 class="card-title">📱 WhatsApp Message Generator</h3>
+          <div class="form-group">
+            <label for="waAdminNumber">Nomor WhatsApp Admin</label>
+            <input type="tel" id="waAdminNumber" class="input" placeholder="628xxxxxxxxxx">
+          </div>
+          <div class="form-group">
+            <label for="waName">Nama Calon Peserta (opsional)</label>
+            <input type="text" id="waName" class="input" placeholder="Nama...">
+          </div>
+          <div class="form-group">
+            <label>Preview Pesan:</label>
+            <div class="wa-preview" id="waPreview">
+              Assalamu'alaikum Admin CryptoSharia, saya ingin daftar CryptoSharia Masterclass menggunakan kode promo: <strong>M-SA01</strong>.
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-green" onclick="App.openWhatsApp()">📱 Buka WhatsApp</button>
+            <button class="btn btn-outline" onclick="App.copyWAMessage()">📋 Copy Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message Templates -->
+      <div class="card">
+        <h3 class="card-title">📨 Template Pesan</h3>
+        <div class="template-grid" id="templateGrid"></div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5: LEAD TRACKER ==================== -->
+    <section id="leads" class="section">
+      <div class="section-header">
+        <h1>Lead Tracker</h1>
+        <p class="section-subtitle">Lacak dan kelola semua lead Anda</p>
+      </div>
+
+      <!-- Lead Stats -->
+      <div class="stats-grid stats-grid-sm">
+        <div class="stat-card">
+          <div class="stat-info">
+            <span class="stat-value" id="leadTotal">0</span>
+            <span class="stat-label">Total Lead</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-info">
+            <span class="stat-value" id="leadDirected">0</span>
+            <span class="stat-label">Diarahkan ke Admin</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-info">
+            <span class="stat-value" id="leadRegistered">0</span>
+            <span class="stat-label">Sudah Daftar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lead Form -->
+      <div class="card">
+        <h3 class="card-title">➕ Tambah Lead</h3>
+        <form id="leadForm" class="form-grid">
+          <input type="hidden" id="leadEditId" value="">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="leadName">Nama Lead</label>
+              <input type="text" id="leadName" class="input" placeholder="Nama..." required>
+            </div>
+            <div class="form-group">
+              <label for="leadContact">Kontak / Username</label>
+              <input type="text" id="leadContact" class="input" placeholder="@username atau nomor HP">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="leadPlatform">Sumber Platform</label>
+              <select id="leadPlatform" class="input">
+                <option value="TikTok">TikTok</option>
+                <option value="Instagram">Instagram</option>
+                <option value="YouTube Shorts">YouTube Shorts</option>
+                <option value="WhatsApp">WhatsApp</option>
+                <option value="Story">Story</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="leadSource">Konten / Hook Asal</label>
+              <input type="text" id="leadSource" class="input" placeholder="Judul konten atau hook...">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="leadStatus">Status</label>
+              <select id="leadStatus" class="input">
+                <option value="baru masuk">Baru Masuk</option>
+                <option value="tanya-tanya">Tanya-tanya</option>
+                <option value="sudah dikirim info">Sudah Dikirim Info</option>
+                <option value="sudah diarahkan ke admin">Sudah Diarahkan ke Admin</option>
+                <option value="sudah chat admin">Sudah Chat Admin</option>
+                <option value="sudah daftar">Sudah Daftar</option>
+                <option value="belum jadi">Belum Jadi</option>
+                <option value="follow up nanti">Follow Up Nanti</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="leadDate">Tanggal Masuk</label>
+              <input type="date" id="leadDate" class="input">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="leadFollowUp">Follow Up Date</label>
+              <input type="date" id="leadFollowUp" class="input">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="leadNotes">Catatan</label>
+            <textarea id="leadNotes" class="input" rows="2" placeholder="Catatan..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">💾 Simpan Lead</button>
+            <button type="button" class="btn btn-ghost" onclick="App.resetLeadForm()">🔄 Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Lead Table -->
+      <div class="card">
+        <div class="card-header-row">
+          <h3 class="card-title">📋 Daftar Lead</h3>
+          <div class="card-actions">
+            <input type="text" id="leadSearch" class="input input-sm" placeholder="🔍 Cari lead..." oninput="App.filterLeads()">
+            <select id="leadFilter" class="input input-sm" onchange="App.filterLeads()">
+              <option value="">Semua Status</option>
+              <option value="baru masuk">Baru Masuk</option>
+              <option value="tanya-tanya">Tanya-tanya</option>
+              <option value="sudah dikirim info">Sudah Dikirim Info</option>
+              <option value="sudah diarahkan ke admin">Sudah Diarahkan ke Admin</option>
+              <option value="sudah chat admin">Sudah Chat Admin</option>
+              <option value="sudah daftar">Sudah Daftar</option>
+              <option value="belum jadi">Belum Jadi</option>
+              <option value="follow up nanti">Follow Up Nanti</option>
+            </select>
+            <button class="btn btn-sm btn-outline" onclick="App.exportLeadsCSV()">📥 Export CSV</button>
+            <button class="btn btn-sm btn-danger" onclick="App.resetModule('leads')">🗑️ Reset Data</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="table" id="leadTable">
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>Kontak</th>
+                <th>Platform</th>
+                <th>Status</th>
+                <th>Tanggal</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="leadTableBody"></tbody>
+          </table>
+        </div>
+        <p id="leadEmpty" class="text-muted text-center" hidden>Belum ada lead.</p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 6: PERFORMANCE ==================== -->
+    <section id="performance" class="section">
+      <div class="section-header">
+        <h1>Content Performance Tracker</h1>
+        <p class="section-subtitle">Lacak dan analisa performa konten Anda</p>
+      </div>
+
+      <!-- Performance Stats -->
+      <div class="stats-grid stats-grid-sm">
+        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="perfTotal">0</span><span class="stat-label">Total Konten</span></div></div>
+        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="perfViews">0</span><span class="stat-label">Total Views</span></div></div>
+        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="perfLeads">0</span><span class="stat-label">Total Lead</span></div></div>
+        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="perfReg">0</span><span class="stat-label">Lead Daftar</span></div></div>
+        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="perfConv">0%</span><span class="stat-label">Conversion</span></div></div>
+      </div>
+
+      <!-- Performance Form -->
+      <div class="card">
+        <h3 class="card-title">➕ Tambah Data Performa</h3>
+        <form id="perfForm" class="form-grid">
+          <input type="hidden" id="perfEditId" value="">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="perfName">Nama Konten</label>
+              <input type="text" id="perfName" class="input" placeholder="Judul konten..." required>
+            </div>
+            <div class="form-group">
+              <label for="perfPlatform">Platform</label>
+              <select id="perfPlatform" class="input">
+                <option value="TikTok">TikTok</option>
+                <option value="Instagram Reels">Instagram Reels</option>
+                <option value="YouTube Shorts">YouTube Shorts</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="perfDate">Tanggal Posting</label>
+              <input type="date" id="perfDate" class="input">
+            </div>
+            <div class="form-group">
+              <label for="perfCategory">Kategori</label>
+              <select id="perfCategory" class="input">
+                <option value="edukasi">Edukasi</option>
+                <option value="anti-FOMO">Anti-FOMO</option>
+                <option value="syariah">Syariah</option>
+                <option value="pemula">Pemula</option>
+                <option value="soft selling">Soft Selling</option>
+                <option value="CTA">CTA</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="perfHook">Hook</label>
+            <input type="text" id="perfHook" class="input" placeholder="Hook yang digunakan...">
+          </div>
+          <div class="form-row form-row-4">
+            <div class="form-group"><label for="perfViews">Views</label><input type="number" id="perfViewsInput" class="input" min="0" value="0"></div>
+            <div class="form-group"><label for="perfLikes">Likes</label><input type="number" id="perfLikes" class="input" min="0" value="0"></div>
+            <div class="form-group"><label for="perfComments">Comments</label><input type="number" id="perfComments" class="input" min="0" value="0"></div>
+            <div class="form-group"><label for="perfShares">Shares</label><input type="number" id="perfShares" class="input" min="0" value="0"></div>
+          </div>
+          <div class="form-row form-row-3">
+            <div class="form-group"><label for="perfDM">DM Masuk</label><input type="number" id="perfDM" class="input" min="0" value="0"></div>
+            <div class="form-group"><label for="perfLeadIn">Lead Masuk</label><input type="number" id="perfLeadIn" class="input" min="0" value="0"></div>
+            <div class="form-group"><label for="perfLeadReg">Lead Daftar</label><input type="number" id="perfLeadReg" class="input" min="0" value="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="perfNotes">Catatan Performa</label>
+            <textarea id="perfNotes" class="input" rows="2" placeholder="Catatan..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">💾 Simpan Performa</button>
+            <button type="button" class="btn btn-ghost" onclick="App.resetPerfForm()">🔄 Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Performance Table -->
+      <div class="card">
+        <div class="card-header-row">
+          <h3 class="card-title">📊 Tabel Performa</h3>
+          <div class="card-actions">
+            <button class="btn btn-sm btn-outline" onclick="App.exportPerfCSV()">📥 Export CSV</button>
+            <button class="btn btn-sm btn-danger" onclick="App.resetModule('performance')">🗑️ Reset Data</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="table" id="perfTable">
+            <thead>
+              <tr>
+                <th>Konten</th>
+                <th>Platform</th>
+                <th>Tanggal</th>
+                <th>Views</th>
+                <th>Likes</th>
+                <th>DM</th>
+                <th>Lead</th>
+                <th>Daftar</th>
+                <th>🏆</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="perfTableBody"></tbody>
+          </table>
+        </div>
+        <p id="perfEmpty" class="text-muted text-center" hidden>Belum ada data performa.</p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 7: KOMISI CALCULATOR ==================== -->
+    <section id="komisi" class="section">
+      <div class="section-header">
+        <h1>Komisi Calculator</h1>
+        <p class="section-subtitle">Hitung estimasi komisi affiliate Anda</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">🧮 Kalkulator</h3>
+          <div class="form-group">
+            <label for="komisiInput">Jumlah Pendaftar Valid</label>
+            <input type="number" id="komisiInput" class="input input-lg" min="0" value="0" oninput="App.calculateKomisi()">
+          </div>
+          <div class="komisi-breakdown" id="komisiBreakdown">
+            <div class="komisi-row">
+              <span>1–3 pendaftar × Rp500.000</span>
+              <span id="komisi1">Rp0</span>
+            </div>
+            <div class="komisi-row">
+              <span>4–5 pendaftar × Rp750.000</span>
+              <span id="komisi2">Rp0</span>
+            </div>
+            <div class="komisi-row">
+              <span>6+ pendaftar × Rp1.000.000</span>
+              <span id="komisi3">Rp0</span>
+            </div>
+            <div class="komisi-total">
+              <span>Total Estimasi Komisi</span>
+              <span id="komisiTotal">Rp0</span>
+            </div>
+          </div>
+          <p class="text-muted text-sm">⚠️ Komisi final mengikuti validasi admin dan hanya dihitung dari pendaftaran berbayar yang sah.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">📋 Contoh Perhitungan</h3>
+          <div class="komisi-examples">
+            <div class="komisi-example" onclick="App.setKomisiExample(3)">
+              <h4>3 Pendaftar</h4>
+              <p class="komisi-amount">Rp1.500.000</p>
+              <p class="text-sm">3 × Rp500.000</p>
+            </div>
+            <div class="komisi-example" onclick="App.setKomisiExample(5)">
+              <h4>5 Pendaftar</h4>
+              <p class="komisi-amount">Rp3.000.000</p>
+              <p class="text-sm">3×500rb + 2×750rb</p>
+            </div>
+            <div class="komisi-example" onclick="App.setKomisiExample(10)">
+              <h4>10 Pendaftar</h4>
+              <p class="komisi-amount">Rp8.000.000</p>
+              <p class="text-sm">3×500rb + 2×750rb + 5×1jt</p>
+            </div>
+          </div>
+
+          <div class="komisi-tiers">
+            <h4>Skema Komisi</h4>
+            <table class="table table-sm">
+              <thead><tr><th>Pendaftar</th><th>Komisi/Orang</th></tr></thead>
+              <tbody>
+                <tr><td>Ke-1 s/d ke-3</td><td>Rp500.000</td></tr>
+                <tr><td>Ke-4 dan ke-5</td><td>Rp750.000</td></tr>
+                <tr><td>Ke-6 dan seterusnya</td><td>Rp1.000.000</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 8: CALENDAR ==================== -->
+    <section id="calendar" class="section">
+      <div class="section-header">
+        <h1>Content Calendar & Checklist</h1>
+        <p class="section-subtitle">Rencanakan dan pantau aktivitas harian Anda</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Calendar -->
+        <div class="card">
+          <h3 class="card-title">📅 Rencana Konten</h3>
+          <form id="calendarForm" class="form-grid">
+            <input type="hidden" id="calEditId" value="">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="calDate">Tanggal</label>
+                <input type="date" id="calDate" class="input" required>
+              </div>
+              <div class="form-group">
+                <label for="calPlatform">Platform</label>
+                <select id="calPlatform" class="input">
+                  <option value="TikTok">TikTok</option>
+                  <option value="Instagram Reels">Instagram Reels</option>
+                  <option value="YouTube Shorts">YouTube Shorts</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="calTheme">Tema</label>
+              <input type="text" id="calTheme" class="input" placeholder="Tema konten...">
+            </div>
+            <div class="form-group">
+              <label for="calTitle">Judul Konten</label>
+              <input type="text" id="calTitle" class="input" placeholder="Judul konten..." required>
+            </div>
+            <div class="form-group">
+              <label for="calCTA">CTA</label>
+              <input type="text" id="calCTA" class="input" placeholder="Call to action...">
+            </div>
+            <div class="form-group">
+              <label for="calStatus">Status Produksi</label>
+              <select id="calStatus" class="input">
+                <option value="ide">💡 Ide</option>
+                <option value="script">📝 Script</option>
+                <option value="ready">✅ Ready</option>
+                <option value="posted">🚀 Posted</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">💾 Simpan</button>
+              <button type="button" class="btn btn-ghost" onclick="App.resetCalForm()">🔄 Reset</button>
+            </div>
+          </form>
+          <div class="table-wrap">
+            <table class="table table-sm" id="calTable">
+              <thead>
+                <tr>
+                  <th>Tanggal</th>
+                  <th>Platform</th>
+                  <th>Judul</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="calTableBody"></tbody>
+            </table>
+          </div>
+          <p id="calEmpty" class="text-muted text-center" hidden>Belum ada rencana konten.</p>
+          <div class="form-actions" style="margin-top: var(--space-3);">
+            <button class="btn btn-sm btn-danger" onclick="App.resetModule('calendar')">🗑️ Reset Data</button>
+          </div>
+        </div>
+
+        <!-- Daily Checklist -->
+        <div class="card">
+          <h3 class="card-title">✅ Checklist Harian</h3>
+          <div class="checklist-date">
+            <input type="date" id="checklistDate" class="input" onchange="App.loadChecklist()">
+          </div>
+          <div class="checklist" id="checklistContainer">
+            <label class="checklist-item">
+              <input type="checkbox" data-check="hook" onchange="App.saveChecklist()">
+              <span class="checkmark"></span>
+              <span>Sudah buat 1 hook</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" data-check="script" onchange="App.saveChecklist()">
+              <span class="checkmark"></span>
+              <span>Sudah siapkan 1 script</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" data-check="posting" onchange="App.saveChecklist()">
+              <span class="checkmark"></span>
+              <span>Sudah posting 1 konten</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" data-check="story" onchange="App.saveChecklist()">
+              <span class="checkmark"></span>
+              <span>Sudah upload story CTA</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" data-check="followup" onchange="App.saveChecklist()">
+              <span class="checkmark"></span>
+              <span>Sudah follow up lead</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" data-check="performa" onchange="App.saveChecklist()">
+              <span class="checkmark"></span>
+              <span>Sudah cek performa konten</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" data-check="arahkan" onchange="App.saveChecklist()">
+              <span class="checkmark"></span>
+              <span>Sudah arahkan lead ke admin</span>
+            </label>
+          </div>
+          <div class="checklist-progress">
+            <div class="progress-bar">
+              <div class="progress-fill progress-fill-green" id="checklistProgress" style="width:0%"></div>
+            </div>
+            <span id="checklistProgressText" class="text-sm">0/7 selesai</span>
+          </div>
+
+          <!-- Weekly Progress -->
+          <div class="weekly-progress">
+            <h4>📊 Progress Mingguan</h4>
+            <div id="weeklyBars" class="weekly-bars"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 9: ASSETS ==================== -->
+    <section id="assets" class="section">
+      <div class="section-header">
+        <h1>Asset Library</h1>
+        <p class="section-subtitle">Prompt & catatan untuk konten amigurumi 3D faceless</p>
+      </div>
+
+      <div class="asset-tabs">
+        <button class="tab-btn active" data-asset-tab="promptKarakter">🧸 Karakter</button>
+        <button class="tab-btn" data-asset-tab="promptScene">🎬 Scene</button>
+        <button class="tab-btn" data-asset-tab="promptCTA">🎯 CTA Scene</button>
+        <button class="tab-btn" data-asset-tab="promptBg">🖼️ Background</button>
+        <button class="tab-btn" data-asset-tab="promptStory">📖 Visual Storytelling</button>
+        <button class="tab-btn" data-asset-tab="promptHook">🎣 Visual Hook</button>
+        <button class="tab-btn" data-asset-tab="promptTransisi">🔄 Transisi</button>
+        <button class="tab-btn" data-asset-tab="catatanVO">🎤 Voiceover</button>
+        <button class="tab-btn" data-asset-tab="catatanCaption">📝 Caption</button>
+      </div>
+
+      <div id="assetContent" class="asset-content">
+        <!-- Dynamically loaded -->
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 10: PRINSIP SYARIAH ==================== -->
+    <section id="syariah" class="section">
+      <div class="section-header">
+        <h1>Prinsip Konten Aman Syariah</h1>
+        <p class="section-subtitle">Panduan membuat konten yang sesuai prinsip syariah</p>
+      </div>
+
+      <div class="syariah-grid">
+        <div class="syariah-card syariah-dont">
+          <div class="syariah-icon">🚫</div>
+          <h3>Jangan Menjanjikan Profit Pasti</h3>
+          <p>Tidak boleh mengklaim "pasti untung" atau memberikan jaminan return tertentu.</p>
+        </div>
+        <div class="syariah-card syariah-dont">
+          <div class="syariah-icon">🚫</div>
+          <h3>Jangan Gunakan Klaim "Pasti Cuan"</h3>
+          <p>Hindari penggunaan kata-kata yang menjamin keuntungan finansial.</p>
+        </div>
+        <div class="syariah-card syariah-dont">
+          <div class="syariah-icon">🚫</div>
+          <h3>Jangan Mendorong FOMO</h3>
+          <p>Jangan membuat audiens merasa ketinggalan atau harus segera beli tanpa berpikir.</p>
+        </div>
+        <div class="syariah-card syariah-dont">
+          <div class="syariah-icon">🚫</div>
+          <h3>Jangan Mendorong Leverage / Gambling</h3>
+          <p>Leverage dan gambling bertentangan dengan prinsip syariah. Jangan mempromosikannya.</p>
+        </div>
+        <div class="syariah-card syariah-dont">
+          <div class="syariah-icon">🚫</div>
+          <h3>Jangan Seolah Semua Crypto Halal</h3>
+          <p>Tidak semua cryptocurrency otomatis halal. Perlu screening terlebih dahulu.</p>
+        </div>
+        <div class="syariah-card syariah-do">
+          <div class="syariah-icon">✅</div>
+          <h3>Fokus Edukasi</h3>
+          <p>Utamakan edukasi, pemahaman risiko, dan literasi keuangan syariah.</p>
+        </div>
+        <div class="syariah-card syariah-do">
+          <div class="syariah-icon">✅</div>
+          <h3>Risk Management</h3>
+          <p>Selalu tekankan pentingnya memahami dan mengelola risiko investasi.</p>
+        </div>
+        <div class="syariah-card syariah-do">
+          <div class="syariah-icon">✅</div>
+          <h3>Screening Halal</h3>
+          <p>Arahkan audiens untuk memahami cara screening koin sesuai prinsip syariah.</p>
+        </div>
+        <div class="syariah-card syariah-do">
+          <div class="syariah-icon">✅</div>
+          <h3>Belajar Terstruktur</h3>
+          <p>Dorong pendekatan belajar yang sistematis, bukan asal ikut tren.</p>
+        </div>
+      </div>
+
+      <div class="card disclaimer-card">
+        <div class="disclaimer-icon">⚖️</div>
+        <h3>Disclaimer Wajib</h3>
+        <p class="disclaimer-text">"Bukan financial advice. Konten ini untuk edukasi."</p>
+        <button class="btn btn-outline" onclick="App.quickCopy('disclaimer')">📋 Copy Disclaimer</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
