@@ -272,7 +272,7 @@ include __DIR__ . '/includes/sidebar.php';
         </div>
         
         <div id="studioCreate" class="tab-content active">
-          <div class="grid-2">
+          <div style="display: flex; flex-direction: column; gap: var(--space-6);">
             <!-- Form Konten -->
             <div class="card">
               <h3 class="card-title">Draft Konten</h3>
