@@ -4,7 +4,7 @@
   <script>
     window.APP_SETTINGS = <?php echo json_encode($settings, JSON_UNESCAPED_UNICODE); ?>;
   </script>
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js?v=<?= time() ?>"></script>
 </body>
 
 </html>
