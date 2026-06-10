@@ -26,7 +26,13 @@ function getDB() {
             $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
         } catch (PDOException $e) {
             http_response_code(500);
-            echo json_encode(['success' => false, 'message' => 'Database connection failed.']);
+            echo json_encode([
+                'success' => false, 
+                'message' => 'Database connection failed.',
+                'error' => $e->getMessage(),
+                'host' => DB_HOST,
+                'user' => DB_USER
+            ]);
             exit;
         }
     }
