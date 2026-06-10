@@ -673,25 +673,22 @@ const App = {
     // ==================== KOMISI ====================
     calculateKomisi() {
         let n = parseInt(document.getElementById('komisiInput').value) || 0;
-        let t1 = 0, t2 = 0, t3 = 0, total = 0;
+        let t1 = 0, t2 = 0, total = 0;
 
         if (n > 0) {
-            let c1 = Math.min(n, 3);
-            t1 = c1 * 500000;
-            if (n > 3) {
-                let c2 = Math.min(n - 3, 2);
-                t2 = c2 * 750000;
+            if (n < 4) {
+                t1 = n * 750000;
+                total = t1;
+            } else {
+                t2 = n * 1000000;
+                total = t2;
             }
-            if (n > 5) {
-                let c3 = n - 5;
-                t3 = c3 * 1000000;
-            }
-            total = t1 + t2 + t3;
         }
 
         document.getElementById('komisi1').textContent = 'Rp' + t1.toLocaleString('id-ID');
         document.getElementById('komisi2').textContent = 'Rp' + t2.toLocaleString('id-ID');
-        document.getElementById('komisi3').textContent = 'Rp' + t3.toLocaleString('id-ID');
+        const k3 = document.getElementById('komisi3');
+        if (k3) k3.textContent = 'Rp0';
         document.getElementById('komisiTotal').textContent = 'Rp' + total.toLocaleString('id-ID');
     },
 

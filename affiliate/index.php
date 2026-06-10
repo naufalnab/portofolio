@@ -748,16 +748,12 @@ include __DIR__ . '/includes/sidebar.php';
           </div>
           <div class="komisi-breakdown" id="komisiBreakdown">
             <div class="komisi-row">
-              <span>Tier 1 (1-3 org) @ Rp500rb</span>
+              <span>Paket 1-3 org (@ Rp750rb)</span>
               <span id="komisi1">Rp0</span>
             </div>
             <div class="komisi-row">
-              <span>Tier 2 (4-5 org) @ Rp750rb</span>
+              <span>Paket 4+ org (@ Rp1 Jt)</span>
               <span id="komisi2">Rp0</span>
-            </div>
-            <div class="komisi-row">
-              <span>Tier 3 (6+ org) @ Rp1jt</span>
-              <span id="komisi3">Rp0</span>
             </div>
             <div class="komisi-row komisi-total-row">
               <span>Total Estimasi Komisi</span>
@@ -774,16 +770,16 @@ include __DIR__ . '/includes/sidebar.php';
           
           <div class="ab-stats" style="margin-bottom: var(--space-4);">
             <div class="ab-stat" style="cursor: pointer;" onclick="App.setKomisiExample(1)">
-              <span class="ab-stat-label">1 Orang</span><strong class="text-gold">Rp500rb</strong>
+              <span class="ab-stat-label">1 Orang</span><strong class="text-gold">Rp750rb</strong>
             </div>
             <div class="ab-stat" style="cursor: pointer;" onclick="App.setKomisiExample(3)">
-              <span class="ab-stat-label">3 Orang</span><strong class="text-gold">Rp1.5 Jt</strong>
+              <span class="ab-stat-label">3 Orang</span><strong class="text-gold">Rp2.25 Jt</strong>
             </div>
             <div class="ab-stat" style="cursor: pointer;" onclick="App.setKomisiExample(5)">
-              <span class="ab-stat-label">5 Orang</span><strong class="text-gold">Rp3 Jt</strong>
+              <span class="ab-stat-label">5 Orang</span><strong class="text-gold">Rp5 Jt</strong>
             </div>
             <div class="ab-stat" style="cursor: pointer;" onclick="App.setKomisiExample(10)">
-              <span class="ab-stat-label">10 Orang</span><strong class="text-gold">Rp8 Jt</strong>
+              <span class="ab-stat-label">10 Orang</span><strong class="text-gold">Rp10 Jt</strong>
             </div>
           </div>
 
@@ -798,15 +794,11 @@ include __DIR__ . '/includes/sidebar.php';
               </thead>
               <tbody>
                 <tr>
-                  <td>Ke-1 s/d ke-3</td>
-                  <td>Rp500.000</td>
-                </tr>
-                <tr>
-                  <td>Ke-4 dan ke-5</td>
+                  <td>1 s/d 3 Orang</td>
                   <td>Rp750.000</td>
                 </tr>
                 <tr>
-                  <td>Ke-6 dan seterusnya</td>
+                  <td>4 Orang atau lebih</td>
                   <td>Rp1.000.000</td>
                 </tr>
               </tbody>
