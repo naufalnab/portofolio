@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
   <meta name="description" content="Dashboard kerja pribadi affiliate content creator CryptoSharia Masterclass">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Toast Notification -->
   <div id="toast" class="toast" aria-live="polite"></div>
@@ -34,12 +38,13 @@
         <svg viewBox="0 0 40 40" width="40" height="40">
           <defs>
             <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#c9a84c"/>
-              <stop offset="100%" style="stop-color:#e8c66a"/>
+              <stop offset="0%" style="stop-color:#c9a84c" />
+              <stop offset="100%" style="stop-color:#e8c66a" />
             </linearGradient>
           </defs>
-          <rect width="40" height="40" rx="10" fill="url(#brandGrad)"/>
-          <text x="20" y="27" text-anchor="middle" fill="#0a1628" font-size="18" font-weight="800" font-family="Outfit">CS</text>
+          <rect width="40" height="40" rx="10" fill="url(#brandGrad)" />
+          <text x="20" y="27" text-anchor="middle" fill="#0a1628" font-size="18" font-weight="800"
+            font-family="Outfit">CS</text>
         </svg>
       </div>
       <div class="brand-text">
@@ -113,7 +118,7 @@
       <div class="promo-banner" id="dashPromo">
         <div class="promo-banner-content">
           <span class="promo-label">Kode Promo Anda</span>
-          <span class="promo-code" id="dashPromoCode">M-SA01</span>
+          <span class="promo-code" id="dashPromoCode">P - NFL</span>
           <button class="btn btn-gold btn-sm" onclick="App.copyPromoCode()">📋 Copy</button>
         </div>
       </div>
@@ -237,10 +242,14 @@
               <option value="">Pilih Hook A...</option>
             </select>
             <div class="ab-stats" id="hookAStats">
-              <div class="ab-stat"><span class="ab-stat-label">Views</span><input type="number" id="hookAViews" class="input input-sm" value="0" min="0"></div>
-              <div class="ab-stat"><span class="ab-stat-label">DM</span><input type="number" id="hookADM" class="input input-sm" value="0" min="0"></div>
-              <div class="ab-stat"><span class="ab-stat-label">Lead</span><input type="number" id="hookALead" class="input input-sm" value="0" min="0"></div>
-              <div class="ab-stat"><span class="ab-stat-label">Pendaftar</span><input type="number" id="hookAReg" class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">Views</span><input type="number" id="hookAViews"
+                  class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">DM</span><input type="number" id="hookADM"
+                  class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">Lead</span><input type="number" id="hookALead"
+                  class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">Pendaftar</span><input type="number" id="hookAReg"
+                  class="input input-sm" value="0" min="0"></div>
             </div>
           </div>
           <div class="ab-vs">VS</div>
@@ -250,10 +259,14 @@
               <option value="">Pilih Hook B...</option>
             </select>
             <div class="ab-stats" id="hookBStats">
-              <div class="ab-stat"><span class="ab-stat-label">Views</span><input type="number" id="hookBViews" class="input input-sm" value="0" min="0"></div>
-              <div class="ab-stat"><span class="ab-stat-label">DM</span><input type="number" id="hookBDM" class="input input-sm" value="0" min="0"></div>
-              <div class="ab-stat"><span class="ab-stat-label">Lead</span><input type="number" id="hookBLead" class="input input-sm" value="0" min="0"></div>
-              <div class="ab-stat"><span class="ab-stat-label">Pendaftar</span><input type="number" id="hookBReg" class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">Views</span><input type="number" id="hookBViews"
+                  class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">DM</span><input type="number" id="hookBDM"
+                  class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">Lead</span><input type="number" id="hookBLead"
+                  class="input input-sm" value="0" min="0"></div>
+              <div class="ab-stat"><span class="ab-stat-label">Pendaftar</span><input type="number" id="hookBReg"
+                  class="input input-sm" value="0" min="0"></div>
             </div>
           </div>
         </div>
@@ -280,7 +293,8 @@
           <div class="timeline-dot">1</div>
           <div class="timeline-content">
             <h3>🎬 Membuat Konten</h3>
-            <p>Anda membuat konten edukatif amigurumi 3D faceless tentang crypto syariah di TikTok, Instagram Reels, atau YouTube Shorts.</p>
+            <p>Anda membuat konten edukatif amigurumi 3D faceless tentang crypto syariah di TikTok, Instagram Reels,
+              atau YouTube Shorts.</p>
           </div>
         </div>
         <div class="timeline-item">
@@ -416,7 +430,8 @@
             </div>
             <div class="form-group">
               <label for="contentScript">Isi Script</label>
-              <textarea id="contentScript" class="input" rows="5" placeholder="Tulis script lengkap di sini..."></textarea>
+              <textarea id="contentScript" class="input" rows="5"
+                placeholder="Tulis script lengkap di sini..."></textarea>
             </div>
             <div class="form-group">
               <label for="contentCTA">CTA</label>
@@ -454,7 +469,8 @@
           <div class="card-header-row">
             <h3 class="card-title">Daftar Konten</h3>
             <div class="card-actions">
-              <input type="text" id="contentSearch" class="input input-sm" placeholder="🔍 Cari konten..." oninput="App.filterContent()">
+              <input type="text" id="contentSearch" class="input input-sm" placeholder="🔍 Cari konten..."
+                oninput="App.filterContent()">
               <button class="btn btn-sm btn-danger" onclick="App.resetModule('contents')">🗑️ Reset Data</button>
             </div>
           </div>
@@ -515,7 +531,7 @@
         <div class="card promo-card-big">
           <div class="promo-display">
             <span class="promo-label-big">KODE PROMO ANDA</span>
-            <span class="promo-code-big" id="promoCodeDisplay">M-SA01</span>
+            <span class="promo-code-big" id="promoCodeDisplay">P - NFL</span>
             <button class="btn btn-gold" onclick="App.copyPromoCode()">📋 Copy Kode Promo</button>
           </div>
           <div class="promo-benefits">
@@ -528,9 +544,10 @@
           <div class="promo-format">
             <h4>Format Kode Promo</h4>
             <p><strong>M</strong> = Member CryptoSharia<br>
-            <strong>P</strong> = Pengurus CryptoSharia<br>
-            + Inisial nama + Nomor urut</p>
-            <p class="text-muted text-sm">Contoh: M-SA01 | Kode final diberikan admin.</p>
+              <strong>P</strong> = Pengurus CryptoSharia<br>
+              + Inisial nama + Nomor urut
+            </p>
+            <p class="text-muted text-sm">Contoh: P - NFL | Kode final diberikan admin.</p>
           </div>
           <!-- Promo Code Simulator -->
           <div class="promo-simulator">
@@ -545,15 +562,17 @@
               </div>
               <div class="form-group">
                 <label for="promoInitial">Inisial</label>
-                <input type="text" id="promoInitial" class="input" maxlength="3" placeholder="SA" oninput="App.simulatePromo()">
+                <input type="text" id="promoInitial" class="input" maxlength="3" placeholder="SA"
+                  oninput="App.simulatePromo()">
               </div>
               <div class="form-group">
                 <label for="promoNumber">Nomor</label>
-                <input type="text" id="promoNumber" class="input" maxlength="3" placeholder="01" oninput="App.simulatePromo()">
+                <input type="text" id="promoNumber" class="input" maxlength="3" placeholder="01"
+                  oninput="App.simulatePromo()">
               </div>
             </div>
             <div class="promo-preview">
-              <span>Hasil: </span><strong id="promoSimResult">M-SA01</strong>
+              <span>Hasil: </span><strong id="promoSimResult">P - NFL</strong>
             </div>
           </div>
         </div>
@@ -572,7 +591,8 @@
           <div class="form-group">
             <label>Preview Pesan:</label>
             <div class="wa-preview" id="waPreview">
-              Assalamu'alaikum Admin CryptoSharia, saya ingin daftar CryptoSharia Masterclass menggunakan kode promo: <strong>M-SA01</strong>.
+              Assalamu'alaikum Admin CryptoSharia, saya ingin daftar CryptoSharia Masterclass menggunakan kode promo:
+              <strong>P - NFL</strong>.
             </div>
           </div>
           <div class="form-actions">
@@ -691,7 +711,8 @@
         <div class="card-header-row">
           <h3 class="card-title">📋 Daftar Lead</h3>
           <div class="card-actions">
-            <input type="text" id="leadSearch" class="input input-sm" placeholder="🔍 Cari lead..." oninput="App.filterLeads()">
+            <input type="text" id="leadSearch" class="input input-sm" placeholder="🔍 Cari lead..."
+              oninput="App.filterLeads()">
             <select id="leadFilter" class="input input-sm" onchange="App.filterLeads()">
               <option value="">Semua Status</option>
               <option value="baru masuk">Baru Masuk</option>
@@ -735,11 +756,26 @@
 
       <!-- Performance Stats -->
       <div class="stats-grid stats-grid-sm">
-        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="perfTotal">0</span><span class="stat-label">Total Konten</span></div></div>
-        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="perfViews">0</span><span class="stat-label">Total Views</span></div></div>
-        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="perfLeads">0</span><span class="stat-label">Total Lead</span></div></div>
-        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="perfReg">0</span><span class="stat-label">Lead Daftar</span></div></div>
-        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="perfConv">0%</span><span class="stat-label">Conversion</span></div></div>
+        <div class="stat-card">
+          <div class="stat-info"><span class="stat-value" id="perfTotal">0</span><span class="stat-label">Total
+              Konten</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-info"><span class="stat-value" id="perfViews">0</span><span class="stat-label">Total
+              Views</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-info"><span class="stat-value" id="perfLeads">0</span><span class="stat-label">Total
+              Lead</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-info"><span class="stat-value" id="perfReg">0</span><span class="stat-label">Lead
+              Daftar</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-info"><span class="stat-value" id="perfConv">0%</span><span
+              class="stat-label">Conversion</span></div>
+        </div>
       </div>
 
       <!-- Performance Form -->
@@ -783,15 +819,22 @@
             <input type="text" id="perfHook" class="input" placeholder="Hook yang digunakan...">
           </div>
           <div class="form-row form-row-4">
-            <div class="form-group"><label for="perfViews">Views</label><input type="number" id="perfViewsInput" class="input" min="0" value="0"></div>
-            <div class="form-group"><label for="perfLikes">Likes</label><input type="number" id="perfLikes" class="input" min="0" value="0"></div>
-            <div class="form-group"><label for="perfComments">Comments</label><input type="number" id="perfComments" class="input" min="0" value="0"></div>
-            <div class="form-group"><label for="perfShares">Shares</label><input type="number" id="perfShares" class="input" min="0" value="0"></div>
+            <div class="form-group"><label for="perfViews">Views</label><input type="number" id="perfViewsInput"
+                class="input" min="0" value="0"></div>
+            <div class="form-group"><label for="perfLikes">Likes</label><input type="number" id="perfLikes"
+                class="input" min="0" value="0"></div>
+            <div class="form-group"><label for="perfComments">Comments</label><input type="number" id="perfComments"
+                class="input" min="0" value="0"></div>
+            <div class="form-group"><label for="perfShares">Shares</label><input type="number" id="perfShares"
+                class="input" min="0" value="0"></div>
           </div>
           <div class="form-row form-row-3">
-            <div class="form-group"><label for="perfDM">DM Masuk</label><input type="number" id="perfDM" class="input" min="0" value="0"></div>
-            <div class="form-group"><label for="perfLeadIn">Lead Masuk</label><input type="number" id="perfLeadIn" class="input" min="0" value="0"></div>
-            <div class="form-group"><label for="perfLeadReg">Lead Daftar</label><input type="number" id="perfLeadReg" class="input" min="0" value="0"></div>
+            <div class="form-group"><label for="perfDM">DM Masuk</label><input type="number" id="perfDM" class="input"
+                min="0" value="0"></div>
+            <div class="form-group"><label for="perfLeadIn">Lead Masuk</label><input type="number" id="perfLeadIn"
+                class="input" min="0" value="0"></div>
+            <div class="form-group"><label for="perfLeadReg">Lead Daftar</label><input type="number" id="perfLeadReg"
+                class="input" min="0" value="0"></div>
           </div>
           <div class="form-group">
             <label for="perfNotes">Catatan Performa</label>
@@ -848,7 +891,8 @@
           <h3 class="card-title">🧮 Kalkulator</h3>
           <div class="form-group">
             <label for="komisiInput">Jumlah Pendaftar Valid</label>
-            <input type="number" id="komisiInput" class="input input-lg" min="0" value="0" oninput="App.calculateKomisi()">
+            <input type="number" id="komisiInput" class="input input-lg" min="0" value="0"
+              oninput="App.calculateKomisi()">
           </div>
           <div class="komisi-breakdown" id="komisiBreakdown">
             <div class="komisi-row">
@@ -868,7 +912,8 @@
               <span id="komisiTotal">Rp0</span>
             </div>
           </div>
-          <p class="text-muted text-sm">⚠️ Komisi final mengikuti validasi admin dan hanya dihitung dari pendaftaran berbayar yang sah.</p>
+          <p class="text-muted text-sm">⚠️ Komisi final mengikuti validasi admin dan hanya dihitung dari pendaftaran
+            berbayar yang sah.</p>
         </div>
 
         <div class="card">
@@ -894,11 +939,25 @@
           <div class="komisi-tiers">
             <h4>Skema Komisi</h4>
             <table class="table table-sm">
-              <thead><tr><th>Pendaftar</th><th>Komisi/Orang</th></tr></thead>
+              <thead>
+                <tr>
+                  <th>Pendaftar</th>
+                  <th>Komisi/Orang</th>
+                </tr>
+              </thead>
               <tbody>
-                <tr><td>Ke-1 s/d ke-3</td><td>Rp500.000</td></tr>
-                <tr><td>Ke-4 dan ke-5</td><td>Rp750.000</td></tr>
-                <tr><td>Ke-6 dan seterusnya</td><td>Rp1.000.000</td></tr>
+                <tr>
+                  <td>Ke-1 s/d ke-3</td>
+                  <td>Rp500.000</td>
+                </tr>
+                <tr>
+                  <td>Ke-4 dan ke-5</td>
+                  <td>Rp750.000</td>
+                </tr>
+                <tr>
+                  <td>Ke-6 dan seterusnya</td>
+                  <td>Rp1.000.000</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -1129,4 +1188,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

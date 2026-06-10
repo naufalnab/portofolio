@@ -5,7 +5,7 @@
 
 const App = {
   // --- Configuration ---
-  promoCode: 'M-SA01',
+  promoCode: 'P - NFL',
 
   // --- Seed Data ---
   seedIdeas: [
@@ -110,7 +110,7 @@ Di sana kamu akan belajar:
 • Financial planning
 • Dan masih banyak lagi
 
-Gunakan kode promo saya: M-SA01 untuk mendapatkan:
+Gunakan kode promo saya: P - NFL untuk mendapatkan:
 ✅ Diskon Rp250.000
 ✅ Bonus Discord Premium 6 bulan (senilai Rp1.000.000)
 
@@ -122,7 +122,7 @@ Chat admin CryptoSharia untuk daftar ya! 🙏`,
 
 Kemarin sempat tanya-tanya soal CryptoSharia Masterclass ya? Kalau masih tertarik, pendaftaran masih dibuka.
 
-Jangan lupa sebutkan kode promo M-SA01 supaya kamu dapat diskon Rp250.000 dan bonus Discord Premium 6 bulan.
+Jangan lupa sebutkan kode promo P - NFL supaya kamu dapat diskon Rp250.000 dan bonus Discord Premium 6 bulan.
 
 Kalau ada pertanyaan, jangan ragu chat saya ya. 🙏`,
     },
@@ -145,7 +145,7 @@ DM saya untuk info lebih lanjut. 🙏`,
 
 Kalau kamu mau daftar CryptoSharia Masterclass, jangan lupa sebutkan kode promo saya:
 
-🏷️ M-SA01
+🏷️ P - NFL
 
 Benefitnya:
 ✅ Diskon Rp250.000
@@ -206,9 +206,9 @@ Sebutkan ke admin saat chat ya, supaya tercatat. 🙏`,
 
   // Quick copy content
   quickCopyContent: {
-    cta: 'Kalau mau belajar crypto lebih terstruktur, chat admin CryptoSharia dan gunakan kode promo saya: M-SA01. Diskon Rp250.000 + Bonus Discord Premium 6 bulan.',
-    admin: "Assalamu'alaikum Admin CryptoSharia, saya ingin daftar CryptoSharia Masterclass menggunakan kode promo: M-SA01.",
-    followup: "Assalamu'alaikum! Kemarin sempat tanya-tanya soal CryptoSharia Masterclass ya? Kalau masih tertarik, pendaftaran masih dibuka. Jangan lupa sebutkan kode promo M-SA01 supaya dapat diskon Rp250.000 dan bonus Discord Premium 6 bulan. 🙏",
+    cta: 'Kalau mau belajar crypto lebih terstruktur, chat admin CryptoSharia dan gunakan kode promo saya: P - NFL. Diskon Rp250.000 + Bonus Discord Premium 6 bulan.',
+    admin: "Assalamu'alaikum Admin CryptoSharia, saya ingin daftar CryptoSharia Masterclass menggunakan kode promo: P - NFL.",
+    followup: "Assalamu'alaikum! Kemarin sempat tanya-tanya soal CryptoSharia Masterclass ya? Kalau masih tertarik, pendaftaran masih dibuka. Jangan lupa sebutkan kode promo P - NFL supaya dapat diskon Rp250.000 dan bonus Discord Premium 6 bulan. 🙏",
     caption: "Belajar crypto itu seharusnya tidak bikin cemas. 📚\n\nDi CryptoSharia Masterclass, kamu belajar dari nol dengan pendekatan syariah, terstruktur, dan sadar risiko.\n\nBukan janji cuan instan. Tapi ilmu yang bisa kamu pakai seumur hidup.\n\nDM saya untuk info lebih lanjut. 🙏\n\n#CryptoSyariah #BelajarCrypto #InvestasiHalal #CryptoSharia",
     disclaimer: 'Bukan financial advice. Konten ini untuk edukasi.',
   },
@@ -800,7 +800,7 @@ Sebutkan ke admin saat chat ya, supaya tercatat. 🙏`,
     // Update templates with current promo code
     const templates = this.seedTemplates.map(t => ({
       ...t,
-      text: t.text.replace(/M-SA01/g, this.promoCode),
+      text: t.text.replace(/P - NFL/g, this.promoCode),
     }));
 
     grid.innerHTML = templates.map((t, i) => `
