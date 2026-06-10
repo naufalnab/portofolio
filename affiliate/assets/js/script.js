@@ -122,10 +122,10 @@ const App = {
         });
     },
 
-    onSectionEnter(sectionId) {
+    async onSectionEnter(sectionId) {
         if (sectionId === 'dashboard') this.loadDashboard();
         else if (sectionId === 'leads') this.loadLeads();
-        else if (sectionId === 'studio') { this.loadContents(); this.loadBanks(); }
+        else if (sectionId === 'studio') { await this.loadContents(); this.loadBanks(); }
         else if (sectionId === 'performance') this.loadPerformance();
         else if (sectionId === 'calendar') { this.loadCalendar(); this.loadChecklist(); }
         else if (sectionId === 'assets') this.loadAssets('prompt_karakter');
@@ -378,7 +378,8 @@ const App = {
         const res = await this.apiCall('contents', id ? 'update' : 'create', { ...payload, id });
         if (res) {
             this.resetContentForm();
-            this.loadContents();
+            await this.loadContents();
+            this.loadBanks();
         }
     },
 
@@ -407,33 +408,62 @@ const App = {
     // ==================== BANK/TEMPLATES ====================
     async loadBanks() {
         const res = await this.apiCall('templates', 'list');
-        if (res) {
-            const data = res.data;
-            const ideas = data.filter(d => d.template_type === 'idea');
-            const hooks = data.filter(d => d.template_type === 'hook');
-            const ctas = data.filter(d => d.template_type === 'cta');
-            const scripts = data.filter(d => d.template_type === 'script');
+        let data = [];
+        if (res) data = res.data;
 
-            const renderBank = (id, items) => {
-                const el = document.getElementById(id);
-                if(!el) return;
-                el.innerHTML = items.map(item => `
-                    <div class="bank-item">
-                        <span class="bank-item-text">${item.content.replace(/\n/g, '<br>')}</span>
-                        <button class="btn btn-sm btn-ghost" onclick="App.copyToClipboard('${item.content.replace(/'/g, "\\'").replace(/\n/g, "\\n")}')">📋</button>
-                    </div>
-                `).join('') || '<p class="text-muted">Kosong</p>';
-            };
+        let ideas = [];
+        let hooks = [];
+        let ctas = [];
+        let scripts = [];
 
-            renderBank('ideaBank', ideas);
-            renderBank('hookBank', hooks);
-            renderBank('ctaBank', ctas);
-            renderBank('scriptBank', scripts);
-            
-            // Also store for promo page
-            this.waTemplates = data.filter(d => d.template_type === 'whatsapp');
-            this.renderTemplates();
+        // Extract from Content Studio
+        if (this.contents) {
+            this.contents.forEach(c => {
+                if (c.title) ideas.push({ content: c.title });
+                if (c.hook) hooks.push({ content: c.hook });
+                if (c.cta) ctas.push({ content: c.cta });
+                if (c.script_body) scripts.push({ content: c.script_body });
+            });
         }
+
+        // Merge with any templates from DB
+        data.forEach(d => {
+            if (d.template_type === 'idea') ideas.push(d);
+            if (d.template_type === 'hook') hooks.push(d);
+            if (d.template_type === 'cta') ctas.push(d);
+            if (d.template_type === 'script') scripts.push(d);
+        });
+
+        const renderBank = (id, items) => {
+            const el = document.getElementById(id);
+            if(!el) return;
+            
+            // Remove duplicates
+            const uniqueItems = [];
+            const seen = new Set();
+            items.forEach(item => {
+                if (!seen.has(item.content)) {
+                    seen.add(item.content);
+                    uniqueItems.push(item);
+                }
+            });
+
+            el.innerHTML = uniqueItems.map(item => `
+                <div class="bank-item">
+                    <span class="bank-item-text">${item.content.replace(/\n/g, '<br>')}</span>
+                    <button class="btn btn-sm btn-ghost" onclick="App.copyToClipboard('${item.content.replace(/'/g, "\\'").replace(/\n/g, "\\n")}')">📋</button>
+                </div>
+            `).join('') || '<p class="text-muted">Kosong</p>';
+        };
+
+        renderBank('ideaBank', ideas);
+        renderBank('hookBank', hooks);
+        renderBank('ctaBank', ctas);
+        renderBank('scriptBank', scripts);
+        
+        // Also store for promo page
+        this.waTemplates = data.filter(d => d.template_type === 'whatsapp');
+        this.renderTemplates();
     },
 
     renderTemplates() {
