@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Anti-FOUC -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'light') { document.documentElement.classList.add('light-mode'); } } catch (e) { } })();</script>
+
+    <!-- SEO -->
+    <title>Application — Fullstack Developer @ Pixtalase · Naufal Nabila</title>
+    <meta name="description"
+        content="Naufal Nabila's application for the Fullstack Developer position at Pixtalase. Tech stack alignment, portfolio, and relevant experience.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://naufalnabila.my.id/apply/pixtalase-fullstack/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://naufalnabila.my.id/apply/pixtalase-fullstack/">
+    <meta property="og:title" content="Application — Fullstack Developer @ Pixtalase · Naufal Nabila">
+    <meta property="og:description"
+        content="My application for the Fullstack Developer position at Pixtalase. Includes tech stack match, portfolio, and relevant experience.">
+    <meta property="og:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/base.css?v=8">
+    <link rel="stylesheet" href="/assets/css/layout.css?v=8">
+    <link rel="stylesheet" href="/assets/css/sections.css?v=8">
+    <link rel="stylesheet" href="/assets/css/components.css?v=8">
+    <link rel="stylesheet" href="/assets/css/responsive.css?v=8">
+    <link rel="stylesheet" href="/apply/senior-fullstack-se/apply.css?v=1">
+    <link rel="stylesheet" href="/apply/pixtalase-fullstack/pixtalase.css?v=1">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Naufal<span>.</span></a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/case-studies/">Case Studies</a></li>
+                    <li><a href="/founded/">Founded</a></li>
+                    <li><a href="/packages/">Packages</a></li>
+                </ul>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                    <span id="theme-icon">☀️</span>
+                    <span id="theme-text">Light</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="apply-hero" id="top">
+        <div class="container">
+            <div class="apply-hero-content">
+                <div class="apply-badge">
+                    <span class="apply-badge-dot"></span>
+                    Application — Fullstack Developer
+                </div>
+                <h1>Hi <span class="accent-text">Pixtalase</span>,<br>I'm Naufal Nabila.</h1>
+                <p class="apply-hero-sub">Applying for the
+                    <a href="https://www.threads.com/@pixtalase/post/Da1qVfHjwxT" target="_blank"
+                        rel="noopener">Fullstack Developer</a>
+                    position — Remote, building products that help creators & UMKM.
+                </p>
+                <div class="apply-meta-row">
+                    <div class="apply-meta-chip">
+                        <span class="apply-meta-icon">📍</span>
+                        Indonesia — Full Remote Ready
+                    </div>
+                    <div class="apply-meta-chip">
+                        <span class="apply-meta-icon">⏳</span>
+                        5+ Years Experience
+                    </div>
+                    <div class="apply-meta-chip">
+                        <span class="apply-meta-icon">🌐</span>
+                        Fluent English
+                    </div>
+                    <div class="apply-meta-chip">
+                        <span class="apply-meta-icon">🎯</span>
+                        Passionate about EdTech & UMKM
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY PIXTALASE -->
+    <section class="apply-answer" id="why-pixtalase">
+        <div class="container">
+            <div class="answer-header fade-in">
+                <div class="answer-number">01</div>
+                <div>
+                    <span class="section-eyebrow">Why Pixtalase</span>
+                    <h2 class="section-title">Why I'm excited about this role.</h2>
+                </div>
+            </div>
+
+            <div class="answer-content fade-in">
+                <div class="why-grid">
+                    <div class="why-card">
+                        <span class="why-icon">🎨</span>
+                        <h3>Creator & UMKM Focus</h3>
+                        <p>I've spent 5+ years building platforms that help people learn and sell — from
+                            EdTech SaaS platforms serving 4 brands across 4 languages, to AI-powered automation
+                            that makes content creation accessible. Pixtalase's mission to help creators &
+                            UMKM sell easier resonates deeply with what I've been building independently.</p>
+                    </div>
+                    <div class="why-card">
+                        <span class="why-icon">🏗️</span>
+                        <h3>Builder Mindset</h3>
+                        <p>I don't just code features — I build <strong>products</strong>. I've founded and
+                            shipped 4 platforms from zero, handled everything from architecture to deployment
+                            to SEO. I'm looking for a team where I can channel that energy into building
+                            something impactful at scale.</p>
+                    </div>
+                    <div class="why-card">
+                        <span class="why-icon">🌍</span>
+                        <h3>Remote-First Culture</h3>
+                        <p>I've been working remote and managing my own schedule for years. I'm disciplined,
+                            async-friendly, and I over-communicate progress. Flexible hours + great tools =
+                            my ideal environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK MATCH -->
+    <section class="apply-stack" id="stack">
+        <div class="container">
+            <span class="section-eyebrow fade-in">Tech Stack Match</span>
+            <h2 class="section-title fade-in">Your Stack ↔ My Experience</h2>
+            <p class="section-subtitle fade-in">Here's how my skills map to Pixtalase's tech stack.</p>
+
+            <div class="stack-grid pixtalase-stack fade-in">
+                <div class="stack-card">
+                    <div class="stack-card-header required">
+                        <span class="stack-label">Required</span>
+                        <h3>Next.js / React</h3>
+                    </div>
+                    <div class="stack-card-body">
+                        <p class="stack-match">My Relevant Experience</p>
+                        <ul class="stack-list">
+                            <li>Component-based architecture with SvelteKit (same mental model as React)</li>
+                            <li>SSR/CSR/SSG trade-offs — built multi-language SEO-optimized sites</li>
+                            <li>Reactive data binding, state management patterns</li>
+                            <li>Strong vanilla JS/TS foundation — fast React/Next.js ramp-up</li>
+                        </ul>
+                        <div class="stack-confidence">
+                            <div class="stack-confidence-bar" style="--fill: 82%"></div>
+                            <span>Adaptable — 1-2 weeks to production-ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card-header required">
+                        <span class="stack-label">Required</span>
+                        <h3>Node.js</h3>
+                    </div>
+                    <div class="stack-card-body">
+                        <p class="stack-match">My Relevant Experience</p>
+                        <ul class="stack-list">
+                            <li>Backend APIs: REST architecture, auth systems, middleware</li>
+                            <li>n8n workflow automation (runs on Node.js)</li>
+                            <li>Docker-based microservices deployment</li>
+                            <li>Database integration (MariaDB/MySQL, PostgreSQL via Odoo)</li>
+                        </ul>
+                        <div class="stack-confidence">
+                            <div class="stack-confidence-bar" style="--fill: 80%"></div>
+                            <span>Strong backend experience — Node.js ecosystem familiar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card-header required">
+                        <span class="stack-label">Required</span>
+                        <h3>TypeScript</h3>
+                    </div>
+                    <div class="stack-card-body">
+                        <p class="stack-match">My Relevant Experience</p>
+                        <ul class="stack-list">
+                            <li>SvelteKit projects with TypeScript configuration</li>
+                            <li>Type-safe patterns in Python (type hints, Odoo ORM typing)</li>
+                            <li>Strong understanding of static typing benefits</li>
+                            <li>Interface/type design for large codebases</li>
+                        </ul>
+                        <div class="stack-confidence">
+                            <div class="stack-confidence-bar" style="--fill: 75%"></div>
+                            <span>Solid foundation — ready to write production TS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card-header required">
+                        <span class="stack-label">Required</span>
+                        <h3>PostgreSQL</h3>
+                    </div>
+                    <div class="stack-card-body">
+                        <p class="stack-match">My Relevant Experience</p>
+                        <ul class="stack-list">
+                            <li>2+ years with PostgreSQL via Odoo ERP development</li>
+                            <li>Complex queries, indexing, ORM patterns</li>
+                            <li>Database schema design for multi-tenant systems</li>
+                            <li>MariaDB/MySQL — transferable relational DB skills</li>
+                        </ul>
+                        <div class="stack-confidence">
+                            <div class="stack-confidence-bar" style="--fill: 88%"></div>
+                            <span>Strong — production PostgreSQL experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card-header required">
+                        <span class="stack-label">Required</span>
+                        <h3>Tailwind CSS</h3>
+                    </div>
+                    <div class="stack-card-body">
+                        <p class="stack-match">My Relevant Experience</p>
+                        <ul class="stack-list">
+                            <li>Deep CSS expertise — custom design systems from scratch</li>
+                            <li>Responsive, mobile-first layouts</li>
+                            <li>CSS variables, custom properties, modern features</li>
+                            <li>Utility-first approach aligns with my workflow</li>
+                        </ul>
+                        <div class="stack-confidence">
+                            <div class="stack-confidence-bar" style="--fill: 85%"></div>
+                            <span>Strong CSS foundation — Tailwind is plug-and-play</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT I BRING -->
+    <section class="apply-answer answer-alt" id="what-i-bring">
+        <div class="container">
+            <div class="answer-header fade-in">
+                <div class="answer-number">02</div>
+                <div>
+                    <span class="section-eyebrow">What I Bring</span>
+                    <h2 class="section-title">More than just code.</h2>
+                </div>
+            </div>
+
+            <div class="answer-content fade-in">
+                <div class="bring-grid">
+                    <div class="bring-card">
+                        <div class="bring-card-num">01</div>
+                        <h3>Full Product Ownership</h3>
+                        <p>I've built 4 platforms from idea to production — architecture, development,
+                            deployment, SEO, and user growth. I understand the <strong>full lifecycle</strong>,
+                            not just the code part.</p>
+                    </div>
+
+                    <div class="bring-card">
+                        <div class="bring-card-num">02</div>
+                        <h3>AI-Augmented Development</h3>
+                        <p>I use AI tools (Gemini, Claude, Copilot) to accelerate development 40–60%,
+                            while <strong>owning 100% of the decisions</strong>. AI is my accelerator,
+                            not my driver.</p>
+                    </div>
+
+                    <div class="bring-card">
+                        <div class="bring-card-num">03</div>
+                        <h3>DevOps & Infrastructure</h3>
+                        <p>Docker multi-environment deployments, Nginx reverse proxy, CI/CD pipelines,
+                            monitoring — I can <strong>build it and ship it</strong>.</p>
+                    </div>
+
+                    <div class="bring-card">
+                        <div class="bring-card-num">04</div>
+                        <h3>Multi-Language & i18n</h3>
+                        <p>Built platforms serving 4 languages (Indonesia, English, Arabic, Malay) with
+                            full RTL support and SEO-optimized multi-language routing.</p>
+                    </div>
+
+                    <div class="bring-card">
+                        <div class="bring-card-num">05</div>
+                        <h3>Enterprise Experience</h3>
+                        <p>Custom ERP modules for Yamaha Motor Parts, Telkom Sigma, SUCOFINDO, Duniatex —
+                            I understand <strong>business logic complexity</strong>.</p>
+                    </div>
+
+                    <div class="bring-card">
+                        <div class="bring-card-num">06</div>
+                        <h3>Automation & AI Pipelines</h3>
+                        <p>n8n workflow automation, AI video generation, AI voice-over systems,
+                            Vertex AI / Gemini API integrations — I build <strong>smart systems</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROOF -->
+    <section class="apply-proof" id="proof">
+        <div class="container">
+            <span class="section-eyebrow fade-in">Proof of Work</span>
+            <h2 class="section-title fade-in">Real systems. Real users. Real impact.</h2>
+            <p class="section-subtitle fade-in">These aren't tutorials or side projects — these are production systems I built and maintain.</p>
+
+            <div class="proof-grid fade-in">
+                <div class="proof-card">
+                    <div class="proof-card-header">
+                        <span class="proof-icon">🎓</span>
+                        <h3>4 EdTech SaaS Platforms</h3>
+                    </div>
+                    <p>Founded & built
+                        <a href="https://pembelajarbelajar.com" target="_blank" rel="noopener">Pembelajar Belajar</a>,
+                        <a href="https://almutaalim.com" target="_blank" rel="noopener">Al Muta'allim</a>,
+                        <a href="https://belajarsekejap.com" target="_blank" rel="noopener">Belajar Sekejap</a>,
+                        <a href="https://thelearninglearner.com" target="_blank" rel="noopener">The Learning Learner</a>
+                        — multi-brand, 4 languages, shared codebase.
+                    </p>
+                    <div class="proof-stack">PHP · MariaDB · Docker · SaaS · i18n · SEO</div>
+                </div>
+
+                <div class="proof-card">
+                    <div class="proof-card-header">
+                        <span class="proof-icon">🤖</span>
+                        <h3>AI Automation Systems</h3>
+                    </div>
+                    <p>End-to-end AI pipelines: multi-language video generation, AI voice-over,
+                        image generation, n8n workflow automation with SMTP/WhatsApp integration.</p>
+                    <div class="proof-stack">n8n · Vertex AI · Gemini API · Python · Docker</div>
+                </div>
+
+                <div class="proof-card">
+                    <div class="proof-card-header">
+                        <span class="proof-icon">⚙️</span>
+                        <h3>Enterprise ERP (Odoo)</h3>
+                    </div>
+                    <p>Custom modules for Yamaha Motor Parts, Telkom Sigma, SUCOFINDO, Duniatex,
+                        PT. Adhi Karya — complex business logic, PostgreSQL, REST APIs.</p>
+                    <div class="proof-stack">Python · Odoo · PostgreSQL · XML · REST API</div>
+                </div>
+
+                <div class="proof-card">
+                    <div class="proof-card-header">
+                        <span class="proof-icon">🌐</span>
+                        <h3>Portfolio & Web Systems</h3>
+                    </div>
+                    <p>This portfolio site (<a href="https://naufalnabila.my.id" target="_blank"
+                            rel="noopener">naufalnabila.my.id</a>), multi-environment Docker deployments,
+                        payment integrations, auth systems.</p>
+                    <div class="proof-stack">SvelteKit · Docker · Nginx · SEO · Auth</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES ALIGNMENT -->
+    <section class="apply-answer" id="values">
+        <div class="container">
+            <div class="answer-header fade-in">
+                <div class="answer-number">03</div>
+                <div>
+                    <span class="section-eyebrow">Values Alignment</span>
+                    <h2 class="section-title">Your values ↔ My track record.</h2>
+                </div>
+            </div>
+
+            <div class="answer-content fade-in">
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-card-label">Pixtalase Value</div>
+                        <h3>🏆 Produk yang Berdampak Nyata</h3>
+                        <div class="value-card-divider"></div>
+                        <div class="value-card-response">
+                            <span class="value-card-mine">My Track Record</span>
+                            <p>4 EdTech platforms serving real users across 4 countries. Enterprise ERP modules
+                                used daily by companies like Yamaha and Telkom Sigma. I build things people
+                                actually use.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-card-label">Pixtalase Value</div>
+                        <h3>👥 Tim Solid & Kolaboratif</h3>
+                        <div class="value-card-divider"></div>
+                        <div class="value-card-response">
+                            <span class="value-card-mine">My Track Record</span>
+                            <p>Mentored junior developers at previous companies. I believe strong teams are
+                                built through clear communication, constructive PR reviews, and shared ownership
+                                of code quality.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-card-label">Pixtalase Value</div>
+                        <h3>💻 Teknologi Modern & Best Practice</h3>
+                        <div class="value-card-divider"></div>
+                        <div class="value-card-response">
+                            <span class="value-card-mine">My Track Record</span>
+                            <p>Docker deployments, Git workflows, automated testing, AI-augmented development.
+                                I continuously adopt modern tools while keeping fundamentals strong.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-card-label">Pixtalase Value</div>
+                        <h3>🏠 Kerja Remote, Hidup Seimbang</h3>
+                        <div class="value-card-divider"></div>
+                        <div class="value-card-response">
+                            <span class="value-card-mine">My Track Record</span>
+                            <p>5+ years of remote work experience. I'm disciplined with async communication,
+                                proactive with status updates, and I maintain work-life balance by being
+                                efficient — not by overworking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="apply-cta" id="contact">
+        <div class="container">
+            <div class="contact-panel fade-in">
+                <div class="contact-wrap" style="grid-template-columns: 1fr;">
+                    <div style="text-align: center;">
+                        <h2>Let's build together?</h2>
+                        <p class="contact-reassure" style="text-align: center; max-width: 640px; margin: 0 auto 2rem;">
+                            I'm excited about Pixtalase's mission and ready to contribute.
+                            I've attached my CV to the email — feel free to reach out via any channel below.
+                        </p>
+                        <div class="apply-cta-actions">
+                            <a href="mailto:career@pixtalase.com?subject=Fullstack%20Developer%20Application%20-%20Naufal%20Nabila&body=Hi%20Pixtalase%20Team%2C%0A%0AI%27m%20applying%20for%20the%20Fullstack%20Developer%20position.%0A%0APortfolio%3A%20https%3A%2F%2Fnaufalnabila.my.id%0ADetailed%20application%3A%20https%3A%2F%2Fnaufalnabila.my.id%2Fapply%2Fpixtalase-fullstack%2F%0A%0ALooking%20forward%20to%20discussing%20further!%0A%0ABest%20regards%2C%0ANaufal%20Nabila"
+                                class="btn btn-primary" target="_blank" rel="noopener">
+                                ✉️ Email career@pixtalase.com
+                            </a>
+                            <a href="https://wa.me/6282328591004?text=Hi%20Naufal%2C%20I%20saw%20your%20application%20for%20the%20Pixtalase%20Fullstack%20Developer%20role."
+                                class="btn btn-ghost" target="_blank" rel="noopener">
+                                💬 WhatsApp Me
+                            </a>
+                            <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/" class="btn btn-ghost"
+                                target="_blank" rel="noopener">
+                                🔗 LinkedIn
+                            </a>
+                            <a href="https://naufalnabila.my.id/" class="btn btn-ghost" target="_blank" rel="noopener">
+                                🌐 Full Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="justify-content: center; text-align: center;">
+                <span>© 2026 Naufal Nabila · Build. Impact. Grow Together.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/theme.js?v=8" defer></script>
+    <script src="/assets/js/nav.js?v=8" defer></script>
+    <script src="/assets/js/reveal.js?v=8" defer></script>
+    <script src="/assets/js/main.js?v=8" defer></script>
+</body>
+
+</html>

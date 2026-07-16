@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Pixtalase Application — Page-Specific Overrides
+   Extends apply.css with Pixtalase-specific components
+   ========================================================================== */
+
+/* Pixtalase accent override — purple-ish to match Pixtalase brand */
+.apply-hero .apply-badge {
+    background: rgba(118, 56, 250, 0.12);
+    border-color: rgba(118, 56, 250, 0.25);
+    color: #9b7aff;
+}
+
+.apply-hero .apply-badge-dot {
+    background: #9b7aff;
+}
+
+/* Stack grid — allow 5 cards to flow naturally */
+.pixtalase-stack {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Why grid */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.why-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
+    box-shadow: var(--shadow);
+}
+
+.why-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.why-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+.why-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+}
+
+.why-card p strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* Bring grid (What I Bring) */
+.bring-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.bring-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.bring-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bring-card:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
+}
+
+.bring-card:hover::before {
+    opacity: 1;
+}
+
+.bring-card-num {
+    font-size: 2rem;
+    font-weight: 900;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+    margin-bottom: 0.85rem;
+    letter-spacing: -0.04em;
+}
+
+.bring-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+}
+
+.bring-card p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.bring-card p strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* Values alignment grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.value-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
+    box-shadow: var(--shadow);
+}
+
+.value-card-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+}
+
+.value-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.value-card-divider {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 1rem;
+}
+
+.value-card-mine {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-soft);
+    margin-bottom: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--accent-soft);
+    border-radius: 4px;
+}
+
+.value-card-response p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bring-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pixtalase-stack {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 540px) {
+    .bring-grid {
+        grid-template-columns: 1fr;
+    }
+}
