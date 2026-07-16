@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Anti-FOUC -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'light') { document.documentElement.classList.add('light-mode'); } } catch (e) { } })();</script>
+
+    <!-- SEO -->
+    <title>Application — Senior Fullstack SE · Naufal Nabila</title>
+    <meta name="description"
+        content="Naufal Nabila's application for the Senior Fullstack Software Engineer role. AI workflow, mentorship philosophy, and technical background.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://naufalnabila.my.id/apply/senior-fullstack-se/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://naufalnabila.my.id/apply/senior-fullstack-se/">
+    <meta property="og:title" content="Application — Senior Fullstack SE · Naufal Nabila">
+    <meta property="og:description"
+        content="My application for the Senior Fullstack SE position. Includes my AI workflow and mentorship approach.">
+    <meta property="og:image" content="https://naufalnabila.my.id/assets/images/og-cover.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/base.css?v=8">
+    <link rel="stylesheet" href="/assets/css/layout.css?v=8">
+    <link rel="stylesheet" href="/assets/css/sections.css?v=8">
+    <link rel="stylesheet" href="/assets/css/components.css?v=8">
+    <link rel="stylesheet" href="/assets/css/responsive.css?v=8">
+    <link rel="stylesheet" href="/apply/senior-fullstack-se/apply.css?v=1">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Naufal<span>.</span></a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/case-studies/">Case Studies</a></li>
+                    <li><a href="/founded/">Founded</a></li>
+                    <li><a href="/packages/">Packages</a></li>
+                </ul>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                    <span id="theme-icon">☀️</span>
+                    <span id="theme-text">Light</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="apply-hero" id="top">
+        <div class="container">
+            <div class="apply-hero-content">
+                <div class="apply-badge">
+                    <span class="apply-badge-dot"></span>
+                    Application — Senior Fullstack SE
+                </div>
+                <h1>Hi, I'm <span class="accent-text">Naufal Nabila</span>.<br>Here are my answers.</h1>
+                <p class="apply-hero-sub">Responding to
+                    <a href="https://www.threads.com/@pebriangy/post/DajldIMj5yq" target="_blank"
+                        rel="noopener">@pebriangy's post</a>
+                    — 2 Senior Fullstack SE positions (15–20M IDR, Full Remote).
+                </p>
+                <div class="apply-meta-row">
+                    <div class="apply-meta-chip">
+                        <span class="apply-meta-icon">📍</span>
+                        Indonesia — Full Remote Ready
+                    </div>
+                    <div class="apply-meta-chip">
+                        <span class="apply-meta-icon">⏳</span>
+                        5+ Years Experience
+                    </div>
+                    <div class="apply-meta-chip">
+                        <span class="apply-meta-icon">🌐</span>
+                        Fluent English
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK MATCH -->
+    <section class="apply-stack" id="stack">
+        <div class="container">
+            <span class="section-eyebrow fade-in">Tech Stack Match</span>
+            <h2 class="section-title fade-in">Current Stack ↔ Required Stack</h2>
+            <p class="section-subtitle fade-in">The posting mentions "Will need to adapt if the tech stack changes" — here's how my experience maps to the required stack.</p>
+
+            <div class="stack-grid fade-in">
+                <div class="stack-card">
+                    <div class="stack-card-header required">
+                        <span class="stack-label">Required</span>
+                        <h3>ReactJS</h3>
+                    </div>
+                    <div class="stack-card-body">
+                        <p class="stack-match">My Relevant Experience</p>
+                        <ul class="stack-list">
+                            <li>Component-based architecture (SvelteKit — same mental model)</li>
+                            <li>State management patterns, SSR/CSR trade-offs</li>
+                            <li>Built multi-language SPA with reactive data binding</li>
+                            <li>Strong vanilla JS foundation — quick React ramp-up</li>
+                        </ul>
+                        <div class="stack-confidence">
+                            <div class="stack-confidence-bar" style="--fill: 82%"></div>
+                            <span>Adaptable — 1-2 weeks to production-ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card-header required">
+                        <span class="stack-label">Required</span>
+                        <h3>NodeJS (NestJS)</h3>
+                    </div>
+                    <div class="stack-card-body">
+                        <p class="stack-match">My Relevant Experience</p>
+                        <ul class="stack-list">
+                            <li>Backend architecture: REST APIs, auth systems, middleware</li>
+                            <li>Docker-based microservices (multi-environment deploy)</li>
+                            <li>n8n workflow automation (Node.js runtime)</li>
+                            <li>Database design with MariaDB/MySQL, ORM patterns</li>
+                        </ul>
+                        <div class="stack-confidence">
+                            <div class="stack-confidence-bar" style="--fill: 78%"></div>
+                            <span>Adaptable — NestJS patterns align with my backend experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card-header required">
+                        <span class="stack-label">Required</span>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="stack-card-body">
+                        <p class="stack-match">My Relevant Experience</p>
+                        <ul class="stack-list">
+                            <li>Odoo ERP development (Python framework — 2+ years)</li>
+                            <li>Custom module development, ORM, XML views</li>
+                            <li>AI/ML pipeline integration (Vertex AI)</li>
+                            <li>Scripting & automation workflows</li>
+                        </ul>
+                        <div class="stack-confidence">
+                            <div class="stack-confidence-bar" style="--fill: 90%"></div>
+                            <span>Strong — production Python experience via Odoo & AI pipelines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANSWER 1 -->
+    <section class="apply-answer" id="answer-1">
+        <div class="container">
+            <div class="answer-header fade-in">
+                <div class="answer-number">01</div>
+                <div>
+                    <span class="section-eyebrow">Question One</span>
+                    <h2 class="section-title">Explain your workflow when you use AI to build.</h2>
+                </div>
+            </div>
+
+            <div class="answer-content fade-in">
+                <div class="workflow-pipeline">
+                    <div class="workflow-step">
+                        <div class="workflow-step-num">01</div>
+                        <div class="workflow-step-content">
+                            <h3>Understand & Plan</h3>
+                            <p>I break the task into clear subtasks and define acceptance criteria first. I use AI
+                                (Claude/Gemini) to brainstorm architecture options, identify edge cases, and evaluate
+                                trade-offs — e.g., <em>"what are the pros/cons of SSR vs CSR for this use case?"</em>
+                            </p>
+                            <div class="workflow-tools">
+                                <span class="tool-tag">Gemini</span>
+                                <span class="tool-tag">Claude</span>
+                                <span class="tool-tag">Architecture Review</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workflow-step">
+                        <div class="workflow-step-num">02</div>
+                        <div class="workflow-step-content">
+                            <h3>Build with AI as Co-pilot</h3>
+                            <p>I use AI coding assistants for boilerplate, repetitive code, and complex logic
+                                scaffolding. But I <strong>always review every line</strong> — AI is my accelerator, not
+                                my driver. I keep the context tight: specific files, clear prompts, and iterative
+                                refinement.</p>
+                            <div class="workflow-tools">
+                                <span class="tool-tag">Copilot</span>
+                                <span class="tool-tag">Antigravity IDE</span>
+                                <span class="tool-tag">Code Review</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workflow-step">
+                        <div class="workflow-step-num">03</div>
+                        <div class="workflow-step-content">
+                            <h3>Verify & Iterate</h3>
+                            <p>I test manually and write automated tests. I <strong>never ship AI-generated code without
+                                    verifying it myself</strong>. If there's a bug, I debug it logically — not by blindly
+                                asking AI to "fix it."</p>
+                            <div class="workflow-tools">
+                                <span class="tool-tag">Unit Tests</span>
+                                <span class="tool-tag">Manual QA</span>
+                                <span class="tool-tag">Logical Debugging</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-principle">
+                    <div class="principle-icon">💡</div>
+                    <div>
+                        <h4>Key Principle</h4>
+                        <p>AI saves me <strong>40–60%</strong> of coding time, but I own <strong>100%</strong> of the
+                            decisions. I treat AI output like a junior dev's PR — always review, often refine, sometimes
+                            reject.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANSWER 2 -->
+    <section class="apply-answer answer-alt" id="answer-2">
+        <div class="container">
+            <div class="answer-header fade-in">
+                <div class="answer-number">02</div>
+                <div>
+                    <span class="section-eyebrow">Question Two</span>
+                    <h2 class="section-title">Major feature deadline + new junior onboarding.</h2>
+                    <p class="answer-scenario">You're assigned a major feature that has to be done + research in a week
+                        while there's a new junior SE that comes and needs your guidance.</p>
+                </div>
+            </div>
+
+            <div class="answer-content fade-in">
+                <div class="timeline-approach">
+                    <div class="day-block">
+                        <div class="day-label">Day 1–2</div>
+                        <div class="day-title">Parallel Setup</div>
+                        <div class="day-grid">
+                            <div class="day-card you">
+                                <span class="day-card-badge">You (Senior)</span>
+                                <p>Deep-dive into research for the major feature. Document findings as you go:
+                                    architecture decisions, API specs, trade-offs.</p>
+                            </div>
+                            <div class="day-card junior">
+                                <span class="day-card-badge">Junior</span>
+                                <p>1–2 hours onboarding: dev environment setup, codebase architecture walkthrough, key
+                                    docs. Then assign a small, self-contained task related to the feature.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-block">
+                        <div class="day-label">Day 3–5</div>
+                        <div class="day-title">Build & Mentor Async</div>
+                        <div class="day-grid">
+                            <div class="day-card you">
+                                <span class="day-card-badge">You (Senior)</span>
+                                <p>Focus on the critical/complex parts of the feature. Use PR reviews as teaching
+                                    moments — write clear, constructive feedback.</p>
+                            </div>
+                            <div class="day-card junior">
+                                <span class="day-card-badge">Junior</span>
+                                <p>Works on a well-scoped module with clear specs and acceptance criteria. 2× daily
+                                    check-ins (15 min max): morning alignment + afternoon code review.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-block">
+                        <div class="day-label">Day 6–7</div>
+                        <div class="day-title">Integrate & Polish</div>
+                        <div class="day-grid">
+                            <div class="day-card you">
+                                <span class="day-card-badge">You (Senior)</span>
+                                <p>Merge all pieces, run integration tests, handle edge cases. Final code review and
+                                    documentation.</p>
+                            </div>
+                            <div class="day-card junior">
+                                <span class="day-card-badge">Junior</span>
+                                <p>Does the final QA pass — builds their ownership and catches things with fresh
+                                    eyes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outcome-grid">
+                    <div class="outcome-card">
+                        <span class="outcome-icon">🎯</span>
+                        <h4>Feature ships on time</h4>
+                        <p>Documented decisions, clean architecture</p>
+                    </div>
+                    <div class="outcome-card">
+                        <span class="outcome-icon">👥</span>
+                        <h4>Junior gets real guidance</h4>
+                        <p>Hands-on mentorship through actual work, not theory</p>
+                    </div>
+                    <div class="outcome-card">
+                        <span class="outcome-icon">📈</span>
+                        <h4>Team velocity increases</h4>
+                        <p>Turns 1 engineer into 1.5 from day one</p>
+                    </div>
+                    <div class="outcome-card highlight">
+                        <span class="outcome-icon">💡</span>
+                        <h4>Mindset</h4>
+                        <p>Mentoring isn't separate from the work — it <strong>IS</strong> the work. A senior's job is
+                            to make the team better while delivering.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROOF -->
+    <section class="apply-proof" id="proof">
+        <div class="container">
+            <span class="section-eyebrow fade-in">Proof of Work</span>
+            <h2 class="section-title fade-in">I don't just talk — I build and ship.</h2>
+            <p class="section-subtitle fade-in">These are real systems I've built and maintained, not just side projects.</p>
+
+            <div class="proof-grid fade-in">
+                <div class="proof-card">
+                    <div class="proof-card-header">
+                        <span class="proof-icon">🏗️</span>
+                        <h3>4 EdTech Platforms</h3>
+                    </div>
+                    <p>Founded & built
+                        <a href="https://pembelajarbelajar.com" target="_blank" rel="noopener">Pembelajar Belajar</a>,
+                        <a href="https://almutaalim.com" target="_blank" rel="noopener">Al Muta'allim</a>,
+                        <a href="https://belajarsekejap.com" target="_blank" rel="noopener">Belajar Sekejap</a>,
+                        <a href="https://thelearninglearner.com" target="_blank" rel="noopener">The Learning Learner</a>
+                    </p>
+                    <div class="proof-stack">PHP · MariaDB · Docker · Multi-brand SaaS · i18n (4 languages)</div>
+                </div>
+
+                <div class="proof-card">
+                    <div class="proof-card-header">
+                        <span class="proof-icon">🤖</span>
+                        <h3>AI Automation</h3>
+                    </div>
+                    <p>End-to-end AI pipelines: multi-language video generation, AI voice-over, image generation modules,
+                        n8n workflow automation with SMTP/WhatsApp integration.</p>
+                    <div class="proof-stack">n8n · Vertex AI · Gemini API · Python · Docker</div>
+                </div>
+
+                <div class="proof-card">
+                    <div class="proof-card-header">
+                        <span class="proof-icon">⚙️</span>
+                        <h3>Enterprise ERP</h3>
+                    </div>
+                    <p>Custom Odoo modules for clients including Yamaha Motor Parts, Telkom Sigma, SUCOFINDO,
+                        Duniatex, PT. Adhi Karya, and PT. Naska Jala Dewa.</p>
+                    <div class="proof-stack">Python · Odoo · PostgreSQL · XML · REST API</div>
+                </div>
+
+                <div class="proof-card">
+                    <div class="proof-card-header">
+                        <span class="proof-icon">🌐</span>
+                        <h3>Web Systems</h3>
+                    </div>
+                    <p>Multi-environment Docker deployments (dev/staging/production), SEO-optimized multi-language
+                        sites, payment gateway integrations, and authentication systems.</p>
+                    <div class="proof-stack">Docker · Nginx · MariaDB · SEO · SvelteKit</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="apply-cta" id="contact">
+        <div class="container">
+            <div class="contact-panel fade-in">
+                <div class="contact-wrap" style="grid-template-columns: 1fr;">
+                    <div style="text-align: center;">
+                        <h2>Let's talk?</h2>
+                        <p class="contact-reassure" style="text-align: center; max-width: 640px; margin: 0 auto 2rem;">
+                            I'm excited about this opportunity and ready to discuss how I can contribute.
+                            Feel free to reach out via any channel below.
+                        </p>
+                        <div class="apply-cta-actions">
+                            <a href="https://wa.me/6282328591004?text=Hi%20Naufal%2C%20I%20saw%20your%20application%20for%20the%20Senior%20Fullstack%20SE%20role."
+                                class="btn btn-primary" target="_blank" rel="noopener">
+                                💬 WhatsApp Me
+                            </a>
+                            <a href="mailto:naufal.nabila.2008@gmail.com?subject=Senior%20Fullstack%20SE%20Application&body=Hi%20Naufal%2C%20I%20saw%20your%20application..."
+                                class="btn btn-ghost" target="_blank" rel="noopener">
+                                ✉️ Email
+                            </a>
+                            <a href="https://www.linkedin.com/in/naufal-nabila-8b2931143/" class="btn btn-ghost"
+                                target="_blank" rel="noopener">
+                                🔗 LinkedIn
+                            </a>
+                            <a href="https://naufalnabila.my.id/" class="btn btn-ghost" target="_blank" rel="noopener">
+                                🌐 Full Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="justify-content: center; text-align: center;">
+                <span>© 2026 Naufal Nabila · Built with precision, code, and a lot of automation.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/theme.js?v=8" defer></script>
+    <script src="/assets/js/nav.js?v=8" defer></script>
+    <script src="/assets/js/reveal.js?v=8" defer></script>
+    <script src="/assets/js/main.js?v=8" defer></script>
+</body>
+
+</html>
