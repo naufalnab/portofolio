@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Academic OS — illustrative UI concept, not an application screenshot">
+<title>Academic OS — illustrative preview</title>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101520"/><stop offset="1" stop-color="#41376b"/></linearGradient><linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b493fa" stop-opacity=".2"/><stop offset="1" stop-color="#b493fa" stop-opacity="0"/></linearGradient></defs>
+<rect width="960" height="540" fill="url(#bg)"/><circle cx="910" cy="60" r="315" fill="url(#shine)"/><circle cx="60" cy="530" r="245" fill="url(#shine)"/>
+<text x="74" y="114" fill="#e8f2f7" font-family="Arial,Helvetica,sans-serif" font-size="43" font-weight="700">Academic OS</text>
+<text x="76" y="149" fill="#b493fa" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="3">SCHOOL OPERATIONS</text>
+<rect x="75" y="187" width="810" height="296" rx="21" fill="#0f1a29" stroke="#4a5c75" stroke-opacity=".6" stroke-width="2"/>
+<rect x="75" y="187" width="810" height="37" rx="21" fill="#1d2939"/><rect x="75" y="211" width="810" height="13" fill="#1d2939"/>
+<circle cx="104" cy="205" r="5" fill="#ec6f73"/><circle cx="124" cy="205" r="5" fill="#f9cb67"/><circle cx="144" cy="205" r="5" fill="#61be90"/>
+<rect x="97" y="243" width="182" height="220" rx="12" fill="#131e30"/>
+<rect x="119" y="270" width="120" height="12" rx="6" fill="#b493fa" opacity=".9"/>
+<rect x="119" y="306" width="128" height="10" rx="5" fill="#41516c"/><rect x="119" y="340" width="98" height="10" rx="5" fill="#41516c"/><rect x="119" y="374" width="120" height="10" rx="5" fill="#41516c"/>
+<rect x="306" y="222" width="520" height="202" rx="12" fill="#1a2740"/><path d="M306 267 H826 M411 267 V424 M515 267 V424 M619 267 V424 M723 267 V424 M306 320 H826 M306 372 H826" stroke="#3e4a66" stroke-width="2"/><rect x="428" y="285" width="70" height="20" rx="8" fill="#b493fa" opacity=".8"/><rect x="637" y="337" width="70" height="20" rx="8" fill="#b493fa" opacity=".65"/><rect x="742" y="390" width="66" height="19" rx="8" fill="#b493fa" opacity=".8"/>
+<text x="76" y="516" fill="#b5c3d4" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="2">ILLUSTRATIVE PREVIEW · NOT A SCREENSHOT</text>
+</svg>
