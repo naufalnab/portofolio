@@ -347,7 +347,7 @@ function syncPage(page, header, footer, checkOnly) {
   const depth = page.file.split('/').length - 1;
   const up = '../'.repeat(depth);
   const updated = footerResult.html.replace(
-    /\\b(href|src|action|poster)(\\s*=\\s*)(["'])\\/(?!\\/)([^"']*)\\3/gi,
+    /\b(href|src|action|poster)(\s*=\s*)(["'])\/(?!\/)([^"']*)\3/gi,
     (_all, attribute, equals, quote, target) =>
       attribute + equals + quote + up + (target || (depth === 0 ? './' : '')) + quote,
   );
