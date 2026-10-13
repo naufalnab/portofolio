@@ -341,7 +341,16 @@ function syncPage(page, header, footer, checkOnly) {
     return 'skipped';
   }
 
-  const updated = footerResult.html;
+  // The shared partials use canonical /links, but GitHub Pages serves project
+  // sites below /portofolio/. Convert output URLs relative to each HTML file,
+  // so the same published files also work under a custom domain at /.
+  const depth = page.file.split('/').length - 1;
+  const up = '../'.repeat(depth);
+  const updated = footerResult.html.replace(
+    /\\b(href|src|action|poster)(\\s*=\\s*)(["'])\\/(?!\\/)([^"']*)\\3/gi,
+    (_all, attribute, equals, quote, target) =>
+      attribute + equals + quote + up + (target || (depth === 0 ? './' : '')) + quote,
+  );
 
   // --- Safety validations BEFORE writing ---------------------------------
   if (updated.includes('{{')) {
