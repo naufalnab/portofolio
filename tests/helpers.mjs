@@ -36,7 +36,26 @@ function resolveFromRoot(relPath) {
  * @returns {string} the file's UTF-8 contents
  */
 export function readPage(file) {
-  return readFileSync(resolveFromRoot(file), "utf8");
+  const raw = readFileSync(resolveFromRoot(file), "utf8");
+  if (!String(file).endsWith(".html")) return raw;
+
+  // Legacy structural tests compare canonical root URLs. Production HTML
+  // intentionally uses relative URLs so GitHub Pages project sites work.
+  // Canonicalize a test-only copy; the deployment-path regression test reads
+  // the original disk bytes and asserts their browser resolution separately.
+  const folder = path.posix.dirname(String(file).replace(/^\/+/, ""));
+  const pageUrl = "https://naufalnabila.my.id/" +
+    (folder === "." ? "" : folder + "/");
+  return raw.replace(
+    /\b(href|src|action|poster)(\s*=\s*)(["'])([^"']*)\3/gi,
+    (all, attribute, equals, quote, value) => {
+      if (/^(?:#|\/|[a-z][a-z0-9+.-]*:)/i.test(value)) return all;
+      const resolved = new URL(value, pageUrl);
+      if (resolved.origin !== "https://naufalnabila.my.id") return all;
+      return attribute + equals + quote +
+        resolved.pathname + resolved.search + resolved.hash + quote;
+    },
+  );
 }
 
 /**
